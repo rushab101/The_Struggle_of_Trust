@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
     private float movementInputDirection;
@@ -264,6 +265,7 @@ public class PlayerController : MonoBehaviour {
     public void GameOver()
     {
         UnityEngine.Debug.Log("GAME OVER!");
+        SceneManager.LoadScene("Game Over");
 
     }
 
