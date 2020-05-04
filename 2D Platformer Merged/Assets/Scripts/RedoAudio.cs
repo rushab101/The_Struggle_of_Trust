@@ -31,10 +31,12 @@ public class RedoAudio : MonoBehaviour
         backgroundSlider.value = backgroundfloat;
         */
         //-----------------------------------Disable these lines of Code in Debug Mode--------------------------///
-      
+
+        backgroundfloat = PlayerPrefs.GetFloat(BackgroundPref);
+        backgroundSlider.value = backgroundfloat;
 
         //-----------------------------------Disable these lines of Code in Build Mode--------------------------///
-        
+        /*
         if (firstPlayInt == 0)
         {
             backgroundfloat = 0.5f;
@@ -49,7 +51,7 @@ public class RedoAudio : MonoBehaviour
             backgroundSlider.value = backgroundfloat;
 
         }
-        
+        */
         //-----------------------------------Disable these lines of Code in Build Mode--------------------------///
 
         //  PlayerPrefs.Save();
