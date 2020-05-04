@@ -8,7 +8,7 @@ public class CombatDummyController : MonoBehaviour {
     [SerializeField]
     private bool applyKnockback;
 /*    [SerializeField]
-    private GameObject hitParticle;*/
+    private GameObject HitParticle;*/
 
     private float currentHealth, knockbackStart;
 
@@ -44,13 +44,15 @@ public class CombatDummyController : MonoBehaviour {
         checkKnockback();
     }
 
-    private void Damage(float amount) {
+    public void Damage(float amount) {
         currentHealth -= amount;
         playerFacingDirection = pc.GetFacingDirection();
 
-        // Instantiate(hitParticle, aliveGO.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+        // one or the other should work and randomize the hit particle (make sure to un-comment the serializedfield HitParticle)
+        //Instantiate(HitParticle, aliveGO.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+        //Instantiate(HitParticle, aliveAnim.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
 
-        if(playerFacingDirection == 1) {
+        if (playerFacingDirection == 1) {
             playerOnLeft = true;
         }
         else {
