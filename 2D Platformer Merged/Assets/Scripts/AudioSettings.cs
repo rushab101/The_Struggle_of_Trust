@@ -10,15 +10,18 @@ public class AudioSettings : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        PlayerPrefs.Save();
         ContinueSettings();
     }
 
     private void ContinueSettings()
     {
+
         backgroundfloat = PlayerPrefs.GetFloat(BackgroundPref);
+        UnityEngine.Debug.Log(backgroundfloat);
         backgroundAudio.volume = backgroundfloat;
-     
+
     }
 
-  
+
 }

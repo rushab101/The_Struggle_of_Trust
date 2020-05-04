@@ -16,15 +16,32 @@ public class RedoAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        backgroundAudio = GetComponent<AudioSource>();
         firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
         UnityEngine.Debug.Log(FirstPlay);
+
+
+        //Build Mode
+
+
+
+        //-----------------------------------Disable these lines of Code in Debug Mode--------------------------///
+        /*
+        backgroundfloat = PlayerPrefs.GetFloat(BackgroundPref);
+        backgroundSlider.value = backgroundfloat;
+        */
+        //-----------------------------------Disable these lines of Code in Debug Mode--------------------------///
+      
+
+        //-----------------------------------Disable these lines of Code in Build Mode--------------------------///
+        
         if (firstPlayInt == 0)
         {
             backgroundfloat = 0.5f;
             backgroundSlider.value = backgroundfloat;
             PlayerPrefs.SetFloat(BackgroundPref, backgroundfloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
+            PlayerPrefs.Save();
         }
         else
         {
@@ -32,7 +49,10 @@ public class RedoAudio : MonoBehaviour
             backgroundSlider.value = backgroundfloat;
 
         }
+        
+        //-----------------------------------Disable these lines of Code in Build Mode--------------------------///
 
+        //  PlayerPrefs.Save();
     }
 
 
@@ -41,6 +61,7 @@ public class RedoAudio : MonoBehaviour
     {
 
         PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
+        PlayerPrefs.Save();
 
     }
 
@@ -48,7 +69,7 @@ public class RedoAudio : MonoBehaviour
     {
         if (hasFocus == false)
         {
-           // UnityEngine.Debug.Log("message");
+            // UnityEngine.Debug.Log("message");
             SaveSoundSettings();
         }
     }
@@ -59,13 +80,16 @@ public class RedoAudio : MonoBehaviour
 
     void Update()
     {
-        backgroundAudio.volume = backgroundSlider.value;
-        
+        UpdateSound();
+        SaveSoundSettings();
+        //  PlayerPrefs.Save();
     }
+
+
 
     public void SetVolume(float vol)
     {
-        backgroundfloat = vol;
+        backgroundAudio.volume = backgroundSlider.value;
     }
 
 

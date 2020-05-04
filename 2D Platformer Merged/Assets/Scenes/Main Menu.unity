@@ -587,7 +587,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734953964}
-  - component: {fileID: 734953963}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -595,20 +594,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &734953963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734953962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c63172e17b96d649accd053e5e971b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundSlider: {fileID: 1434245879}
-  backgroundAudio: {fileID: 1870014448}
 --- !u!4 &734953964
 Transform:
   m_ObjectHideFlags: 0
@@ -1696,7 +1681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1340908285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c63172e17b96d649accd053e5e971b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95594ec5da98fdf408d5cbcbd7f562c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 0}
@@ -2627,6 +2612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870014447}
   - component: {fileID: 1870014448}
+  - component: {fileID: 1870014449}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -2744,6 +2730,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1870014449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870014446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95594ec5da98fdf408d5cbcbd7f562c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSlider: {fileID: 1434245879}
+  backgroundAudio: {fileID: 1870014448}
 --- !u!1 &1952548804
 GameObject:
   m_ObjectHideFlags: 0
