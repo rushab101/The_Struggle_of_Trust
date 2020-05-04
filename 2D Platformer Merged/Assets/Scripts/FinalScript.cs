@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RedoAudio : MonoBehaviour
+public class FinalScript : MonoBehaviour
 {
+
     private static readonly string FirstPlay = "FirstPlay";
     private static readonly string BackgroundPref = "BackgroundPref";
     private int firstPlayInt;
@@ -13,15 +14,15 @@ public class RedoAudio : MonoBehaviour
     public AudioSource backgroundAudio;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
-      
         firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
         UnityEngine.Debug.Log(FirstPlay);
         if (firstPlayInt == 0)
         {
-            backgroundfloat = 0.5f;
+            backgroundfloat = 0.75f;
             backgroundSlider.value = backgroundfloat;
             PlayerPrefs.SetFloat(BackgroundPref, backgroundfloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
@@ -36,7 +37,6 @@ public class RedoAudio : MonoBehaviour
     }
 
 
-
     public void SaveSoundSettings()
     {
 
@@ -48,27 +48,18 @@ public class RedoAudio : MonoBehaviour
     {
         if (hasFocus == false)
         {
-           // UnityEngine.Debug.Log("message");
+            // UnityEngine.Debug.Log("message");
             SaveSoundSettings();
         }
     }
+
+
+
     public void UpdateSound()
     {
+         UnityEngine.Debug.Log("message");
         backgroundAudio.volume = backgroundSlider.value;
     }
-
-    void Update()
-    {
-        backgroundAudio.volume = backgroundSlider.value;
-        
-    }
-
-    public void SetVolume(float vol)
-    {
-        backgroundfloat = vol;
-    }
-
-
 
 
 }
