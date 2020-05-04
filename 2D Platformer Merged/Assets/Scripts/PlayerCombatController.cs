@@ -32,8 +32,10 @@ public class PlayerCombatController : MonoBehaviour {
     }
 
     private void CheckCombatInput() { //Checks for any combat related input from the player
+        //if (Input.GetKeyDown(KeyCode.V)) { // "V" is for attack
         if (Input.GetMouseButtonDown(0)) { // True if LMB/Mouse 1 is pressed
             if (combatEnabled) {
+                Debug.Log("MB1 was pressed.");
                 //Attempt to Combat
                 gotInput = true;
                 lastInputTime = Time.time;
