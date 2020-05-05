@@ -1,14 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CombatDummyController : MonoBehaviour {
     [SerializeField]
     private float maxHealth, knockbackSpeedX, knockbackSpeedY, knockbackDuration, knockbackDeathSpeedX, knockbackDeathSpeedY, deathTorque; 
     [SerializeField]
     private bool applyKnockback;
-/*    [SerializeField]
-    private GameObject HitParticle;*/
+    [SerializeField]
+    private GameObject HitParticle;
 
     private float currentHealth, knockbackStart;
 
@@ -26,9 +28,10 @@ public class CombatDummyController : MonoBehaviour {
 
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
 
-        aliveGO = transform.Find("Dumb").gameObject; 
+        aliveGO = transform.Find("Alive").gameObject; 
         brokenTopGO = transform.Find("Broken Top").gameObject; 
         brokenBotGO = transform.Find("Broken Bottom").gameObject;
+        //Debug.Log(aliveGO);
 
         aliveAnim = aliveGO.GetComponent<Animator>();
         rbAlive = aliveGO.GetComponent<Rigidbody2D>();
@@ -38,19 +41,22 @@ public class CombatDummyController : MonoBehaviour {
         aliveGO.SetActive(true);
         brokenTopGO.SetActive(false);
         brokenBotGO.SetActive(false);
+       
     }
 
     private void Update() {
         checkKnockback();
     }
 
-    public void Damage(float amount) {
-        currentHealth -= amount;
+    private void Damage(float[] attackDetails) {
+        currentHealth -= attackDetails[0];
+      //  Debug.Log("Ok");
         playerFacingDirection = pc.GetFacingDirection();
+      //  Instantiate(hitParticle, Slime.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
 
         // one or the other should work and randomize the hit particle (make sure to un-comment the serializedfield HitParticle)
-        //Instantiate(HitParticle, aliveGO.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
-        //Instantiate(HitParticle, aliveAnim.transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+        Instantiate(HitParticle, aliveGO.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
+        Instantiate(HitParticle, aliveAnim.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
 
         if (playerFacingDirection == 1) {
             playerOnLeft = true;
@@ -72,6 +78,7 @@ public class CombatDummyController : MonoBehaviour {
     }
 
     private void Knockback() {
+        Debug.Log("Ok");
         knockback = true;
         knockbackStart = Time.time;
         rbAlive.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
