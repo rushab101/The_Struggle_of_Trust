@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerCombatController : MonoBehaviour {
@@ -18,6 +19,7 @@ public class PlayerCombatController : MonoBehaviour {
     private bool isFirstAttack;
 
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
+    private float[] attackDetails = new float[2];
 
     private Animator anim;
 
@@ -64,9 +66,13 @@ public class PlayerCombatController : MonoBehaviour {
 
     private void CheckAttackHitbox() { // Detect damagable objects in a range
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
+        attackDetails[0] = attack1Damage;
+        attackDetails[1] = transform.position.x;
+
+
 
         foreach (Collider2D collider in detectedObjects) {
-            collider.transform.parent.SendMessage("Damage", attack1Damage); // Used to call function on scripts on objects without knowing which script it is
+            collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
     }
