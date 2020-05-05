@@ -1988,6 +1988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 630463867}
+  backgroundAudio: {fileID: 55546158}
 --- !u!1 &605194860
 GameObject:
   m_ObjectHideFlags: 0
