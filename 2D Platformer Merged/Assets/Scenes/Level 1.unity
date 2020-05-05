@@ -3879,7 +3879,7 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   wallCheckDistance: 0.55
   movementSpeed: 3
-  maxHealth: 30
+  maxHealth: 60
   knockbackDuration: 0.1
   groundCheck: {fileID: 1025422865}
   wallCheck: {fileID: 1637262672}
@@ -41760,7 +41760,7 @@ PrefabInstance:
     - target: {fileID: 5229916854390596672, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5229916854390596673, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}

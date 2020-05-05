@@ -101,6 +101,7 @@ public class BasicEnemyController : MonoBehaviour
         knowckbackStartTime = Time.time;
         movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
         SlimeRb.velocity = movement;
+       // Debug.log()
         SlimeAnim.SetBool("Knockback", true);
 
     }
@@ -113,7 +114,7 @@ public class BasicEnemyController : MonoBehaviour
     }
     private void ExitknockbackState()
     {
-        SlimeAnim.SetBool("Knockback", false);
+       SlimeAnim.SetBool("Knockback", false);
 
     }
     //------------------//
