@@ -39,17 +39,17 @@ public class BasicEnemyController : MonoBehaviour
 
     private float currentHealth, knowckbackStartTime;
 
-    private GameObject alive;
-    private Rigidbody2D aliveRb;
-    private Animator aliveAnim;
+    private GameObject Slime;
+    private Rigidbody2D SlimeRb;
+    private Animator SlimeAnim;
 
     private void Start()
     {
-        alive = transform.Find("Alive").gameObject;
-        aliveRb = alive.GetComponent<Rigidbody2D>();
+        Slime = transform.Find("Slime").gameObject;
+        SlimeRb = Slime.GetComponent<Rigidbody2D>();
         facingDirection = 1;
         currentHealth = maxHealth;
-        aliveAnim = alive.GetComponent<Animator>();
+        SlimeAnim = Slime.GetComponent<Animator>();
     }
 
 
@@ -84,8 +84,8 @@ public class BasicEnemyController : MonoBehaviour
         }
         else
         {
-            movement.Set(movementSpeed * facingDirection, aliveRb.velocity.y);
-            aliveRb.velocity = movement;
+            movement.Set(movementSpeed * facingDirection, SlimeRb.velocity.y);
+            SlimeRb.velocity = movement;
         }
     }
     private void ExitWalkingState()
@@ -100,8 +100,8 @@ public class BasicEnemyController : MonoBehaviour
     {
         knowckbackStartTime = Time.time;
         movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
-        aliveRb.velocity = movement;
-        aliveAnim.SetBool("Knockback", true);
+        SlimeRb.velocity = movement;
+        SlimeAnim.SetBool("Knockback", true);
 
     }
     private void UpdateknockbackState()
@@ -113,7 +113,7 @@ public class BasicEnemyController : MonoBehaviour
     }
     private void ExitknockbackState()
     {
-        aliveAnim.SetBool("Knockback", false);
+        SlimeAnim.SetBool("Knockback", false);
 
     }
     //------------------//
@@ -121,8 +121,8 @@ public class BasicEnemyController : MonoBehaviour
     //-- Dead State ---//
     private void EnterDeadState()
     {
-        Instantiate(deathChunckParticle, alive.transform.position, deathChunckParticle.transform.rotation);
-        Instantiate(DeathBloodParticle, alive.transform.position, DeathBloodParticle.transform.rotation);
+        Instantiate(deathChunckParticle, Slime.transform.position, deathChunckParticle.transform.rotation);
+        Instantiate(DeathBloodParticle, Slime.transform.position, DeathBloodParticle.transform.rotation);
         //Spawn chucks and blood
         Destroy(gameObject);
 
@@ -140,7 +140,7 @@ public class BasicEnemyController : MonoBehaviour
     private void Flip()
     {
         facingDirection *= -1;
-        alive.transform.Rotate(0.0f, 180.0f, 0.0f);
+        Slime.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
     //-----Other functions --///
 
@@ -148,8 +148,8 @@ public class BasicEnemyController : MonoBehaviour
     private void Damage(float[] attackDetails)
     {
         currentHealth -= attackDetails[0];
-        Instantiate(hitParticle, alive.transform.position,Quaternion.Euler(0.0f,0.0f,UnityEngine.Random.Range(0.0f, 360.0f)));
-        if (attackDetails[1] > alive.transform.position.x)
+        Instantiate(hitParticle, Slime.transform.position,Quaternion.Euler(0.0f,0.0f,UnityEngine.Random.Range(0.0f, 360.0f)));
+        if (attackDetails[1] > Slime.transform.position.x)
         {
             damageDirection = -1;
         }

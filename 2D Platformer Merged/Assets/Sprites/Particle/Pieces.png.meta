@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: -8231439895271094956
     second: Pieces_4
+  - first:
+      213: -1265261323504801017
+    second: Pieces_0
+  - first:
+      213: 6713323665980220584
+    second: Pieces_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
