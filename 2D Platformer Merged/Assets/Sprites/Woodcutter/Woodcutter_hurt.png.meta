@@ -111,12 +111,12 @@ TextureImporter:
       name: Woodcutter_hurt_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 26
+        width: 27
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,12 +132,12 @@ TextureImporter:
       name: Woodcutter_hurt_1
       rect:
         serializedVersion: 2
-        x: 51
+        x: 50
         y: 0
-        width: 26
+        width: 27
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Woodcutter_hurt_2
       rect:
         serializedVersion: 2
-        x: 98
+        x: 97
         y: 0
-        width: 26
+        width: 27
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
