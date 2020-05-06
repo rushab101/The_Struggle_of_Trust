@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: 0b8d0f9430d11694eb4033e207538ea5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2471592659353179898
+    second: Hyena_walk_0
+  - first:
+      213: -2419008658184752302
+    second: Hyena_walk_1
+  - first:
+      213: 2507993390049796495
+    second: Hyena_walk_2
+  - first:
+      213: -956104591135857483
+    second: Hyena_walk_3
+  - first:
+      213: 2243268222033737985
+    second: Hyena_walk_4
+  - first:
+      213: 6630705575699186964
+    second: Hyena_walk_5
+  - first:
+      213: 2469485408627288545
+    second: Hyena_walk_6
+  - first:
+      213: -3308116282487766069
+    second: Hyena_walk_7
+  - first:
+      213: -3508633150676416566
+    second: Hyena_walk_8
+  - first:
+      213: -4786434576557790878
+    second: Hyena_walk_9
+  - first:
+      213: 7709822001516061031
+    second: Hyena_walk_10
+  - first:
+      213: -6836043282483193461
+    second: Hyena_walk_11
+  - first:
+      213: -2991630306297155423
+    second: Hyena_walk_12
+  - first:
+      213: -2253513362087679051
+    second: Hyena_walk_13
+  - first:
+      213: 1935590072000056084
+    second: Hyena_walk_14
+  - first:
+      213: 9204820426813708626
+    second: Hyena_walk_15
+  - first:
+      213: 6797620600724386160
+    second: Hyena_walk_16
+  - first:
+      213: -4713570293120065095
+    second: Hyena_walk_17
+  - first:
+      213: -9204169453106252039
+    second: Hyena_walk_18
+  - first:
+      213: -2912002665319610786
+    second: Hyena_walk_19
+  - first:
+      213: -1985990859019268410
+    second: Hyena_walk_20
+  - first:
+      213: 6517986413391947188
+    second: Hyena_walk_21
+  - first:
+      213: 1049634283024666735
+    second: Hyena_walk_22
+  - first:
+      213: -176143587362307767
+    second: Hyena_walk_23
+  - first:
+      213: 8126419308185498815
+    second: Hyena_walk_24
+  - first:
+      213: -7567074481196050282
+    second: Hyena_walk_25
+  - first:
+      213: -2767921630243790848
+    second: Hyena_walk_26
+  - first:
+      213: -7778869073749351183
+    second: Hyena_walk_27
+  - first:
+      213: -6934489405850163953
+    second: Hyena_walk_28
+  - first:
+      213: 3974438339281385316
+    second: Hyena_walk_29
+  - first:
+      213: 6524995763137208788
+    second: Hyena_walk_30
+  - first:
+      213: -2262287960786483258
+    second: Hyena_walk_31
+  - first:
+      213: 4149720250672298453
+    second: Hyena_walk_32
+  - first:
+      213: -6944311423803698143
+    second: Hyena_walk_33
+  - first:
+      213: -8369705937755154971
+    second: Hyena_walk_34
+  - first:
+      213: 7687396803912309102
+    second: Hyena_walk_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hyena_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6953abd6cdc4220800000000000000
+      internalID: 2471592659353179898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hyena_walk_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253bd4c1174fd6ed0800000000000000
+      internalID: -2419008658184752302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hyena_walk_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8122f843be2ec220800000000000000
+      internalID: 2507993390049796495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hyena_walk_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b42a35a0fb3bb2f0800000000000000
+      internalID: -956104591135857483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hyena_walk_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1093e360090b12f10800000000000000
+      internalID: 2243268222033737985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hyena_walk_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41580c1179ff40c50800000000000000
+      internalID: 6630705575699186964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

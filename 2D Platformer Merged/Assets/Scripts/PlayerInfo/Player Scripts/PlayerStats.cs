@@ -13,6 +13,8 @@ public class PlayerStats : MonoBehaviour
         deathBloodParticle;
 
     private int currentHealth;
+    private Respawn GM;
+   
 
 
 
@@ -22,6 +24,8 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        //   GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameObject.Find("GameManager").GetComponent<Respawn>();
     }
 
     
@@ -29,6 +33,7 @@ public class PlayerStats : MonoBehaviour
     {
         Instantiate(deathChunckParticle, transform.position, deathChunckParticle.transform.rotation);
         Instantiate(deathChunckParticle, transform.position, deathBloodParticle.transform.rotation);
+     //   GM.RespawnIn();
         Destroy(gameObject);
         
 
