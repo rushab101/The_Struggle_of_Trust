@@ -53,7 +53,17 @@ public class CombatDummyController : MonoBehaviour {
         currentHealth -= attackDetails[0];
        // currentHealth -= attackDetails;
         Debug.Log("Ok");
-        playerFacingDirection = pc.GetFacingDirection();
+       // playerFacingDirection = pc.GetFacingDirection();
+
+        if (attackDetails[1] < aliveGO.transform.position.x)
+        {
+            playerFacingDirection = 1;
+        }
+        else
+        {
+            playerFacingDirection = -1;
+        }
+
       //  Instantiate(hitParticle, Slime.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
 
         // one or the other should work and randomize the hit particle (make sure to un-comment the serializedfield HitParticle)

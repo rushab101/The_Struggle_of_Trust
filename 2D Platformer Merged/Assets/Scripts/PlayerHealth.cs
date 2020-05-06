@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -12,15 +13,27 @@ public class PlayerHealth : MonoBehaviour {
     public Sprite fullheart;
     public Sprite emptyHeart;
     //------------------------------------------------------//
+    private PlayerController PC;
+
+
+    private bool GameOver= false;
 
     // Start is called before the first frame update
     void Start() {
         health = 5;
+        PC = GetComponent<PlayerController>();
+        //StartCoroutine(Test());
+
     }
 
     // Update is called once per frame
     void Update() {
         Health();
+        if (GameOver)
+        {
+            StartCoroutine(Test());
+           // FindObjec.GameOver();
+        }
 
     }
 
@@ -46,8 +59,24 @@ public class PlayerHealth : MonoBehaviour {
         UnityEngine.Debug.Log("Went to here\n");
         health--;
         UnityEngine.Debug.Log(health);
-        if (health <= 0) {
-            FindObjectOfType<PlayerController>().GameOver();
+        if (health <= 0)
+        {
+            GameOver = true;
+            //PlayerisDead
+            FindObjectOfType<PlayerStats>().Die();
+            //StartCoroutine(Test());
+           // FindObjectOfType<PlayerController>().GameOver();
+
         }
     }
+
+   
+    IEnumerator Test()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Debug.Log("Hi");
+        SceneManager.LoadScene("Game Over");
+    }
+
+
 }
