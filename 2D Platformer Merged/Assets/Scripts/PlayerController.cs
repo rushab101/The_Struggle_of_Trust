@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour {
     private float jumpTimer;
     private float turnTimer;
     private float wallJumpTimer;
+    private float knockbackStartTime;
+    [SerializeField]
+    private float knockbackDuation;
 
     private int amountOfJumpsLeft;
     private int facingDirection = 1;
@@ -25,6 +28,12 @@ public class PlayerController : MonoBehaviour {
     private bool canMove;
     private bool canFlip;
     private bool hasWallJumped;
+    private bool knockback;
+
+
+    [SerializeField]
+    private Vector2 knockbackSpeed;
+
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -70,6 +79,7 @@ public class PlayerController : MonoBehaviour {
         CheckIfCanJump();
         CheckIfWallSliding();
         CheckJump();
+        CheckKnockback();
     }
 
     private void FixedUpdate() {
@@ -85,6 +95,24 @@ public class PlayerController : MonoBehaviour {
             isWallSliding = false;
         }
     }
+
+    public void knockBack(int direction)
+    {
+        knockback = true;
+        knockbackStartTime = Time.time;
+        rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);
+
+    }
+
+    private void CheckKnockback()
+    {
+        if (Time.time >= knockbackStartTime + knockbackDuation && knockback)
+        {
+            knockback = false;
+            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+        }
+    }
+
 
     public int GetFacingDirection() {
         return facingDirection;
@@ -232,10 +260,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void ApplyMovement() {
-        if (!isGrounded && !isWallSliding && movementInputDirection == 0) {
+        if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback) {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        else if (canMove) {
+        else if (canMove && !knockback) {
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
 
@@ -255,7 +283,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Flip() {
-        if (!isWallSliding && canFlip) {
+        if (!isWallSliding && canFlip && !knockback) {
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);

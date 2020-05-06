@@ -23,10 +23,12 @@ public class PlayerCombatController : MonoBehaviour {
     private float[] attackDetails = new float[2];
 
     private Animator anim;
+    private PlayerController PC;
 
     private void Start() {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
+        PC = GetComponent<PlayerController>();
     }
 
     private void Update() {
@@ -82,6 +84,24 @@ public class PlayerCombatController : MonoBehaviour {
         isAttacking = false;
         anim.SetBool("isAttacking", isAttacking);
         anim.SetBool("attack1", false);
+    }
+
+    private void Damage(float[] attackDetails)
+    {
+        int direction;
+        //Damage our player
+        FindObjectOfType<PlayerHealth>().EndGame();
+
+
+        if (attackDetails[1] < transform.position.x)
+        {
+            direction = 1;
+        }
+        else
+        {
+            direction = -1;
+        }
+        PC.knockBack(direction);
     }
 
     private void OnDrawGizmos() {
