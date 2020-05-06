@@ -1018,7 +1018,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -3112,7 +3112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621719070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.599, y: -0.813, z: 0}
+  m_LocalPosition: {x: -0.318, y: -0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1479277290}
@@ -5374,7 +5374,7 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   wallCheckDistance: 0.55
   movementSpeed: 3
-  maxHealth: 60
+  maxHealth: 20
   knockbackDuration: 0.1
   lastTouchDamageTime: 0
   touchDamageCoolDown: 0.2
@@ -46979,7 +46979,7 @@ GameObject:
   - component: {fileID: 2044291453}
   - component: {fileID: 2044291452}
   m_Layer: 0
-  m_Name: EnemyAIFirst (2)
+  m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47016,12 +47016,12 @@ MonoBehaviour:
   wallCheckDistance: 0.7
   movementSpeed: 3
   maxHealth: 60
-  knockbackDuration: 0.1
+  knockbackDuration: 0.3
   lastTouchDamageTime: 0
   touchDamageCoolDown: 0.2
   touchDamage: 1
-  touchDamageWidth: 1.7
-  touchDamageHeight: 1.7
+  touchDamageWidth: 3.5
+  touchDamageHeight: 3
   groundCheck: {fileID: 793128791}
   wallCheck: {fileID: 1586822855}
   touchDamageCheck: {fileID: 621719071}
@@ -47082,7 +47082,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
