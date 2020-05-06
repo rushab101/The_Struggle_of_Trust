@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
     private bool canFlip;
     private bool hasWallJumped;
     private bool knockback;
+    private bool isHurting; // new (06 may 2020)
+    private bool isDead; // new (06 may 2020)
 
 
     [SerializeField]
@@ -86,6 +88,7 @@ public class PlayerController : MonoBehaviour {
         ApplyMovement();
         CheckSurroundings();
     }
+
 
     private void CheckIfWallSliding() {
         if (isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0) {
@@ -162,6 +165,11 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isWallSliding", isWallSliding);
+
+
+
+        anim.SetBool("isHurting", isHurting); // new (06 may 2020)
+        anim.SetBool("isDead", isDead); // new (06 may 2020)
     }
 
     private void CheckInput() {
