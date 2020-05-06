@@ -6150,8 +6150,8 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   wallCheckDistance: 0.55
   movementSpeed: 3
-  maxHealth: 60
-  knockbackDuration: 0.1
+  maxHealth: 20
+  knockbackDuration: 0.2
   lastTouchDamageTime: 0
   touchDamageCoolDown: 0.2
   touchDamage: 1
@@ -47014,7 +47014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheckDistance: 0.5
   wallCheckDistance: 0.7
-  movementSpeed: 3
+  movementSpeed: 8
   maxHealth: 60
   knockbackDuration: 0.3
   lastTouchDamageTime: 0
