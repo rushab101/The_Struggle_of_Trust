@@ -48,9 +48,11 @@ public class CombatDummyController : MonoBehaviour {
         checkKnockback();
     }
 
-    private void Damage(float[] attackDetails) {
+    private void Damage(float [] attackDetails)
+    {
         currentHealth -= attackDetails[0];
-      //  Debug.Log("Ok");
+       // currentHealth -= attackDetails;
+        Debug.Log("Ok");
         playerFacingDirection = pc.GetFacingDirection();
       //  Instantiate(hitParticle, Slime.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
 

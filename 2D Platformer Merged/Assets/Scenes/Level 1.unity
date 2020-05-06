@@ -1351,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &319821827
 Transform:
   m_ObjectHideFlags: 0
@@ -2617,7 +2617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605194860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.5, y: -0.073543586, z: 0.033145525}
+  m_LocalPosition: {x: -89.19995, y: 19.899994, z: 0.03314209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1985350501}
@@ -2646,7 +2646,8 @@ MonoBehaviour:
   knockbackDeathSpeedY: 8
   deathTorque: 1
   applyKnockback: 1
-  HitParticle: {fileID: 0}
+  HitParticle: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
+    type: 3}
 --- !u!1 &609265443
 GameObject:
   m_ObjectHideFlags: 0
@@ -6863,7 +6864,7 @@ MonoBehaviour:
     spaceCount: 0
     wordCount: 1
     linkCount: 0
-    lineCount: 12
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -7472,7 +7473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1515498914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7493,7 +7494,8 @@ MonoBehaviour:
   knockbackDeathSpeedY: 8
   deathTorque: 1
   applyKnockback: 1
-  HitParticle: {fileID: 0}
+  HitParticle: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
+    type: 3}
 --- !u!4 &1515498915
 Transform:
   m_ObjectHideFlags: 0
@@ -7502,7 +7504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515498913}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.04, y: -0.073543586, z: 0.033145525}
+  m_LocalPosition: {x: -91.7, y: 20.2, z: 0.033145525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1227104203}
@@ -43252,7 +43254,7 @@ GameObject:
   - component: {fileID: 1985350503}
   - component: {fileID: 1985350502}
   m_Layer: 9
-  m_Name: Dumb
+  m_Name: Alive
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43266,7 +43268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985350500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.337, y: 1.036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 605194861}
@@ -44156,7 +44158,7 @@ PrefabInstance:
     - target: {fileID: 5229916852825183585, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
       propertyPath: m_Name
-      value: Dumb
+      value: Alive
       objectReference: {fileID: 0}
     - target: {fileID: 5229916854390596672, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
@@ -44171,12 +44173,12 @@ PrefabInstance:
     - target: {fileID: 5229916854390596673, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.98
+      value: -94.69
       objectReference: {fileID: 0}
     - target: {fileID: 5229916854390596673, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.073543586
+      value: 20.08
       objectReference: {fileID: 0}
     - target: {fileID: 5229916854390596673, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
         type: 3}
@@ -44223,5 +44225,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229916854390596674, guid: d80048e0c006bbd4c87b5d0e8dadf06f,
+        type: 3}
+      propertyPath: HitParticle
+      value: 
+      objectReference: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d80048e0c006bbd4c87b5d0e8dadf06f, type: 3}
