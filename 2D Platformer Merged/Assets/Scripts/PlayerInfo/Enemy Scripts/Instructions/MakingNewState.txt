@@ -6,3 +6,5 @@
 
 Example Enemy Detecting Player
 1) Go to States folder-> create new C# Script (Player Detected State)
+2) Go to States folder -> Data Folder -> create new C# script
+3)Go to EnemySpecific Folder -> Enemy1
