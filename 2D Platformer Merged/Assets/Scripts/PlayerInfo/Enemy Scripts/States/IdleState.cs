@@ -14,12 +14,18 @@ public IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolN
         this.stateData = stateData;
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+    }
+
     public override void Enter()
     {
         base.Enter();
         entity.SetVelocity(0f);
         isIdleTimeOver = false;
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+       
         SetRandomIdleTime();
     }
 
@@ -34,7 +40,7 @@ public IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolN
         }
     }
 
-    
+ 
 
     public override void LogicUpdate()
     {
@@ -45,15 +51,20 @@ public IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolN
         }
     }
 
+
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+         
     }
+
+
     public void SetFlipAfterIdle(bool flip)
     {
         flipAfterIdle = flip;
     }
+
+
 
     private void SetRandomIdleTime()
     {
