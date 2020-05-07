@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -101,6 +102,10 @@ public class PlayerController : MonoBehaviour {
 
     public void knockBack(int direction)
     {
+        anim.SetBool("L", true);
+        if (anim.GetBool("L")== true){
+            UnityEngine.Debug.Log("in KnockBack");
+        }
         knockback = true;
         knockbackStartTime = Time.time;
         rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);
@@ -109,9 +114,11 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckKnockback()
     {
+        anim.SetBool("L", false);
         if (Time.time >= knockbackStartTime + knockbackDuation && knockback)
         {
             knockback = false;
+          //  anim.SetBool("L", false);
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
         }
     }
@@ -165,7 +172,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isWallSliding", isWallSliding);
-
+        
 
 
         anim.SetBool("isHurting", isHurting); // new (06 may 2020)
