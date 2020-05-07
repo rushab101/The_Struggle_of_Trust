@@ -14,6 +14,8 @@ public class Entity : MonoBehaviour
     private Transform wallCheck;
      [SerializeField]
     private Transform ledgeCheck;
+      [SerializeField]
+    private Transform playerCheck;
 
 
     private Vector2 velocityWorkspace;
@@ -49,6 +51,16 @@ public class Entity : MonoBehaviour
     public virtual bool CheckLedge()
     {
    return Physics2D.Raycast(ledgeCheck.position,Vector2.down,entityData.ledgeCheckDistance,entityData.whatIsGround);
+    }
+
+    public virtual bool CheckPlayerInMinAgroRange() //Shorter Distance Check between Player and enemy
+    {
+        return Physics2D.Raycast(playerCheck.position,aliveGO.transform.right,entityData.minAgroDistance,entityData.whatIsPlayer);
+    }
+
+    public virtual bool CheckPlayerinMaxAgroRange()
+    {
+        return Physics2D.Raycast(playerCheck.position,aliveGO.transform.right,entityData.maxAgroDistance,entityData.whatIsPlayer);
     }
 
     public virtual void Flip()

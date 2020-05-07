@@ -1,0 +1,8 @@
+1) Create new state class (inherits State)
+2) Create state data class
+3) Create enemy specific state
+4) Declare state on enemy class
+5) Set up Animator
+
+Example Enemy Detecting Player
+1) Go to States folder-> create new C# Script (Player Detected State)
