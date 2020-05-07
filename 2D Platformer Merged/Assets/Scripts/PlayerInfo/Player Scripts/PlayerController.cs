@@ -114,11 +114,11 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckKnockback()
     {
-        anim.SetBool("L", false);
+       // anim.SetBool("L", false);
         if (Time.time >= knockbackStartTime + knockbackDuation && knockback)
         {
             knockback = false;
-          //  anim.SetBool("L", false);
+           anim.SetBool("L", false);
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
         }
     }
