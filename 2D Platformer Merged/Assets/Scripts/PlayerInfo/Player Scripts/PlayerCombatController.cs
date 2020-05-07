@@ -59,6 +59,11 @@ public class PlayerCombatController : MonoBehaviour {
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
                 anim.SetBool("isAttacking", isAttacking);
+
+                // play random animation (07 may 2020)
+                int index = UnityEngine.Random.Range(1, 5); // random number 
+                anim.Play("Attack" + index);
+                Invoke("ResetAttack", .15f);
             }
         }
 
@@ -66,6 +71,11 @@ public class PlayerCombatController : MonoBehaviour {
             // Wait for new input
             gotInput = false;
         }
+    }
+
+    //07 may 2020 (for rng attack anim)
+    private void ResetAttack() {
+        isAttacking = false;
     }
 
     private void CheckAttackHitbox() { // Detect damagable objects in a range
