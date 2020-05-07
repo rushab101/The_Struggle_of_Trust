@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackDuation: 0.25
-  knockbackSpeed: {x: 20, y: 10}
+  knockbackSpeed: {x: 10, y: 0}
   amountOfJumps: 1
   movementSpeed: 9
   jumpForce: 20
@@ -420,6 +420,7 @@ MonoBehaviour:
   jumpTimerSet: 0.15
   turnTimerSet: 0.1
   wallJumpTimerSet: 0.5
+  IEFFrames: 0
   wallHopDirection: {x: 0, y: 0}
   wallJumpDirection: {x: 1, y: 2}
   groundCheck: {fileID: 1183915148}
@@ -2878,7 +2879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &604089452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3126,7 +3127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &618878652
 Transform:
   m_ObjectHideFlags: 0

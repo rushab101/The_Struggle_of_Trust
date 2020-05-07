@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
         if (IEFFrames <= 10)
         {
             rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);// actually doing the knockback
-            IEFFrames = 150.0f;
+            IEFFrames = 300.0f;
             anim.SetBool("L", true);
             damagePlayer = true;
 
