@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
     private bool knockback;
     private bool isHurting; // new (06 may 2020)
     private bool isDead; // new (06 may 2020)
-
+    private bool damagePlayer;
 
     [SerializeField]
     private Vector2 knockbackSpeed;
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpTimerSet = 0.15f;
     public float turnTimerSet = 0.1f;
     public float wallJumpTimerSet = 0.5f;
+    public float IEFFrames = 0.0f;
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -102,26 +103,52 @@ public class PlayerController : MonoBehaviour {
 
     public void knockBack(int direction)
     {
-        anim.SetBool("L", true);
-        if (anim.GetBool("L")== true){
-            UnityEngine.Debug.Log("in KnockBack");
-        }
+        //anim.SetBool("L", true);
+       // if (anim.GetBool("L")== true){
+        //    UnityEngine.Debug.Log("in KnockBack");
+       // }
         knockback = true;
+       // IEFFrames = 100.0f;
         knockbackStartTime = Time.time;
-        rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);
+
+        UnityEngine.Debug.Log(IEFFrames);
+
+        if (IEFFrames <= 10)
+        {
+            rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);// actually doing the knockback
+            IEFFrames = 150.0f;
+            anim.SetBool("L", true);
+            damagePlayer = true;
+
+        }
+      
+       
 
     }
 
     private void CheckKnockback()
     {
        // anim.SetBool("L", false);
-        if (Time.time >= knockbackStartTime + knockbackDuation && knockback)
+        if (Time.time >= knockbackStartTime + knockbackDuation && knockback) // KnockBack is Over
         {
             knockback = false;
            anim.SetBool("L", false);
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
         }
+         if (IEFFrames > 10)
+        {
+            IEFFrames--;
+            damagePlayer = false;
+
+        }
+        
+        //  if (Time.time < knockbackStartTime + knockbackDuation && knockback)//Still in knockback Stage
+        //    {
+        //   IEFFrames--;
+        //   UnityEngine.Debug.Log(IEFFrames);
+        //  }
     }
+    
 
 
     public int GetFacingDirection() {
@@ -310,6 +337,11 @@ public class PlayerController : MonoBehaviour {
         UnityEngine.Debug.Log("GAME OVER!");
         SceneManager.LoadScene("Game Over");
 
+    }
+
+    public float DamageOrNot()
+    {
+        return IEFFrames;
     }
 
     private void OnDrawGizmos() {

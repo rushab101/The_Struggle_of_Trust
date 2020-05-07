@@ -18,6 +18,7 @@ public class PlayerCombatController : MonoBehaviour {
     private bool gotInput;
     private bool isAttacking;
     private bool isFirstAttack;
+    private float canGetHit;
 
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
     private float[] attackDetails = new float[2];
@@ -90,7 +91,13 @@ public class PlayerCombatController : MonoBehaviour {
     {
         int direction;
         //Damage our player
-        FindObjectOfType<PlayerHealth>().EndGame();
+        canGetHit = FindObjectOfType<PlayerController>().DamageOrNot();
+        UnityEngine.Debug.Log(canGetHit);
+        if (canGetHit <= 10)
+        {
+            FindObjectOfType<PlayerHealth>().EndGame();
+        }
+        // 
 
 
         if (attackDetails[1] < transform.position.x)
