@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: a285bdeb0522d744795d591589dd628a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3847943250117979209
+    second: Skeleton Attack_0
+  - first:
+      213: -529646562509220946
+    second: Skeleton Attack_1
+  - first:
+      213: -7138319701972840668
+    second: Skeleton Attack_2
+  - first:
+      213: 3291756735606063980
+    second: Skeleton Attack_3
+  - first:
+      213: -8264367007930756521
+    second: Skeleton Attack_4
+  - first:
+      213: 6926094506201588144
+    second: Skeleton Attack_5
+  - first:
+      213: 3844375112415055413
+    second: Skeleton Attack_6
+  - first:
+      213: -6815739294338704575
+    second: Skeleton Attack_7
+  - first:
+      213: 7627512933118868929
+    second: Skeleton Attack_8
+  - first:
+      213: -7601260514028395475
+    second: Skeleton Attack_9
+  - first:
+      213: -823298783069048056
+    second: Skeleton Attack_10
+  - first:
+      213: 368417881747873077
+    second: Skeleton Attack_11
+  - first:
+      213: 1424786261180037135
+    second: Skeleton Attack_12
+  - first:
+      213: 7777100389646448644
+    second: Skeleton Attack_13
+  - first:
+      213: 951018012323566522
+    second: Skeleton Attack_14
+  - first:
+      213: 2023176062729479260
+    second: Skeleton Attack_15
+  - first:
+      213: -134369724413475220
+    second: Skeleton Attack_16
+  - first:
+      213: -4541977737240093436
+    second: Skeleton Attack_17
+  - first:
+      213: -6244284412213251510
+    second: Skeleton Attack_18
+  - first:
+      213: 6978996606712860755
+    second: Skeleton Attack_19
+  - first:
+      213: 3008964270953196486
+    second: Skeleton Attack_20
+  - first:
+      213: -5385811977247641624
+    second: Skeleton Attack_21
+  - first:
+      213: 1820079202474380281
+    second: Skeleton Attack_22
+  - first:
+      213: 834374799674731707
+    second: Skeleton Attack_23
+  - first:
+      213: -3404122265967070540
+    second: Skeleton Attack_24
+  - first:
+      213: 7952820107865262526
+    second: Skeleton Attack_25
+  - first:
+      213: -6546767552723300042
+    second: Skeleton Attack_26
+  - first:
+      213: 2293400817835622309
+    second: Skeleton Attack_27
+  - first:
+      213: -4958604895029561277
+    second: Skeleton Attack_28
+  - first:
+      213: -4080951077498473148
+    second: Skeleton Attack_29
+  - first:
+      213: 6770636070485142917
+    second: Skeleton Attack_30
+  - first:
+      213: 5186065039056153598
+    second: Skeleton Attack_31
+  - first:
+      213: -3795251993776732835
+    second: Skeleton Attack_32
+  - first:
+      213: -3070274466495672618
+    second: Skeleton Attack_33
+  - first:
+      213: 2661703335823924769
+    second: Skeleton Attack_34
+  - first:
+      213: 7885265440688933174
+    second: Skeleton Attack_35
+  - first:
+      213: -8448231208357179382
+    second: Skeleton Attack_36
+  - first:
+      213: 1307321827166943975
+    second: Skeleton Attack_37
+  - first:
+      213: -529250437850313130
+    second: Skeleton Attack_38
+  - first:
+      213: 5614117514993653802
+    second: Skeleton Attack_39
+  - first:
+      213: -3602409579256144754
+    second: Skeleton Attack_40
+  - first:
+      213: -5213732978924978585
+    second: Skeleton Attack_41
+  - first:
+      213: -2875547399896783264
+    second: Skeleton Attack_42
+  - first:
+      213: -4702434809073939630
+    second: Skeleton Attack_43
+  - first:
+      213: -1037105282979953994
+    second: Skeleton Attack_44
+  - first:
+      213: -6153448789304644846
+    second: Skeleton Attack_45
+  - first:
+      213: -2227239196122366971
+    second: Skeleton Attack_46
+  - first:
+      213: 359793468486901428
+    second: Skeleton Attack_47
+  - first:
+      213: 8650649756223558735
+    second: Skeleton Attack_48
+  - first:
+      213: 831223622572679703
+    second: Skeleton Attack_49
+  - first:
+      213: 8275011083165947767
+    second: Skeleton Attack_50
+  - first:
+      213: 5742485213158964796
+    second: Skeleton Attack_51
+  - first:
+      213: 6900214209460500632
+    second: Skeleton Attack_52
+  - first:
+      213: -2292913237270765617
+    second: Skeleton Attack_53
+  - first:
+      213: 4489972432816918009
+    second: Skeleton Attack_54
+  - first:
+      213: 6799931182045576767
+    second: Skeleton Attack_55
+  - first:
+      213: 405522640514022202
+    second: Skeleton Attack_56
+  - first:
+      213: -2050271341933107121
+    second: Skeleton Attack_57
+  - first:
+      213: -8010645153933491732
+    second: Skeleton Attack_58
+  - first:
+      213: 2381919907575471154
+    second: Skeleton Attack_59
+  - first:
+      213: 6700912569489498477
+    second: Skeleton Attack_60
+  - first:
+      213: -6615370771847720252
+    second: Skeleton Attack_61
+  - first:
+      213: 838983612538158549
+    second: Skeleton Attack_62
+  - first:
+      213: 5920652105891681783
+    second: Skeleton Attack_63
+  - first:
+      213: 2324360077503278637
+    second: Skeleton Attack_64
+  - first:
+      213: 8272751633153541252
+    second: Skeleton Attack_65
+  - first:
+      213: 917203201942415371
+    second: Skeleton Attack_66
+  - first:
+      213: 3066950875205344109
+    second: Skeleton Attack_67
+  - first:
+      213: -3571333940925378912
+    second: Skeleton Attack_68
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
