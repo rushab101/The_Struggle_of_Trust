@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_ChargeState : ChargeState
+public class E1_StunState : StunState
 {
     private Enemy1 enemy;
-    public E1_ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, stateData)
+    public E1_StunState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_StunState stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -20,31 +20,29 @@ public class E1_ChargeState : ChargeState
         base.Enter();
     }
 
+
     public override void Exit()
     {
         base.Exit();
     }
 
+   
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-         if (performCloseRangeAction)
+        if (isStunTimeOver)
+        {
+            if (performCloseRangeAction)
             {
                 stateMachine.ChangeState(enemy.meleeAttackState);
             }
-       else if (!isDetectingLedge || isDetectingWall)
-        {
-            stateMachine.ChangeState(enemy.lookForPlayerState);
-        }
-        else if (isChargeTimeOver)
-        {
-           
-           if (isPlayerInMinAgroRange)
+            else if (isPlayerInMinAgroRange)
             {
-                stateMachine.ChangeState(enemy.playerDetectedState);
+                stateMachine.ChangeState(enemy.chargeState);
             }
-            else 
+            else
             {
+                enemy.lookForPlayerState.SetTurnImmediately(true);
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
         }
@@ -54,4 +52,6 @@ public class E1_ChargeState : ChargeState
     {
         base.PhysicsUpdate();
     }
+
+  
 }

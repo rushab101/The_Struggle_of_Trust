@@ -10,6 +10,8 @@ public class PlayerCombatController : MonoBehaviour {
     private bool combatEnabled;
     [SerializeField]
     private float inputTimer, attack1Radius, attack1Damage;
+     [SerializeField]
+     private float stunDamageAmount =1f;
     [SerializeField]
     private Transform attack1HitBoxPos;
     [SerializeField]
@@ -83,6 +85,7 @@ public class PlayerCombatController : MonoBehaviour {
 
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
 
 
 
