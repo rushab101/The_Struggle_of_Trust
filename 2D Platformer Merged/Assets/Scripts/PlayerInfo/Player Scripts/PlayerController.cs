@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
+
+    public ParticleSystem dust; // 07 may 2020
+
     private float movementInputDirection;
     private float jumpTimer;
     private float turnTimer;
@@ -91,6 +94,10 @@ public class PlayerController : MonoBehaviour {
         CheckSurroundings();
     }
 
+    //07 may 2020
+    private void CreateDust() {
+        dust.Play();
+    }
 
     private void CheckIfWallSliding() {
         if (isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0) {
@@ -273,6 +280,7 @@ public class PlayerController : MonoBehaviour {
 
     private void NormalJump() {
         if (canNormalJump) {
+            CreateDust(); //07 may 23020
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             amountOfJumpsLeft--;
             jumpTimer = 0;
@@ -283,6 +291,7 @@ public class PlayerController : MonoBehaviour {
 
     private void WallJump() {
         if (canWallJump) {
+            CreateDust(); //07 may 23020
             rb.velocity = new Vector2(rb.velocity.x, 0.0f);
             isWallSliding = false;
             amountOfJumpsLeft = amountOfJumps;
@@ -326,6 +335,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Flip() {
         if (!isWallSliding && canFlip && !knockback) {
+            CreateDust(); // 07 may 2020
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
