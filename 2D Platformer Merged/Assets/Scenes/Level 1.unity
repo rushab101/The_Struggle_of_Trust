@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 261221884}
   knockbackDuation: 0.25
-  knockbackSpeed: {x: 10, y: 0}
+  knockbackSpeed: {x: 10, y: 20}
   amountOfJumps: 1
   movementSpeed: 9
   jumpForce: 20

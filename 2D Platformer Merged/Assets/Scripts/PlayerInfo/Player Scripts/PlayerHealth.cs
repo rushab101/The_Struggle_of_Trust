@@ -58,7 +58,7 @@ public class PlayerHealth : MonoBehaviour {
     public void EndGame() {
         UnityEngine.Debug.Log("Went to here\n");
         health--;
-        UnityEngine.Debug.Log(health);
+        UnityEngine.Debug.Log("Health left: " + health);
         if (health <= 0)
         {
             GameOver = true;
