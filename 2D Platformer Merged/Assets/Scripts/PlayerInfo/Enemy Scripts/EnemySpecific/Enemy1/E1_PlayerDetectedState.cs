@@ -35,6 +35,10 @@ public class E1_PlayerDetectedState : PlayerDetectedState
           //  enemy.idleState.SetFlipAfterIdle(false);
             stateMachine.ChangeState(enemy.chargeState);
         }
+        else if (!isPlayerinMaxAgroRange)
+        {
+            stateMachine.ChangeState(enemy.lookForPlayerState);
+        }
     }
 
     

@@ -47117,6 +47117,8 @@ MonoBehaviour:
   moveStateData: {fileID: 11400000, guid: c53874dd43bf0a0488f7fed0bea0682b, type: 2}
   playerDetectedData: {fileID: 11400000, guid: 7b7078146ed7350458c4cf604cbce0d0, type: 2}
   chargeStateData: {fileID: 11400000, guid: 852974d5ccde800409453c8225d24ef2, type: 2}
+  lookForPlayerStateData: {fileID: 11400000, guid: 550f1dd3d08e8ff4b9a47d4908b267bb,
+    type: 2}
 --- !u!1 &2049824433
 GameObject:
   m_ObjectHideFlags: 0

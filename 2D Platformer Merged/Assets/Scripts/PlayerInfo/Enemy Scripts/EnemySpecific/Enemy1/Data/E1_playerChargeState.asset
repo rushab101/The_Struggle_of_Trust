@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: E1_playerChargeState
   m_EditorClassIdentifier: 
   chargeSpeed: 10
-  chargeTime: 2
+  chargeTime: 3
