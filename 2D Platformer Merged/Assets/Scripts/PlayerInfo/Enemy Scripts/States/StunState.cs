@@ -10,6 +10,8 @@ public class StunState : State
     protected bool isMovementStopped;
     protected bool performCloseRangeAction;
     protected bool isPlayerInMinAgroRange;
+    protected bool LedgeCheck;
+    protected bool wallCheck;
     public StunState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_StunState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -18,7 +20,9 @@ public class StunState : State
     public override void DoChecks()
     {
         base.DoChecks();
+        LedgeCheck = entity.CheckLedge();
         isGrounded = entity.CheckGround();
+        wallCheck = entity.CheckWall();
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
@@ -44,6 +48,12 @@ public class StunState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+       if (!LedgeCheck )
+        {
+            stateData.stunKnockBackAngle.x=0;
+            stateData.stunKnockBackAngle.y=0;
+        }
+        
         if (Time.time >= startTime + stateData.stunTime)
         {
             isStunTimeOver = true;

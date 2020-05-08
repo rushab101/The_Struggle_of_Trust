@@ -8964,7 +8964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793128790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: -0.6, z: 0}
+  m_LocalPosition: {x: 0.446, y: -1.134, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1479277290}
@@ -10402,7 +10402,7 @@ MonoBehaviour:
   wallCheckDistance: 0.55
   movementSpeed: 3
   maxHealth: 20
-  knockbackDuration: 0.1
+  knockbackDuration: 1
   lastTouchDamageTime: 0
   touchDamageCoolDown: 0.2
   touchDamage: 1
@@ -10417,7 +10417,7 @@ MonoBehaviour:
   whatisPlayer:
     serializedVersion: 2
     m_Bits: 2048
-  knockbackSpeed: {x: 10, y: 5}
+  knockbackSpeed: {x: 20, y: 0}
   hitParticle: {fileID: 980967008157153808, guid: 81034b2ad0cbe6e4892c8d4a8c0dff32,
     type: 3}
   deathChunckParticle: {fileID: 5258076348934243929, guid: 27e9920b0ca821b47b8b10c6b101ea73,

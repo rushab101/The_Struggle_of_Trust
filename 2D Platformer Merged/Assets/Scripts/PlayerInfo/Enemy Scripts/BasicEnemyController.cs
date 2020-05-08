@@ -22,7 +22,7 @@ public class BasicEnemyController : MonoBehaviour
         touchDamageBotLeft,
         touchDamageTopRight;
 
-    private float[] attackDetails = new float[2];
+    AttackDetails attackDetails;
 
     private bool groundDetected, wallDetected;
 
@@ -170,11 +170,11 @@ public class BasicEnemyController : MonoBehaviour
     //-----Other functions --///
 
 
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
-        currentHealth -= attackDetails[0];
+        currentHealth -= attackDetails.damageAmount;
         Instantiate(hitParticle, Slime.transform.position,Quaternion.Euler(0.0f,0.0f,UnityEngine.Random.Range(0.0f, 360.0f)));
-        if (attackDetails[1] > Slime.transform.position.x)
+        if (attackDetails.position.x  > Slime.transform.position.x)
         {
             damageDirection = -1;
         }
@@ -207,8 +207,7 @@ public class BasicEnemyController : MonoBehaviour
             if (hit != null)
             {
                 lastTouchDamageTime = Time.time;
-                attackDetails[0] = touchDamage;
-                attackDetails[1] = Slime.transform.position.x;
+       
                 hit.SendMessage("Damage", attackDetails);
             }
         }
