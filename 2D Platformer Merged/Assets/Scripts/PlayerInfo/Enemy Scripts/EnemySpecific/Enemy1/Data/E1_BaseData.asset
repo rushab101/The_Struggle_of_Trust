@@ -16,6 +16,7 @@ MonoBehaviour:
   ledgeCheckDistance: 1.4
   minAgroDistance: 4
   maxAgroDistance: 5
+  closeRangeActionDistance: 3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

@@ -21,7 +21,7 @@ public class PlayerCombatController : MonoBehaviour {
     private float canGetHit;
 
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails;
 
     private Animator anim;
     private PlayerController PC;
@@ -80,8 +80,9 @@ public class PlayerCombatController : MonoBehaviour {
 
     private void CheckAttackHitbox() { // Detect damagable objects in a range
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
-        attackDetails[0] = attack1Damage;
-        attackDetails[1] = transform.position.x;
+
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
 
 
 
@@ -97,10 +98,11 @@ public class PlayerCombatController : MonoBehaviour {
         anim.SetBool("attack1", false);
     }
 
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
         int direction;
         //Damage our player
+        //PS.DecreaseHealth(attackDetails.damageAmount); // TODO: 
         canGetHit = FindObjectOfType<PlayerController>().DamageOrNot();
         UnityEngine.Debug.Log(canGetHit);
         if (canGetHit <= 10)
@@ -110,7 +112,7 @@ public class PlayerCombatController : MonoBehaviour {
         // 
 
 
-        if (attackDetails[1] < transform.position.x)
+        if (attackDetails.position.x < transform.position.x)
         {
             direction = 1;
         }

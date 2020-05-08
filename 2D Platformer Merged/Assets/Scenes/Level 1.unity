@@ -11893,6 +11893,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1243517676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243517677}
+  m_Layer: 9
+  m_Name: MeleeAttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243517677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243517676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.11, y: -0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1479277290}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1247699061
 GameObject:
   m_ObjectHideFlags: 0
@@ -13160,6 +13190,7 @@ GameObject:
   - component: {fileID: 1479277293}
   - component: {fileID: 1479277292}
   - component: {fileID: 1479277291}
+  - component: {fileID: 1479277295}
   m_Layer: 9
   m_Name: Slime
   m_TagString: Enemy
@@ -13182,6 +13213,7 @@ Transform:
   - {fileID: 1586822855}
   - {fileID: 621719071}
   - {fileID: 1866734699}
+  - {fileID: 1243517677}
   m_Father: {fileID: 2044291450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13301,6 +13333,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1479277295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479277289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a63fb1fd0d7454ba9eeb9a33b48552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1497192240
 GameObject:
   m_ObjectHideFlags: 0
@@ -51192,7 +51236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866734698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.298, y: -0.663, z: 0}
+  m_LocalPosition: {x: -0.298, y: -0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1479277290}
@@ -52047,6 +52091,9 @@ MonoBehaviour:
   chargeStateData: {fileID: 11400000, guid: 852974d5ccde800409453c8225d24ef2, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 550f1dd3d08e8ff4b9a47d4908b267bb,
     type: 2}
+  meleeAttackStateData: {fileID: 11400000, guid: 4aae3ad0eeb868747970e7d66f02a141,
+    type: 2}
+  meleeAttackPosition: {fileID: 1243517677}
 --- !u!1 &2049824433
 GameObject:
   m_ObjectHideFlags: 0

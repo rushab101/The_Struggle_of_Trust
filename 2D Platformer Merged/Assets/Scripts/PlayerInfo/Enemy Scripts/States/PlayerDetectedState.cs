@@ -8,6 +8,7 @@ public class PlayerDetectedState : State
     protected bool isPlayerInminAgroRange;
     protected bool isPlayerinMaxAgroRange;
     protected bool performLongRangeAction;
+    protected bool performCloseRangeAction;
     public PlayerDetectedState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -18,6 +19,7 @@ public class PlayerDetectedState : State
         base.DoChecks();
         isPlayerInminAgroRange=entity.CheckPlayerInMinAgroRange();
      isPlayerinMaxAgroRange=entity.CheckPlayerinMaxAgroRange();
+     performCloseRangeAction=entity.CheckPlayerInCloseRangeAction();
     }
 
     public override void Enter()
