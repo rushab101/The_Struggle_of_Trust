@@ -467,6 +467,7 @@ MonoBehaviour:
   inputTimer: 0.3
   attack1Radius: 0.9
   attack1Damage: 10
+  stunDamageAmount: 1
   attack1HitBoxPos: {fileID: 491814627}
   whatIsDamageable:
     serializedVersion: 2
@@ -13214,6 +13215,7 @@ Transform:
   - {fileID: 621719071}
   - {fileID: 1866734699}
   - {fileID: 1243517677}
+  - {fileID: 1581675256}
   m_Father: {fileID: 2044291450}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13791,6 +13793,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1581675255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581675256}
+  m_Layer: 9
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581675256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581675255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2, y: -1.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1479277290}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586822854
 GameObject:
   m_ObjectHideFlags: 0
@@ -52085,6 +52117,7 @@ MonoBehaviour:
   wallCheck: {fileID: 1586822855}
   ledgeCheck: {fileID: 793128791}
   playerCheck: {fileID: 1866734699}
+  groundCheck: {fileID: 1581675256}
   idelstateData: {fileID: 11400000, guid: 819ad6af9dc59e842b00d3dd54170f58, type: 2}
   moveStateData: {fileID: 11400000, guid: c53874dd43bf0a0488f7fed0bea0682b, type: 2}
   playerDetectedData: {fileID: 11400000, guid: 7b7078146ed7350458c4cf604cbce0d0, type: 2}
@@ -52093,6 +52126,8 @@ MonoBehaviour:
     type: 2}
   meleeAttackStateData: {fileID: 11400000, guid: 4aae3ad0eeb868747970e7d66f02a141,
     type: 2}
+  stunStateData: {fileID: 11400000, guid: 62ee56c021a1c654c977ca208db6597d, type: 2}
+  deadStateData: {fileID: 11400000, guid: 448d64dcd1c9e414491ada0a51d5ce88, type: 2}
   meleeAttackPosition: {fileID: 1243517677}
 --- !u!1 &2049824433
 GameObject:
