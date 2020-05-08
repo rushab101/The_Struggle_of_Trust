@@ -126,11 +126,7 @@ public class PlayerController : MonoBehaviour {
             IEFFrames = 300.0f;
             anim.SetBool("L", true);
             damagePlayer = true;
-
         }
-      
-       
-
     }
 
     private void CheckKnockback()
@@ -156,8 +152,6 @@ public class PlayerController : MonoBehaviour {
         //  }
     }
     
-
-
     public int GetFacingDirection() {
         return facingDirection;
     }
