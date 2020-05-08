@@ -63,7 +63,7 @@ public class PlayerCombatController : MonoBehaviour {
                 anim.SetBool("isAttacking", isAttacking);
 
                 // play random animation (07 may 2020)
-                int index = UnityEngine.Random.Range(1, 5); // random number 
+                int index = UnityEngine.Random.Range(1, 4); // random number 
                 anim.Play("Attack" + index);
                 Invoke("ResetAttack", .15f);
             }
