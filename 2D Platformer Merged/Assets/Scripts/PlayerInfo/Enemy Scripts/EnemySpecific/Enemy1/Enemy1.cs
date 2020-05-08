@@ -12,6 +12,7 @@ public class Enemy1 : Entity
     public E1_MeleeAttackState meleeAttackState { get; private set; }
     public E1_StunState stunState { get; private set; }
     public E1_DeadState deadState { get; private set; }
+    public E1_HurtState hurtState {get; private set;}
 
 
     [SerializeField]
@@ -30,6 +31,8 @@ public class Enemy1 : Entity
     private D_StunState stunStateData;
     [SerializeField]
     private D_DeadState deadStateData;
+    [SerializeField]
+    private D_HurtState hurtStateData;
 
 
     [SerializeField]
@@ -47,6 +50,7 @@ public class Enemy1 : Entity
         meleeAttackState = new E1_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         stunState = new E1_StunState(this, stateMachine, "stun", stunStateData, this);
         deadState = new E1_DeadState(this,stateMachine,"dead",deadStateData,this);
+        hurtState = new E1_HurtState(this, stateMachine, "hurt",this);
         stateMachine.Initialize(movestate);
 
     }
@@ -67,6 +71,14 @@ public class Enemy1 : Entity
         {
             stateMachine.ChangeState(stunState);
         }
+        else if (PlayerDamaged && stateMachine.currentState != hurtState)
+        {
+          //  PlayerDamaged = false;
+            stateMachine.ChangeState(hurtState);
+            //stateMachine.ChangeState(idleState);
+            //Debug.Log("Went to here");
+        }
+
     
     }
 

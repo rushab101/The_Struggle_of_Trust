@@ -48,11 +48,7 @@ public class StunState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-       if (!LedgeCheck )
-        {
-            stateData.stunKnockBackAngle.x=0;
-            stateData.stunKnockBackAngle.y=0;
-        }
+      
         
         if (Time.time >= startTime + stateData.stunTime)
         {

@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public GameObject aliveGO { get; private set; }
     public AniimationToStateMachine atsm {get; private set;}
     public int lastDamageDirection {get; private set;}
+
     [SerializeField]
     private Transform wallCheck;
      [SerializeField]
@@ -28,6 +29,7 @@ public class Entity : MonoBehaviour
 
     private Vector2 velocityWorkspace;
     protected bool isStunned;
+    public bool PlayerDamaged;
     protected bool isDead;
 
     public virtual void Start()
@@ -49,6 +51,7 @@ public class Entity : MonoBehaviour
         {
             ResetStunResistance();
         }
+ //       ResetHurt();
     }
     public virtual void FixedUpdate()
     {
@@ -105,11 +108,20 @@ public class Entity : MonoBehaviour
     public virtual void ResetStunResistance()
     {
         isStunned = false;
+       // PlayerDamaged = false;
         currentStunResistance = entityData.stunResistance;
+    }
+    public virtual void ResetHurt()
+    {
+        
+    PlayerDamaged = false;
+        
+       
     }
     public virtual void Damage(AttackDetails attackDetails)
     {
         lastDamageTime = Time.time;
+        PlayerDamaged = true;
         currentStunResistance -=attackDetails.stunDamageAmount;
         currentHealth -= attackDetails.damageAmount;
         DamageHop(entityData.damageHopSpeed);

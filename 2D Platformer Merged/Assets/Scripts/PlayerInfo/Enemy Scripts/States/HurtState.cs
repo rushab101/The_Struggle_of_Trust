@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HurtState : State
 {
+    protected bool hurting;
+    protected bool complete;
+   
     public HurtState(Entity etity, FiniteStateMachine stateMachine, string animBoolName) : base(etity, stateMachine, animBoolName) {
     }
 
@@ -12,42 +15,29 @@ public class HurtState : State
     }
 
     public override void Enter() {
+
         base.Enter();
+     
     }
 
-    public override bool Equals(object obj) {
-        return base.Equals(obj);
-    }
 
     public override void Exit() {
         base.Exit();
     }
 
-    public override int GetHashCode() {
-        return base.GetHashCode();
-    }
 
     public override void LogicUpdate() {
         base.LogicUpdate();
+          hurting = entity.PlayerDamaged;
+         // entity.PlayerDamaged = false;
+
     }
 
     public override void PhysicsUpdate() {
         base.PhysicsUpdate();
     }
 
-    public override string ToString() {
-        return base.ToString();
-    }
+    
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
