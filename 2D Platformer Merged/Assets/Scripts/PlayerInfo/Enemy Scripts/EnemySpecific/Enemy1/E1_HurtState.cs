@@ -40,7 +40,7 @@ public class E1_HurtState : HurtState
 
             //Debug.Log("VALUE IS");
               Debug.Log(counter);
-          //  stateMachine.ChangeState(enemy.idleState);
+            stateMachine.ChangeState(enemy.lookForPlayerState);
            
         }
        

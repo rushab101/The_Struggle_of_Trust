@@ -74,7 +74,7 @@ public class Enemy1 : Entity
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
           //  PlayerDamaged = false;
-        //    stateMachine.ChangeState(hurtState);
+            stateMachine.ChangeState(hurtState);
             //stateMachine.ChangeState(idleState);
             //Debug.Log("Went to here");
         }
