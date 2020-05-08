@@ -412,7 +412,7 @@ MonoBehaviour:
   movementSpeed: 9
   jumpForce: 20
   groundCheckRadius: 0.475
-  wallCheckDistance: 0.8
+  wallCheckDistance: 0.85
   wallSlideSpeed: 1
   movementForceInAir: 30
   airDragMultiplier: 0.75
