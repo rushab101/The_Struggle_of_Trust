@@ -12,16 +12,16 @@ Current stable state as of May 9nd, 2020:
 + Spikes 
 
 Needs to be added still
--Save Systems
--Dialogue In game
--Movement(Dashing, Sliding, LedgeClimb)
--Advanced Range AI
--Missing particle for Hitstop
--Water Particle Effect
--Level Particle Effect
--Checkpoints
--Physics Objects
--Hearts to recover health
++Save Systems
++Dialogue In game
++Movement(Dashing, Sliding, LedgeClimb)
++Advanced Range AI
++Missing particle for Hitstop
++Water Particle Effect
++Level Particle Effect
++Checkpoints
++Physics Objects
++Hearts to recover health
 
 
 
