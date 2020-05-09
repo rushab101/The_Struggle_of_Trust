@@ -420,6 +420,10 @@ MonoBehaviour:
   movementSpeed: 9
   fasterMovementSpeed: 35
   jumpForce: 20
+  fJumpPressedRemember: 0
+  fJumpPressedRememberTime: 0.2
+  fGroundedRemeber: 0
+  fGroundRememberTime: 0.2
   groundCheckRadius: 0.475
   wallCheckDistance: 0.85
   wallSlideSpeed: 1
@@ -525,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50442cfa343ca3547b916dc830171637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitStopParticle: {fileID: 0}
+  HitStopParticle: {fileID: 622433145}
 --- !u!114 &50095509
 MonoBehaviour:
   m_ObjectHideFlags: 0
