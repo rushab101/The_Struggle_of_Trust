@@ -254,7 +254,7 @@ public class PlayerController : MonoBehaviour
             {
                 fGroundedRemeber=fGroundRememberTime;
             }
-            if (isGrounded || (amountOfJumpsLeft > 0 && isTouchingWall))
+            if (isGrounded || (amountOfJumpsLeft > 0 && !isTouchingWall))
             {
                 NormalJump();
             }
