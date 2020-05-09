@@ -72,12 +72,15 @@ public class PlayerCombatController : MonoBehaviour
         { // True if LMB/Mouse 1 is pressed
             if (combatEnabled)
             {
-               
+               FindObjectOfType<PlayerController>().rb.velocity= new Vector2(0,0) *0;
                 //Attempt to Combat
                 gotInput = true;
                 airAttack = false;
                 lastInputTime = Time.time;
             }
+           
+               
+            
         }
 
     }
@@ -98,8 +101,10 @@ public class PlayerCombatController : MonoBehaviour
 
                 // play random animation (07 may 2020)
                 int index = UnityEngine.Random.Range(1, 4); // random number 
+                FindObjectOfType<PlayerController>().rb.velocity= new Vector2(0,0);
                 anim.Play("Attack" + index);
                 Invoke("ResetAttack", .15f);
+                   FindObjectOfType<PlayerController>().isWalking= true;
             }
         }
         else if (airAttack)

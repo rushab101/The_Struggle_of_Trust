@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private int lastWallJumpDirection;
 
     private bool isFacingRight = true;
-    private bool isWalking;
+    public bool isWalking;
     public bool isGrounded;
     private bool isTouchingWall;
     private bool isWallSliding;
@@ -296,6 +296,13 @@ public class PlayerController : MonoBehaviour
                 turnTimer = turnTimerSet;
             }
         }
+        if ( Input.GetKeyDown(KeyCode.Z))
+        {
+            UnityEngine.Debug.Log("Error");
+             StartCoroutine(SwordAttackQUICK());
+                canMove = false;
+
+        }
 
         if (turnTimer >= 0)
         {
@@ -313,6 +320,15 @@ public class PlayerController : MonoBehaviour
             checkJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
         }
+    }
+
+     IEnumerator SwordAttackQUICK()
+    {
+        canMove = false;
+        
+        yield return new WaitForSeconds(0.1f);
+       
+        canMove = true;
     }
 
     private void CheckJump()

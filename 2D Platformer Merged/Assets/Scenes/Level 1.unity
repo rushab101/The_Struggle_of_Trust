@@ -412,6 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dust: {fileID: 261221884}
   knockbackDuation: 0.25
+  isWalking: 0
   isGrounded: 0
   knockbackSpeed: {x: 10, y: 20}
   rb: {fileID: 0}
@@ -657,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &55546158
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56552,7 +56553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1943905902
 Transform:
   m_ObjectHideFlags: 0
