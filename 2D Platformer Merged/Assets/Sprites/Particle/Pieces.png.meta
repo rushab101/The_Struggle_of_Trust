@@ -210,10 +210,10 @@ TextureImporter:
       name: Pieces_4
       rect:
         serializedVersion: 2
-        x: 22
-        y: 22
-        width: 6
-        height: 5
+        x: 23
+        y: 25
+        width: 1
+        height: 1
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

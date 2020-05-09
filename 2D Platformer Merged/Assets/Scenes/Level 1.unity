@@ -361,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50095498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1082.72, y: -510.5, z: 280.66705}
+  m_LocalPosition: {x: -1047.37, y: -495.59, z: 280.66705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1183915148}
@@ -499,9 +499,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  deathChunckParticle: {fileID: 5258076348934243929, guid: a0f82c28cacde39409d1784d8835f333,
+  deathChunckParticle: {fileID: 9101933404109482393, guid: 0d7bf6660612dda488bf4b2d700c95d1,
     type: 3}
-  deathBloodParticle: {fileID: 4090631466798184185, guid: 099540dc8dd5628418c2f369e86b6cb4,
+  deathBloodParticle: {fileID: 231112197258768274, guid: 099540dc8dd5628418c2f369e86b6cb4,
     type: 3}
 --- !u!111 &50095507
 Animation:
@@ -1375,7 +1375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206637671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140.08719, y: -9.194495, z: -9.958984}
+  m_LocalPosition: {x: 175.43716, y: 5.715508, z: -9.958984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1077307513}
@@ -7866,7 +7866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140.08734, y: -8.6997595, z: -9.958984}
+  m_LocalPosition: {x: 175.43716, y: 5.715508, z: -9.958984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 814199297}
@@ -16389,9 +16389,9 @@ MonoBehaviour:
   knockbackSpeed: {x: 10, y: 5}
   hitParticle: {fileID: 980967008157153808, guid: 81034b2ad0cbe6e4892c8d4a8c0dff32,
     type: 3}
-  deathChunckParticle: {fileID: 5258076348934243929, guid: 27e9920b0ca821b47b8b10c6b101ea73,
+  deathChunckParticle: {fileID: 8680843622117264720, guid: 7683e58689f667e41a90f5a6438c32c5,
     type: 3}
-  DeathBloodParticle: {fileID: 4090631466798184185, guid: 099540dc8dd5628418c2f369e86b6cb4,
+  DeathBloodParticle: {fileID: 5100174698813196958, guid: 8f6d5cc5b81855743a9d717c9a2dad27,
     type: 3}
 --- !u!1 &1088057326
 GameObject:
@@ -56553,7 +56553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1943905902
 Transform:
   m_ObjectHideFlags: 0
