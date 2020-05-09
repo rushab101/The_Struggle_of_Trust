@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 50095504}
   - component: {fileID: 50095506}
   - component: {fileID: 50095507}
+  - component: {fileID: 50095509}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -413,8 +414,11 @@ MonoBehaviour:
   knockbackDuation: 0.25
   isGrounded: 0
   knockbackSpeed: {x: 10, y: 20}
+  rb: {fileID: 0}
+  anim: {fileID: 0}
   amountOfJumps: 1
   movementSpeed: 9
+  fasterMovementSpeed: 20
   jumpForce: 20
   groundCheckRadius: 0.475
   wallCheckDistance: 0.85
@@ -475,6 +479,8 @@ MonoBehaviour:
   whatIsDamageable:
     serializedVersion: 2
     m_Bits: 512
+  gotInput: 0
+  airAttack: 0
 --- !u!114 &50095506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +525,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50442cfa343ca3547b916dc830171637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitStopParticle: {fileID: 622433145}
+  HitStopParticle: {fileID: 0}
+--- !u!114 &50095509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50095498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8288b847a1904fa4fb79c1c185f27f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &53245974
 GameObject:
   m_ObjectHideFlags: 0
@@ -8283,8 +8301,8 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.4
-  m_MaxParticleSize: 0.4
+  m_MinParticleSize: 0
+  m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -8493,8 +8511,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.8490566, g: 0.29236382, b: 0.29236382, a: 1}
-      maxColor: {r: 0.9339623, g: 0.75158054, b: 0.14538093, a: 1}
+      minColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -8715,7 +8733,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.43633232
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -9819,7 +9837,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300002, guid: 93f6ca69a747ade4a876f052b2d86ef5, type: 3}
+    - sprite: {fileID: 21300000, guid: 9256005e1d98dc24e84ed1f5e78d44cf, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

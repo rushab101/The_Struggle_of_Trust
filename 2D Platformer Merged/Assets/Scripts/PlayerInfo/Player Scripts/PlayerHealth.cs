@@ -58,11 +58,13 @@ public class PlayerHealth : MonoBehaviour {
     public void EndGame() {
         UnityEngine.Debug.Log("Went to here\n");
         health--;
+        FindObjectOfType<PlayerController>().anim.SetBool("playerDead", false);
         UnityEngine.Debug.Log("Health left: " + health);
         if (health <= 0)
         {
             GameOver = true;
             //PlayerisDead
+           
             FindObjectOfType<PlayerStats>().Die();
             //StartCoroutine(Test());
            // FindObjectOfType<PlayerController>().GameOver();
@@ -75,6 +77,8 @@ public class PlayerHealth : MonoBehaviour {
     {
         yield return new WaitForSeconds(1.5f);
         Debug.Log("Hi");
+
+
         SceneManager.LoadScene("Game Over");
     }
 

@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     private int currentHealth;
     private Respawn GM;
-   
+    private bool GameOver= false;
 
 
 
@@ -29,14 +29,35 @@ public class PlayerStats : MonoBehaviour
     }
 
     
+    void Update() {
+        if (GameOver)
+        {
+            StartCoroutine(Test());
+           // FindObjec.GameOver();
+        }
+
+    }
+
+    
     public void Die()
     {
         Instantiate(deathChunckParticle, transform.position, deathChunckParticle.transform.rotation);
         Instantiate(deathChunckParticle, transform.position, deathBloodParticle.transform.rotation);
+
+        FindObjectOfType<PlayerController>().anim.SetBool("playerDead", true);
      //   GM.RespawnIn();
-        Destroy(gameObject);
+       
         
 
+    }
+
+       IEnumerator Test()
+    {
+       // yield return new WaitForSeconds(0.5f);
+       // FindObjectOfType<PlayerController>().anim.SetBool("playerDead", true);
+        yield return new WaitForSeconds(1.0f);
+         Destroy(gameObject);
+       
     }
 
 }

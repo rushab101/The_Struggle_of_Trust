@@ -18,12 +18,13 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsDamageable;
 
-    private bool gotInput;
+    public bool gotInput;
     private float animationTimer;
-    private bool airAttack;
+    public bool airAttack;
     private bool isAttacking;
     private bool isFirstAttack;
     private float canGetHit;
+    
 
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
     private AttackDetails attackDetails;
@@ -42,6 +43,10 @@ public class PlayerCombatController : MonoBehaviour
     {
         CheckCombatInput();
         CheckAttacks();
+    }
+    public bool airChecker()
+    {
+        return airAttack;
     }
 
     private void CheckCombatInput()
@@ -67,7 +72,7 @@ public class PlayerCombatController : MonoBehaviour
         { // True if LMB/Mouse 1 is pressed
             if (combatEnabled)
             {
-                Debug.Log("WTF");
+               
                 //Attempt to Combat
                 gotInput = true;
                 airAttack = false;
@@ -142,9 +147,9 @@ public class PlayerCombatController : MonoBehaviour
     IEnumerator Test()
     {
         yield return new WaitForSeconds(0.35f);
-        Debug.Log("Hi");
+      //  Debug.Log("Hi");
         anim.SetBool("setAttack", false);
-        Debug.Log("flag 2");
+       // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
 

@@ -42,12 +42,13 @@ public class PlayerController : MonoBehaviour {
     private Vector2 knockbackSpeed;
 
 
-    private Rigidbody2D rb;
-    private Animator anim;
+    public Rigidbody2D rb;
+    public Animator anim;
 
     public int amountOfJumps = 1;
 
     public float movementSpeed = 10.0f;
+    public float fasterMovementSpeed = 11.0f;
     public float jumpForce = 16.0f;
     public float groundCheckRadius;
     public float wallCheckDistance;
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour {
     public float jumpTimerSet = 0.15f;
     public float turnTimerSet = 0.1f;
     public float wallJumpTimerSet = 0.5f;
+    private bool notRepeat = false;
     public float IEFFrames = 0.0f;
 
     public Vector2 wallHopDirection;
@@ -183,9 +185,11 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckMovementDirection() {
         if (isFacingRight && movementInputDirection < 0) {
+            UnityEngine.Debug.Log("Right Flip");
             Flip();
         }
         else if (!isFacingRight && movementInputDirection > 0) {
+              UnityEngine.Debug.Log("Left Flip");
             Flip();
         }
 
@@ -234,6 +238,7 @@ public class PlayerController : MonoBehaviour {
              movementInputDirection=0f;
 
     }
+    
     else
     {
         disableMove = false;
@@ -330,8 +335,20 @@ public class PlayerController : MonoBehaviour {
         if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback) {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        else if (canMove && !knockback) {
+        else if (canMove && !knockback && !Input.GetKeyDown(KeyCode.C)) {
+          //   StartCoroutine(Test());
+             anim.SetBool("spinMan", false);
+             notRepeat = false;
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+        }
+         else if ( Input.GetKeyDown(KeyCode.C) && !notRepeat) {
+             notRepeat = true;
+              //UnityEngine.Debug.Log("YAAAAA ");
+            anim.SetBool("spinMan", true);
+             
+            rb.velocity = new Vector2(fasterMovementSpeed * movementInputDirection, rb.velocity.y);
+         
+            
         }
 
         if (isWallSliding) {
@@ -339,6 +356,15 @@ public class PlayerController : MonoBehaviour {
                 rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
             }
         }
+    }
+
+     IEnumerator Test()
+    {
+         yield return new WaitForSeconds(0.35f);
+      //  Debug.Log("Hi");
+      // anim.SetBool("spinMan", false);
+       // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
     }
 
     public void DisableFlip() {
@@ -350,12 +376,22 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Flip() {
-        if (!isWallSliding && canFlip && !knockback) {
+        if (!isWallSliding && canFlip && !knockback && !FindObjectOfType<PlayerCombatController>().airAttack) {
             CreateDust(); // 07 may 2020
             facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
         }
+        else if (!isWallSliding && !knockback)
+        {
+             CreateDust(); // 07 may 2020
+            facingDirection *= -1;
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+
+        }
+       
+
     }
 
     public void GameOver()
