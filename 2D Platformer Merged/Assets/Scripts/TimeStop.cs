@@ -8,8 +8,14 @@ public class TimeStop : MonoBehaviour
     private float speed;
     private bool restoreTime;
 
+    //public GameObject HitStopParticle;
+    //private Animator anim;
+
+    public ParticleSystem HitStopParticle;
+
     void Start() {
         restoreTime = false;
+        //anim = GetComponentInChildren<Animator>();
     }
 
     void Update(){
@@ -24,6 +30,10 @@ public class TimeStop : MonoBehaviour
         }
     }
 
+/*    private void enableHitStopParticle() {
+        HitStopParticle.Play();
+    }*/
+
     public void StopTime(float changeTime, int restoreSpeed, float delay) {
 
         speed = restoreSpeed;
@@ -33,8 +43,15 @@ public class TimeStop : MonoBehaviour
             StartCoroutine(StartTimeAgain(delay));
         }
         else {
+           // Time.timeScale = 1f;
             restoreTime = true;
+            //anim.SetBool("Damaged", false);
         }
+
+        //HitStopParticle.Play();
+
+        //Instantiate(HitStopParticle, transform.position, Quaternion.identity);
+        //anim.SetBool("Damaged", true);
 
         Time.timeScale = changeTime;
     }
