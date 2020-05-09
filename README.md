@@ -11,7 +11,7 @@ Current stable state as of May 9nd, 2020:
 + HitStop
 + Spikes 
 
-Needs to be added still
+Needs to be added still:
 +Save Systems
 +Dialogue In game
 +Movement(Dashing, Sliding, LedgeClimb)
