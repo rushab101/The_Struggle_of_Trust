@@ -16,6 +16,7 @@ public class Spikes : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
+
             FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
             UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
 
