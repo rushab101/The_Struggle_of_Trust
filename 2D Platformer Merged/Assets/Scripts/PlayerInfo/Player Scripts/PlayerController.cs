@@ -326,7 +326,7 @@ public class PlayerController : MonoBehaviour
     {
         canMove = false;
         
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
        
         canMove = true;
     }
