@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     private bool isTouchingWall;
     private bool isWallSliding;
     private bool canNormalJump;
+    private bool disableMove;
     private bool canWallJump;
     private bool isAttemptingToJump;
     private bool checkJumpMultiplier;
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour {
         amountOfJumpsLeft = amountOfJumps;
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
+        disableMove = false;
     }
 
     // Update is called once per frame
@@ -219,6 +221,26 @@ public class PlayerController : MonoBehaviour {
                 isAttemptingToJump = true;
             }
         }
+       // if (Input.GetButtonDown("DownArrow"))
+      //  {
+     //       UnityEngine.Debug.Log("Went Down");
+            
+    //    }
+    if (Input.GetAxis ("Vertical") < 0) {
+     // Move to the right
+      //UnityEngine.Debug.Log("Went Down");
+    disableMove = true;
+         anim.SetBool("Down", true);
+             movementInputDirection=0f;
+
+    }
+    else
+    {
+        disableMove = false;
+        movementInputDirection = Input.GetAxisRaw("Horizontal");
+        anim.SetBool("Down", false);
+    } 
+    
 
         if (Input.GetButtonDown("Horizontal") && isTouchingWall) {
             if (!isGrounded && movementInputDirection != facingDirection) {
