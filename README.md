@@ -1,14 +1,27 @@
 # 2D Platformer Project
 
-Current stable state as of May 2nd, 2020:
-- 1 platform level (incomplete)
-- Background audio (changing when necessary)
-- Cinemachine camera movement
-- Basic movement (x, y, and wall sliding)
-- Wall jumping
-- Spawn points and kill boundaries (3 each)
-- Basic combat
-- Animations (2 attacks, idle, jump, run, wallslide, etc.)
-- Health system 
-- Timer
-- Target dummy (with animations and "physics")
+Current stable state as of May 9nd, 2020:
++ 1 Platform Test Level (Main Screen, GameOver and Platform Scences)
++ Background Audio + Saves value when closing game
++ Cinemachine camera movement + zoomed out camera
++ Movement (Running, 3 ground attacks, 2 Air Attacks, Wall Sliding, Crouching, Death Animation, Somersoult, Hurt)
++ Advanced Melee AI + Target Dummy
++ Health System
++ Timer
++ HitStop
++ Spikes 
+
+Needs to be added still
+-Save Systems
+-Dialogue In game
+-Movement(Dashing, Sliding, LedgeClimb)
+-Advanced Range AI
+-Missing particle for Hitstop
+-Water Particle Effect
+-Level Particle Effect
+-Checkpoints
+-Physics Objects
+-Hearts to recover health
+
+
+
