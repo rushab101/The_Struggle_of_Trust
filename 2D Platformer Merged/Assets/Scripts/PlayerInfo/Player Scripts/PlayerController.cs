@@ -350,6 +350,16 @@ public class PlayerController : MonoBehaviour {
          
             
         }
+        else if ( Input.GetKeyDown(KeyCode.V)) {
+           
+              //UnityEngine.Debug.Log("YAAAAA ");
+           
+             
+            rb.velocity = new Vector2(-22, rb.velocity.y);
+         
+            
+        }
+
 
         if (isWallSliding) {
             if (rb.velocity.y < -wallSlideSpeed) {

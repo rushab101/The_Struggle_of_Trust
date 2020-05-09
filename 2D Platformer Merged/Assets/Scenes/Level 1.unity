@@ -418,7 +418,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   amountOfJumps: 1
   movementSpeed: 9
-  fasterMovementSpeed: 20
+  fasterMovementSpeed: 35
   jumpForce: 20
   groundCheckRadius: 0.475
   wallCheckDistance: 0.85
