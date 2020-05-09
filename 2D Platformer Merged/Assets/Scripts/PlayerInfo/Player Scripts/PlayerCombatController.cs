@@ -18,6 +18,7 @@ public class PlayerCombatController : MonoBehaviour {
     private LayerMask whatIsDamageable;
 
     private bool gotInput;
+    private float animationTimer;
     private bool airAttack;
     private bool isAttacking;
     private bool isFirstAttack;
@@ -44,10 +45,16 @@ public class PlayerCombatController : MonoBehaviour {
     
      if (Input.GetKeyDown(KeyCode.Z) &&  !FindObjectOfType<PlayerController>().isGrounded)
         {
-            Debug.Log("MB1 was pressed.");
+            if (combatEnabled){
+                 Debug.Log("MB1 was pressed.");
             gotInput = false;
             airAttack = true;
                lastInputTime = Time.time;
+           // animationTimer = 0;
+
+
+            }
+           
         }
 
         //if (Input.GetKeyDown(KeyCode.V)) { // "V" is for attack
@@ -64,7 +71,6 @@ public class PlayerCombatController : MonoBehaviour {
     }
 
     private void CheckAttacks() { // Makes attack happen when there is an input
-
         if (gotInput) { //ground attack
             Debug.Log("WTF 1");
             if (!isAttacking) {
@@ -74,7 +80,7 @@ public class PlayerCombatController : MonoBehaviour {
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
                 anim.SetBool("isAttacking", isAttacking);
-
+                
                 // play random animation (07 may 2020)
                 int index = UnityEngine.Random.Range(1, 4); // random number 
                 anim.Play("Attack" + index);
@@ -82,10 +88,25 @@ public class PlayerCombatController : MonoBehaviour {
             }
         }
          else if (airAttack) { //ground attack
-          Debug.Log("WTF 2");
-                int index = UnityEngine.Random.Range(1, 2); // random number 
+          Debug.Log(animationTimer);
+    animationTimer++;
+ 
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                airAttack = false;
+                anim.SetBool("attack1", true);
+                 isFirstAttack = !isFirstAttack;
+                  anim.SetBool("firstAttack", isFirstAttack);
+                anim.SetBool("isAttacking", isAttacking);
+                anim.SetBool("setAttack", true);
+                 int index = UnityEngine.Random.Range(1,3); // random number 
                 anim.Play("AirAttack" + index);
                 Invoke("ResetAttack", .15f);
+                StartCoroutine(Test());
+                 
+            }
+               
         }
 
         
@@ -94,13 +115,25 @@ public class PlayerCombatController : MonoBehaviour {
             // Wait for new input
             gotInput = false;
             airAttack = false;
+           
         }
+       
 
 
 
 
 
 
+    }
+
+     
+    IEnumerator Test()
+    {
+        yield return new WaitForSeconds(0.35f);
+        Debug.Log("Hi");
+         anim.SetBool("setAttack", false);
+          Debug.Log("flag 2");
+       // SceneManager.LoadScene("Game Over");
     }
 
     //07 may 2020 (for rng attack anim)
