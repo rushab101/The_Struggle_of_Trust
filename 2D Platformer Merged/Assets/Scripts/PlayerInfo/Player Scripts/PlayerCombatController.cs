@@ -18,6 +18,7 @@ public class PlayerCombatController : MonoBehaviour {
     private LayerMask whatIsDamageable;
 
     private bool gotInput;
+    private bool airAttack;
     private bool isAttacking;
     private bool isFirstAttack;
     private float canGetHit;
@@ -41,25 +42,31 @@ public class PlayerCombatController : MonoBehaviour {
 
     private void CheckCombatInput() { //Checks for any combat related input from the player
     
+     if (Input.GetKeyDown(KeyCode.Z) &&  !FindObjectOfType<PlayerController>().isGrounded)
+        {
+            Debug.Log("MB1 was pressed.");
+            gotInput = false;
+            airAttack = true;
+               lastInputTime = Time.time;
+        }
 
         //if (Input.GetKeyDown(KeyCode.V)) { // "V" is for attack
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z)) { // True if LMB/Mouse 1 is pressed
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z) && FindObjectOfType<PlayerController>().isGrounded && !airAttack) { // True if LMB/Mouse 1 is pressed
             if (combatEnabled) {
-               // Debug.Log("MB1 was pressed.");
+                Debug.Log("WTF");
                 //Attempt to Combat
                 gotInput = true;
+                airAttack = false;
                 lastInputTime = Time.time;
             }
         }
-        else if (Input.GetKeyDown("S"))
-        {
-             Debug.Log("MB1 was pressed.");
-        }
+       
     }
 
     private void CheckAttacks() { // Makes attack happen when there is an input
-        if (gotInput) {
-            // Perform Attack 1
+
+        if (gotInput) { //ground attack
+            Debug.Log("WTF 1");
             if (!isAttacking) {
                 gotInput = false;
                 isAttacking = true;
@@ -74,11 +81,26 @@ public class PlayerCombatController : MonoBehaviour {
                 Invoke("ResetAttack", .15f);
             }
         }
+         else if (airAttack) { //ground attack
+          Debug.Log("WTF 2");
+                int index = UnityEngine.Random.Range(1, 2); // random number 
+                anim.Play("AirAttack" + index);
+                Invoke("ResetAttack", .15f);
+        }
+
+        
 
         if (Time.time >= lastInputTime + inputTimer) {
             // Wait for new input
             gotInput = false;
+            airAttack = false;
         }
+
+
+
+
+
+
     }
 
     //07 may 2020 (for rng attack anim)
