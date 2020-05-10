@@ -439,7 +439,7 @@ MonoBehaviour:
   dashSpeed: 50
   distanceBetweenImages: 0.3
   dashCoolDown: 0
-  spinCoolDown: 0.5
+  spinCoolDown: 1.5
   spinning: 0
   fJumpPressedRememberTime: 0.2
   fGroundedRemeber: 0
