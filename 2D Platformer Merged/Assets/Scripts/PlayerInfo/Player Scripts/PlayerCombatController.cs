@@ -15,6 +15,10 @@ public class PlayerCombatController : MonoBehaviour
     private float stunDamageAmount = 1f;
     [SerializeField]
     private Transform attack1HitBoxPos;
+     [SerializeField]
+    private Transform attack2HitBoxPos;
+      [SerializeField]
+    private Transform attack3HitBoxPos;
     [SerializeField]
     private LayerMask whatIsDamageable;
 
@@ -269,6 +273,41 @@ public class PlayerCombatController : MonoBehaviour
         }
     }
 
+    
+    private void CheckAttackHitbox2()
+    { // Detect damagable objects in a range
+        Collider2D[] detectedObjects2 = Physics2D.OverlapCircleAll(attack2HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
+
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
+
+
+
+        foreach (Collider2D collider in detectedObjects2)
+        {
+            collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
+
+        }
+    }
+
+       private void CheckAttackHitbox3()
+    { // Detect damagable objects in a range
+        Collider2D[] detectedObjects3 = Physics2D.OverlapCircleAll(attack3HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
+
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
+
+
+
+        foreach (Collider2D collider in detectedObjects3)
+        {
+            collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
+
+        }
+    }
+
     private void FinishAttack1()
     { // Called at end of attack animation, to let script know it's done
         isAttacking = false;
@@ -304,5 +343,7 @@ public class PlayerCombatController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);
+        Gizmos.DrawWireSphere(attack2HitBoxPos.position, attack1Radius);
+        Gizmos.DrawWireSphere(attack3HitBoxPos.position, attack1Radius);
     }
 }
