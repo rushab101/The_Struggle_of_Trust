@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public float fasterMovementSpeed = 11.0f;
     public float jumpForce = 16.0f;
     public float fJumpPressedRemember = 0;
+    public bool spinning = false;
        public float fJumpPressedRememberTime = 0.2f;
        public float fGroundedRemeber = 0;
        public float fGroundRememberTime = 0.2f;
@@ -99,6 +100,7 @@ public class PlayerController : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckKnockback();
+        checkifCanspin();
     }
 
     private void FixedUpdate()
@@ -407,31 +409,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void checkifCanspin()
+    {
+        if (Input.GetKeyDown(KeyCode.C) && !notRepeat)
+        {
+            anim.SetBool("spinMan", true);
+            notRepeat = true;
+            UnityEngine.Debug.Log("YAAAAA ");
+            spinning = true;
+            
+            rb.velocity = new Vector2(fasterMovementSpeed * movementInputDirection, rb.velocity.y);
+             StartCoroutine(Test());
+
+        }
+
+    }
+
     private void ApplyMovement()
     {
+       
+        
         if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback)
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-        else if (canMove && !knockback && !Input.GetKeyDown(KeyCode.C))
+       
+         else if (canMove && !knockback && !Input.GetKeyDown(KeyCode.C) && !spinning)
         {
-            //   StartCoroutine(Test());
+              StartCoroutine(Test());
+          //  anim.SetBool("spinMan", false);
             anim.SetBool("spinMan", false);
+            spinning = false;
             notRepeat = false;
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
-        else if (Input.GetKeyDown(KeyCode.C) && !notRepeat)
-        {
-            notRepeat = true;
-            //UnityEngine.Debug.Log("YAAAAA ");
-            anim.SetBool("spinMan", true);
-
-            rb.velocity = new Vector2(fasterMovementSpeed * movementInputDirection, rb.velocity.y);
-
-
-        }
-
-
 
 
         if (isWallSliding)
@@ -445,10 +456,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Test()
     {
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.05f);
         //  Debug.Log("Hi");
-        // anim.SetBool("spinMan", false);
-        // Debug.Log("flag 2");
+       spinning = false;
+         //UnityEngine.Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
 
