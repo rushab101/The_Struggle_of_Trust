@@ -117,12 +117,15 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0))
+        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0 ))
         {
             isWallSliding = true;
+            anim.SetBool("wallSlide",true);
         }
         else
         {
+            UnityEngine.Debug.Log("IS NOT WALL SLIDING");
+            anim.SetBool("wallSlide",false);
             isWallSliding = false;
         }
     }
@@ -209,6 +212,8 @@ public class PlayerController : MonoBehaviour
 
     private void CheckMovementDirection()
     {
+        
+
         if (isFacingRight && movementInputDirection < 0)
         {
             UnityEngine.Debug.Log("Right Flip");
@@ -220,7 +225,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (Mathf.Abs(rb.velocity.x) >= 0.01f)
+        if (Mathf.Abs(rb.velocity.x) >= 0.01f && rb.velocity.magnitude > 0 && !isTouchingWall)
         {
             isWalking = true;
         }
