@@ -301,8 +301,9 @@ public class PlayerController : MonoBehaviour
         if ( Input.GetKeyDown(KeyCode.Z))
         {
             UnityEngine.Debug.Log("Error");
+            canMove = false;
              StartCoroutine(SwordAttackQUICK());
-                canMove = false;
+                //canMove = false;
 
         }
 
@@ -326,9 +327,9 @@ public class PlayerController : MonoBehaviour
 
      IEnumerator SwordAttackQUICK()
     {
-        canMove = false;
+        //canMove = false;
         
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.45f);
        
         canMove = true;
     }
