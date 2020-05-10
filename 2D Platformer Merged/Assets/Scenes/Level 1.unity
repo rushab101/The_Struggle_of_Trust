@@ -156,7 +156,7 @@ Transform:
   - {fileID: 280917714}
   - {fileID: 50095501}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44747544
 GameObject:
@@ -414,6 +414,8 @@ MonoBehaviour:
   knockbackDuation: 0.25
   isWalking: 0
   isGrounded: 0
+  canMove: 0
+  canFlip: 0
   knockbackSpeed: {x: 10, y: 20}
   rb: {fileID: 0}
   anim: {fileID: 0}
@@ -15384,7 +15386,7 @@ Transform:
   - {fileID: 92918039}
   - {fileID: 1598990946}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957477787
 GameObject:
@@ -19959,7 +19961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707422676
 GameObject:
