@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0) || (Input.GetButtonDown("Horizontal") && isTouchingWall && !isGrounded))
+        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < 0))
         {
             isWallSliding = true;
         }
