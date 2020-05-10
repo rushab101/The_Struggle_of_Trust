@@ -31,8 +31,8 @@ public class PlayerController : MonoBehaviour
     private bool canWallJump;
     private bool isAttemptingToJump;
     private bool checkJumpMultiplier;
-    private bool canMove;
-    private bool canFlip;
+    public bool canMove;
+    public bool canFlip;
     private bool hasWallJumped;
     private bool knockback;
     private bool isHurting; // new (06 may 2020)

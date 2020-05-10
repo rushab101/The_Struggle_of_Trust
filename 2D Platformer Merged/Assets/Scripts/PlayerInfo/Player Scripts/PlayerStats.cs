@@ -43,8 +43,10 @@ public class PlayerStats : MonoBehaviour
     {
         Instantiate(deathChunckParticle, transform.position, deathChunckParticle.transform.rotation);
         Instantiate(deathChunckParticle, transform.position, deathBloodParticle.transform.rotation);
-
+        FindObjectOfType<PlayerController>().canMove= false;
+        FindObjectOfType<PlayerController>().canFlip = false;
         FindObjectOfType<PlayerController>().anim.SetBool("playerDead", true);
+        GameOver = true;
      //   GM.RespawnIn();
        
         
