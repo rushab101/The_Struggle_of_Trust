@@ -43,6 +43,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background 4
+    uniqueID: 2363896261
+    locked: 0
+  - name: Background 3
+    uniqueID: 4141574339
+    locked: 0
+  - name: Background 2
+    uniqueID: 3583119501
+    locked: 0
+  - name: Particle Back
+    uniqueID: 975696535
+    locked: 0
   - name: Background
     uniqueID: 400664625
     locked: 0
@@ -63,4 +75,10 @@ TagManager:
     locked: 0
   - name: Foreground Decorations
     uniqueID: 1211544955
+    locked: 0
+  - name: Particle Front
+    uniqueID: 938607987
+    locked: 0
+  - name: Front 1
+    uniqueID: 1690633557
     locked: 0
