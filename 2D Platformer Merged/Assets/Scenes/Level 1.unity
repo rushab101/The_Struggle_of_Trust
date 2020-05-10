@@ -427,7 +427,7 @@ MonoBehaviour:
   fGroundedRemeber: 0
   fGroundRememberTime: 0.2
   groundCheckRadius: 0.475
-  wallCheckDistance: 0.85
+  wallCheckDistance: 0.9
   wallSlideSpeed: 1
   movementForceInAir: 30
   airDragMultiplier: 0.75
