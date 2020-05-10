@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            UnityEngine.Debug.Log("IS NOT WALL SLIDING");
+         
             anim.SetBool("wallSlide",false);
             isWallSliding = false;
         }
@@ -276,7 +276,7 @@ public class PlayerController : MonoBehaviour
         //       UnityEngine.Debug.Log("Went Down");
 
         //    }
-        if (Input.GetAxis("Vertical") < 0)
+        if (Input.GetAxis("Vertical") < 0 && isGrounded && !FindObjectOfType<PlayerCombatController>().down_attack)
         {
             // Move to the right
             //UnityEngine.Debug.Log("Went Down");
@@ -303,9 +303,9 @@ public class PlayerController : MonoBehaviour
                 turnTimer = turnTimerSet;
             }
         }
-        if ( Input.GetKeyDown(KeyCode.Z))
+        if ( Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerCombatController>().down_attack && !FindObjectOfType<PlayerCombatController>().airAttack)
         {
-            UnityEngine.Debug.Log("Error");
+         //   UnityEngine.Debug.Log("Error");
             canMove = false;
              StartCoroutine(SwordAttackQUICK());
                 //canMove = false;

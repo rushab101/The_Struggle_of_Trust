@@ -24,7 +24,16 @@ public class PlayerCombatController : MonoBehaviour
     private bool isAttacking;
     private bool isFirstAttack;
     private float canGetHit;
-    
+    public bool down_attack;
+    private bool is_attacking;
+
+
+
+    public float fJumpPressedRemember = 0;
+    public float fJumpPressedRememberTime = 1.0f;
+
+
+
 
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
     private AttackDetails attackDetails;
@@ -51,12 +60,57 @@ public class PlayerCombatController : MonoBehaviour
 
     private void CheckCombatInput()
     { //Checks for any combat related input from the player
-
-        if (Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerController>().isGrounded)
-        {
-            if (combatEnabled)
+        /*
+           fJumpPressedRemember -= Time.deltaTime; //Dreacsing 
+            if (Input.GetButtonDown("Jump"))
             {
-                Debug.Log("MB1 was pressed.");
+             fJumpPressedRemember = fJumpPressedRememberTime;
+
+                if (fJumpPressedRemember > 0 )
+                {
+                           Debug.Log("Test.");
+                    if (Input.GetKeyDown(KeyCode.Z))
+                    {
+                           Debug.Log("Test 2");
+                    }
+                    else if (Input.GetKeyDown(KeyCode.DownArrow))
+                    {
+
+                           Debug.Log("Test 3");
+                    }
+                    fJumpPressedRemember = 0;
+                }
+                else
+                {
+                     Debug.Log("Test 4");
+                }
+
+
+
+            }
+           */
+
+
+        if (Input.GetKey(KeyCode.DownArrow) && !FindObjectOfType<PlayerController>().isGrounded)
+        {
+            if(combatEnabled &&(Input.GetKeyDown(KeyCode.Z) || ( Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.Z) ) || (Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.Z) && Input.GetKeyDown(KeyCode.Space) ) ) ) 
+            {
+               down_attack = true;
+            
+               airAttack = false;
+               gotInput = false;
+            }
+            else {
+                down_attack = false;
+            }
+
+        }
+
+       else if (Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerController>().isGrounded && !down_attack)
+        {
+            if (combatEnabled && !Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                Debug.Log("Up Attack.");
                 gotInput = false;
                 airAttack = true;
                 lastInputTime = Time.time;
@@ -66,21 +120,22 @@ public class PlayerCombatController : MonoBehaviour
             }
 
         }
+       
 
         //if (Input.GetKeyDown(KeyCode.V)) { // "V" is for attack
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z) && FindObjectOfType<PlayerController>().isGrounded && !airAttack)
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z) && FindObjectOfType<PlayerController>().isGrounded && !airAttack && !down_attack)
         { // True if LMB/Mouse 1 is pressed
             if (combatEnabled)
             {
-               FindObjectOfType<PlayerController>().rb.velocity= new Vector2(0,0) *0;
+                FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 0) * 0;
                 //Attempt to Combat
                 gotInput = true;
                 airAttack = false;
                 lastInputTime = Time.time;
             }
-           
-               
-            
+
+
+
         }
 
     }
@@ -89,7 +144,7 @@ public class PlayerCombatController : MonoBehaviour
     { // Makes attack happen when there is an input
         if (gotInput)
         { //ground attack
-            Debug.Log("WTF 1");
+            
             if (!isAttacking)
             {
                 gotInput = false;
@@ -101,15 +156,15 @@ public class PlayerCombatController : MonoBehaviour
 
                 // play random animation (07 may 2020)
                 int index = UnityEngine.Random.Range(1, 4); // random number 
-                FindObjectOfType<PlayerController>().rb.velocity= new Vector2(0,0);
+                FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 0);
                 anim.Play("Attack" + index);
                 Invoke("ResetAttack", .15f);
-                   FindObjectOfType<PlayerController>().isWalking= true;
+                FindObjectOfType<PlayerController>().isWalking = true;
             }
         }
-        else if (airAttack)
-        { //ground attack
-            Debug.Log(animationTimer);
+        else if (airAttack) //air up attack
+        { 
+
             animationTimer++;
 
             if (!isAttacking)
@@ -129,6 +184,28 @@ public class PlayerCombatController : MonoBehaviour
             }
 
         }
+        else if (down_attack) //air down attack
+        {
+            if (!isAttacking)
+            {
+                    Debug.Log("Down attack.");
+                isAttacking = true;
+                down_attack = false;
+                anim.SetBool("attack1", true);
+                isFirstAttack = !isFirstAttack;
+                anim.SetBool("firstAttack", isFirstAttack);
+                anim.SetBool("isAttacking", isAttacking);
+                anim.SetBool("downAttack", true);
+                //int index = UnityEngine.Random.Range(1, 2); // random number 
+                anim.Play("AirAttack3");
+                Invoke("ResetAttack", .15f);
+                StartCoroutine(Test2());
+
+            }
+
+        }
+
+
 
 
 
@@ -152,9 +229,20 @@ public class PlayerCombatController : MonoBehaviour
     IEnumerator Test()
     {
         yield return new WaitForSeconds(0.35f);
-      //  Debug.Log("Hi");
+        //  Debug.Log("Hi");
         anim.SetBool("setAttack", false);
-       // Debug.Log("flag 2");
+      //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
+        IEnumerator Test2()
+    {
+        yield return new WaitForSeconds(0.42f);
+        //  Debug.Log("Hi");
+      //  anim.SetBool("setAttack", false);
+        anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
 
