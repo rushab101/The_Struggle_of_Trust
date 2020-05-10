@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     private float turnTimer;
     private float wallJumpTimer;
     private float knockbackStartTime;
+    private float dashTimeLeft;
+    private float lastImageXpos;
+    private float lastDash = -100f;
     [SerializeField]
     private float knockbackDuation;
 
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
     private bool isHurting; // new (06 may 2020)
     private bool isDead; // new (06 may 2020)
     private bool damagePlayer;
+    private bool isDashing;
+    private bool isSlidding;
 
     [SerializeField]
     private Vector2 knockbackSpeed;
@@ -52,10 +57,14 @@ public class PlayerController : MonoBehaviour
     public float fasterMovementSpeed = 11.0f;
     public float jumpForce = 16.0f;
     public float fJumpPressedRemember = 0;
+    public float dashTime;
+    public float dashSpeed;
+    public float distanceBetweenImages;
+    public float dashCoolDown;
     public bool spinning = false;
-       public float fJumpPressedRememberTime = 0.2f;
-       public float fGroundedRemeber = 0;
-       public float fGroundRememberTime = 0.2f;
+    public float fJumpPressedRememberTime = 0.2f;
+    public float fGroundedRemeber = 0;
+    public float fGroundRememberTime = 0.2f;
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
@@ -92,7 +101,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         CheckInput();
         CheckMovementDirection();
         UpdateAnimations();
@@ -101,6 +110,8 @@ public class PlayerController : MonoBehaviour
         CheckJump();
         CheckKnockback();
         checkifCanspin();
+        CheckDash();
+        CheckSlide();
     }
 
     private void FixedUpdate()
@@ -117,15 +128,15 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0 ))
+        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0))
         {
             isWallSliding = true;
-            anim.SetBool("wallSlide",true);
+            anim.SetBool("wallSlide", true);
         }
         else
         {
-         
-            anim.SetBool("wallSlide",false);
+
+            anim.SetBool("wallSlide", false);
             isWallSliding = false;
         }
     }
@@ -212,7 +223,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckMovementDirection()
     {
-        
+
 
         if (isFacingRight && movementInputDirection < 0)
         {
@@ -251,7 +262,7 @@ public class PlayerController : MonoBehaviour
     private void CheckInput()
     {
         movementInputDirection = Input.GetAxisRaw("Horizontal");
-        fJumpPressedRemember -=Time.deltaTime;
+        fJumpPressedRemember -= Time.deltaTime;
         fGroundRememberTime -= Time.deltaTime;
         if (Input.GetButtonDown("Jump"))
         {
@@ -259,7 +270,7 @@ public class PlayerController : MonoBehaviour
             fJumpPressedRemember = fJumpPressedRememberTime;
             if (isGrounded)
             {
-                fGroundedRemeber=fGroundRememberTime;
+                fGroundedRemeber = fGroundRememberTime;
             }
             if (isGrounded || (amountOfJumpsLeft > 0 && !isTouchingWall))
             {
@@ -303,12 +314,12 @@ public class PlayerController : MonoBehaviour
                 turnTimer = turnTimerSet;
             }
         }
-        if ( Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerCombatController>().down_attack && !FindObjectOfType<PlayerCombatController>().airAttack)
+        if (Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerCombatController>().down_attack && !FindObjectOfType<PlayerCombatController>().airAttack)
         {
-         //   UnityEngine.Debug.Log("Error");
+            //   UnityEngine.Debug.Log("Error");
             canMove = false;
-             StartCoroutine(SwordAttackQUICK());
-                //canMove = false;
+            StartCoroutine(SwordAttackQUICK());
+            //canMove = false;
 
         }
 
@@ -328,14 +339,123 @@ public class PlayerController : MonoBehaviour
             checkJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
         }
+      /*  
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            UnityEngine.Debug.Log("In dashing");
+            if (Time.time >= (lastDash + dashCoolDown))
+            {
+                AttemptToDash();
+            }
+
+        }
+        */
+        if (Input.GetButtonDown("Dash"))
+        {
+            if (Time.time >= (lastDash + dashCoolDown))
+            {
+                AttemptToDash();
+            }
+
+        }
+
+         if (Input.GetKeyDown(KeyCode.V))
+        {
+            UnityEngine.Debug.Log("In dashing");
+            if (Time.time >= (lastDash + dashCoolDown))
+            {
+                AttemptToSlide();
+            }
+
+        }
+        
+
+
+    }
+    private void CheckDash()
+    {
+         
+        if (isDashing)
+        {
+            if (dashTimeLeft > 0)
+            {
+                canMove = false;
+                canFlip = false;
+                
+                rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
+                dashTimeLeft -= Time.deltaTime;
+                if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+                {
+                    UnityEngine.Debug.Log("Get values");
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImageXpos = transform.position.x;
+                }
+
+            }
+            if (dashTimeLeft <= 0  || isTouchingWall)
+            {
+                isDashing = false;
+                canMove = true;
+                canFlip = true;
+            }
+
+
+        }
     }
 
-     IEnumerator SwordAttackQUICK()
+     private void CheckSlide()
+    {
+         
+        if ( isSlidding)
+        {
+            if (dashTimeLeft > 0)
+            {
+                canMove = false;
+                canFlip = false;
+                
+                rb.velocity = new Vector2(dashSpeed * facingDirection, 0);
+                dashTimeLeft -= Time.deltaTime;
+
+            }
+            if (dashTimeLeft <= 0  || isTouchingWall)
+            {
+                isDashing = false;
+                canMove = true;
+                canFlip = true;
+            }
+
+
+        }
+    }
+
+
+    private void AttemptToDash()
+    {
+        
+        isDashing = true;
+        dashTimeLeft = dashTime;
+        lastDash = Time.time;
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastImageXpos = transform.position.x;
+    }
+
+    private void AttemptToSlide()
+    {
+        isSlidding = true;
+        dashTimeLeft = dashTime;
+        lastDash = Time.time;
+    }
+
+
+
+
+
+    IEnumerator SwordAttackQUICK()
     {
         //canMove = false;
-        
+
         yield return new WaitForSeconds(0.45f);
-       
+
         canMove = true;
     }
 
@@ -351,7 +471,7 @@ public class PlayerController : MonoBehaviour
             else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0)
             {
                 fGroundedRemeber = 0;
-                fJumpPressedRemember=0;
+                fJumpPressedRemember = 0;
                 NormalJump();
             }
         }
@@ -423,9 +543,9 @@ public class PlayerController : MonoBehaviour
             notRepeat = true;
             UnityEngine.Debug.Log("YAAAAA ");
             spinning = true;
-            
+
             rb.velocity = new Vector2(fasterMovementSpeed * movementInputDirection, rb.velocity.y);
-             StartCoroutine(Test());
+            StartCoroutine(Test());
 
         }
 
@@ -433,17 +553,17 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
-       
-        
+
+
         if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback)
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
-       
-         else if (canMove && !knockback && !Input.GetKeyDown(KeyCode.C) && !spinning)
+
+        else if (canMove && !knockback && !Input.GetKeyDown(KeyCode.C) && !spinning)
         {
-              StartCoroutine(Test());
-          //  anim.SetBool("spinMan", false);
+            StartCoroutine(Test());
+            //  anim.SetBool("spinMan", false);
             anim.SetBool("spinMan", false);
             spinning = false;
             notRepeat = false;
@@ -464,8 +584,8 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.05f);
         //  Debug.Log("Hi");
-       spinning = false;
-         //UnityEngine.Debug.Log("flag 2");
+        spinning = false;
+        //UnityEngine.Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
 

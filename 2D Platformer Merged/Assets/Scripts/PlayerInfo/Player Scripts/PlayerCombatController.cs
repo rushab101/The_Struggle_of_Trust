@@ -127,7 +127,7 @@ public class PlayerCombatController : MonoBehaviour
        
 
         //if (Input.GetKeyDown(KeyCode.V)) { // "V" is for attack
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z) && FindObjectOfType<PlayerController>().isGrounded && !airAttack && !down_attack)
+        if (Input.GetMouseButtonDown(0) ||  Input.GetKeyDown(KeyCode.Z) && FindObjectOfType<PlayerController>().isGrounded && !airAttack && !down_attack)
         { // True if LMB/Mouse 1 is pressed
             if (combatEnabled)
             {
