@@ -15,8 +15,10 @@ public class PlayerController : MonoBehaviour
     private float wallJumpTimer;
     private float knockbackStartTime;
     private float dashTimeLeft;
+    private float spinTimeLeft;
     private float lastImageXpos;
     private float lastDash = -100f;
+      private float lastSpin = -100f;
     [SerializeField]
     private float knockbackDuation;
 
@@ -58,9 +60,11 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 16.0f;
     public float fJumpPressedRemember = 0;
     public float dashTime;
+    public float spinTime;
     public float dashSpeed;
     public float distanceBetweenImages;
     public float dashCoolDown;
+    public float spinCoolDown;
     public bool spinning = false;
     public float fJumpPressedRememberTime = 0.2f;
     public float fGroundedRemeber = 0;
@@ -86,6 +90,7 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
 
     public LayerMask whatIsGround;
+    public bool  isSpinning;
 
     // Start is called before the first frame update
     void Start()
@@ -109,9 +114,10 @@ public class PlayerController : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckKnockback();
-        checkifCanspin();
+       // checkifCanspin();
         CheckDash();
         CheckSlide();
+        CheckSpin();
     }
 
     private void FixedUpdate()
@@ -282,15 +288,10 @@ public class PlayerController : MonoBehaviour
                 isAttemptingToJump = true;
             }
         }
-        // if (Input.GetButtonDown("DownArrow"))
-        //  {
-        //       UnityEngine.Debug.Log("Went Down");
 
-        //    }
         if (Input.GetAxis("Vertical") < 0 && isGrounded && !FindObjectOfType<PlayerCombatController>().down_attack)
         {
-            // Move to the right
-            //UnityEngine.Debug.Log("Went Down");
+         
             disableMove = true;
             anim.SetBool("Down", true);
             movementInputDirection = 0f;
@@ -339,17 +340,16 @@ public class PlayerController : MonoBehaviour
             checkJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
         }
-      /*  
-        if (Input.GetKeyDown(KeyCode.V))
+      
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            UnityEngine.Debug.Log("In dashing");
-            if (Time.time >= (lastDash + dashCoolDown))
+             if (Time.time >= (lastSpin + spinCoolDown))
             {
-                AttemptToDash();
+                 AtemptToSpin();
             }
-
+             
         }
-        */
+        
         if (Input.GetButtonDown("Dash"))
         {
             if (Time.time >= (lastDash + dashCoolDown))
@@ -382,6 +382,7 @@ public class PlayerController : MonoBehaviour
                 canMove = false;
                 canFlip = false;
                 
+            //anim.SetBool("spinMan", true);
                 rb.velocity = new Vector2(dashSpeed * facingDirection, 0);
                 dashTimeLeft -= Time.deltaTime;
                 if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
@@ -403,6 +404,36 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void CheckSpin()
+    {
+       
+        if (isSpinning)
+        {
+            if (spinTimeLeft > 0 && isGrounded)
+            {
+                canMove = false;
+                canFlip = false;
+                 canNormalJump = false;
+               
+                rb.velocity = new Vector2(fasterMovementSpeed * facingDirection, rb.velocity.y);
+                spinTimeLeft -= Time.deltaTime;
+            
+
+            }
+            if (spinTimeLeft <= 0 && !isGrounded )
+            {
+                 anim.SetBool("spinMan", false);
+                isSpinning = false;
+                canMove = true;
+                canFlip = true;
+            }
+
+
+        }
+                
+                
+ }
+
      private void CheckSlide()
     {
          
@@ -413,7 +444,7 @@ public class PlayerController : MonoBehaviour
                 canMove = false;
                 canFlip = false;
                 
-                rb.velocity = new Vector2(dashSpeed * facingDirection, 0);
+                rb.velocity = new Vector2(dashSpeed * facingDirection,  rb.velocity.y);
                 dashTimeLeft -= Time.deltaTime;
 
             }
@@ -437,6 +468,14 @@ public class PlayerController : MonoBehaviour
         lastDash = Time.time;
         PlayerAfterImagePool.Instance.GetFromPool();
         lastImageXpos = transform.position.x;
+    }
+
+    private void AtemptToSpin()
+    {
+         anim.SetBool("spinMan", true);
+        spinTimeLeft = spinTime;
+        lastSpin = Time.time;
+        isSpinning = true;
     }
 
     private void AttemptToSlide()

@@ -431,13 +431,15 @@ MonoBehaviour:
   anim: {fileID: 0}
   amountOfJumps: 1
   movementSpeed: 9
-  fasterMovementSpeed: 35
+  fasterMovementSpeed: 20
   jumpForce: 20
   fJumpPressedRemember: 0
   dashTime: 0.2
+  spinTime: 0.1
   dashSpeed: 50
   distanceBetweenImages: 0.3
   dashCoolDown: 0
+  spinCoolDown: 0.5
   spinning: 0
   fJumpPressedRememberTime: 0.2
   fGroundedRemeber: 0
@@ -461,6 +463,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  isSpinning: 0
 --- !u!95 &50095504
 Animator:
   serializedVersion: 3
