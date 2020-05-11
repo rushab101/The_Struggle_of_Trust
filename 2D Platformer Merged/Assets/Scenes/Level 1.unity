@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32908397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.294, y: -0.954, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 661444993}
@@ -1013,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120343654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.314, y: -0.294, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 661444993}
@@ -13634,9 +13634,12 @@ GameObject:
   - component: {fileID: 661444993}
   - component: {fileID: 661444995}
   - component: {fileID: 661444994}
-  m_Layer: 0
+  - component: {fileID: 661444997}
+  - component: {fileID: 661444996}
+  - component: {fileID: 661444998}
+  m_Layer: 9
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13656,6 +13659,7 @@ Transform:
   - {fileID: 120343655}
   - {fileID: 1576836595}
   - {fileID: 756014196}
+  - {fileID: 1311199673}
   m_Father: {fileID: 872553980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13729,6 +13733,65 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &661444996
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661444992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.29772568, y: -0.24029577}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5308609, y: 1.5596778}
+  m_EdgeRadius: 0
+--- !u!50 &661444997
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661444992}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 8
+  m_Material: {fileID: 6200000, guid: e2a3af93f6b4bbe40a1f949f4314f1c7, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &661444998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661444992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a63fb1fd0d7454ba9eeb9a33b48552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &671410047
 GameObject:
   m_ObjectHideFlags: 0
@@ -14060,7 +14123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756014195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.282, y: -0.983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 661444993}
@@ -15125,14 +15188,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4004205a6e9bf974d8c1be2555de62df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityData: {fileID: 0}
-  wallCheck: {fileID: 0}
-  ledgeCheck: {fileID: 0}
-  playerCheck: {fileID: 0}
-  groundCheck: {fileID: 0}
+  entityData: {fileID: 11400000, guid: 8035cc1dc860fb5408ef5080b16c487e, type: 2}
+  wallCheck: {fileID: 120343655}
+  ledgeCheck: {fileID: 32908398}
+  playerCheck: {fileID: 1576836595}
+  groundCheck: {fileID: 756014196}
   PlayerDamaged: 0
-  idelstateData: {fileID: 0}
-  moveStateData: {fileID: 0}
+  idelstateData: {fileID: 11400000, guid: c4cee0e544bbbb840906c31117ea34cd, type: 2}
+  moveStateData: {fileID: 11400000, guid: e804503f7cc83aa4ea016108e7f0091c, type: 2}
+  playerDetectedData: {fileID: 11400000, guid: ea039c9fa406c9f4bbf639f2674b95bc, type: 2}
+  meleeAttackStateData: {fileID: 11400000, guid: 2da287904b8f1ae47bd8c3bcf1a75c70,
+    type: 2}
+  lookForPlayerStateData: {fileID: 11400000, guid: 28dfe1a972ba5e94b9ea1bc0a875ea3b,
+    type: 2}
+  stunStateData: {fileID: 11400000, guid: 1acb050f52e573c4ba32eb44e673e8ed, type: 2}
+  chargeStateData: {fileID: 11400000, guid: 811967f12e3951b428c9db3ece0ec5f6, type: 2}
+  deadStateData: {fileID: 11400000, guid: 2aa2d0ff5f6f32245ad1c25ea90552ec, type: 2}
+  meleeAttackPosition: {fileID: 1311199673}
 --- !u!1 &888134649
 GameObject:
   m_ObjectHideFlags: 0
@@ -17573,6 +17645,36 @@ Transform:
   m_Father: {fileID: 1411857189}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311199672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311199673}
+  m_Layer: 0
+  m_Name: MeleeAttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311199673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311199672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.704, y: -0.239, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661444993}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339135751
 GameObject:
   m_ObjectHideFlags: 0
@@ -19358,7 +19460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576836594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.011, y: -0.218, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 661444993}
