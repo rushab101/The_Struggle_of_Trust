@@ -1,6 +1,6 @@
 # 2D Platformer Project
 
-Current stable state as of May 9nd, 2020:
+Current stable state as of May 11th, 2020:
 + 1 Platform Test Level (Main Screen, GameOver and Platform Scences)
 + Background Audio + Saves value when closing game
 + Cinemachine camera movement + zoomed out camera
