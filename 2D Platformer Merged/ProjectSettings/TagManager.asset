@@ -61,6 +61,9 @@ TagManager:
   - name: Walls and Interior
     uniqueID: 2340910339
     locked: 0
+  - name: Particle Effect Layer (TEST)
+    uniqueID: 939398187
+    locked: 0
   - name: Platforms
     uniqueID: 386317951
     locked: 0
