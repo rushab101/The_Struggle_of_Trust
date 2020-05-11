@@ -119,6 +119,7 @@ public class PlayerController : MonoBehaviour
         CheckSlide();
         CheckSpin();
     }
+    
 
     private void FixedUpdate()
     {
@@ -387,7 +388,7 @@ public class PlayerController : MonoBehaviour
                 dashTimeLeft -= Time.deltaTime;
                 if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
                 {
-                    UnityEngine.Debug.Log("Get values");
+              //     UnityEngine.Debug.Log("Get values");
                     PlayerAfterImagePool.Instance.GetFromPool();
                     lastImageXpos = transform.position.x;
                 }
