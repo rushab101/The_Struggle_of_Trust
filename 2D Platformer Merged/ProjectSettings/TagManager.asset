@@ -52,17 +52,20 @@ TagManager:
   - name: Background 2
     uniqueID: 3583119501
     locked: 0
-  - name: Particle Back
-    uniqueID: 975696535
-    locked: 0
-  - name: Background
+  - name: Background 1
     uniqueID: 400664625
     locked: 0
-  - name: Decorations
+  - name: Background Decorations
     uniqueID: 1430828403
+    locked: 0
+  - name: Walls and Interior
+    uniqueID: 2340910339
     locked: 0
   - name: Platforms
     uniqueID: 386317951
+    locked: 0
+  - name: Signs and Guidables
+    uniqueID: 475686353
     locked: 0
   - name: Enemy
     uniqueID: 3977323589
@@ -70,14 +73,11 @@ TagManager:
   - name: Player
     uniqueID: 1194979239
     locked: 0
-  - name: Spikes and Damageables
-    uniqueID: 3856726265
-    locked: 0
   - name: Foreground Decorations
     uniqueID: 1211544955
     locked: 0
-  - name: Particle Front
-    uniqueID: 938607987
+  - name: Spikes and Damageables
+    uniqueID: 3856726265
     locked: 0
   - name: Front 1
     uniqueID: 1690633557
