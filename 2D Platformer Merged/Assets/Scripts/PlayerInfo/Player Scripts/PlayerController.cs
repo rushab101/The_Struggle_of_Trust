@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private float spinTimeLeft;
     private float lastImageXpos;
     private float lastDash = -100f;
-      private float lastSpin = -100f;
+    private float lastSpin = -100f;
     [SerializeField]
     private float knockbackDuation;
 
@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private bool canWallJump;
     private bool isAttemptingToJump;
     private bool checkJumpMultiplier;
+    private float lastTapTime = 0;
     public bool canMove;
     public bool canFlip;
     private bool hasWallJumped;
@@ -61,6 +62,13 @@ public class PlayerController : MonoBehaviour
     public float fasterMovementSpeed = 11.0f;
     public float jumpForce = 16.0f;
     public float fJumpPressedRemember = 0;
+
+    public float tapSpeed = 0.5f;
+     public float tapSpeed2 = 0.7f;
+       public float tapSpeed3 = 1.5f;
+       
+       public float tapSpeed4 = 2.0f;
+
     public float dashTime;
     public float spinTime;
     public float dashSpeed;
@@ -92,7 +100,7 @@ public class PlayerController : MonoBehaviour
     public Transform wallCheck;
 
     public LayerMask whatIsGround;
-    public bool  isSpinning;
+    public bool isSpinning;
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +110,7 @@ public class PlayerController : MonoBehaviour
         amountOfJumpsLeft = amountOfJumps;
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
+        lastTapTime = 0;
         disableMove = false;
     }
 
@@ -116,13 +125,13 @@ public class PlayerController : MonoBehaviour
         CheckIfWallSliding();
         CheckJump();
         CheckKnockback();
-       // checkifCanspin();
+        // checkifCanspin();
         CheckDash();
         CheckSlide();
         CheckSpin();
         CheckFalling();
     }
-    
+
 
     private void FixedUpdate()
     {
@@ -138,7 +147,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckFalling()
     {
-        if (rb.velocity.y < -0.1 && jumped )
+        if (rb.velocity.y < -0.1 && jumped)
         {
             isFalling = true;
         }
@@ -177,7 +186,7 @@ public class PlayerController : MonoBehaviour
 
         if (IEFFrames <= 20)
         {
-             FindObjectOfType<PlayerCombatController>().animationIE = true;
+            FindObjectOfType<PlayerCombatController>().animationIE = true;
             rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);// actually doing the knockback
             IEFFrames = 150.0f;
             anim.SetBool("L", true);
@@ -189,7 +198,8 @@ public class PlayerController : MonoBehaviour
     {
         // anim.SetBool("L", false);
         if (Time.time >= knockbackStartTime + knockbackDuation && knockback) // KnockBack is Over
-        {   FindObjectOfType<PlayerCombatController>().animationIE = false;
+        {
+            FindObjectOfType<PlayerCombatController>().animationIE = false;
             knockback = false;
             anim.SetBool("L", false);
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
@@ -229,6 +239,10 @@ public class PlayerController : MonoBehaviour
             amountOfJumpsLeft = amountOfJumps;
         }
 
+
+
+
+
         if (isTouchingWall)
         {
             checkJumpMultiplier = false;
@@ -239,9 +253,12 @@ public class PlayerController : MonoBehaviour
         {
             canNormalJump = false;
         }
+
+
         else
         {
             canNormalJump = true;
+
         }
     }
 
@@ -309,7 +326,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxis("Vertical") < 0 && isGrounded && !FindObjectOfType<PlayerCombatController>().down_attack)
         {
-         
+
             disableMove = true;
             anim.SetBool("Down", true);
             movementInputDirection = 0f;
@@ -358,16 +375,16 @@ public class PlayerController : MonoBehaviour
             checkJumpMultiplier = false;
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeightMultiplier);
         }
-      
+
         if (Input.GetKeyDown(KeyCode.C))
         {
-             if (Time.time >= (lastSpin + spinCoolDown))
+            if (Time.time >= (lastSpin + spinCoolDown))
             {
-                 AtemptToSpin();
+                AtemptToSpin();
             }
-             
+
         }
-        
+
         if (Input.GetButtonDown("Dash"))
         {
             if (Time.time >= (lastDash + dashCoolDown))
@@ -377,7 +394,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-         if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             UnityEngine.Debug.Log("In dashing");
             if (Time.time >= (lastDash + dashCoolDown))
@@ -386,32 +403,32 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        
+
 
 
     }
     private void CheckDash()
     {
-         
+
         if (isDashing)
         {
             if (dashTimeLeft > 0)
             {
                 canMove = false;
                 canFlip = false;
-                
-            //anim.SetBool("spinMan", true);
+
+                //anim.SetBool("spinMan", true);
                 rb.velocity = new Vector2(dashSpeed * facingDirection, 0);
                 dashTimeLeft -= Time.deltaTime;
                 if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
                 {
-              //     UnityEngine.Debug.Log("Get values");
+                    //     UnityEngine.Debug.Log("Get values");
                     PlayerAfterImagePool.Instance.GetFromPool();
                     lastImageXpos = transform.position.x;
                 }
 
             }
-            if (dashTimeLeft <= 0  || isTouchingWall)
+            if (dashTimeLeft <= 0 || isTouchingWall)
             {
                 isDashing = false;
                 canMove = true;
@@ -424,23 +441,23 @@ public class PlayerController : MonoBehaviour
 
     private void CheckSpin()
     {
-       
+
         if (isSpinning)
         {
-            if (spinTimeLeft > 0 && !Input.GetKey(KeyCode.Space) )
+            if (spinTimeLeft > 0 && !Input.GetKey(KeyCode.Space))
             {
                 canMove = false;
                 canFlip = false;
-                 canNormalJump = false;
-               
+                canNormalJump = false;
+
                 rb.velocity = new Vector2(fasterMovementSpeed * facingDirection, rb.velocity.y);
                 spinTimeLeft -= Time.deltaTime;
-            
+
 
             }
-            else if (spinTimeLeft <= 0 )
+            else if (spinTimeLeft <= 0)
             {
-                 anim.SetBool("spinMan", false);
+                anim.SetBool("spinMan", false);
                 isSpinning = false;
                 canMove = true;
                 canFlip = true;
@@ -448,25 +465,25 @@ public class PlayerController : MonoBehaviour
 
 
         }
-                
-                
- }
 
-     private void CheckSlide()
+
+    }
+
+    private void CheckSlide()
     {
-         
-        if ( isSlidding)
+
+        if (isSlidding)
         {
             if (dashTimeLeft > 0)
             {
                 canMove = false;
                 canFlip = false;
-                
-                rb.velocity = new Vector2(dashSpeed * facingDirection,  rb.velocity.y);
+
+                rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
                 dashTimeLeft -= Time.deltaTime;
 
             }
-            if (dashTimeLeft <= 0  || isTouchingWall)
+            if (dashTimeLeft <= 0 || isTouchingWall)
             {
                 isDashing = false;
                 canMove = true;
@@ -480,7 +497,7 @@ public class PlayerController : MonoBehaviour
 
     private void AttemptToDash()
     {
-        
+
         isDashing = true;
         dashTimeLeft = dashTime;
         lastDash = Time.time;
@@ -490,7 +507,7 @@ public class PlayerController : MonoBehaviour
 
     private void AtemptToSpin()
     {
-         anim.SetBool("spinMan", true);
+        anim.SetBool("spinMan", true);
         spinTimeLeft = spinTime;
         lastSpin = Time.time;
         isSpinning = true;
@@ -525,8 +542,9 @@ public class PlayerController : MonoBehaviour
             {
                 WallJump();
             }
-            else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0)
+            else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0 && !isTouchingWall)
             {
+
                 fGroundedRemeber = 0;
                 fJumpPressedRemember = 0;
                 NormalJump();
@@ -558,8 +576,25 @@ public class PlayerController : MonoBehaviour
 
     private void NormalJump()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding))
+            {
+                canNormalJump = false;
+                UnityEngine.Debug.Log("Double tap");
+
+            }
+              
+            lastTapTime = Time.time;
+        }
+if (!isWallSliding && !isTouchingWall)
+{
+    canWallJump = true;
+}
+
         if (canNormalJump)
         {
+
             CreateDust(); //07 may 23020
             jumped = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -568,9 +603,10 @@ public class PlayerController : MonoBehaviour
             isAttemptingToJump = false;
             checkJumpMultiplier = true;
         }
-        else 
+        else
         {
-            jumped= false;
+            jumped = false;
+
         }
     }
 
