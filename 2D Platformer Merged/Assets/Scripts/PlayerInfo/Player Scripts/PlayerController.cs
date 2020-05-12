@@ -427,7 +427,7 @@ public class PlayerController : MonoBehaviour
        
         if (isSpinning)
         {
-            if (spinTimeLeft > 0 && isGrounded)
+            if (spinTimeLeft > 0 && !Input.GetKey(KeyCode.Space) )
             {
                 canMove = false;
                 canFlip = false;
@@ -438,7 +438,7 @@ public class PlayerController : MonoBehaviour
             
 
             }
-            if (spinTimeLeft <= 0 && !isGrounded )
+            else if (spinTimeLeft <= 0 )
             {
                  anim.SetBool("spinMan", false);
                 isSpinning = false;
