@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     private float turnTimer;
     private float wallJumpTimer;
     private float knockbackStartTime;
+    private bool jumped;
     private float dashTimeLeft;
+    private bool isFalling;
     private float spinTimeLeft;
     private float lastImageXpos;
     private float lastDash = -100f;
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
         CheckDash();
         CheckSlide();
         CheckSpin();
+        CheckFalling();
     }
     
 
@@ -131,6 +134,18 @@ public class PlayerController : MonoBehaviour
     private void CreateDust()
     {
         dust.Play();
+    }
+
+    private void CheckFalling()
+    {
+        if (rb.velocity.y < -0.1 && jumped )
+        {
+            isFalling = true;
+        }
+        else
+        {
+            isFalling = false;
+        }
     }
 
     private void CheckIfWallSliding()
@@ -546,11 +561,16 @@ public class PlayerController : MonoBehaviour
         if (canNormalJump)
         {
             CreateDust(); //07 may 23020
+            jumped = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             amountOfJumpsLeft--;
             jumpTimer = 0;
             isAttemptingToJump = false;
             checkJumpMultiplier = true;
+        }
+        else 
+        {
+            jumped= false;
         }
     }
 
