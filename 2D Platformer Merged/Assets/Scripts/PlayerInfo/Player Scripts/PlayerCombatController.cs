@@ -31,6 +31,7 @@ public class PlayerCombatController : MonoBehaviour
     private float canGetHit;
     public bool down_attack;
     private bool is_attacking;
+    public bool DoNotDamage=false;
 
 
 
@@ -269,9 +270,11 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects)
         {
+             DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
+          DoNotDamage = false;
     }
 
     
@@ -288,9 +291,14 @@ public class PlayerCombatController : MonoBehaviour
         foreach (Collider2D collider in detectedObjects2)
         {
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
+            if (FindObjectOfType<EnemyGFX>().flying)
+            {
+                DoNotDamage = true;
+            }
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
+        DoNotDamage = false;
     }
 
        private void CheckAttackHitbox3()
@@ -305,10 +313,11 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects3)
         {
-            
+             DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
+          DoNotDamage = false;
     }
 
     private void FinishAttack1()

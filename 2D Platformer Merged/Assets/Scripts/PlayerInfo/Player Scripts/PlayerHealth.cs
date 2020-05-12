@@ -57,7 +57,11 @@ public class PlayerHealth : MonoBehaviour {
 
     public void EndGame() {
         UnityEngine.Debug.Log("Went to here\n");
-        health--;
+        if (!FindObjectOfType<PlayerCombatController>().DoNotDamage)
+        {
+             health--;
+        }
+       
         FindObjectOfType<PlayerController>().anim.SetBool("playerDead", false);
         UnityEngine.Debug.Log("Health left: " + health);
         if (health <= 0)

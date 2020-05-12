@@ -62,14 +62,18 @@ public class EnemyGFX : MonoBehaviour
     private float currentHealth, knowckbackStartTime;
 
     private GameObject Slime;
-    Rigidbody2D rb;
+    private Rigidbody2D SlimeRb;
     private Animator SlimeAnim;
+    public bool flying = false;
 
     private void Start()
     {
         Slime = transform.Find("Wasp").gameObject;
-    
-        rb = GetComponent<Rigidbody2D>();
+        SlimeRb = Slime.GetComponent<Rigidbody2D>();
+        if (SlimeRb == null)
+        {
+            Debug.Log("SOMETHING IS WRONG");
+        }
         facingDirection = 1;
         currentHealth = maxHealth;
         SlimeAnim = Slime.GetComponent<Animator>();
@@ -81,9 +85,8 @@ public class EnemyGFX : MonoBehaviour
     private void EnterknockbackState()
     {
         knowckbackStartTime = Time.time;
-
         movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
-        rb.velocity = movement;
+        SlimeRb.velocity = movement;
        // Debug.log()
         SlimeAnim.SetBool("Knockback", true);
 
@@ -144,7 +147,7 @@ public class EnemyGFX : MonoBehaviour
         }
         else if (currentHealth <= 0.0f)
         {
-           Destroy(gameObject);
+           EnterDeadState();
         }
 
     }
@@ -235,8 +238,9 @@ public class EnemyGFX : MonoBehaviour
       {  
            if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
         {
-            // FindObjectOfType<PlayerHealth>().EndGame();
-             // FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
+            flying = true;
+            FindObjectOfType<PlayerHealth>().EndGame();
+              FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
         }
            
       }
