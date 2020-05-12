@@ -160,10 +160,11 @@ public class PlayerController : MonoBehaviour
 
         UnityEngine.Debug.Log("IEFFrames: " + IEFFrames);
 
-        if (IEFFrames <= 10)
+        if (IEFFrames <= 20)
         {
+             FindObjectOfType<PlayerCombatController>().animationIE = true;
             rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);// actually doing the knockback
-            IEFFrames = 300.0f;
+            IEFFrames = 150.0f;
             anim.SetBool("L", true);
             damagePlayer = true;
         }
@@ -173,13 +174,14 @@ public class PlayerController : MonoBehaviour
     {
         // anim.SetBool("L", false);
         if (Time.time >= knockbackStartTime + knockbackDuation && knockback) // KnockBack is Over
-        {
+        {   FindObjectOfType<PlayerCombatController>().animationIE = false;
             knockback = false;
             anim.SetBool("L", false);
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
         }
-        if (IEFFrames > 10)
+        if (IEFFrames > 20)
         {
+
             IEFFrames--;
             damagePlayer = false;
 

@@ -23,6 +23,7 @@ public class PlayerCombatController : MonoBehaviour
     private LayerMask whatIsDamageable;
 
     public bool gotInput;
+    public bool animationIE;
     private float animationTimer;
     public bool airAttack;
     private bool isAttacking;
@@ -322,10 +323,14 @@ public class PlayerCombatController : MonoBehaviour
         //PS.DecreaseHealth(attackDetails.damageAmount); // TODO: 
         canGetHit = FindObjectOfType<PlayerController>().DamageOrNot();
         UnityEngine.Debug.Log(canGetHit);
-        if (canGetHit <= 10)
+
+
+        if (canGetHit <= 20)
         {
+           // animationIE = false;
             FindObjectOfType<PlayerHealth>().EndGame();
         }
+      
         // 
 
 
