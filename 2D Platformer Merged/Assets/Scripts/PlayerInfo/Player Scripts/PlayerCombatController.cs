@@ -12,6 +12,8 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private float inputTimer, attack1Radius, attack1Damage;
     [SerializeField]
+    private float attack2Radius;
+    [SerializeField]
     private float stunDamageAmount = 1f;
     [SerializeField]
     private Transform attack1HitBoxPos;
@@ -280,7 +282,7 @@ public class PlayerCombatController : MonoBehaviour
     
     private void CheckAttackHitbox2()
     { // Detect damagable objects in a range
-        Collider2D[] detectedObjects2 = Physics2D.OverlapCircleAll(attack2HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
+        Collider2D[] detectedObjects2 = Physics2D.OverlapCircleAll(attack2HitBoxPos.position, attack2Radius, whatIsDamageable); // Detect all objects in a circle
 
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
@@ -291,10 +293,7 @@ public class PlayerCombatController : MonoBehaviour
         foreach (Collider2D collider in detectedObjects2)
         {
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
-            if (FindObjectOfType<EnemyGFX>().flying)
-            {
                 DoNotDamage = true;
-            }
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
@@ -359,7 +358,7 @@ public class PlayerCombatController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);
-        Gizmos.DrawWireSphere(attack2HitBoxPos.position, attack1Radius);
+        Gizmos.DrawWireSphere(attack2HitBoxPos.position, attack2Radius);
         Gizmos.DrawWireSphere(attack3HitBoxPos.position, attack1Radius);
     }
 }
