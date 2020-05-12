@@ -13,9 +13,24 @@ public class E2_PlayerDetectedState :  PlayerDetectedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+
+
          if (performCloseRangeAction)
         {
-         stateMachine.ChangeState(enemy.meleeAttackState);   
+            if (Time.time >= enemy.dodgeState.startTime +enemy.dodgeStateData.dodgeCooldown)
+            {
+                stateMachine.ChangeState(enemy.dodgeState);
+            }
+            else {
+                stateMachine.ChangeState(enemy.meleeAttackState);   
+            }
+
+             
+        }
+        else if (!isPlayerinMaxAgroRange)
+        {
+            stateMachine.ChangeState(enemy.lookForPlayerState);
         }
 
         

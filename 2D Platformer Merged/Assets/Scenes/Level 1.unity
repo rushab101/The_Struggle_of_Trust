@@ -5378,6 +5378,7 @@ MonoBehaviour:
   stunStateData: {fileID: 11400000, guid: 1acb050f52e573c4ba32eb44e673e8ed, type: 2}
   chargeStateData: {fileID: 11400000, guid: 811967f12e3951b428c9db3ece0ec5f6, type: 2}
   deadStateData: {fileID: 11400000, guid: 2aa2d0ff5f6f32245ad1c25ea90552ec, type: 2}
+  dodgeStateData: {fileID: 11400000, guid: 2d32ff1116bdf5b4a918786a6127e8c9, type: 2}
   meleeAttackPosition: {fileID: 1311199673}
 --- !u!1 &888134649
 GameObject:
@@ -49193,11 +49194,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2697581902607487127, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697581902607487127, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697581902607487127, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697581902607487127, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2697581903269926466, guid: 979f39c1095a0cb418d529453f083b4a,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 50095501}
+    - target: {fileID: 2697581903269926467, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: radius
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697581903269926467, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697581903269926467, guid: 979f39c1095a0cb418d529453f083b4a,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2697581903269926471, guid: 979f39c1095a0cb418d529453f083b4a,
         type: 3}
       propertyPath: m_Name
@@ -49206,12 +49242,12 @@ PrefabInstance:
     - target: {fileID: 2697581903269926477, guid: 979f39c1095a0cb418d529453f083b4a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.34
+      value: 29.01
       objectReference: {fileID: 0}
     - target: {fileID: 2697581903269926477, guid: 979f39c1095a0cb418d529453f083b4a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.76
+      value: 15.26
       objectReference: {fileID: 0}
     - target: {fileID: 2697581903269926477, guid: 979f39c1095a0cb418d529453f083b4a,
         type: 3}
