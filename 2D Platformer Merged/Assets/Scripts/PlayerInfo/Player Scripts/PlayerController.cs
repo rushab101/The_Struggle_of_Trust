@@ -64,10 +64,10 @@ public class PlayerController : MonoBehaviour
     public float fJumpPressedRemember = 0;
 
     public float tapSpeed = 0.5f;
-     public float tapSpeed2 = 0.7f;
-       public float tapSpeed3 = 1.5f;
-       
-       public float tapSpeed4 = 2.0f;
+    public float tapSpeed2 = 0.7f;
+    public float tapSpeed3 = 1.5f;
+
+    public float tapSpeed4 = 2.0f;
 
     public float dashTime;
     public float spinTime;
@@ -578,19 +578,29 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding))
+            if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding) && isTouchingWall)
             {
                 canNormalJump = false;
                 UnityEngine.Debug.Log("Double tap");
-
             }
-              
+
+            if (!isWallSliding && !isTouchingWall || isGrounded)
+            {
+                canWallJump = true;
+            }
+
+
             lastTapTime = Time.time;
         }
-if (!isWallSliding && !isTouchingWall)
-{
-    canWallJump = true;
-}
+
+        if (!isWallSliding && !isTouchingWall)
+            {
+                canWallJump = true;
+            }
+        if (isGrounded)
+        {
+            canWallJump = true;
+        }
 
         if (canNormalJump)
         {
