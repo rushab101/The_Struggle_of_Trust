@@ -37,7 +37,7 @@ public class IEPlayer : MonoBehaviour
         }
         else if (canGetHit <= 20)
         {
-             playerSR.color = new Color (1f,1f,1f,1f);
+             playerSR.color = new Color (1f,1f,1f,1f);//jj
         }
        
       
