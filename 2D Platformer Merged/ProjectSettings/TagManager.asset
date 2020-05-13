@@ -8,6 +8,7 @@ TagManager:
   - interObject
   - GM
   - Sword
+  - Spike
   layers:
   - Default
   - TransparentFX

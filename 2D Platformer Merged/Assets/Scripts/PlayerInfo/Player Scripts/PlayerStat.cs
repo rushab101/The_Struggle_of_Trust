@@ -25,7 +25,7 @@ public class PlayerStat : MonoBehaviour
     {
         currentHealth = maxHealth;
         //   GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        //GameObject.Find("GameManager").GetComponent<Respawn>();
+        GameObject.Find("GameManager").GetComponent<Respawn>();
     }
 
     

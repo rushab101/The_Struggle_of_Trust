@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 16.0f;
     public float fJumpPressedRemember = 0;
 
-    public float tapSpeed = 0.5f;
+    public float tapSpeed = 0.55f;
     public float tapSpeed2 = 0.7f;
     public float tapSpeed3 = 1.5f;
 
