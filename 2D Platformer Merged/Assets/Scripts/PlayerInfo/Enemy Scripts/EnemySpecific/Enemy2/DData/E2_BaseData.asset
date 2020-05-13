@@ -17,11 +17,11 @@ MonoBehaviour:
   wallCheckDistance: 0.2
   ledgeCheckDistance: 0.4
   groundCheckRadius: 0.3
-  minAgroDistance: 3
-  maxAgroDistance: 4
+  minAgroDistance: 8.96
+  maxAgroDistance: 11.17
   stunResistance: 3
   sunRecoveryTime: 2
-  closeRangeActionDistance: 1
+  closeRangeActionDistance: 1.51
   hitParticle: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
     type: 3}
   whatIsGround:
