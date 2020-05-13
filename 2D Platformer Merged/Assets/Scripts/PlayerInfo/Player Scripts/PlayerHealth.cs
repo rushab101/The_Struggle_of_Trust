@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour {
             GameOver = true;
             //PlayerisDead
            
-            FindObjectOfType<PlayerStats>().Die();
+            FindObjectOfType<PlayerStat>().Die();
             //StartCoroutine(Test());
            // FindObjectOfType<PlayerController>().GameOver();
 
