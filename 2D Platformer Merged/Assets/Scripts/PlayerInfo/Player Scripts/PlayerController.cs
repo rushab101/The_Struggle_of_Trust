@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
         // IEFFrames = 100.0f;
         knockbackStartTime = Time.time;
 
-        UnityEngine.Debug.Log("IEFFrames: " + IEFFrames);
+      //  UnityEngine.Debug.Log("IEFFrames: " + IEFFrames);
 
         if (IEFFrames <= 20)
         {

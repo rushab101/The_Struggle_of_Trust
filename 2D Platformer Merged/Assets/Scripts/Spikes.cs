@@ -7,6 +7,7 @@ public class Spikes : MonoBehaviour {
 /*    private PlayerHealth player;
     private PlayerController pc;
 
+
     private bool hitSpike = false;
 
     private void Start() {
@@ -14,23 +15,43 @@ public class Spikes : MonoBehaviour {
         pc = GetComponent<PlayerController>();
     }*/
 
-  public  void OnCollisionEnter2D(Collider2D collider)
-{
- 
-    Debug.Log("Went to collisons");
- 
-}
+     private bool hitSpike = true;
+
 
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Sword"))
-        {
-            Debug.Log("Went to collisons");
+        {   
+          
+            Debug.Log(FindObjectOfType<PlayerCombatController>().anim.GetBool("downAttack"));
+            
+            if ( FindObjectOfType<PlayerCombatController>().anim.GetBool("downAttack"))
+            {       
+                  hitSpike = false;
+                   FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 30);
+            }
+            else  if ( !FindObjectOfType<PlayerCombatController>().anim.GetBool("downAttack"))
+            {       
+                    FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
+           // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
+
+            FindObjectOfType<PlayerStats>().TakeDamage(1f);
+           // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
+
+            FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
+            }
+
+
+            else {
+                hitSpike = true;
+                }
+   
+          //  hitSpike = true;
         }
 
 
-        else if (collision.CompareTag("Player")) {
+        if (collision.CompareTag("Player") && hitSpike) {
 
             FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
            // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");

@@ -46,7 +46,7 @@ public class PlayerCombatController : MonoBehaviour
     private float lastInputTime = Mathf.NegativeInfinity; // Storing the last time player attempted to attack and will be ready to attack
     private AttackDetails attackDetails;
 
-    private Animator anim;
+    public Animator anim;
     private PlayerController PC;
 
     private void Start()
@@ -292,7 +292,8 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
-            FindObjectOfType<Spikes>().OnCollisionEnter2D(collider);
+            UnityEngine.Debug.Log("Went to second collider");
+           
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
                 DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
@@ -333,7 +334,7 @@ public class PlayerCombatController : MonoBehaviour
         //Damage our player
         //PS.DecreaseHealth(attackDetails.damageAmount); // TODO: 
         canGetHit = FindObjectOfType<PlayerController>().DamageOrNot();
-        UnityEngine.Debug.Log(canGetHit);
+       // UnityEngine.Debug.Log(canGetHit);
 
 
         if (canGetHit <= 20)
