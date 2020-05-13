@@ -53,7 +53,7 @@ public class TimeStop : MonoBehaviour
         anim.SetBool("ouch", true);
 
         enableHitStopParticle();
-        Debug.Log("Enable Hit Particle");
+        //Debug.Log("Enable Hit Particle");
 
         Time.timeScale = changeTime;
     }

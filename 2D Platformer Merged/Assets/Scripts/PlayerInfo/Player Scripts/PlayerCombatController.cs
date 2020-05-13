@@ -196,7 +196,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             if (!isAttacking)
             {
-                    Debug.Log("Down attack.");
+                   // Debug.Log("Down attack.");
                 isAttacking = true;
                 down_attack = false;
                 anim.SetBool("attack1", true);
@@ -292,6 +292,7 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
+            FindObjectOfType<Spikes>().OnCollisionEnter2D(collider);
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
                 DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is

@@ -16,7 +16,8 @@ public class Checkpoint : MonoBehaviour
   {
     
       if (other.CompareTag("Player"))
-      {  Debug.Log("Went to trigger");
+      {  
+          //Debug.Log("Went to trigger");
           gm.lastCheckPointPos = transform.position;
       //  PlayerPrefs.SetFloat("XPosition",gm.lastCheckPointPos.x);
        // PlayerPrefs.SetFloat("yPosition",gm.lastCheckPointPos.y);

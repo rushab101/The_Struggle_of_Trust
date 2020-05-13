@@ -49,7 +49,7 @@ public class PlayerStats : MonoBehaviour
         health -= dmg;
         }
          ClampHealth();
-         UnityEngine.Debug.Log(health);
+       //  UnityEngine.Debug.Log(health);
 
         if (health <= 0)
         {

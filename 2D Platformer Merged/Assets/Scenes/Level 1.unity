@@ -49837,6 +49837,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4138573212405415954, guid: 0efff7a9578469b4c9e92159b133dcad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138573212405415954, guid: 0efff7a9578469b4c9e92159b133dcad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4138573211700820367, guid: 0efff7a9578469b4c9e92159b133dcad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0efff7a9578469b4c9e92159b133dcad, type: 3}

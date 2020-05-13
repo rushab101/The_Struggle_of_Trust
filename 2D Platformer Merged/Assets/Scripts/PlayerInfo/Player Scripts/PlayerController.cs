@@ -268,12 +268,12 @@ public class PlayerController : MonoBehaviour
 
         if (isFacingRight && movementInputDirection < 0)
         {
-            UnityEngine.Debug.Log("Right Flip");
+          //  UnityEngine.Debug.Log("Right Flip");
             Flip();
         }
         else if (!isFacingRight && movementInputDirection > 0)
         {
-            UnityEngine.Debug.Log("Left Flip");
+          //  UnityEngine.Debug.Log("Left Flip");
             Flip();
         }
 
