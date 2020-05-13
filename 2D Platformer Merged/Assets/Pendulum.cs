@@ -41,15 +41,21 @@ public class Pendulum : MonoBehaviour
 
     }
 
-     void OnTriggerEnter2D(Collider2D collision) 
-     {
-         // FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
-           FindObjectOfType<PlayerStats>().TakeDamage(1f);
+   
+
+
+      void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+        if (collision.gameObject.tag == "Player")
+        {
+             FindObjectOfType<PlayerStats>().TakeDamage(1f);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
             direction = FindObjectOfType<PlayerController>().GetFacingDirection();
-             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(-direction * velocityThreshold , 0);
-
-     }
+            FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
+        }
+    }
 
 
 
