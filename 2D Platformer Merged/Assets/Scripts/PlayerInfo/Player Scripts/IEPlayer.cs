@@ -15,6 +15,7 @@ public class IEPlayer : MonoBehaviour
     private SpriteRenderer playerSR;
     private Color color;
     private float canGetHit;
+    private float totalHealth;
     private SpriteRenderer SR;
         private Transform player;
 
@@ -31,7 +32,8 @@ public class IEPlayer : MonoBehaviour
     {
         alpha -=alphaDecay * Time.deltaTime;
          canGetHit = FindObjectOfType<PlayerController>().DamageOrNot();
-        if ( FindObjectOfType<PlayerCombatController>().animationIE && FindObjectOfType<PlayerHealth>().health > 1)
+        totalHealth = FindObjectOfType<PlayerStats>().Healths();
+        if ( FindObjectOfType<PlayerCombatController>().animationIE && totalHealth > 1)
         {
              playerSR.color = new Color (1f,1f,1f,0.5f);
         }

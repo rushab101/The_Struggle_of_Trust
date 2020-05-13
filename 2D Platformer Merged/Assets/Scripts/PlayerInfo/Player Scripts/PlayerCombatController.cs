@@ -338,7 +338,7 @@ public class PlayerCombatController : MonoBehaviour
         if (canGetHit <= 20)
         {
            // animationIE = false;
-            FindObjectOfType<PlayerHealth>().EndGame();
+            FindObjectOfType<PlayerStats>().TakeDamage(1f);
         }
       
         // 

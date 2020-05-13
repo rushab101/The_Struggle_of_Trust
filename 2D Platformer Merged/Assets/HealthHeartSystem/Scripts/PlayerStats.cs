@@ -1,8 +1,9 @@
-﻿/*
- *  Author: ariel oliveira [o.arielg@gmail.com]
- */
-
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerStats : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private float maxTotalHealth;
 
+    private bool GameOver= false;
+
     public float Health { get { return health; } }
     public float MaxHealth { get { return maxHealth; } }
     public float MaxTotalHealth { get { return maxTotalHealth; } }
@@ -41,8 +44,40 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+         if (!FindObjectOfType<PlayerCombatController>().DoNotDamage)
+        {
         health -= dmg;
-        ClampHealth();
+        }
+         ClampHealth();
+         UnityEngine.Debug.Log(health);
+
+        if (health <= 0)
+        {
+               UnityEngine.Debug.Log("Death");
+                GameOver = true;
+            //PlayerisDead
+           
+            FindObjectOfType<PlayerStat>().Die();
+            //StartCoroutine(Test());
+           // FindObjectOfType<PlayerController>().GameOver();
+
+        }
+
+       
+    }
+
+    public float Healths()
+    {
+        return health;
+    }
+
+     void Update() {
+        if (GameOver)
+        {
+            StartCoroutine(Test());
+           // FindObjec.GameOver();
+        }
+
     }
 
     public void AddHealth()
@@ -63,5 +98,13 @@ public class PlayerStats : MonoBehaviour
 
         if (onHealthChangedCallback != null)
             onHealthChangedCallback.Invoke();
+    }
+
+       IEnumerator Test()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Debug.Log("Hi");
+        SceneManager.LoadScene("Game Over");
+       
     }
 }

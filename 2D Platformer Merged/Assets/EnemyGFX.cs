@@ -239,7 +239,7 @@ public class EnemyGFX : MonoBehaviour
            if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
         {
             flying = true;
-            FindObjectOfType<PlayerHealth>().EndGame();
+            FindObjectOfType<PlayerStats>().TakeDamage(1f);
               FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
         }
            

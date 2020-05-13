@@ -18,6 +18,9 @@ public class HealthBarHUDTester : MonoBehaviour
 
     public void Hurt(float dmg)
     {
+        
         PlayerStats.Instance.TakeDamage(dmg);
+
+        
     }
 }

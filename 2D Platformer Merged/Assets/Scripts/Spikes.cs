@@ -20,7 +20,7 @@ public class Spikes : MonoBehaviour {
             FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
             UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
 
-            FindObjectOfType<PlayerHealth>().EndGame();
+            FindObjectOfType<PlayerStats>().TakeDamage(1f);
             UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
 
             FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
