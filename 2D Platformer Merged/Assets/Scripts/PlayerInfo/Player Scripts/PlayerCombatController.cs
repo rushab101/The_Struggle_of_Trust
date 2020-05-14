@@ -26,6 +26,7 @@ public class PlayerCombatController : MonoBehaviour
 
     public bool gotInput;
     public bool animationIE;
+    private int counting=0;
     private float animationTimer;
     public bool airAttack;
     private bool isAttacking;
@@ -34,6 +35,7 @@ public class PlayerCombatController : MonoBehaviour
     public bool down_attack;
     private bool is_attacking;
     public bool DoNotDamage=false;
+    public bool potDetected=false;
 
 
 
@@ -53,6 +55,7 @@ public class PlayerCombatController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
+        
         PC = GetComponent<PlayerController>();
     }
 
@@ -161,11 +164,14 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("attack1", true);
                 anim.SetBool("firstAttack", isFirstAttack);
                 anim.SetBool("isAttacking", isAttacking);
-
+                    
                 // play random animation (07 may 2020)
                 int index = UnityEngine.Random.Range(1, 4); // random number 
                 FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 0);
                 anim.Play("Attack" + index);
+                //  anim.SetBool("Attacked", true);
+              //    FindObjectOfType<IHittable>().HitReceived();
+                anim.SetTrigger("Attack");
                 Invoke("ResetAttack", .15f);
                 FindObjectOfType<PlayerController>().isWalking = true;
             }
@@ -186,6 +192,9 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("setAttack", true);
                 int index = UnityEngine.Random.Range(1, 3); // random number 
                 anim.Play("AirAttack" + index);
+             //   anim.SetBool("Attacked", true);
+              
+                anim.SetTrigger("Attack");
                 Invoke("ResetAttack", .15f);
                 StartCoroutine(Test());
 
@@ -206,6 +215,8 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("downAttack", true);
                 //int index = UnityEngine.Random.Range(1, 2); // random number 
                 anim.Play("AirAttack3");
+                anim.SetTrigger("Attack");
+             
                 Invoke("ResetAttack", .15f);
                 StartCoroutine(Test2());
 
@@ -222,6 +233,7 @@ public class PlayerCombatController : MonoBehaviour
             // Wait for new input
             gotInput = false;
             airAttack = false;
+         //    anim.SetBool("Attacked", false);
 
         }
 
@@ -239,6 +251,7 @@ public class PlayerCombatController : MonoBehaviour
         yield return new WaitForSeconds(0.35f);
         //  Debug.Log("Hi");
         anim.SetBool("setAttack", false);
+       //  anim.SetBool("Attacked", false);
       //  anim.SetBool("downAttack",false);
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
@@ -250,6 +263,7 @@ public class PlayerCombatController : MonoBehaviour
         //  Debug.Log("Hi");
       //  anim.SetBool("setAttack", false);
         anim.SetBool("downAttack",false);
+      //     anim.SetBool("Attacked", false);
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
@@ -272,10 +286,19 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects)
         {
-             DoNotDamage = true;
+            
+            if (collider.gameObject.tag == "Pot")
+            {
+             
+              // FindObjectOfType<Pots>().changeState();
+                
+            }
+          
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
+           
 
         }
+        
           DoNotDamage = false;
     }
 
@@ -292,9 +315,9 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
-            UnityEngine.Debug.Log("Went to second collider");
+          
            
-            FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
+            //FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
                 DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 

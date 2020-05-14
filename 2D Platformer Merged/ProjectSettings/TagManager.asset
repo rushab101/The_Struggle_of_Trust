@@ -9,6 +9,9 @@ TagManager:
   - GM
   - Sword
   - Spike
+  - Hittable
+  - Damage
+  - Pot
   layers:
   - Default
   - TransparentFX
@@ -24,7 +27,7 @@ TagManager:
   - Player
   - Platform
   - Sword
-  - 
+  - Damage
   - 
   - 
   - 
