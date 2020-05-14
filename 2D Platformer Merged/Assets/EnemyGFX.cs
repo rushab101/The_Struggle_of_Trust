@@ -143,7 +143,7 @@ public class EnemyGFX : MonoBehaviour
 
         if (currentHealth > 0.0f)
         {
-            SwitchState(State.Knockback);
+             movement.Set(knockbackSpeed.x * damageDirection, knockbackSpeed.y);
         }
         else if (currentHealth <= 0.0f)
         {
