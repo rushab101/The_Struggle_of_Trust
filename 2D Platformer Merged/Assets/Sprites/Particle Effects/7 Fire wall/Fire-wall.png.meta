@@ -1,7 +1,178 @@
 fileFormatVersion: 2
 guid: cd88bf58359482f46b0feff85a8ef1af
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 9100320460688023021
+    second: Fire-wall_0
+  - first:
+      213: -5041242610737721168
+    second: Fire-wall_1
+  - first:
+      213: 6398825219080102098
+    second: Fire-wall_2
+  - first:
+      213: -6929608371103195048
+    second: Fire-wall_3
+  - first:
+      213: -2486791227363307004
+    second: Fire-wall_4
+  - first:
+      213: -7162859542000224459
+    second: Fire-wall_5
+  - first:
+      213: 4093813459348738529
+    second: Fire-wall_6
+  - first:
+      213: -6658636169905161913
+    second: Fire-wall_7
+  - first:
+      213: 6596653287336491103
+    second: Fire-wall_8
+  - first:
+      213: -2471717494190933292
+    second: Fire-wall_9
+  - first:
+      213: -7831166640683110774
+    second: Fire-wall_10
+  - first:
+      213: -91531105072851231
+    second: Fire-wall_11
+  - first:
+      213: -983225450852797147
+    second: Fire-wall_12
+  - first:
+      213: -295643710352709559
+    second: Fire-wall_13
+  - first:
+      213: -6405922803447565017
+    second: Fire-wall_14
+  - first:
+      213: -6036230756219703045
+    second: Fire-wall_15
+  - first:
+      213: -2877872471998237260
+    second: Fire-wall_16
+  - first:
+      213: 103604253952791109
+    second: Fire-wall_17
+  - first:
+      213: -343163117323874417
+    second: Fire-wall_18
+  - first:
+      213: -5871337941029148165
+    second: Fire-wall_19
+  - first:
+      213: -4607718688271203002
+    second: Fire-wall_20
+  - first:
+      213: 641624354503539359
+    second: Fire-wall_21
+  - first:
+      213: -8311045787295733327
+    second: Fire-wall_22
+  - first:
+      213: 5149164372809844020
+    second: Fire-wall_23
+  - first:
+      213: 6657638653967230745
+    second: Fire-wall_24
+  - first:
+      213: -1358318973411679998
+    second: Fire-wall_25
+  - first:
+      213: 4064669245668171912
+    second: Fire-wall_26
+  - first:
+      213: 1310949521682824108
+    second: Fire-wall_27
+  - first:
+      213: -5820856789932924431
+    second: Fire-wall_28
+  - first:
+      213: -5810079407433454239
+    second: Fire-wall_29
+  - first:
+      213: -6769288527269425074
+    second: Fire-wall_30
+  - first:
+      213: 2021817860236906910
+    second: Fire-wall_31
+  - first:
+      213: 7256841813633099871
+    second: Fire-wall_0
+  - first:
+      213: -5200405983992108399
+    second: Fire-wall_1
+  - first:
+      213: 7247833773899641351
+    second: Fire-wall_2
+  - first:
+      213: -6302545993778284167
+    second: Fire-wall_3
+  - first:
+      213: 6190398719038773612
+    second: Fire-wall_4
+  - first:
+      213: -7891510274808207005
+    second: Fire-wall_5
+  - first:
+      213: -8562175768341365008
+    second: Fire-wall_6
+  - first:
+      213: -1292481731227515199
+    second: Fire-wall_7
+  - first:
+      213: 6923522773466434893
+    second: Fire-wall_8
+  - first:
+      213: -1233709929394863468
+    second: Fire-wall_9
+  - first:
+      213: -3084600086939496191
+    second: Fire-wall_10
+  - first:
+      213: -3999754199406851900
+    second: Fire-wall_11
+  - first:
+      213: 6720045512098538346
+    second: Fire-wall_12
+  - first:
+      213: -6642146530725257470
+    second: Fire-wall_13
+  - first:
+      213: -5128415278689883243
+    second: Fire-wall_14
+  - first:
+      213: 8690339037509014887
+    second: Fire-wall_15
+  - first:
+      213: 1196381378816225752
+    second: Fire-wall_16
+  - first:
+      213: -3341264019630823939
+    second: Fire-wall_17
+  - first:
+      213: 2482803207031695145
+    second: Fire-wall_18
+  - first:
+      213: 8028088506421806818
+    second: Fire-wall_19
+  - first:
+      213: -6224391206313527617
+    second: Fire-wall_20
+  - first:
+      213: 8783876722569645310
+    second: Fire-wall_21
+  - first:
+      213: 8909944873734782427
+    second: Fire-wall_22
+  - first:
+      213: 23573022344770970
+    second: Fire-wall_23
+  - first:
+      213: 2082489850117429266
+    second: Fire-wall_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +202,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +211,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +235,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +268,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fire-wall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f586dcc5e2b75b460800000000000000
+      internalID: 7256841813633099871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19aa55c7f4274d7b0800000000000000
+      internalID: -5200405983992108399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702fd5caa6a759460800000000000000
+      internalID: 7247833773899641351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_3
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979b84c9fcbd888a0800000000000000
+      internalID: -6302545993778284167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d65a36d6b8e550800000000000000
+      internalID: 6190398719038773612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36926b05739bb7290800000000000000
+      internalID: -7891510274808207005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe3e87c08a0d2980800000000000000
+      internalID: -8562175768341365008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_7
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6808b96be201ee0800000000000000
+      internalID: -1292481731227515199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d4bc2b74b451060800000000000000
+      internalID: 6923522773466434893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire-wall_9
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 72
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4920c8e0b5bf0eee0800000000000000
+      internalID: -1233709929394863468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
