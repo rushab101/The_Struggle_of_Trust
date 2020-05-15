@@ -37,6 +37,7 @@ public class PlayerCombatController : MonoBehaviour
     private bool is_attacking;
     public bool DoNotDamage=false;
     public bool potDetected=false;
+    public bool trigger = false;
 
 
 
@@ -101,6 +102,19 @@ public class PlayerCombatController : MonoBehaviour
 
             }
            */
+           if (Input.GetKeyDown(KeyCode.UpArrow))
+           {
+               trigger = true;
+           }
+            if (Input.GetKeyDown(KeyCode.UpArrow)==false)
+            {
+            trigger = false;
+            }
+             
+        
+
+
+          
 
 
         if (Input.GetKey(KeyCode.DownArrow) && !FindObjectOfType<PlayerController>().isGrounded)
