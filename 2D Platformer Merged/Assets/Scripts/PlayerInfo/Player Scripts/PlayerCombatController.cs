@@ -23,6 +23,7 @@ public class PlayerCombatController : MonoBehaviour
     private Transform attack3HitBoxPos;
     [SerializeField]
     private LayerMask whatIsDamageable;
+    public int counter;
 
     public bool gotInput;
     public bool animationIE;
@@ -55,7 +56,7 @@ public class PlayerCombatController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnabled);
-        
+        counter =0;
         PC = GetComponent<PlayerController>();
     }
 
@@ -119,15 +120,20 @@ public class PlayerCombatController : MonoBehaviour
 
        else if (Input.GetKeyDown(KeyCode.Z) && !FindObjectOfType<PlayerController>().isGrounded && !down_attack)
         {
-            if (combatEnabled && !Input.GetKeyDown(KeyCode.DownArrow))
+            if (combatEnabled && !Input.GetKeyDown(KeyCode.DownArrow) && counter < 6)
             {
+                counter ++;
+                FindObjectOfType<PlayerController>().canMove=false;
                 Debug.Log("Up Attack.");
                 gotInput = false;
                 airAttack = true;
                 lastInputTime = Time.time;
                 // animationTimer = 0;
-
-
+            }
+            else if (FindObjectOfType<PlayerController>().isGrounded || counter >=6)
+            {
+                    Debug.Log("Condition");
+                counter =0;
             }
 
         }
@@ -191,7 +197,9 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("isAttacking", isAttacking);
                 anim.SetBool("setAttack", true);
                 int index = UnityEngine.Random.Range(1, 3); // random number 
-                 FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0,5);
+                 FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0,2);
+                 
+               //  Physics.gravity.Y = 2.0f;
                 anim.Play("AirAttack" + index);
              //   anim.SetBool("Attacked", true);
               
