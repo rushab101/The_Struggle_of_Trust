@@ -191,6 +191,7 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("isAttacking", isAttacking);
                 anim.SetBool("setAttack", true);
                 int index = UnityEngine.Random.Range(1, 3); // random number 
+                 FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0,5);
                 anim.Play("AirAttack" + index);
              //   anim.SetBool("Attacked", true);
               
@@ -205,6 +206,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             if (!isAttacking)
             {
+
                    // Debug.Log("Down attack.");
                 isAttacking = true;
                 down_attack = false;
@@ -248,6 +250,7 @@ public class PlayerCombatController : MonoBehaviour
 
     IEnumerator Test()
     {
+        
         yield return new WaitForSeconds(0.35f);
         //  Debug.Log("Hi");
         anim.SetBool("setAttack", false);
@@ -287,12 +290,7 @@ public class PlayerCombatController : MonoBehaviour
         foreach (Collider2D collider in detectedObjects)
         {
             
-            if (collider.gameObject.tag == "Pot")
-            {
-             
-              // FindObjectOfType<Pots>().changeState();
-                
-            }
+            
           
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
            
@@ -315,14 +313,13 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
-          
            
-            //FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
+            FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
                 DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
-        DoNotDamage = false;
+      
     }
 
        private void CheckAttackHitbox3()
