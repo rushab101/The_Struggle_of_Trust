@@ -18,18 +18,20 @@ public class Pots : MonoBehaviour
 
     private bool playerOnLeft, knockback;
 
-    private PlayerController pc;
-    private GameObject aliveGO, brokenTopGO, brokenBotGO;
+  
+    private GameObject aliveGO, brokenTopGO, brokenBotGO , heart;
     private Rigidbody2D rbAlive, rbBrokenTop, rbBrokenBot;
     private Animator aliveAnim;
 
     private void Start() {
         currentHealth = maxHealth;
 
-        pc = GameObject.Find("Player").GetComponent<PlayerController>();
+     //   pc = GameObject.Find("Player").GetComponent<PlayerController>();
 
         aliveGO = transform.Find("Alive").gameObject; 
-        brokenTopGO = transform.Find("Broken Top").gameObject; 
+
+        //brokenTopGO = Find("Hearts").gameObject; 
+        heart = GameObject.Find("Hearts");
         brokenBotGO = transform.Find("Broken Bottom").gameObject;
         //Debug.Log(aliveGO);
 
@@ -39,6 +41,7 @@ public class Pots : MonoBehaviour
         rbBrokenBot = brokenBotGO.GetComponent<Rigidbody2D>();
 
         aliveGO.SetActive(true);
+        heart.SetActive(false);
         brokenTopGO.SetActive(false);
         brokenBotGO.SetActive(false);
        
@@ -109,18 +112,36 @@ public class Pots : MonoBehaviour
     private void Die() {
        // aliveGO.SetActive(false);
         aliveAnim.SetBool("Broken", true);
-        Destroy(gameObject,0.95f);
-       // brokenBotGO.SetActive(true);
-      //  brokenTopGO.SetActive(true);
+       // Destroy(gameObject,0.95f);
+       
+     //  brokenTopGO.SetActive(true);
+    StartCoroutine(Test2());
 
-        brokenTopGO.transform.position = aliveGO.transform.position;
-        brokenBotGO.transform.position = aliveGO.transform.position;
 
-        rbBrokenBot.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
-        rbBrokenTop.velocity = new Vector2(knockbackDeathSpeedX * playerFacingDirection, knockbackDeathSpeedY);
-        rbBrokenTop.AddTorque(deathTorque * -playerFacingDirection, ForceMode2D.Impulse);
-          Destroy(gameObject,0.5f);
+
+     //   brokenTopGO.transform.position = aliveGO.transform.position;
+        heart.SetActive(true);
+        heart.transform.position = aliveGO.transform.position;
+        
+
+       // rbBrokenBot.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
+       // rbBrokenTop.velocity = new Vector2(knockbackDeathSpeedX * playerFacingDirection, knockbackDeathSpeedY);
+      //  rbBrokenTop.AddTorque(deathTorque * -playerFacingDirection, ForceMode2D.Impulse);
+     //     Destroy(gameObject,0.5f);
     }
+
+/*
+   
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("flag 2");
+        }
+    }
+*/
   IEnumerator Test()
     {
         yield return new WaitForSeconds(0.2f);
@@ -131,6 +152,21 @@ public class Pots : MonoBehaviour
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
+
+    IEnumerator Test2()
+    {
+        yield return new WaitForSeconds(0.9f);
+         // aliveAnim.SetBool("Broken", false);
+        aliveGO.SetActive(false);
+      
+
+    }
+
+    public void CollisionDetected(IncreaseHp childScript)
+     {
+         Debug.Log("child collided");
+     } 
+
 
     
     
