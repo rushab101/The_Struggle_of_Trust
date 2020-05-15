@@ -18,14 +18,15 @@ Current stable state as of May 13th, 2020:
 + Advanced Range AI 
 + Can dynamically increase total hearts (After defeat boss when it drops a heart, when picking it up, total health will increase
 + Pogo on Spikes
++ Dialogue In game
++Physics Object( Moving Spikes, breakable creates)
 
 
 Needs to be added eventually: 
-- Dialogue In game
 - Fix Glow
 - Missing particle for Hitstop
 - Level Particle Effect
-- Physics Objects (Health pickups, moving spikes, breakable creates, moving platforms)
+- Physics Objects (Health pickups,moving platforms)
 - FIX DUST PARTICLES (Needs to happen while moving, jumping, landing, turning directions, etc.)
 - Mana/Stamina system (to prevent spamming attacks and spells)
 - Nuggets/Ingots/Coin system (whatever name we choose; these can be used for store purchases)
