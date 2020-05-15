@@ -6,7 +6,7 @@ using UnityEngine;
 public class OldLadyTrigger : MonoBehaviour
 {
     public GameObject canvasObject;
-    public bool firstSentence = false;
+    private bool firstSentence = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,20 +33,28 @@ public class OldLadyTrigger : MonoBehaviour
 
   private void OnTriggerEnter2D(Collider2D collision) 
     {
+      /*
          if (collision.CompareTag("Player"))
         {
                 canvasObject.SetActive(true);
                 FindObjectOfType<DialogueTrigger>().TriggerDialogue();
                  
         }
-
+  */
     }
 
   
        private void OnTriggerStay2D(Collider2D collision) 
     {
 
-
+        if (Input.GetKey(KeyCode.UpArrow) && !firstSentence)
+        {
+                canvasObject.SetActive(true);
+                 firstSentence = true;
+                FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+               
+                 
+        }
 
       
 
@@ -56,6 +64,8 @@ public class OldLadyTrigger : MonoBehaviour
 
      private void OnTriggerExit2D( Collider2D collision ) {
        canvasObject.SetActive(false);
+       firstSentence = false;
+                 
     }
 
 
