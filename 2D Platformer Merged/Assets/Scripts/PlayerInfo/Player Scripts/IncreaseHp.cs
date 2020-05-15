@@ -5,6 +5,21 @@ using UnityEngine;
 public class IncreaseHp : MonoBehaviour
 {
 
+private GameObject aliveGO; 
+     private void Start() {
+     
+
+     //   pc = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        aliveGO = transform.Find("Hearts").gameObject; 
+
+        //brokenTopGO = Find("Hearts").gameObject; 
+      
+        //Debug.Log(aliveGO);
+      //  Instantiate(aliveGO);
+      
+    }
+
   
     void OnCollisionEnter2D(Collision2D collision)
     {
