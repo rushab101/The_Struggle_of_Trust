@@ -6,7 +6,7 @@ public class Pots : MonoBehaviour
 {
 
        [SerializeField]
-    private float maxHealth, knockbackSpeedX, knockbackSpeedY, knockbackDuration, knockbackDeathSpeedX, knockbackDeathSpeedY, deathTorque; 
+    private float maxHealth, knockbackSpeedX =10f, knockbackSpeedY, knockbackDuration, knockbackDeathSpeedX, knockbackDeathSpeedY, deathTorque; 
     [SerializeField]
     private bool applyKnockback;
     [SerializeField]
@@ -16,10 +16,10 @@ public class Pots : MonoBehaviour
 
     private int playerFacingDirection;
 
-    private bool playerOnLeft, knockback;
+    private bool playerOnLeft, knockback,done = false;
 
-    private PlayerController pc;
-    private GameObject aliveGO, brokenTopGO, brokenBotGO;
+      private PlayerController pc;
+    private GameObject aliveGO, brokenTopGO, brokenBotGO ;
     private Rigidbody2D rbAlive, rbBrokenTop, rbBrokenBot;
     private Animator aliveAnim;
 
@@ -29,10 +29,12 @@ public class Pots : MonoBehaviour
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
 
         aliveGO = transform.Find("Alive").gameObject; 
-        brokenTopGO = transform.Find("Broken Top").gameObject; 
+
+        //brokenTopGO = Find("Hearts").gameObject; 
+    
         brokenBotGO = transform.Find("Broken Bottom").gameObject;
         //Debug.Log(aliveGO);
-
+      //  Instantiate(heart);
         aliveAnim = aliveGO.GetComponent<Animator>();
         rbAlive = aliveGO.GetComponent<Rigidbody2D>();
         rbBrokenTop = brokenTopGO.GetComponent<Rigidbody2D>();
@@ -109,18 +111,52 @@ public class Pots : MonoBehaviour
     private void Die() {
        // aliveGO.SetActive(false);
         aliveAnim.SetBool("Broken", true);
-        Destroy(gameObject,0.95f);
-       // brokenBotGO.SetActive(true);
-      //  brokenTopGO.SetActive(true);
+     
+       // Destroy(gameObject,0.95f);
+       
+     //  brokenTopGO.SetActive(true);
+    StartCoroutine(Test2());
+   brokenBotGO.SetActive(true);
+   brokenBotGO.transform.position = aliveGO.transform.position;
+  // pc.transform.position = aliveGO.transform.position;
+    
+   
+   // StartCoroutine(Test3());
+if (Vector2.Distance(pc.transform.position,brokenBotGO.transform.position) <=2)
+       {
+            Debug.Log("flag 2");
+            // FindObjectOfType<PlayerStats>().Heal(1f);
+              StartCoroutine(Test3());
+          
+       }
 
-        brokenTopGO.transform.position = aliveGO.transform.position;
-        brokenBotGO.transform.position = aliveGO.transform.position;
+       
+           // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
+           
 
-        rbBrokenBot.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
-        rbBrokenTop.velocity = new Vector2(knockbackDeathSpeedX * playerFacingDirection, knockbackDeathSpeedY);
-        rbBrokenTop.AddTorque(deathTorque * -playerFacingDirection, ForceMode2D.Impulse);
-          Destroy(gameObject,0.5f);
+
+     //   brokenTopGO.transform.position = aliveGO.transform.position;
+       // heart.SetActive(true);
+       // heart.transform.position = aliveGO.transform.position;
+
+       // rbBrokenBot.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
+       // rbBrokenTop.velocity = new Vector2(knockbackDeathSpeedX * playerFacingDirection, knockbackDeathSpeedY);
+      //  rbBrokenTop.AddTorque(deathTorque * -playerFacingDirection, ForceMode2D.Impulse);
+     //     Destroy(gameObject,0.5f);
     }
+
+/*
+   
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("flag 2");
+        }
+    }
+*/
   IEnumerator Test()
     {
         yield return new WaitForSeconds(0.2f);
@@ -130,6 +166,42 @@ public class Pots : MonoBehaviour
       //  anim.SetBool("downAttack",false);
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
+    }
+
+    
+  IEnumerator Test3()
+    {
+        yield return new WaitForSeconds(0.55f);
+         FindObjectOfType<PlayerStats>().Heal(1f);
+       Destroy(gameObject);
+         
+        //  Debug.Log("Hi");
+      //  anim.SetBool("setAttack", false);
+        
+      //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
+    IEnumerator Test2()
+    {
+        yield return new WaitForSeconds(0.9f);
+         // aliveAnim.SetBool("Broken", false);
+        aliveGO.SetActive(false);
+      
+
+    }
+ void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+        if (collision.gameObject.tag == "Player")
+        {
+             FindObjectOfType<PlayerStats>().TakeDamage(1f);
+           // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
+           
+            FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
+        }
     }
 
     
