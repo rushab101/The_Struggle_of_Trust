@@ -1,7 +1,247 @@
 fileFormatVersion: 2
 guid: 64e2a368778a31a4f98e245d3514d696
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7145504079409453619
+    second: hit-blue-1_0
+  - first:
+      213: 2407727437012525866
+    second: hit-blue-1_1
+  - first:
+      213: 3174151128688674360
+    second: hit-blue-1_2
+  - first:
+      213: 4995201718095554176
+    second: hit-blue-1_3
+  - first:
+      213: 1303800416031375551
+    second: hit-blue-1_4
+  - first:
+      213: 7649573541925686136
+    second: hit-blue-1_5
+  - first:
+      213: -7094818300850251529
+    second: hit-blue-1_6
+  - first:
+      213: -1320714567202273745
+    second: hit-blue-1_7
+  - first:
+      213: 8092756577677157436
+    second: hit-blue-1_8
+  - first:
+      213: -3646007325519685844
+    second: hit-blue-1_9
+  - first:
+      213: 8265045940473129524
+    second: hit-blue-1_10
+  - first:
+      213: 4823490939253802753
+    second: hit-blue-1_11
+  - first:
+      213: 4754428818757671742
+    second: hit-blue-1_12
+  - first:
+      213: -7397826091195447440
+    second: hit-blue-1_13
+  - first:
+      213: -4781441842573050311
+    second: hit-blue-1_14
+  - first:
+      213: 7961308823416892580
+    second: hit-blue-1_15
+  - first:
+      213: 3987848897470576225
+    second: hit-blue-1_16
+  - first:
+      213: -2183793390179963244
+    second: hit-blue-1_17
+  - first:
+      213: 8903720548205868334
+    second: hit-blue-1_18
+  - first:
+      213: -5329410929633305290
+    second: hit-blue-1_19
+  - first:
+      213: -7212255046975909356
+    second: hit-blue-1_20
+  - first:
+      213: -4147297141795751673
+    second: hit-blue-1_21
+  - first:
+      213: -2824065566165360114
+    second: hit-blue-1_22
+  - first:
+      213: 4869089163076854372
+    second: hit-blue-1_23
+  - first:
+      213: 3260289900104301569
+    second: hit-blue-1_24
+  - first:
+      213: 4403978326147949063
+    second: hit-blue-1_25
+  - first:
+      213: -3979550377122503147
+    second: hit-blue-1_26
+  - first:
+      213: 2035654851147639908
+    second: hit-blue-1_27
+  - first:
+      213: 5557076405854420812
+    second: hit-blue-1_28
+  - first:
+      213: -6468802200566280063
+    second: hit-blue-1_29
+  - first:
+      213: 6649499195017540052
+    second: hit-blue-1_30
+  - first:
+      213: 4016608700396497285
+    second: hit-blue-1_31
+  - first:
+      213: 4281976744621225433
+    second: hit-blue-1_32
+  - first:
+      213: -3438088461550487183
+    second: hit-blue-1_33
+  - first:
+      213: -3443487532653956537
+    second: hit-blue-1_34
+  - first:
+      213: -78296261482527512
+    second: hit-blue-1_35
+  - first:
+      213: -2711572536052252844
+    second: hit-blue-1_36
+  - first:
+      213: 1681175562586873690
+    second: hit-blue-1_37
+  - first:
+      213: 3269708742067466714
+    second: hit-blue-1_38
+  - first:
+      213: 446398454474929163
+    second: hit-blue-1_39
+  - first:
+      213: -8247746219008982577
+    second: hit-blue-1_40
+  - first:
+      213: 384033865727105235
+    second: hit-blue-1_41
+  - first:
+      213: -1579544645300029990
+    second: hit-blue-1_42
+  - first:
+      213: -2667026536749379932
+    second: hit-blue-1_43
+  - first:
+      213: -3574068936217199864
+    second: hit-blue-1_44
+  - first:
+      213: 4828984977580074644
+    second: hit-blue-1_45
+  - first:
+      213: -7269957214355256914
+    second: hit-blue-1_46
+  - first:
+      213: 2846221752245183428
+    second: hit-blue-1_47
+  - first:
+      213: -5392692157919514480
+    second: hit-blue-1_48
+  - first:
+      213: 5361345035709509313
+    second: hit-blue-1_49
+  - first:
+      213: 6041189026438678426
+    second: hit-blue-1_50
+  - first:
+      213: -8361445765531768688
+    second: hit-blue-1_51
+  - first:
+      213: -1014923538639210047
+    second: hit-blue-1_52
+  - first:
+      213: 8479611538191104724
+    second: hit-blue-1_53
+  - first:
+      213: -2755430740619712235
+    second: hit-blue-1_54
+  - first:
+      213: -1970112614672226195
+    second: hit-blue-1_55
+  - first:
+      213: 141077072219336683
+    second: hit-blue-1_56
+  - first:
+      213: 6184235272116548958
+    second: hit-blue-1_57
+  - first:
+      213: 6764011310135336125
+    second: hit-blue-1_58
+  - first:
+      213: 3657950653177388215
+    second: hit-blue-1_59
+  - first:
+      213: 6787640640836550462
+    second: hit-blue-1_60
+  - first:
+      213: -4023658423802099472
+    second: hit-blue-1_61
+  - first:
+      213: 8574406376288978126
+    second: hit-blue-1_62
+  - first:
+      213: 1504773807347210133
+    second: hit-blue-1_63
+  - first:
+      213: 4484192033012629746
+    second: hit-blue-1_64
+  - first:
+      213: -8428530108987151380
+    second: hit-blue-1_65
+  - first:
+      213: 2541726562373681632
+    second: hit-blue-1_66
+  - first:
+      213: 1644433768225078879
+    second: hit-blue-1_67
+  - first:
+      213: -1737913676697297514
+    second: hit-blue-1_68
+  - first:
+      213: 1961297495999099463
+    second: hit-blue-1_69
+  - first:
+      213: 7845608449461013127
+    second: hit-blue-1_70
+  - first:
+      213: 2094504731119616563
+    second: hit-blue-1_71
+  - first:
+      213: -7897664955268157306
+    second: hit-blue-1_72
+  - first:
+      213: 1825072120466173364
+    second: hit-blue-1_73
+  - first:
+      213: 3357538155256716162
+    second: hit-blue-1_74
+  - first:
+      213: 1308383549629685432
+    second: hit-blue-1_75
+  - first:
+      213: -1113512641459212464
+    second: hit-blue-1_76
+  - first:
+      213: 3426861050229700491
+    second: hit-blue-1_77
+  - first:
+      213: -4105910234217554382
+    second: hit-blue-1_78
+  - first:
+      213: -540725627376652620
+    second: hit-blue-1_79
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +271,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +280,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,16 +304,208 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hit-blue-1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5e1b5f5e116dc90800000000000000
+      internalID: -7145504079409453619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23e717e857f96120800000000000000
+      internalID: 2407727437012525866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836c4e852a9dc0c20800000000000000
+      internalID: 3174151128688674360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086a1843f75825540800000000000000
+      internalID: 4995201718095554176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb08e8f0297081210800000000000000
+      internalID: 1303800416031375551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b05b17b9eb82a60800000000000000
+      internalID: 7649573541925686136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f851e768542a8d90800000000000000
+      internalID: -7094818300850251529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hit-blue-1_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26893c3911ebade0800000000000000
+      internalID: -1320714567202273745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

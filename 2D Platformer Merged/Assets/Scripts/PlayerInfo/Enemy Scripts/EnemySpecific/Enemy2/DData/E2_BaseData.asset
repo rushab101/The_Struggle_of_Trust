@@ -22,7 +22,7 @@ MonoBehaviour:
   stunResistance: 3
   sunRecoveryTime: 2
   closeRangeActionDistance: 1.51
-  hitParticle: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
+  hitParticle: {fileID: 1760992571876156, guid: bfbb1577c0cf6194893d32135866cd83,
     type: 3}
   whatIsGround:
     serializedVersion: 2

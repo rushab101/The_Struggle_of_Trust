@@ -291,9 +291,9 @@ public class PlayerCombatController : MonoBehaviour
         //  Debug.Log("Hi");
       //  anim.SetBool("setAttack", false);
       
-         Vector3 a= new Vector3(PC.transform.position.x,PC.transform.position.y-1.4f,PC.transform.position.z);
+         Vector3 a= new Vector3(PC.transform.position.x,PC.transform.position.y-1.2f,PC.transform.position.z);
          if(FindObjectOfType<PlayerController>().isGrounded)
-         Instantiate(HitParticle, a, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
+         Instantiate(HitParticle, a, Quaternion.identity);
         anim.SetBool("downAttack",false);
      
       //     anim.SetBool("Attacked", false);
