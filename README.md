@@ -1,6 +1,6 @@
 # 2D Platformer Project
 
-Current stable state as of May 13th, 2020:
+Current stable state as of May 16th, 2020:
 + 1 Platform Test Level (Main Screen, GameOver and Platform Scences)
 + Main Scene of the game started
 + Background Audio + Saves value when closing game
