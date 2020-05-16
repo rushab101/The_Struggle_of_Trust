@@ -4,14 +4,14 @@ Current stable state as of May 16th, 2020:
 + 1 Platform Test Level (Main Screen, GameOver and Platform Scences)
 + Main Scene of the game started
 + Background Audio + Saves value when closing game
-+ Cinemachine camera movement + zoomed out camera
++ Cinemachine camera movement + zoomed out camera + perspective camera in scene 2
 + Movement (Running, 3 ground attacks, 2 Air Attacks, Wall Sliding, Crouching, Death Animation, Somersoult, Hurt, Dashing)
 + Advanced Melee AI + Target Dummy
 + Advanced Flying AI
-+ Health System
++ Health System using hearts
 + Timer
 + HitStop
-+ Spikes
++ Spikes 
 + Save Systems
 + Checkpoints
 + Water Particle Effect
