@@ -19,17 +19,17 @@ Current stable state as of May 13th, 2020:
 + Can dynamically increase total hearts (After defeat boss when it drops a heart, when picking it up, total health will increase
 + Pogo on Spikes
 + Dialogue In game
-+Physics Object( Moving Spikes, breakable creates)
++Physics Object( Moving Spikes, breakable creates,Health pickups,moving platforms)
++ Nuggets/Ingots/Coin system (whatever name we choose; these can be used for store purchases)
+
 
 
 Needs to be added eventually: 
 - Fix Glow
 - Missing particle for Hitstop
 - Level Particle Effect
-- Physics Objects (Health pickups,moving platforms)
 - FIX DUST PARTICLES (Needs to happen while moving, jumping, landing, turning directions, etc.)
 - Mana/Stamina system (to prevent spamming attacks and spells)
-- Nuggets/Ingots/Coin system (whatever name we choose; these can be used for store purchases)
 - Map system (full map if possible) & potentially completion % for each region
 - Collectables and the % completion for them (Maybe easter eggs too, maybe not)
 - Camera shake for certain scenarios (i.e. landing from a high jump, dealing final blow to enemy, etc.)
