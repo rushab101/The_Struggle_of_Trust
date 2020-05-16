@@ -451,12 +451,14 @@ public class PlayerController : MonoBehaviour
                 canNormalJump = false;
 
                 rb.velocity = new Vector2(fasterMovementSpeed * facingDirection, rb.velocity.y);
+                
                 spinTimeLeft -= Time.deltaTime;
 
 
             }
             else if (spinTimeLeft <= 0)
             {
+                StartCoroutine(SwordAttackQUICK2());
                 anim.SetBool("spinMan", false);
                 isSpinning = false;
                 canMove = true;
@@ -529,6 +531,15 @@ public class PlayerController : MonoBehaviour
         //canMove = false;
 
         yield return new WaitForSeconds(0.45f);
+
+        canMove = true;
+    }
+
+      IEnumerator SwordAttackQUICK2()
+    {
+        //canMove = false;
+
+        yield return new WaitForSeconds(0.95f);
 
         canMove = true;
     }

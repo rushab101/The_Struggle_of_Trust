@@ -70909,36 +70909,42 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 926991312, guid: 356ee10e45dfcc040a9c2c6e30e27e02, type: 3}
       propertyPath: m_Offset.y
-      value: -0.050419807
+      value: 0.18691206
       objectReference: {fileID: 0}
     - target: {fileID: 926991312, guid: 356ee10e45dfcc040a9c2c6e30e27e02, type: 3}
       propertyPath: m_Radius
-      value: 0.500504
+      value: 0.34969914
       objectReference: {fileID: 0}
     - target: {fileID: 926991312, guid: 356ee10e45dfcc040a9c2c6e30e27e02, type: 3}
       propertyPath: m_Offset.x
-      value: 0.013214588
+      value: -0.01398468
       objectReference: {fileID: 0}
     - target: {fileID: 6353598523185158573, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.08
+      value: -1.159
       objectReference: {fileID: 0}
     - target: {fileID: 6353598523185158573, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.028
+      value: -0.038
       objectReference: {fileID: 0}
     - target: {fileID: 6353598523185158578, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353598523554226220, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}
       propertyPath: attack2Radius
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6353598523554226220, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
+        type: 3}
+      propertyPath: HitParticle
+      value: 
+      objectReference: {fileID: 980967008157153808, guid: 82178495c13515e46bca821c590597b0,
+        type: 3}
     - target: {fileID: 6353598523554226224, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70993,6 +70999,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353598523554226226, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
+        type: 3}
+      propertyPath: spinTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353598523554226226, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
+        type: 3}
+      propertyPath: spinCoolDown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353598523554226226, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
+        type: 3}
+      propertyPath: jumpForce
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6353598523554226231, guid: 356ee10e45dfcc040a9c2c6e30e27e02,
         type: 3}

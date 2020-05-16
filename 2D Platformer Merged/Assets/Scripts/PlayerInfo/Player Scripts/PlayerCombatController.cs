@@ -23,6 +23,9 @@ public class PlayerCombatController : MonoBehaviour
     private Transform attack3HitBoxPos;
     [SerializeField]
     private LayerMask whatIsDamageable;
+     [SerializeField]
+    private GameObject HitParticle;
+
     public int counter;
 
     public bool gotInput;
@@ -287,7 +290,12 @@ public class PlayerCombatController : MonoBehaviour
         yield return new WaitForSeconds(0.42f);
         //  Debug.Log("Hi");
       //  anim.SetBool("setAttack", false);
+      
+         Vector3 a= new Vector3(PC.transform.position.x,PC.transform.position.y-1.4f,PC.transform.position.z);
+         if(FindObjectOfType<PlayerController>().isGrounded)
+         Instantiate(HitParticle, a, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
         anim.SetBool("downAttack",false);
+     
       //     anim.SetBool("Attacked", false);
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
