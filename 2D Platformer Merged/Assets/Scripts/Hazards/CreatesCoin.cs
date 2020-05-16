@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pots : MonoBehaviour
+public class CreatesCoin : MonoBehaviour
 {
 
        [SerializeField]
     private float maxHealth, knockbackSpeedX =10f, knockbackSpeedY, knockbackDuration, knockbackDeathSpeedX, knockbackDeathSpeedY, deathTorque; 
+
+    private int minCount = 3;
+    private int maxCount = 10;
+
     [SerializeField]
     private bool applyKnockback;
     [SerializeField]
     private GameObject HitParticle;
       [SerializeField]
-    private GameObject Heart;
+    private GameObject GreenCoins;
+      [SerializeField]
+    private GameObject YellowCoins;
+      [SerializeField]
+    private GameObject BlueCoins;
+    [SerializeField]
+    private GameObject RedCoins;
+    [SerializeField]
+    private GameObject PurpleCoins;
+
+
 
     private float currentHealth, knockbackStart;
 
@@ -21,31 +35,17 @@ public class Pots : MonoBehaviour
     private bool playerOnLeft, knockback,done = false;
 
       private PlayerController pc;
-    private GameObject aliveGO, brokenTopGO, brokenBotGO ;
-    private Rigidbody2D rbAlive, rbBrokenTop, rbBrokenBot;
+    private GameObject aliveGO;
+    private Rigidbody2D rbAlive;
     private Animator aliveAnim;
 
     private void Start() {
         currentHealth = maxHealth;
-
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
-
         aliveGO = transform.Find("Alive").gameObject; 
-
-        //brokenTopGO = Find("Hearts").gameObject; 
-    
-        brokenBotGO = transform.Find("Broken Bottom").gameObject;
-        //Debug.Log(aliveGO);
-      //  Instantiate(heart);
         aliveAnim = aliveGO.GetComponent<Animator>();
         rbAlive = aliveGO.GetComponent<Rigidbody2D>();
-        rbBrokenTop = brokenTopGO.GetComponent<Rigidbody2D>();
-        rbBrokenBot = brokenBotGO.GetComponent<Rigidbody2D>();
-
-        aliveGO.SetActive(true);
-        brokenTopGO.SetActive(false);
-        brokenBotGO.SetActive(false);
-       
+        aliveGO.SetActive(true);       
     }
 
     private void Update() {
@@ -55,9 +55,7 @@ public class Pots : MonoBehaviour
     private void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
-       // currentHealth -= attackDetails;
-       
-       // playerFacingDirection = pc.GetFacingDirection();
+    
 
         if (attackDetails.position.x < aliveGO.transform.position.x)
         {
@@ -81,7 +79,7 @@ public class Pots : MonoBehaviour
             playerOnLeft = false;
         }
 
-             aliveAnim.SetBool("Attacked", true);
+             aliveAnim.SetBool("hit", true);
              StartCoroutine(Test());
 
         aliveAnim.SetBool("playerOnLeft", playerOnLeft);
@@ -97,7 +95,6 @@ public class Pots : MonoBehaviour
     }
 
     private void Knockback() {
-        Debug.Log("Ok");
         knockback = true;
         knockbackStart = Time.time;
         rbAlive.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);
@@ -111,39 +108,23 @@ public class Pots : MonoBehaviour
     }
 
     private void Die() {
-       // aliveGO.SetActive(false);
-        aliveAnim.SetBool("Broken", true);
-     
-       // Destroy(gameObject,0.95f);
        
-     //  brokenTopGO.SetActive(true);
-    StartCoroutine(Test2());
-        StartCoroutine(Test3());
-        Instantiate(Heart, aliveGO.transform.position,Heart.transform.rotation);
-
-    }
-
-/*
+        aliveAnim.SetBool("broke", true);
    
-     void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+    StartCoroutine(Test2());
 
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("flag 2");
+        int count = Random.Range(minCount,maxCount);
+        for (int i = 0; i < count; ++i) {
+                StartCoroutine(Test3());
+        Instantiate(GreenCoins, aliveGO.transform.position,Quaternion.identity);
         }
     }
-*/
+
+
   IEnumerator Test()
     {
         yield return new WaitForSeconds(0.2f);
-        //  Debug.Log("Hi");
-      //  anim.SetBool("setAttack", false);
-         aliveAnim.SetBool("Attacked", false);
-      //  anim.SetBool("downAttack",false);
-        // Debug.Log("flag 2");
-        // SceneManager.LoadScene("Game Over");
+         aliveAnim.SetBool("hit", false);
     }
 
     
@@ -151,13 +132,9 @@ public class Pots : MonoBehaviour
     IEnumerator Test2()
     {
         yield return new WaitForSeconds(0.9f);
-         // aliveAnim.SetBool("Broken", false);
         aliveGO.SetActive(false);
-      
-
     }
-
-      IEnumerator Test3()
+     IEnumerator Test3()
     {
         yield return new WaitForSeconds(0.1f);
         aliveGO.SetActive(false);
@@ -166,27 +143,3 @@ public class Pots : MonoBehaviour
     
     
 }
-
-
-/*
-
-     aliveAnim.SetBool("Attacked", true);
-             StartCoroutine(Test());
-
-
- aliveAnim.SetBool("Broken", true);
-             //StartCoroutine(Test2());
-             Destroy(gameObject,0.9f);
-             
-    IEnumerator Test()
-    {
-        yield return new WaitForSeconds(0.2f);
-        //  Debug.Log("Hi");
-      //  anim.SetBool("setAttack", false);
-         aliveAnim.SetBool("Attacked", false);
-      //  anim.SetBool("downAttack",false);
-        // Debug.Log("flag 2");
-        // SceneManager.LoadScene("Game Over");
-    }
-
-             */

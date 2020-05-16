@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseHp : MonoBehaviour
+public class YellowCoin : MonoBehaviour
 {
-
-  
-    void OnCollisionEnter2D(Collision2D collision)
+     void OnCollisionEnter2D(Collision2D collision)
     {
-        
 
         if (collision.gameObject.tag == "Player")
         {
-             FindObjectOfType<PlayerStats>().Heal(1.0f);
+            
+        Debug.Log("Went to here");
+             FindObjectOfType<Currency>().UpdateBalance(3);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject);
           
