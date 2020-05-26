@@ -18,7 +18,7 @@ public class OldLadyTrigger : MonoBehaviour
     void Update()
     {
         
-         if (Input.GetKeyDown(KeyCode.UpArrow))
+         if (Input.GetKeyDown(KeyCode.E))
           {
              FindObjectOfType<DialogueManager>().DisplayNextSentence();
              if (FindObjectOfType<DialogueManager>().sentences.Count < 0)
@@ -47,7 +47,7 @@ public class OldLadyTrigger : MonoBehaviour
        private void OnTriggerStay2D(Collider2D collision) 
     {
 
-        if (Input.GetKey(KeyCode.UpArrow) && !firstSentence)
+        if (Input.GetKey(KeyCode.E) && !firstSentence)
         {
                 canvasObject.SetActive(true);
                  firstSentence = true;

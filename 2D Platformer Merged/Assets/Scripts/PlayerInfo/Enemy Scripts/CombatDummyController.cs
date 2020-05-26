@@ -68,7 +68,7 @@ public class CombatDummyController : MonoBehaviour {
 
         // one or the other should work and randomize the hit particle (make sure to un-comment the serializedfield HitParticle)
         Instantiate(HitParticle, aliveGO.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
-        Instantiate(HitParticle, aliveAnim.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
+      //  Instantiate(HitParticle, aliveAnim.transform.position, Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f)));
 
         if (playerFacingDirection == 1) {
             playerOnLeft = true;
