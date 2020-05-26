@@ -64,8 +64,14 @@ TagManager:
   - name: Background 3
     uniqueID: 4141574339
     locked: 0
+  - name: Particle 2
+    uniqueID: 1938586137
+    locked: 0
   - name: Background 2
     uniqueID: 3583119501
+    locked: 0
+  - name: Particle 1
+    uniqueID: 1817496651
     locked: 0
   - name: Background 1
     uniqueID: 400664625
