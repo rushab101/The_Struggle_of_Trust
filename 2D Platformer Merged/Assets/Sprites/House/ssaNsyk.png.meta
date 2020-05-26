@@ -1,0 +1,2420 @@
+fileFormatVersion: 2
+guid: e012514fae295a544a2f71ee857937e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3865937749450131399
+    second: ssaNsyk_0
+  - first:
+      213: 8039387272803137616
+    second: ssaNsyk_1
+  - first:
+      213: 1728384789988417679
+    second: ssaNsyk_2
+  - first:
+      213: -2900042800281540914
+    second: ssaNsyk_3
+  - first:
+      213: -3083844951572542375
+    second: ssaNsyk_4
+  - first:
+      213: -3964065411079067965
+    second: ssaNsyk_5
+  - first:
+      213: 3997191939856983726
+    second: ssaNsyk_6
+  - first:
+      213: 243001141359310229
+    second: ssaNsyk_7
+  - first:
+      213: 5944568016274449379
+    second: ssaNsyk_8
+  - first:
+      213: 4350216509942707534
+    second: ssaNsyk_9
+  - first:
+      213: 5677573334935659457
+    second: ssaNsyk_10
+  - first:
+      213: -3791163696168130265
+    second: ssaNsyk_11
+  - first:
+      213: 5625938511317805621
+    second: ssaNsyk_12
+  - first:
+      213: 1629669233051251043
+    second: ssaNsyk_13
+  - first:
+      213: -4746350783324837908
+    second: ssaNsyk_14
+  - first:
+      213: 7826430396844447796
+    second: ssaNsyk_15
+  - first:
+      213: -8888056227538787083
+    second: ssaNsyk_16
+  - first:
+      213: 7357536552478529910
+    second: ssaNsyk_17
+  - first:
+      213: -7975607210793221473
+    second: ssaNsyk_18
+  - first:
+      213: 3097998892772072195
+    second: ssaNsyk_19
+  - first:
+      213: -885339718497012839
+    second: ssaNsyk_20
+  - first:
+      213: -5006023459813000871
+    second: ssaNsyk_21
+  - first:
+      213: -6899762154859414026
+    second: ssaNsyk_22
+  - first:
+      213: 2368891081219516690
+    second: ssaNsyk_23
+  - first:
+      213: -1803677925090346820
+    second: ssaNsyk_24
+  - first:
+      213: 2290415913486504401
+    second: ssaNsyk_25
+  - first:
+      213: 2985667553041661276
+    second: ssaNsyk_26
+  - first:
+      213: -1022783630447464711
+    second: ssaNsyk_27
+  - first:
+      213: 799522857004139361
+    second: ssaNsyk_28
+  - first:
+      213: 37601030974597056
+    second: ssaNsyk_29
+  - first:
+      213: -315655969084306192
+    second: ssaNsyk_30
+  - first:
+      213: -5001487819635934381
+    second: ssaNsyk_31
+  - first:
+      213: -1714113789653159748
+    second: ssaNsyk_32
+  - first:
+      213: 752098593548520299
+    second: ssaNsyk_33
+  - first:
+      213: 7517235412941695262
+    second: ssaNsyk_34
+  - first:
+      213: 5884381324373737218
+    second: ssaNsyk_35
+  - first:
+      213: 3846072706565203549
+    second: ssaNsyk_36
+  - first:
+      213: 3544704204623743345
+    second: ssaNsyk_37
+  - first:
+      213: -5104964914863085881
+    second: ssaNsyk_38
+  - first:
+      213: 5106762973846349323
+    second: ssaNsyk_39
+  - first:
+      213: 8051273990120145048
+    second: ssaNsyk_40
+  - first:
+      213: 3504955162546588732
+    second: ssaNsyk_41
+  - first:
+      213: -1153971915259926658
+    second: ssaNsyk_42
+  - first:
+      213: 2214909566797273308
+    second: ssaNsyk_43
+  - first:
+      213: -5089066165464440383
+    second: ssaNsyk_44
+  - first:
+      213: -6305922031022410698
+    second: ssaNsyk_45
+  - first:
+      213: 2271398419009212029
+    second: ssaNsyk_46
+  - first:
+      213: 8461731241725977994
+    second: ssaNsyk_47
+  - first:
+      213: -3543475869873500269
+    second: ssaNsyk_48
+  - first:
+      213: -8492678451757500244
+    second: ssaNsyk_49
+  - first:
+      213: -4390380030277614891
+    second: ssaNsyk_50
+  - first:
+      213: 2838702266955253524
+    second: ssaNsyk_51
+  - first:
+      213: 5721293204078575078
+    second: ssaNsyk_52
+  - first:
+      213: -2332874736178748096
+    second: ssaNsyk_53
+  - first:
+      213: -508039894074385913
+    second: ssaNsyk_54
+  - first:
+      213: 1692862913477573684
+    second: ssaNsyk_55
+  - first:
+      213: -7431194124175031160
+    second: ssaNsyk_56
+  - first:
+      213: -1920933574420062478
+    second: ssaNsyk_57
+  - first:
+      213: 826112954366036077
+    second: ssaNsyk_58
+  - first:
+      213: -671559945962809302
+    second: ssaNsyk_59
+  - first:
+      213: 3518340604094037041
+    second: ssaNsyk_60
+  - first:
+      213: 2069428874232745680
+    second: ssaNsyk_61
+  - first:
+      213: 3581236246288889215
+    second: ssaNsyk_62
+  - first:
+      213: -579189201436633437
+    second: ssaNsyk_63
+  - first:
+      213: 1635171186108501814
+    second: ssaNsyk_64
+  - first:
+      213: 1520047173989897955
+    second: ssaNsyk_65
+  - first:
+      213: 8343072158443254695
+    second: ssaNsyk_66
+  - first:
+      213: 8129082965956838060
+    second: ssaNsyk_67
+  - first:
+      213: -170018277705410127
+    second: ssaNsyk_68
+  - first:
+      213: -1284834730255035516
+    second: ssaNsyk_69
+  - first:
+      213: -5307933230789964456
+    second: ssaNsyk_70
+  - first:
+      213: 1590704442198849379
+    second: ssaNsyk_71
+  - first:
+      213: 6917417597771589532
+    second: ssaNsyk_72
+  - first:
+      213: 5136104201417759483
+    second: ssaNsyk_73
+  - first:
+      213: 5495991789407420268
+    second: ssaNsyk_74
+  - first:
+      213: 5530181463667699496
+    second: ssaNsyk_75
+  - first:
+      213: -1234860591651772871
+    second: ssaNsyk_76
+  - first:
+      213: 5150508932632848145
+    second: ssaNsyk_77
+  - first:
+      213: 5263160674687901488
+    second: ssaNsyk_78
+  - first:
+      213: 219396536672283623
+    second: ssaNsyk_79
+  - first:
+      213: 5504464094082011815
+    second: ssaNsyk_80
+  - first:
+      213: -8746937395043561833
+    second: ssaNsyk_81
+  - first:
+      213: -1621441684808588865
+    second: ssaNsyk_82
+  - first:
+      213: 6106241949860594719
+    second: ssaNsyk_83
+  - first:
+      213: -3119311306227387740
+    second: ssaNsyk_84
+  - first:
+      213: -5454292552679808654
+    second: ssaNsyk_85
+  - first:
+      213: 3136449803773775997
+    second: ssaNsyk_86
+  - first:
+      213: 330060662175280556
+    second: ssaNsyk_87
+  - first:
+      213: -4971214382319426912
+    second: ssaNsyk_88
+  - first:
+      213: 398480234842820564
+    second: ssaNsyk_89
+  - first:
+      213: -2297812577279605193
+    second: ssaNsyk_90
+  - first:
+      213: 7224331772649802555
+    second: ssaNsyk_91
+  - first:
+      213: 2280560760462672509
+    second: ssaNsyk_92
+  - first:
+      213: 6266159965693976278
+    second: ssaNsyk_93
+  - first:
+      213: 6728719153491855926
+    second: ssaNsyk_94
+  - first:
+      213: 7152770618233307569
+    second: ssaNsyk_95
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ssaNsyk_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 350
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c78fb786e196a530800000000000000
+      internalID: 3865937749450131399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 351
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0583a3f4124a19f60800000000000000
+      internalID: 8039387272803137616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 352
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80a2722fc47cf710800000000000000
+      internalID: 1728384789988417679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec62acf207af0c7d0800000000000000
+      internalID: -2900042800281540914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c032ffa5bf335d0800000000000000
+      internalID: -3083844951572542375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6283ad28fccf8c0800000000000000
+      internalID: -3964065411079067965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 350
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6ea3a24e0e87730800000000000000
+      internalID: 3997191939856983726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_7
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 351
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5957cb620405f5300800000000000000
+      internalID: 243001141359310229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_8
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 352
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3ef297d195f7250800000000000000
+      internalID: 5944568016274449379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45bc2b0ed21f5c30800000000000000
+      internalID: 4350216509942707534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_10
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3e117fddacace40800000000000000
+      internalID: 5677573334935659457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 349
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729aa8c64b4136bc0800000000000000
+      internalID: -3791163696168130265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 303
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53aa94fb449531e40800000000000000
+      internalID: 5625938511317805621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_13
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 304
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3613769788fbd9610800000000000000
+      internalID: 1629669233051251043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_14
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 305
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7a68c1c13912eb0800000000000000
+      internalID: -4746350783324837908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4389b3fcaf01d9c60800000000000000
+      internalID: 7826430396844447796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f42ad5b3f747a480800000000000000
+      internalID: -8888056227538787083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6795f6833883b1660800000000000000
+      internalID: 7357536552478529910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 303
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9240a49f73f05190800000000000000
+      internalID: -7975607210793221473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_19
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 304
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b9b3e349d4efa20800000000000000
+      internalID: 3097998892772072195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_20
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 305
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993f07d7734a6b3f0800000000000000
+      internalID: -885339718497012839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959f294bf28078ab0800000000000000
+      internalID: -5006023459813000871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_22
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdbbec60ee1f30a0800000000000000
+      internalID: -6899762154859414026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_23
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 299
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2192eaf23edffd020800000000000000
+      internalID: 2368891081219516690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 257
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8b6c1cb7c08f6e0800000000000000
+      internalID: -1803677925090346820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 256
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1d34f532139cf10800000000000000
+      internalID: 2290415913486504401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_26
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 255
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d357c12d83f6920800000000000000
+      internalID: 2985667553041661276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_27
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe281105b75ec1f0800000000000000
+      internalID: -1022783630447464711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_28
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16389896dc9781b00800000000000000
+      internalID: 799522857004139361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_29
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7ed6e30f5958000800000000000000
+      internalID: 37601030974597056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_30
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 257
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc8f7b81909e9bf0800000000000000
+      internalID: -315655969084306192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_31
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 256
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b382ab355279ab0800000000000000
+      internalID: -5001487819635934381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_32
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 255
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0ff1f079e3638e0800000000000000
+      internalID: -1714113789653159748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_33
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bc780afadff6a00800000000000000
+      internalID: 752098593548520299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_34
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e196061b7c5925860800000000000000
+      internalID: 7517235412941695262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_35
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 255
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f3d3243a589a150800000000000000
+      internalID: 5884381324373737218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_36
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 206
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56e42fcfbeff5530800000000000000
+      internalID: 3846072706565203549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_37
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 207
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1798e6681b1513130800000000000000
+      internalID: 3544704204623743345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_38
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 208
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6e0ca05758729b0800000000000000
+      internalID: -5104964914863085881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_39
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06aa303eddded640800000000000000
+      internalID: 5106762973846349323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_40
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890047a590fdbbf60800000000000000
+      internalID: 8051273990120145048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_41
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cc249762a14a030800000000000000
+      internalID: 3504955162546588732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_42
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 206
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e77a72638a44cffe0800000000000000
+      internalID: -1153971915259926658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_43
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 207
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8d0921480fcbe10800000000000000
+      internalID: 2214909566797273308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_44
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 208
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1680919410069b0800000000000000
+      internalID: -5089066165464440383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_45
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634799fa25ddc78a0800000000000000
+      internalID: -6305922031022410698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_46
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e8d64e3d0a58f10800000000000000
+      internalID: 2271398419009212029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_47
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 208
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85e6ef6bbb1e6570800000000000000
+      internalID: 8461731241725977994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 158
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f8502787b03dec0800000000000000
+      internalID: -3543475869873500269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_49
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 159
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8316bb1f1f32a80800000000000000
+      internalID: -8492678451757500244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_50
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 160
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2855aaf9c3213c0800000000000000
+      internalID: -4390380030277614891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_51
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417c6f4fba8156720800000000000000
+      internalID: 2838702266955253524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_52
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edb5fc3bdd166f40800000000000000
+      internalID: 5721293204078575078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_53
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045259c99c6ff9fd0800000000000000
+      internalID: -2332874736178748096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_54
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 158
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a18f5786413f8f0800000000000000
+      internalID: -508039894074385913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_55
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 159
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c7343c9d14e7710800000000000000
+      internalID: 1692862913477573684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_56
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 160
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884c393f0581fd890800000000000000
+      internalID: -7431194124175031160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_57
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe129377197755e0800000000000000
+      internalID: -1920933574420062478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_58
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d680655ea51f67b00800000000000000
+      internalID: 826112954366036077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_59
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 157
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28918789c32ea6f0800000000000000
+      internalID: -671559945962809302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_60
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 111
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cbbd17328a3d030800000000000000
+      internalID: 3518340604094037041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_61
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 112
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de4498c89618bc10800000000000000
+      internalID: 2069428874232745680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_62
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 113
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f757dcc446b13b130800000000000000
+      internalID: 3581236246288889215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_63
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a690ae6d7e46f7f0800000000000000
+      internalID: -579189201436633437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_64
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f83feb78b41b610800000000000000
+      internalID: 1635171186108501814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_65
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e61187e9da481510800000000000000
+      internalID: 1520047173989897955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_66
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 111
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a33673bceb88c370800000000000000
+      internalID: 8343072158443254695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_67
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 112
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2498743ed40d070800000000000000
+      internalID: 8129082965956838060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_68
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 113
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b99b08f649f3adf0800000000000000
+      internalID: -170018277705410127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_69
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4835014ce995b2ee0800000000000000
+      internalID: -1284834730255035516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_70
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dc54769de6656b0800000000000000
+      internalID: -5307933230789964456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_71
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 107
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367f5e32341531610800000000000000
+      internalID: 1590704442198849379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_72
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 65
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c972636b7aa9fff50800000000000000
+      internalID: 6917417597771589532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_73
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 64
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa95e61f8b174740800000000000000
+      internalID: 5136104201417759483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_74
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 63
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6fb718d96fa54c40800000000000000
+      internalID: 5495991789407420268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_75
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fec55bdb62fbc40800000000000000
+      internalID: 5530181463667699496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_76
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936a77f95d4ecdee0800000000000000
+      internalID: -1234860591651772871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_77
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117ae0ee5984a7740800000000000000
+      internalID: 5150508932632848145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_78
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 65
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fd39a8fb08a0940800000000000000
+      internalID: 5263160674687901488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_79
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 64
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb6d49dcf37b0300800000000000000
+      internalID: 219396536672283623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_80
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 63
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a296aefde8c36c40800000000000000
+      internalID: 5504464094082011815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_81
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e09df48c2ac9680800000000000000
+      internalID: -8746937395043561833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_82
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb129f0e06b7f79e0800000000000000
+      internalID: -1621441684808588865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_83
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 63
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14870e73babdb450800000000000000
+      internalID: 6106241949860594719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_84
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 14
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2f470d4eaf5b4d0800000000000000
+      internalID: -3119311306227387740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_85
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 15
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271267842d57e44b0800000000000000
+      internalID: -5454292552679808654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_86
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 16
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7097c99a78e68b20800000000000000
+      internalID: 3136449803773775997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_87
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cada94b6c6c949400800000000000000
+      internalID: 330060662175280556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_88
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2a98f9bd2b20bb0800000000000000
+      internalID: -4971214382319426912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_89
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df02df89afa78500800000000000000
+      internalID: 398480234842820564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_90
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 14
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73603d2a2a78c10e0800000000000000
+      internalID: -2297812577279605193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_91
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 15
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b0c58987bf14460800000000000000
+      internalID: 7224331772649802555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_92
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 16
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d728210cded26af10800000000000000
+      internalID: 2280560760462672509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_93
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de96fc0a4fd5f650800000000000000
+      internalID: 6266159965693976278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_94
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63acf397b66316d50800000000000000
+      internalID: 6728719153491855926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ssaNsyk_95
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 16
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1c5a3fafeb34360800000000000000
+      internalID: 7152770618233307569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
