@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Michsky.UI.FSC
-{
+
     public class FSTDemoManager : MonoBehaviour {
 
         [Header("STYLE OBJECTS")]
@@ -36,33 +35,24 @@ namespace Michsky.UI.FSC
         private GameObject currentButton;
         private GameObject nextButton;
 
-        private Animator currentPanelAnimator;
+        public Animator currentPanelAnimator;
         public Animator nextPanelAnimator;
-        private Animator styleAnimator;
+        public Animator styleAnimator;
 
         private Animator currentButtonAnimator;
         private Animator nextButtonAnimator;
 
         void Start ()
         {
-            currentButton = buttons[currentPanelIndex];
-            currentButtonAnimator = currentButton.GetComponent<Animator>();
-            currentButtonAnimator.Play(buttonFadeIn);
-
-            currentPanel = panels[currentPanelIndex];
-            currentPanelAnimator = currentPanel.GetComponent<Animator>();
-            currentPanelAnimator.Play(panelFadeIn);
-
-            styleObject = objects[currentStylelIndex];
-            styleAnimator = currentPanel.GetComponent<Animator>();
-            styleAnimator.Play(styleExpand);
-
-            nextPanel = panels[currentPanelIndex];
-            nextPanelAnimator = nextPanel.GetComponent<Animator>();
+          
+          
         }
 
         public void PanelAnim(int newPanel)
         {
+           
+           
+
             if (newPanel != currentPanelIndex)
             {
                 currentPanel = panels[currentPanelIndex];
@@ -95,8 +85,9 @@ namespace Michsky.UI.FSC
 
         public void Restart()
         {
+           
+           
             nextPanelAnimator.Play("");
             nextPanelAnimator.Play(panelFadeIn);
         }
     }
-}
