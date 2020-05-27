@@ -89,6 +89,7 @@ public class Currency : MonoBehaviour
 
     }
 
+/*
     void OnApplicationFocus(bool hasFocus)
     {
         if (hasFocus == false)
@@ -97,7 +98,7 @@ public class Currency : MonoBehaviour
             SaveSettings();
         }
     }
-
+*/
 
     // Update is called once per frame
     void Update()

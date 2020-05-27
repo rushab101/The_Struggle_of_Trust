@@ -13,6 +13,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
     private bool first = false;
     public float x_value;
     public float y_value;
+    private float heal;
 
 
     private void Start()
@@ -37,7 +38,10 @@ public class FirePlaceCheckPoint : MonoBehaviour
             aliveGO.SetActive(false);
             aliveAnim.SetBool("on", true);
             gm.lastCheckPointPos = transform.position;
+            heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
+            FindObjectOfType<PlayerStats>().Heal(heal);
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+            FindObjectOfType<Currency>().SaveSettings();
         }
     }
 
