@@ -24,6 +24,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EmissionNewScarf:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionNewSlash:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionSword:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -36,8 +44,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NewSprite:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
     - Color_11630998: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 0}
     - Color_A8D87391: {r: 2.1185474, g: 0, b: 0, a: 0}
-    - Color_F2F209AE: {r: 0, g: 1.4593371, b: 10.323459, a: 0}
+    - Color_F2F209AE: {r: 0, g: 0.36483434, b: 2.5808651, a: 0}
