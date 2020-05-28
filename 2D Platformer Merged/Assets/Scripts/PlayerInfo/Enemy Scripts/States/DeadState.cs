@@ -9,6 +9,15 @@ public class DeadState : State
     {
         this.stateData = stateData;
     }
+    public DeadState()
+    {
+
+    }
+
+
+
+
+   
 
     public override void DoChecks()
     {
@@ -20,8 +29,25 @@ public class DeadState : State
         base.Enter();
         GameObject.Instantiate(stateData.deathBloodParticle,entity.aliveGO.transform.position,stateData.deathBloodParticle.transform.rotation);
         GameObject.Instantiate(stateData.deathChunkParticle,entity.aliveGO.transform.position,stateData.deathChunkParticle.transform.rotation);
-        entity.gameObject.SetActive(false);
+
+       //  StartCoroutine(Test());
+         RunCoroutine();
+       // entity.gameObject.SetActive(false);
     }
+
+
+     private void RunCoroutine()
+     {
+         Test2.t.GetComponent<Test2>()._StartCoroutine(enumerator());
+     }
+ 
+     public IEnumerator enumerator()
+     {
+         yield return new WaitForSeconds(0.4f);
+          entity.gameObject.SetActive(false);
+     }
+
+  
 
   
     public override void Exit()

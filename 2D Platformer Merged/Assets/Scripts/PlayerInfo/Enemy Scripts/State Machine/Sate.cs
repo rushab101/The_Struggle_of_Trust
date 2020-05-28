@@ -18,7 +18,10 @@ public class State
         this.animBoolName = animBoolName;
 
     }
-
+    public State ()
+    {  
+    }
+     
     public virtual void Enter()
     {
         startTime = Time.time;
