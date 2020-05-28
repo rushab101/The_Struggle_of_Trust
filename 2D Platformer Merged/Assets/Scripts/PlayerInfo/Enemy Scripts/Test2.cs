@@ -10,8 +10,8 @@ public class Test2 : MonoBehaviour
  
      private void Awake()
      {
-         if (t != gameObject || !t)
-             t = gameObject;
+       //  if (t != gameObject || !t)
+         //    t = gameObject;
      }
  
      public void _StartCoroutine(IEnumerator iEnumerator)

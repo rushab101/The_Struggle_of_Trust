@@ -31,8 +31,8 @@ public class DeadState : State
         GameObject.Instantiate(stateData.deathChunkParticle,entity.aliveGO.transform.position,stateData.deathChunkParticle.transform.rotation);
 
        //  StartCoroutine(Test());
-         RunCoroutine();
-       // entity.gameObject.SetActive(false);
+       //  RunCoroutine();
+        entity.gameObject.SetActive(false);
     }
 
 
