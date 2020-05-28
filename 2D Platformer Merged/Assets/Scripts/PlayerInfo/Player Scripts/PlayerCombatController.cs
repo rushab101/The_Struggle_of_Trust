@@ -345,7 +345,7 @@ public class PlayerCombatController : MonoBehaviour
         {
            
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
-                DoNotDamage = true;
+            //    DoNotDamage = true;
             collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
 
         }
