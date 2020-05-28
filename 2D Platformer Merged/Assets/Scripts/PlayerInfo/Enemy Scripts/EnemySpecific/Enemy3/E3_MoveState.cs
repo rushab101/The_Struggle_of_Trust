@@ -45,14 +45,14 @@ public class E3_MoveState : MoveState
             stateMachine.ChangeState(enemy.meleeAttackState);    
         }
  
-
+/*
        if (x > 50 && !went_in)
        {
            entity.Flip();
            went_in = true;
          stateMachine.ChangeState(enemy.moveState);
        }
-
+*/
 
        else if (isDetectingWall || !isDetectingLedge)
         {
