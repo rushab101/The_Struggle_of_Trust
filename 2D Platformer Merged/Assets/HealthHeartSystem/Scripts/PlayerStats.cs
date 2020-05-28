@@ -103,7 +103,7 @@ public class PlayerStats : MonoBehaviour
        IEnumerator Test()
     {
         yield return new WaitForSeconds(1.5f);
-        Debug.Log("Hi");
+      //  Debug.Log("Hi");
         SceneManager.LoadScene("Game Over");
        
     }

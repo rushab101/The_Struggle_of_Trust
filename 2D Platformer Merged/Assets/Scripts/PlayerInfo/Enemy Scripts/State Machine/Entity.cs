@@ -31,6 +31,7 @@ public class Entity : MonoBehaviour
     protected bool isStunned;
     public bool PlayerDamaged;
     protected bool isDead;
+    public Vector2 positionOfObject;
 
     public virtual void Start()
     {
@@ -39,6 +40,7 @@ public class Entity : MonoBehaviour
         currentStunResistance = entityData.stunResistance;
 
         aliveGO = transform.Find("Slime").gameObject;
+        
         rb = aliveGO.GetComponent<Rigidbody2D>();
         anim = aliveGO.GetComponent<Animator>();
         stateMachine = new FiniteStateMachine();
@@ -46,12 +48,15 @@ public class Entity : MonoBehaviour
     }
     public virtual void Update()
     {
+
         stateMachine.currentState.LogicUpdate();
+        positionOfObject = aliveGO.transform.position;
         anim.SetFloat("yVelocity", rb.velocity.y);
         if (Time.time >= lastDamageTime + entityData.sunRecoveryTime)
         {
             ResetStunResistance();
         }
+      
  //       ResetHurt();
     }
     public virtual void FixedUpdate()

@@ -27,6 +27,7 @@ public class E3_idleState : IdleState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+          enemy.CheckTouchDamage();
         /*
          if (isPlayerInMinAgroRange)
         {

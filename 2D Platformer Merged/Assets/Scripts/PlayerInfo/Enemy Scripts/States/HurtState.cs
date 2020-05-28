@@ -28,8 +28,9 @@ public class HurtState : State
 
     public override void LogicUpdate() {
         base.LogicUpdate();
+
           hurting = entity.PlayerDamaged;
-         // entity.PlayerDamaged = false;
+          entity.SetVelocity(0f);
 
     }
 

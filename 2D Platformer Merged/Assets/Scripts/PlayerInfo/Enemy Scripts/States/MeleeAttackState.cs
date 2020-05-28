@@ -46,9 +46,7 @@ public class MeleeAttackState : AttackState
     {
         base.PhysicsUpdate();
     }
-
-
-    public override void TriggerAttack()
+      public override void TriggerAttack()
     {
         base.TriggerAttack();
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPosition.position,stateData.attackRadius, stateData.whatIsPlayer);
@@ -57,4 +55,7 @@ public class MeleeAttackState : AttackState
             collider.transform.SendMessage("Damage",attackDetails);
         }
     }
+
+
+
 }
