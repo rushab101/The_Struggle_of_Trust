@@ -113,9 +113,11 @@ public class Enemy3 : Entity
             Collider2D hit = Physics2D.OverlapArea(touchDamageBotLeft, touchDamageTopRight, whatisPlayer);
             if (hit != null)
             {
+
                 lastTouchDamageTime = Time.time;
        
                 hit.SendMessage("Damage", attackDetails);
+                FindObjectOfType<TimeStop>().StopTime(0.25f, 10, 0.1f);
             }
         
     }

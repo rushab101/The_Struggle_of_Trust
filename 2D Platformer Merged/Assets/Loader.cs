@@ -14,8 +14,7 @@ public class Loader : MonoBehaviour
      void Awake()
      {
          LoadPlayer();
-         Debug.Log(x);
-         Debug.Log(y);
+        
          if (x > - 60)
          {
              Interior.SetActive(false);

@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
     public float tapSpeed3 = 1.5f;
 
     public float tapSpeed4 = 2.0f;
+    public bool PendulumHit= false;
 
     public float dashTime;
     public float spinTime;
@@ -184,14 +185,32 @@ public class PlayerController : MonoBehaviour
 
       //  UnityEngine.Debug.Log("IEFFrames: " + IEFFrames);
 
-        if (IEFFrames <= 20)
+ 
+        if (IEFFrames <= 20) //Regular Hits
         {
             FindObjectOfType<PlayerCombatController>().animationIE = true;
-            rb.velocity = new Vector2(knockbackSpeed.x * direction, knockbackSpeed.y);// actually doing the knockback
+            if (PendulumHit)
+            {
+                 rb.velocity = new Vector2(35 * -direction, 15);// PendulumHit
+                UnityEngine.Debug.Log("In Controller");
+            }
+            if (!PendulumHit)
+            {
+                   direction = GetFacingDirection();
+                   rb.velocity = new Vector2(10 * -direction, 15);// actually doing the knockback 
+            }
+        
+         
+
+
             IEFFrames = 150.0f;
             anim.SetBool("L", true);
             damagePlayer = true;
         }
+
+
+
+
     }
 
     private void CheckKnockback()

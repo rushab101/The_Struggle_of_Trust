@@ -28,11 +28,11 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+      
 
-
-        if (Input.GetKey(KeyCode.E) && !first)
+        if (Input.GetKey(KeyCode.E) && !first && collision.gameObject.tag == "Player")
         {
-            //  Debug.Log("Went to here");
+           
             first = true;
             aliveGO2.SetActive(true);
             aliveGO.SetActive(false);
@@ -59,8 +59,14 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
 
         first = false;
+        
+        }
+       
+
 
     }
 
