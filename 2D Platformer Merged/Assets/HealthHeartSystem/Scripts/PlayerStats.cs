@@ -46,14 +46,16 @@ public class PlayerStats : MonoBehaviour
     {
          if (!FindObjectOfType<PlayerCombatController>().DoNotDamage)
         {
-        health -= dmg;
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
+            health -= dmg;
         }
          ClampHealth();
        //  UnityEngine.Debug.Log(health);
 
         if (health <= 0)
         {
-               UnityEngine.Debug.Log("Death");
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            UnityEngine.Debug.Log("Death");
                 GameOver = true;
             //PlayerisDead
            

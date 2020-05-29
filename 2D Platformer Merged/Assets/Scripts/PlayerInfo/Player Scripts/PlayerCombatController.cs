@@ -134,6 +134,7 @@ public class PlayerCombatController : MonoBehaviour
 
             }
            */
+
            if (Input.GetKeyDown(KeyCode.UpArrow))
            {
                trigger = true;
@@ -143,17 +144,13 @@ public class PlayerCombatController : MonoBehaviour
             trigger = false;
             }
              
-        
-
-
-          
 
 
         if (Input.GetKey(KeyCode.DownArrow) && !FindObjectOfType<PlayerController>().isGrounded)
         {
             if(combatEnabled &&(Input.GetKeyDown(KeyCode.Z) || ( Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.Z) ) || (Input.GetKey(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.Z) && Input.GetKeyDown(KeyCode.Space) ) ) ) 
             {
-               down_attack = true;
+                down_attack = true;
             
                airAttack = false;
                gotInput = false;
@@ -207,9 +204,9 @@ public class PlayerCombatController : MonoBehaviour
     { // Makes attack happen when there is an input
         if (gotInput)
         { //ground attack
-            
             if (!isAttacking)
             {
+                FindObjectOfType<AudioManager>().Play("SwordSlash");
                 gotInput = false;
                 isAttacking = true;
                 isFirstAttack = !isFirstAttack;
@@ -229,8 +226,8 @@ public class PlayerCombatController : MonoBehaviour
             }
         }
         else if (airAttack) //air up attack
-        { 
-
+        {
+            FindObjectOfType<AudioManager>().Play("SwordSlash");
             animationTimer++;
 
             if (!isAttacking)
@@ -260,8 +257,13 @@ public class PlayerCombatController : MonoBehaviour
         {
             if (!isAttacking)
             {
+<<<<<<< HEAD
                 downAttacking = true;
                    // Debug.Log("Down attack.");
+=======
+                FindObjectOfType<AudioManager>().Play("SwordSlash");
+                // Debug.Log("Down attack.");
+>>>>>>> f0dbdbf7ace9fd2378def4a0f55984108e2e558a
                 isAttacking = true;
                 down_attack = false;
                 anim.SetBool("attack1", true);
