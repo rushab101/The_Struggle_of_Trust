@@ -12,7 +12,7 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-    // LoadPlayer();
+     LoadPlayer();
       // gm.lastCheckPointPos.x=PlayerPrefs.GetFloat("XPosition");
      //  gm.lastCheckPointPos.y=PlayerPrefs.GetFloat("yPosition");
      //  transform.position = gm.lastCheckPointPos;

@@ -222,7 +222,7 @@ public class PlayerCombatController : MonoBehaviour
               //    FindObjectOfType<IHittable>().HitReceived();
                 anim.SetTrigger("Attack");
                 Invoke("ResetAttack", .15f);
-                FindObjectOfType<PlayerController>().isWalking = true;
+            //    FindObjectOfType<PlayerController>().isWalking = true; //Glitch happens come back here
             }
         }
         else if (airAttack) //air up attack
@@ -257,13 +257,13 @@ public class PlayerCombatController : MonoBehaviour
         {
             if (!isAttacking)
             {
-<<<<<<< HEAD
+
                 downAttacking = true;
                    // Debug.Log("Down attack.");
-=======
+
                 FindObjectOfType<AudioManager>().Play("SwordSlash");
                 // Debug.Log("Down attack.");
->>>>>>> f0dbdbf7ace9fd2378def4a0f55984108e2e558a
+
                 isAttacking = true;
                 down_attack = false;
                 anim.SetBool("attack1", true);

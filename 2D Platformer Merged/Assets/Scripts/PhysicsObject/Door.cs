@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     public GameObject door2;
     private Animator door;
     public GameObject canvasObject;
+    public 
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,10 @@ public class Door : MonoBehaviour
       door = GetComponent<Animator>();
       door.updateMode = AnimatorUpdateMode.UnscaledTime;
            FindObjectOfType<FSTDemoManager>().PanelAnim(6);
-       canvasObject.SetActive(false);
+       //    FindObjectOfType<FSTDemoManager>().Restart();
+           canvasObject.GetComponent<CanvasGroup>().alpha = 0f;
+        
+       //canvasObject.SetActive(false);
 
         
     }
@@ -36,7 +40,7 @@ public class Door : MonoBehaviour
        
         if (Input.GetKey(KeyCode.E) && !first)
         {
-
+             canvasObject.GetComponent<CanvasGroup>().alpha = 1f;
              first = true;
          FindObjectOfType<PlayerController>().canMove=false;
                 FindObjectOfType<PlayerController>().canFlip=false;

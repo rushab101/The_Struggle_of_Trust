@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public bool isWalking;
     public bool isGrounded;
     private bool isTouchingWall;
+    private bool isTouchingWall2;
     private bool isWallSliding;
     private bool canNormalJump;
     private bool disableMove;
@@ -100,6 +101,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public Transform wallCheck;
 
+      public Transform wallCheck2;
+
     public LayerMask whatIsGround;
     public bool isSpinning;
 
@@ -160,7 +163,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if ((isTouchingWall && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0))
+        if (((isTouchingWall || isTouchingWall2) && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0))
         {
             isWallSliding = true;
             anim.SetBool("wallSlide", true);
@@ -249,6 +252,7 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        isTouchingWall2= Physics2D.Raycast(wallCheck2.position, transform.right, 1.0f, whatIsGround);
     }
 
     private void CheckIfCanJump()
@@ -296,11 +300,11 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (Mathf.Abs(rb.velocity.x) >= 0.01f && rb.velocity.magnitude > 0 && !isTouchingWall)
+        if (Mathf.Abs(rb.velocity.x) >= 0.01f && rb.velocity.magnitude > 0 && !isTouchingWall && !isTouchingWall2) 
         {
             isWalking = true;
         }
-        else
+        else 
         {
             isWalking = false;
         }
@@ -332,7 +336,7 @@ public class PlayerController : MonoBehaviour
             {
                 fGroundedRemeber = fGroundRememberTime;
             }
-            if (isGrounded || (amountOfJumpsLeft > 0 && !isTouchingWall))
+            if (isGrounded || (amountOfJumpsLeft > 0 && (!isTouchingWall||!isTouchingWall2)))
             {
                 NormalJump();
             }
@@ -360,7 +364,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Horizontal") && isTouchingWall)
+        if (Input.GetButtonDown("Horizontal") &&(isTouchingWall || isTouchingWall2) )
         {
             if (!isGrounded && movementInputDirection != facingDirection)
             {
@@ -413,16 +417,6 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            UnityEngine.Debug.Log("In dashing");
-            if (Time.time >= (lastDash + dashCoolDown))
-            {
-                AttemptToSlide();
-            }
-
-        }
-
 
 
     }
@@ -447,7 +441,7 @@ public class PlayerController : MonoBehaviour
                 }
 
             }
-            if (dashTimeLeft <= 0 || isTouchingWall)
+            if (dashTimeLeft <= 0 || isTouchingWall || isTouchingWall2)
             {
                 isDashing = false;
                 canMove = true;
@@ -504,7 +498,7 @@ public class PlayerController : MonoBehaviour
                 dashTimeLeft -= Time.deltaTime;
 
             }
-            if (dashTimeLeft <= 0 || isTouchingWall)
+            if (dashTimeLeft <= 0 || isTouchingWall || isTouchingWall2)
             {
                 isDashing = false;
                 canMove = true;
@@ -568,11 +562,11 @@ public class PlayerController : MonoBehaviour
         if (jumpTimer > 0)
         {
             //WallJump
-            if (!isGrounded && isTouchingWall && movementInputDirection != 0 && movementInputDirection != facingDirection)
+            if (!isGrounded && (isTouchingWall || isTouchingWall2) && movementInputDirection != 0 && movementInputDirection != facingDirection)
             {
                 WallJump();
             }
-            else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0 && !isTouchingWall)
+            else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0 && (!isTouchingWall ||!isTouchingWall2))
             {
 
                 fGroundedRemeber = 0;
@@ -608,13 +602,14 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding) && isTouchingWall)
+            if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding) && (isTouchingWall || isTouchingWall2))
             {
                 canNormalJump = false;
+               rb.velocity = Vector2.Lerp(rb.velocity,(new Vector2(rb.velocity.x, jumpForce)), .5f * Time.deltaTime);
                 UnityEngine.Debug.Log("Double tap");
             }
 
-            if (!isWallSliding && !isTouchingWall || isGrounded)
+            if (!isWallSliding && (!isTouchingWall || !isTouchingWall2) || isGrounded)
             {
                 canWallJump = true;
             }
@@ -623,7 +618,7 @@ public class PlayerController : MonoBehaviour
             lastTapTime = Time.time;
         }
 
-        if (!isWallSliding && !isTouchingWall)
+        if (!isWallSliding && (!isTouchingWall || !isTouchingWall2))
             {
                 canWallJump = true;
             }
@@ -660,6 +655,7 @@ public class PlayerController : MonoBehaviour
             amountOfJumpsLeft = amountOfJumps;
             amountOfJumpsLeft--;
             Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * movementInputDirection, wallJumpForce * wallJumpDirection.y);
+            
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             jumpTimer = 0;
             isAttemptingToJump = false;
@@ -774,5 +770,6 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+         Gizmos.DrawLine(wallCheck2.position, new Vector3(wallCheck2.position.x + wallCheckDistance, wallCheck2.position.y, wallCheck2.position.z));
     }
 }

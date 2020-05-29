@@ -19,8 +19,10 @@ public class DoorIn : MonoBehaviour
     
       door = GetComponent<Animator>();
       door.updateMode = AnimatorUpdateMode.UnscaledTime;
-           FindObjectOfType<FSTDemoManager>().PanelAnim(6);
-       canvasObject.SetActive(false);
+        //  FindObjectOfType<FSTDemoManager>().PanelAnim(6);
+     //     FindObjectOfType<FSTDemoManager>().Restart();
+        // canvasObject.GetComponent<CanvasGroup>().alpha = 0f;
+     //  canvasObject.SetActive(false);
 
         
     }
@@ -33,17 +35,21 @@ public class DoorIn : MonoBehaviour
 
         private void OnTriggerStay2D(Collider2D collision) 
     {
+     
+                     
           
        
         if (Input.GetKey(KeyCode.E) && !first)
         {
+             canvasObject.GetComponent<CanvasGroup>().alpha = 1f;
+            Debug.Log("Went into the house");
 
              first = true;
          FindObjectOfType<PlayerController>().canMove=false;
                 FindObjectOfType<PlayerController>().canFlip=false;
             door.SetBool("open", true);
              canvasObject.SetActive(true);
-        //    FindObjectOfType<FSTDemoManager>().PanelAnim(6);
+           // FindObjectOfType<FSTDemoManager>().PanelAnim(6);
             
                 StartCoroutine(Test());
                  Time.timeScale = 0.0f;
@@ -51,7 +57,7 @@ public class DoorIn : MonoBehaviour
                  FindObjectOfType<FSTDemoManager>().styleAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
                  FindObjectOfType<FSTDemoManager>().nextPanelAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
            
-                 FindObjectOfType<FSTDemoManager>().Restart();
+                     FindObjectOfType<FSTDemoManager>().Restart();
                    
                  StartCoroutine(Test2());
               
