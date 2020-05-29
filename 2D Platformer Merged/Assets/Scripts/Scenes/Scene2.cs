@@ -43,7 +43,7 @@ public class Scene2 : MonoBehaviour
      IEnumerator Test()
     {
         
-        yield return new WaitForSecondsRealtime(2.0f);
+        yield return new WaitForSecondsRealtime(1.0f);
             SceneManager.LoadScene("CaveEntrance");
              Time.timeScale = 1f;
     
