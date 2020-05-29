@@ -26,6 +26,8 @@ public class Scene2 : MonoBehaviour
 
       private void OnTriggerEnter2D(Collider2D collision) 
     {
+         if (collision.CompareTag("Player"))
+        {
          canvasObject.GetComponent<CanvasGroup>().alpha = 1f;
          PlayerPrefs.SetFloat("Check1", 2);
            Time.timeScale = 0.0f;
@@ -35,7 +37,7 @@ public class Scene2 : MonoBehaviour
            
         FindObjectOfType<FSTDemoManager>().Restart();
          StartCoroutine(Test());
-       
+        }
        
     }
      IEnumerator Test()
