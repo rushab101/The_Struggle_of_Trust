@@ -15,10 +15,10 @@ public CinemachineVirtualCamera vcam;
       //  Camera.main.transform.position += -Vector3.up * moveSpeed  * Time.deltaTime;
 
     
-      if (Input.GetKey(KeyCode.DownArrow) &&  vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY>0.5f){
+      if (Input.GetKey(KeyCode.DownArrow) &&  vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY>0.5f && FindObjectOfType<PlayerController>().isGrounded){
        vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY-=moveSpeed * Time.deltaTime;
     }
-    else if (Input.GetKey(KeyCode.DownArrow) &&  vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY<=0.5f)
+    else if (Input.GetKey(KeyCode.DownArrow) &&  vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY<=0.5f && FindObjectOfType<PlayerController>().isGrounded)
     {
         vcam.GetCinemachineComponent<CinemachineFramingTransposer>().m_ScreenY = 0.5f;
     }

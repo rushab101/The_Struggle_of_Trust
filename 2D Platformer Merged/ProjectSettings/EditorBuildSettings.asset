@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 4c5d747953e145e47aad90eaf300aaca
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 4ccb564acac85a647be1ab5783299fbd
-  - enabled: 1
-    path: Assets/Scenes/Level2Test.unity
+    path: Assets/Scenes/Beginning.unity
     guid: 7f7a88b418832b943af3278b1f12a1df
+  - enabled: 1
+    path: Assets/Scenes/CaveEntrance.unity
+    guid: 9103248bc497aa44da26bd465435d87b
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 16ba0d80849f7504f85db60d4cc1d2d0
+  - enabled: 0
+    path: Assets/Scenes/Level 1.unity
+    guid: 4ccb564acac85a647be1ab5783299fbd
   m_configObjects: {}
