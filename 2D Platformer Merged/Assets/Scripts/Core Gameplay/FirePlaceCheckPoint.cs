@@ -32,7 +32,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !first && collision.gameObject.tag == "Player")
         {
-           
+            FindObjectOfType<AudioManager>().Play("Checkpoint");
             first = true;
             aliveGO2.SetActive(true);
             aliveGO.SetActive(false);
