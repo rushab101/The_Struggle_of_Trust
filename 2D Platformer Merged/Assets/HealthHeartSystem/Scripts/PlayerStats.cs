@@ -44,7 +44,12 @@ public class PlayerStats : MonoBehaviour
 
     void Awake()
     {
+
         health = PlayerPrefs.GetFloat("Health");
+        if (health ==0)
+        {
+            health = MaxHealth;
+        }
     }
 
 
