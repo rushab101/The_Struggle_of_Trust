@@ -65,7 +65,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: PlayerJump
-    clip: {fileID: 8300000, guid: b31c8ae7dbc3a6c47b6ddb04210ced9b, type: 3}
+    clip: {fileID: 8300000, guid: 38f688fd25285dd43bab4b6161537cc2, type: 3}
     volume: 0.33
     pitch: 1
     source: {fileID: 0}
