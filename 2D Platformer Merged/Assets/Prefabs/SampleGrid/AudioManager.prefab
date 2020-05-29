@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: SwordSlash
     clip: {fileID: 8300000, guid: 5a4550844c31b0045b5aa7f18f19443c, type: 3}
-    volume: 0.398
+    volume: 0.19
     pitch: 1
     source: {fileID: 0}
   - name: Checkpoint
@@ -65,7 +65,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: PlayerJump
-    clip: {fileID: 8300000, guid: 7372e06585fa58345aad2bdd0234d1e5, type: 3}
-    volume: 0.104
+    clip: {fileID: 8300000, guid: b31c8ae7dbc3a6c47b6ddb04210ced9b, type: 3}
+    volume: 0.33
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDash
+    clip: {fileID: 8300000, guid: 635dfccdf875eb244afb3f929c9c2c04, type: 3}
+    volume: 0.293
     pitch: 1
     source: {fileID: 0}
