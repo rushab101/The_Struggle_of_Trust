@@ -28,7 +28,12 @@ public class Scene2 : MonoBehaviour
     {
          canvasObject.GetComponent<CanvasGroup>().alpha = 1f;
          PlayerPrefs.SetFloat("Check1", 2);
-          FindObjectOfType<FSTDemoManager>().Restart();
+           Time.timeScale = 0.0f;
+                FindObjectOfType<FSTDemoManager>().currentPanelAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+                FindObjectOfType<FSTDemoManager>().styleAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+                 FindObjectOfType<FSTDemoManager>().nextPanelAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+           
+        FindObjectOfType<FSTDemoManager>().Restart();
          StartCoroutine(Test());
        
        
@@ -38,6 +43,7 @@ public class Scene2 : MonoBehaviour
         
         yield return new WaitForSecondsRealtime(2.0f);
             SceneManager.LoadScene("CaveEntrance");
+             Time.timeScale = 1f;
     
     }
 
