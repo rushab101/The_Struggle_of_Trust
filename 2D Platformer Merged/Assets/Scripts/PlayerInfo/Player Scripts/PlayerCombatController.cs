@@ -22,6 +22,8 @@ public class PlayerCombatController : MonoBehaviour
       [SerializeField]
     private Transform attack3HitBoxPos;
     [SerializeField]
+    private Transform attack4HitBoxPos;
+    [SerializeField]
     private LayerMask whatIsDamageable;
      [SerializeField]
     private GameObject HitParticle;
@@ -41,11 +43,33 @@ public class PlayerCombatController : MonoBehaviour
     public bool DoNotDamage=false;
     public bool potDetected=false;
     public bool trigger = false;
-
+    public float check  = 0f;
+    public bool downAttacking=false;
 
 
     public float fJumpPressedRemember = 0;
     public float fJumpPressedRememberTime = 1.0f;
+
+
+     private Vector2 
+        touchDamageBotLeft,
+        touchDamageTopRight;
+
+
+
+    [SerializeField]
+    private float
+        touchDamageCoolDown,
+        touchDamage,
+        touchDamageWidth,
+        touchDamageHeight;
+    
+
+
+    [SerializeField]
+    private Transform
+     touchDamageCheck;
+
 
 
 
@@ -68,6 +92,11 @@ public class PlayerCombatController : MonoBehaviour
     {
         CheckCombatInput();
         CheckAttacks();
+        if (downAttacking)
+        {
+            CheckAttackHitbox2();
+        }
+      //  CheckAttackHitbox2();
     }
     public bool airChecker()
     {
@@ -231,7 +260,7 @@ public class PlayerCombatController : MonoBehaviour
         {
             if (!isAttacking)
             {
-
+                downAttacking = true;
                    // Debug.Log("Down attack.");
                 isAttacking = true;
                 down_attack = false;
@@ -241,6 +270,10 @@ public class PlayerCombatController : MonoBehaviour
                 anim.SetBool("isAttacking", isAttacking);
                 anim.SetBool("downAttack", true);
                 //int index = UnityEngine.Random.Range(1, 2); // random number 
+                
+                  //  CheckAttackHitbox2();
+                
+                check++;
                 anim.Play("AirAttack3");
                 anim.SetTrigger("Attack");
              
@@ -279,6 +312,7 @@ public class PlayerCombatController : MonoBehaviour
         yield return new WaitForSeconds(0.35f);
         //  Debug.Log("Hi");
         anim.SetBool("setAttack", false);
+        check =0f;
        //  anim.SetBool("Attacked", false);
       //  anim.SetBool("downAttack",false);
         // Debug.Log("flag 2");
@@ -287,18 +321,15 @@ public class PlayerCombatController : MonoBehaviour
 
         IEnumerator Test2()
     {
-        yield return new WaitForSeconds(0.42f);
+        yield return new WaitForSeconds(0.25f);
         //  Debug.Log("Hi");
       //  anim.SetBool("setAttack", false);
-      
+     //  CheckAttackHitbox2();
+       downAttacking = false;
          Vector3 a= new Vector3(PC.transform.position.x,PC.transform.position.y-0.85f,PC.transform.position.z);
          if(FindObjectOfType<PlayerController>().isGrounded)
-         Instantiate(HitParticle, a, Quaternion.identity);
+        // Instantiate(HitParticle, a, Quaternion.identity);
         anim.SetBool("downAttack",false);
-     
-      //     anim.SetBool("Attacked", false);
-        // Debug.Log("flag 2");
-        // SceneManager.LoadScene("Game Over");
     }
 
     //07 may 2020 (for rng attack anim)
@@ -309,6 +340,7 @@ public class PlayerCombatController : MonoBehaviour
 
     private void CheckAttackHitbox()
     { // Detect damagable objects in a range
+   
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable); // Detect all objects in a circle
 
         attackDetails.damageAmount = attack1Damage;
@@ -333,20 +365,32 @@ public class PlayerCombatController : MonoBehaviour
     
     private void CheckAttackHitbox2()
     { // Detect damagable objects in a range
-        Collider2D[] detectedObjects2 = Physics2D.OverlapCircleAll(attack2HitBoxPos.position, attack2Radius, whatIsDamageable); // Detect all objects in a circle
+    
+        touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
+            touchDamageTopRight.Set(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
+
+
+        Collider2D[] detectedObjects2 = Physics2D.OverlapAreaAll(touchDamageBotLeft, touchDamageTopRight, whatIsDamageable); // Detect all objects in a circle
 
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
         attackDetails.stunDamageAmount = stunDamageAmount;
-
+         Debug.Log("flag 1");
 
 
         foreach (Collider2D collider in detectedObjects2)
         {
+            Debug.Log("flag 2");
            
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
+            //Instantiate(HitParticle, a, Quaternion.identity);
             //    DoNotDamage = true;
-            collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
+            if (downAttacking)
+            {
+                 collider.transform.parent.SendMessage("Damage", attackDetails); // Used to call function on scripts on objects without knowing which script it is
+                 downAttacking = false;
+            }
+           
 
         }
       
@@ -410,7 +454,15 @@ public class PlayerCombatController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);
-        Gizmos.DrawWireSphere(attack2HitBoxPos.position, attack2Radius);
+       
         Gizmos.DrawWireSphere(attack3HitBoxPos.position, attack1Radius);
+         Vector2 botLeft = new Vector2(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
+        Vector2 botRight= new Vector2(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2)); 
+        Vector2 topRight = new Vector2(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2)); 
+        Vector2 topLeft = new Vector2(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
+        Gizmos.DrawLine(botLeft, botRight);
+        Gizmos.DrawLine(botRight, topRight);
+        Gizmos.DrawLine(topRight, topLeft);
+        Gizmos.DrawLine(topLeft, botLeft);
     }
 }
