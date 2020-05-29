@@ -6,25 +6,50 @@ using UnityEngine.SceneManagement;
 public class PlayerPos : MonoBehaviour
 {
    private GameMaster gm;
+   private float Checking;
 
+   void Awake()
+   {
+       Checking =  PlayerPrefs.GetFloat("Check1");
+   }
+
+    
 
    void Start()
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-     LoadPlayer();
-      // gm.lastCheckPointPos.x=PlayerPrefs.GetFloat("XPosition");
-     //  gm.lastCheckPointPos.y=PlayerPrefs.GetFloat("yPosition");
-     //  transform.position = gm.lastCheckPointPos;
+         //LoadPlayer();
+       
+         if (Checking == 1)
+         {
+               Vector2 position;
+                position.x = 116.72776f;
+                 position.y= -28.90263f;
+                transform.position = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+         else if (Checking == 2)
+         {
+              Vector2 position;
+                position.x = -84.52002f;
+                 position.y= 12.79238f;
+                transform.position = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+        else 
+        {
+            LoadPlayer();
+        }
+     
+    
    }
 
    void Update()
    {
-      if (Input.GetKeyDown(KeyCode.T))
-      {
-          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-      }
+     // Checking =  PlayerPrefs.GetFloat("Check1");
    }
+
 
    public void LoadPlayer()
     {
