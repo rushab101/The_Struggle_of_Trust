@@ -19,8 +19,9 @@ public class DoorIn : MonoBehaviour
     
       door = GetComponent<Animator>();
       door.updateMode = AnimatorUpdateMode.UnscaledTime;
-        //  FindObjectOfType<FSTDemoManager>().PanelAnim(6);
+          FindObjectOfType<FSTDemoManager>().PanelAnim(6);
      //     FindObjectOfType<FSTDemoManager>().Restart();
+     canvasObject.GetComponent<CanvasGroup>().alpha = 0f;
         // canvasObject.GetComponent<CanvasGroup>().alpha = 0f;
      //  canvasObject.SetActive(false);
 

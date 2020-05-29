@@ -42,6 +42,12 @@ public class PlayerStats : MonoBehaviour
         ClampHealth();
     }
 
+    void Awake()
+    {
+        health = PlayerPrefs.GetFloat("Health");
+    }
+
+
     public void TakeDamage(float dmg)
     {
          if (!FindObjectOfType<PlayerCombatController>().DoNotDamage)
@@ -70,15 +76,35 @@ public class PlayerStats : MonoBehaviour
 
     public float Healths()
     {
+
         return health;
     }
 
+     public void SaveSettings()
+    {
+
+        PlayerPrefs.SetFloat("Health", health);
+       // PlayerPrefs.Save();
+    }
+
+
+
      void Update() {
+
+              PlayerPrefs.SetFloat("Health", health);
         if (GameOver)
         {
             StartCoroutine(Test());
            // FindObjec.GameOver();
         }
+
+    }
+
+
+    void OnApplicationQuit()
+    {
+        health = MaxHealth;
+        SaveSettings();
 
     }
 

@@ -24,7 +24,7 @@ public class PlayerPos : MonoBehaviour
          if (Checking == 1)
          {
                Vector2 position;
-                position.x = 116.72776f;
+                position.x = 116.2f;
                  position.y= -28.90263f;
                 transform.position = position;
                 PlayerPrefs.SetFloat("Check1",0);
