@@ -11,6 +11,7 @@ public class PlayerPos : MonoBehaviour
    void Awake()
    {
        Checking =  PlayerPrefs.GetFloat("Check1");
+      // PlayerPrefs.DeleteAll();
    }
 
     
@@ -20,6 +21,8 @@ public class PlayerPos : MonoBehaviour
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
          //LoadPlayer();
+
+       
        
          if (Checking == 1)
          {
@@ -37,9 +40,19 @@ public class PlayerPos : MonoBehaviour
                 transform.position = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
+         
+         else if (Checking == 3)
+         {
+                Vector2 position;
+                position.x = -64.00999f;
+                 position.y= -0.5839996f;
+                transform.position = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+         
         else 
         {
-          //  LoadPlayer();
+           LoadPlayer();
         }
      
     

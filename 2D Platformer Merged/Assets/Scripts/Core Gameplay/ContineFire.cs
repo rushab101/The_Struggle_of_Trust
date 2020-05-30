@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ContineFire : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class ContineFire : MonoBehaviour
             heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
             FindObjectOfType<PlayerStats>().Heal(heal);
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+            PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
             FindObjectOfType<Currency>().SaveSettings();
         }
     }

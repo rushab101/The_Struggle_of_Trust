@@ -5,9 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string level;
+    private string level;
+    private int SceneLoader;
+
+    void Awake()
+    {
+        SceneLoader = PlayerPrefs.GetInt("Scene");
+        if (SceneLoader == 0)
+        {
+            level = "Beginning";
+             PlayerPrefs.SetFloat("Check",3);
+        }
+        else if (SceneLoader == 1)
+        {
+            level = "Beginning";
+        }
+          else if (SceneLoader == 2)
+        {
+            level = "CaveEntrance";
+        }
+        
+    }
     public void PlayGame()
     {
+        
         SceneManager.LoadScene(level);
     }
 
