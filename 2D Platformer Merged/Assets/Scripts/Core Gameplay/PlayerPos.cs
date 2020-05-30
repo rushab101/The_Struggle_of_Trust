@@ -39,7 +39,7 @@ public class PlayerPos : MonoBehaviour
          }
         else 
         {
-            LoadPlayer();
+          //  LoadPlayer();
         }
      
     
