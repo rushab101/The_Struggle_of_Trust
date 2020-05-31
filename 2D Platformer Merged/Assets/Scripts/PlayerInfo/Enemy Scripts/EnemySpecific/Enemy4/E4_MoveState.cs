@@ -76,7 +76,7 @@ y_direction= entity.positionOfObject.y;
             stateMachine.ChangeState(enemy.moveState);
         }
     */
-    Debug.Log(went_in);
+   // Debug.Log(went_in);
      if (isDetectingLedge && went_in)
         {
             went_in = false;

@@ -73,6 +73,7 @@ public class Entity : MonoBehaviour
     }
       public virtual void SetVelocityUp(float velocity)
     {
+       // Debug.Log("Going thru here");
         velocityWorkspace.Set(rb.velocity.x, velocity * facingDirection);
         rb.velocity = velocityWorkspace; //set the velocity of the enemy
     }
@@ -126,7 +127,7 @@ public class Entity : MonoBehaviour
     public virtual void ResetStunResistance()
     {
         isStunned = false;
-       // PlayerDamaged = false;
+        PlayerDamaged = false;
         currentStunResistance = entityData.stunResistance;
     }
     public virtual void ResetHurt()
