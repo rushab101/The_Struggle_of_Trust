@@ -17,6 +17,8 @@ public class Entity : MonoBehaviour
     private Transform wallCheck;
      [SerializeField]
     private Transform ledgeCheck;
+     [SerializeField]
+    private Transform ledgeCheckUp;
       [SerializeField]
     private Transform playerCheck;
       [SerializeField]
@@ -50,7 +52,7 @@ public class Entity : MonoBehaviour
     {
 
         stateMachine.currentState.LogicUpdate();
-        positionOfObject = aliveGO.transform.position;
+        positionOfObject = aliveGO.transform.localPosition;
         anim.SetFloat("yVelocity", rb.velocity.y);
         if (Time.time >= lastDamageTime + entityData.sunRecoveryTime)
         {
@@ -69,6 +71,12 @@ public class Entity : MonoBehaviour
         velocityWorkspace.Set(facingDirection * velocity, rb.velocity.y);
         rb.velocity = velocityWorkspace; //set the velocity of the enemy
     }
+      public virtual void SetVelocityUp(float velocity)
+    {
+        velocityWorkspace.Set(rb.velocity.x, velocity * facingDirection);
+        rb.velocity = velocityWorkspace; //set the velocity of the enemy
+    }
+
     public virtual void SetVelocity(float velocity, Vector2 angle, int direction)
     {
         angle.Normalize();
@@ -84,6 +92,10 @@ public class Entity : MonoBehaviour
     public virtual bool CheckLedge()
     {
    return Physics2D.Raycast(ledgeCheck.position,Vector2.down,entityData.ledgeCheckDistance,entityData.whatIsGround);
+    }
+     public virtual bool CheckUp()
+    {
+   return Physics2D.Raycast(ledgeCheckUp.position,Vector2.up,entityData.ledgeCheckDistance,entityData.whatIsGround);
     }
     public virtual bool CheckGround()
     {
@@ -157,10 +169,18 @@ public class Entity : MonoBehaviour
         aliveGO.transform.Rotate(0f,180f,0f);
     }
 
+      public virtual void Flip2()
+    {
+        facingDirection *=-1;
+      //  aliveGO.transform.Rotate(0f,180f,0f);
+    }
+
+
    public virtual void OnDrawGizmos()
     {
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckDistance));
         Gizmos.DrawLine(ledgeCheck.position,ledgeCheck.position + (Vector3)(Vector2.down *entityData.ledgeCheckDistance));
+        Gizmos.DrawLine(ledgeCheckUp.position,ledgeCheckUp.position + (Vector3)(Vector2.up *entityData.ledgeCheckDistance));
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right*entityData.closeRangeActionDistance),0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right*entityData.minAgroDistance),0.2f);
         Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right*entityData.maxAgroDistance),0.2f);
