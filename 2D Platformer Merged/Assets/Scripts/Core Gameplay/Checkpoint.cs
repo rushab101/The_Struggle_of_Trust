@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Checkpoint : MonoBehaviour
       {  
           //Debug.Log("Went to trigger");
           gm.lastCheckPointPos = transform.position;
+            PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
       //  PlayerPrefs.SetFloat("XPosition",gm.lastCheckPointPos.x);
        // PlayerPrefs.SetFloat("yPosition",gm.lastCheckPointPos.y);
         SavePlayer(gm.lastCheckPointPos.x,gm.lastCheckPointPos.y);

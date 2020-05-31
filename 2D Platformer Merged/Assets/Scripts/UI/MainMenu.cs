@@ -10,11 +10,12 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
+      //  PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         if (SceneLoader == 0)
         {
             level = "Beginning";
-             PlayerPrefs.SetFloat("Check",3);
+            PlayerPrefs.SetFloat("Check",3);
         }
         else if (SceneLoader == 1)
         {
