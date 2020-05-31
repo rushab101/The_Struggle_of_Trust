@@ -5,12 +5,16 @@ using UnityEngine;
 public class Trigger : MonoBehaviour
 {
 
-    public Animator anim;
+  [SerializeField]
+    private Animator anim;
     public float timer = 0.45f;
     public bool noDamage = false;
     public GameObject top;
     public GameObject middle;
     public GameObject bot;
+
+    public string name;
+ 
 
     public bool ApplyVol=false;
     void Start()
@@ -36,10 +40,16 @@ public class Trigger : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-            anim.SetBool("fall",true);
+           
+            anim.SetBool(name,true);
+           
+            if (anim.GetBool(name))
+    {
             top.SetActive(false);
             middle.SetActive(true);
-            ApplyVol=true;
+         ApplyVol=true;
+    }
+           
              StartCoroutine(Test());
 
         }
@@ -56,12 +66,18 @@ public class Trigger : MonoBehaviour
     {
         
         yield return new WaitForSeconds(timer);
-      anim.SetBool("fall",false);
-      middle.SetActive(false);
-      bot.SetActive(true);
-
-
+     
+     
+    if (anim.GetBool(name))
+    {
+         middle.SetActive(false);
+        bot.SetActive(true);
+        
       noDamage = true;
+    }
+       anim.SetBool(name,false);
+
+
     }
 
 
