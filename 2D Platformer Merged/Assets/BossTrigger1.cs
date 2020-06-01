@@ -12,6 +12,14 @@ public class BossTrigger1 : MonoBehaviour
     public GameObject F;
     public GameObject G;
     public GameObject H;
+
+       public GameObject canvasObject;
+       public GameObject I;
+
+       bool done_dialogue_sentence=false;
+
+
+
     bool went_in = false;
 
     void Start()
@@ -24,6 +32,8 @@ public class BossTrigger1 : MonoBehaviour
         F.SetActive(false);
         G.SetActive(false);
         H.SetActive(false);
+        I.SetActive(true);
+        canvasObject.SetActive(false);
 
     }
 
@@ -102,9 +112,39 @@ public class BossTrigger1 : MonoBehaviour
     {
         
         yield return new WaitForSecondsRealtime(1.0f);
-       H.SetActive(true);
+
+        canvasObject.SetActive(true);
+        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+
+       
      
     }
+
+      void Update()
+    {
+        if (!done_dialogue_sentence)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+          {
+             FindObjectOfType<DialogueManager>().DisplayNextSentence();
+             if (FindObjectOfType<DialogueManager>().sentences.Count < 1)
+             {
+                 Debug.Log("Go to here");
+                 done_dialogue_sentence = true;
+                  canvasObject.SetActive(false);
+                  I.SetActive(false);
+                  H.SetActive(true); //Actual Boss Fight
+             }
+          }      
+        }
+
+
+
+
+
+
+        }
+         
 
 
     
