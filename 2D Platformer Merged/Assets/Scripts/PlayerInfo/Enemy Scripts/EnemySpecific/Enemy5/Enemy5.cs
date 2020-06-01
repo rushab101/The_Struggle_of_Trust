@@ -82,6 +82,7 @@ public class Enemy5 :  Entity
          if (isDead)
         {
             FindObjectOfType<BossTrigger1>().boss_is_dead = true;
+            FindObjectOfType<OldManTriggger>().new_dia = true;
             moveStateData.movementSpeed=30f;
           stateMachine.ChangeState(deadState);
         }

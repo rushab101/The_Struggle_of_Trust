@@ -13,6 +13,8 @@ public class BossTrigger1 : MonoBehaviour
     public GameObject G;
     public GameObject H;
     public GameObject Lever;
+    public DialogueTrigger trigger;
+    public DialogueManager manager;
     SpriteRenderer rend;
     public bool boss_is_dead = false;
 
@@ -20,7 +22,7 @@ public class BossTrigger1 : MonoBehaviour
        public GameObject I;
 
        bool done_dialogue_sentence=false;
-
+private bool complete_this_one=false;
 
 
     bool went_in = false;
@@ -46,6 +48,7 @@ public class BossTrigger1 : MonoBehaviour
 
        private void OnTriggerEnter2D(Collider2D collision)
     {
+         complete_this_one = true;
         
         if (collision.CompareTag("Player") && !went_in)
         {
@@ -121,7 +124,8 @@ public class BossTrigger1 : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.0f);
 
         canvasObject.SetActive(true);
-        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+       
+        trigger.TriggerDialogue();
 
        
      
@@ -133,8 +137,9 @@ public class BossTrigger1 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
           {
-             FindObjectOfType<DialogueManager>().DisplayNextSentence();
-             if (FindObjectOfType<DialogueManager>().sentences.Count < 1)
+              manager.DisplayNextSentence();
+            
+             if ( manager.sentences.Count < 1 && complete_this_one)
              {
                  Debug.Log("Go to here");
                  done_dialogue_sentence = true;

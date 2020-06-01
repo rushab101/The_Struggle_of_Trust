@@ -37,6 +37,7 @@ public class Lever : MonoBehaviour
       
         
              anim.SetBool("done",false);
+             anim.SetBool("cancel",true);
               a.SetActive(false);
              open_Gate = true;
      
