@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeadState : State
 {
     protected D_DeadState stateData;
+    public bool dead_true=false;
     public DeadState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_DeadState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -32,6 +33,7 @@ public class DeadState : State
 
        //  StartCoroutine(Test());
        //  RunCoroutine();
+       dead_true= true;
         entity.gameObject.SetActive(false);
     }
 

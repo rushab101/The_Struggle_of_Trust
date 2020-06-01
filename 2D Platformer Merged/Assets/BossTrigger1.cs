@@ -12,6 +12,9 @@ public class BossTrigger1 : MonoBehaviour
     public GameObject F;
     public GameObject G;
     public GameObject H;
+    public GameObject Lever;
+    SpriteRenderer rend;
+    public bool boss_is_dead = false;
 
        public GameObject canvasObject;
        public GameObject I;
@@ -33,6 +36,10 @@ public class BossTrigger1 : MonoBehaviour
         G.SetActive(false);
         H.SetActive(false);
         I.SetActive(true);
+        rend= Lever.GetComponent<SpriteRenderer>();
+        Color c = rend.material.color;
+        c.a= 0f;
+        rend.material.color =c;
         canvasObject.SetActive(false);
 
     }
@@ -137,6 +144,19 @@ public class BossTrigger1 : MonoBehaviour
              }
           }      
         }
+        if (boss_is_dead)
+        {
+               StartCoroutine(Tes());
+             StartCoroutine(Tes2());
+             StartCoroutine(Tes3());
+             StartCoroutine(Tes4());
+             StartCoroutine(Tes5());
+             StartCoroutine(Tes6());
+             StartCoroutine(Tes7());
+             StartCoroutine(FadeIn());
+            boss_is_dead = false;
+
+        }
 
 
 
@@ -144,6 +164,70 @@ public class BossTrigger1 : MonoBehaviour
 
 
         }
+
+         IEnumerator Tes()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.1f);
+       A.SetActive(false);
+    }
+
+        IEnumerator Tes2()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.2f);
+      B.SetActive(false);
+    }
+
+        IEnumerator Tes3()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.3f);
+       C.SetActive(false);
+    }
+
+        IEnumerator Tes4()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.4f);
+      D.SetActive(false);
+    }
+
+        IEnumerator Tes5()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.5f);
+     E.SetActive(false);
+    }
+
+        IEnumerator Tes6()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.6f);
+       F.SetActive(false);
+    }
+     IEnumerator Tes7()
+    {
+        
+        yield return new WaitForSecondsRealtime(0.7f);
+       G.SetActive(false);
+       //Time.timeScale = 1f;
+    }
+
+      IEnumerator FadeIn()
+    {
+        
+       for (float f = 0.05f; f <=1; f+=0.05f)
+       {
+           Color c = rend.material.color;
+           c.a = f;
+           rend.material.color = c;
+           yield return new WaitForSeconds(0.05f);
+       }
+    }
+
+
+        
          
 
 

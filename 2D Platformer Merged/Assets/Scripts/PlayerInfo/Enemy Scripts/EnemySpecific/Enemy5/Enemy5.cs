@@ -10,6 +10,7 @@ public class Enemy5 :  Entity
     public E5_DeadState deadState { get; private set; }
      public E5_HurtState hurtState  { get; private set; }
 
+
          
     [SerializeField]
     private D_IdleState idelstateData;
@@ -80,6 +81,7 @@ public class Enemy5 :  Entity
        moveStateData.movementSpeed+=10f;
          if (isDead)
         {
+            FindObjectOfType<BossTrigger1>().boss_is_dead = true;
             moveStateData.movementSpeed=30f;
           stateMachine.ChangeState(deadState);
         }
