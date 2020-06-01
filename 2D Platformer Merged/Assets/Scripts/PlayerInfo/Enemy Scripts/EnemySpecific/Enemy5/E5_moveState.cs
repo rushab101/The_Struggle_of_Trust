@@ -30,6 +30,7 @@ public class E5_moveState : MoveState
     {
          base.LogicUpdate();
           enemy.CheckTouchDamage();
+         
       
 
 

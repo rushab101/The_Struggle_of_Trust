@@ -76,8 +76,11 @@ public class Enemy5 :  Entity
         
         base.Damage(attackDetails);
        // CheckTouchDamage();
+        
+       moveStateData.movementSpeed+=10f;
          if (isDead)
         {
+            moveStateData.movementSpeed=30f;
           stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
@@ -90,6 +93,11 @@ public class Enemy5 :  Entity
   public void CheckTouchDamage()
     {
      // Debug.Log("Checking");
+       if(FindObjectOfType<PlayerStats>().GameOver)
+         {
+             moveStateData.movementSpeed=30f;
+         }
+
         if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
         {
             touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));

@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private float maxTotalHealth;
 
-    private bool GameOver= false;
+    public bool GameOver= false;
 
     public float Health { get { return health; } }
     public float MaxHealth { get { return maxHealth; } }
