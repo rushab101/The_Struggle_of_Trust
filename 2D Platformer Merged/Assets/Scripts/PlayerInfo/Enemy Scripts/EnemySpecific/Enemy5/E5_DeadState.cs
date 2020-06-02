@@ -18,11 +18,14 @@ public class E5_DeadState :DeadState
     public override void Enter()
     {
         base.Enter();
+        clone = (GameObject)GameObject.Instantiate(stateData.Explosion,entity.aliveGO.transform.position,stateData.Explosion.transform.rotation);
     }
 
     public override void Exit()
     {
         base.Exit();
+     
+
     }
 
 

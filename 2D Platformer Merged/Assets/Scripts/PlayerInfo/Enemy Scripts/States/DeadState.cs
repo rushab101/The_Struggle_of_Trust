@@ -5,7 +5,9 @@ using UnityEngine;
 public class DeadState : State
 {
     protected D_DeadState stateData;
+    public GameObject clone;
     public bool dead_true=false;
+    private float counter = 0f;
     public DeadState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_DeadState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -30,11 +32,13 @@ public class DeadState : State
         base.Enter();
         GameObject.Instantiate(stateData.deathBloodParticle,entity.aliveGO.transform.position,stateData.deathBloodParticle.transform.rotation);
         GameObject.Instantiate(stateData.deathChunkParticle,entity.aliveGO.transform.position,stateData.deathChunkParticle.transform.rotation);
+         
 
        //  StartCoroutine(Test());
-       //  RunCoroutine();
-       dead_true= true;
+        dead_true= true;
         entity.gameObject.SetActive(false);
+       //  RunCoroutine();
+      
     }
 
 
@@ -45,8 +49,8 @@ public class DeadState : State
  
      public IEnumerator enumerator()
      {
-         yield return new WaitForSeconds(0.35f);
-          entity.gameObject.SetActive(false);
+         yield return new WaitForSeconds(10f);
+         clone.SetActive(false);
      }
 
   
@@ -61,6 +65,7 @@ public class DeadState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+       
     }
 
     public override void PhysicsUpdate()
