@@ -9,25 +9,24 @@ public class OldManTriggger : MonoBehaviour
      public Animator anim;
 
     public bool new_dia = false;
+    private bool this_plays_first = false;
     // Start is called before the first frame update
+  
     void Start()
     {
-        old_man_dia.SetActive(false);
+        
+              
+            old_man_dia.SetActive(false);
+
+         
+
     }
 
     // Update is called once per frame
     void Update()
     {
        
-          if (Input.GetKeyDown(KeyCode.E) && anim.GetBool("cancel"))
-          {
-               old_man_dia.SetActive(true);
-             FindObjectOfType<DialogueManager2>().DisplayNextSentence();
-             if (FindObjectOfType<DialogueManager2>().sentences.Count < 1)
-             {
-                  old_man_dia.SetActive(false);
-             }
-          }
+       
        
 
         
@@ -40,9 +39,29 @@ public class OldManTriggger : MonoBehaviour
         {
             firstSentenceDone = true;
             old_man_dia.SetActive(true);
-
+ old_man_dia.GetComponent<CanvasGroup>().alpha = 1f;;
             FindObjectOfType<DialogueTrigger2>().TriggerDialogue();
         }
+
+    }
+
+       private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Input.GetKey(KeyCode.E) && anim.GetBool("cancel"))
+          {
+             
+              Time.timeScale = 0f;
+ old_man_dia.GetComponent<CanvasGroup>().alpha = 1f;;
+               old_man_dia.SetActive(true);
+             FindObjectOfType<DialogueManager2>().DisplayNextSentence();
+             if (FindObjectOfType<DialogueManager2>().sentences.Count == 0)
+             {
+               //  Debug.Log("In here");
+                  Time.timeScale = 1f;
+                //  old_man_dia.SetActive(false);
+             }
+          }
+       
 
     }
 
@@ -55,6 +74,7 @@ public class OldManTriggger : MonoBehaviour
 
         old_man_dia.SetActive(false);
         firstSentenceDone = false;
+        this_plays_first = false;
     }
 
 

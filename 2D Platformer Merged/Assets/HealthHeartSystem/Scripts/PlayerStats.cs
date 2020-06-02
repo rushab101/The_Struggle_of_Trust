@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     public delegate void OnHealthChangedDelegate();
+    private bool went_in = false;
     public OnHealthChangedDelegate onHealthChangedCallback;
 
     #region Sigleton
@@ -55,25 +56,26 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-         if (!FindObjectOfType<PlayerCombatController>().DoNotDamage)
+         if (!FindObjectOfType<PlayerCombatController>().DoNotDamage && health >0)
         {
             FindObjectOfType<AudioManager>().Play("PlayerHit");
             health -= dmg;
         }
+
          ClampHealth();
        //  UnityEngine.Debug.Log(health);
 
-        if (health <= 0)
+        if (health <= 0 && !went_in)
         {
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
-            UnityEngine.Debug.Log("Death");
+          
                 GameOver = true;
             //PlayerisDead
            
             FindObjectOfType<PlayerStat>().Die();
             //StartCoroutine(Test());
            // FindObjectOfType<PlayerController>().GameOver();
-
+            went_in = true;
         }
 
        

@@ -8,6 +8,7 @@ public class Lever : MonoBehaviour
     private bool went_it= false;
     public bool open_Gate= false;
     public GameObject a;
+    public GameObject b;
      private void OnTriggerStay2D(Collider2D collision) 
     {
           
@@ -29,6 +30,8 @@ public class Lever : MonoBehaviour
         }
     }
 
+    
+
 
      IEnumerator Test2()
     {
@@ -39,6 +42,7 @@ public class Lever : MonoBehaviour
              anim.SetBool("done",false);
              anim.SetBool("cancel",true);
               a.SetActive(false);
+              b.SetActive(false);
              open_Gate = true;
      
         
