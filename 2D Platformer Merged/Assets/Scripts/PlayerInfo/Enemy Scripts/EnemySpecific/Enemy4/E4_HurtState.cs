@@ -35,7 +35,7 @@ public class E4_HurtState : HurtState
         base.LogicUpdate();
         counter++;
   
-        if (counter > 30f)
+        if (counter > 25f)
         {
 
             //Debug.Log("VALUE IS");
