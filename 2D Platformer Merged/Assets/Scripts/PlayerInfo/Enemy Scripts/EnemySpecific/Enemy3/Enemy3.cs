@@ -106,10 +106,11 @@ public class Enemy3 : Entity
     
   public void CheckTouchDamage()
     {
+      
      // Debug.Log("Checking");
             touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
             touchDamageTopRight.Set(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
-
+ if (Time.time >= lastTouchDamageTime + touchDamageCoolDown){
             Collider2D hit = Physics2D.OverlapArea(touchDamageBotLeft, touchDamageTopRight, whatisPlayer);
             if (hit != null)
             {
@@ -121,7 +122,7 @@ public class Enemy3 : Entity
             }
         
     }
-
+    }
 
 
 

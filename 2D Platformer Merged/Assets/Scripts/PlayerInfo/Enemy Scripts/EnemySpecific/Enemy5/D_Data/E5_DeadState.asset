@@ -16,3 +16,5 @@ MonoBehaviour:
     type: 3}
   deathBloodParticle: {fileID: 231112197258768274, guid: 099540dc8dd5628418c2f369e86b6cb4,
     type: 3}
+  Explosion: {fileID: 7036146124154030643, guid: f96b86bc5344c42498acd41d11b85f56,
+    type: 3}

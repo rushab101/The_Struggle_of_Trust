@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public Animator anim;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
-        anim["Explode"].wrapMode = wrapMode.Once;
-        animation.Play("Explode");
+        anim = GetComponent<Animator>();
+     
     }
 
     // Update is called once per frame
     void Update()
     {
+         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Explode"))
+ {
+    anim.SetBool("done", true);
+ }
         
     }
 }

@@ -8,6 +8,7 @@ public class Enemy4 : Entity
          public E4_IdleState idleState { get; private set; }
          
     public E4_DeadState deadState { get; private set; }
+     public E4_HurtState hurtState  { get; private set; }
 
          
     [SerializeField]
@@ -47,7 +48,7 @@ public class Enemy4 : Entity
         moveState = new E4_MoveState(this, stateMachine, "move", moveStateData, this);
         idleState = new  E4_IdleState(this, stateMachine, "idle", idelstateData, this);
          deadState = new E4_DeadState(this,stateMachine,"dead",deadStateData,this);
-       
+          hurtState = new E4_HurtState(this, stateMachine, "hurt", this);
         stateMachine.Initialize(moveState);
     }
 
@@ -68,16 +69,16 @@ public class Enemy4 : Entity
         public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+        SetVelocity(0f);
        // CheckTouchDamage();
          if (isDead)
         {
           stateMachine.ChangeState(deadState);
         }
-        else 
+       else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
-           stateMachine.ChangeState(moveState);
+            stateMachine.ChangeState(hurtState);
         }
-        
  
     }
 
@@ -88,7 +89,8 @@ public class Enemy4 : Entity
      // Debug.Log("Checking");
             touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
             touchDamageTopRight.Set(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
-
+ if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
+        {
             Collider2D hit = Physics2D.OverlapArea(touchDamageBotLeft, touchDamageTopRight, whatisPlayer);
             if (hit != null)
             {
@@ -99,6 +101,7 @@ public class Enemy4 : Entity
                 FindObjectOfType<TimeStop>().StopTime(0.25f, 10, 0.1f);
             }
         
+    }
     }
 
 
