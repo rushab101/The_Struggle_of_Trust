@@ -8,6 +8,11 @@ public class DeadState : State
     public GameObject clone;
     public bool dead_true=false;
     private float counter = 0f;
+
+
+
+
+    
     public DeadState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_DeadState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;

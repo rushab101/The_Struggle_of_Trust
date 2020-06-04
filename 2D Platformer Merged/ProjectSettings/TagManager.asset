@@ -12,6 +12,7 @@ TagManager:
   - Hittable
   - Damage
   - Pot
+  - InvisibleWall
   layers:
   - Default
   - TransparentFX

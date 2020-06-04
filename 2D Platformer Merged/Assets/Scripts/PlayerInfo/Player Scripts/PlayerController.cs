@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
     private bool isFalling;
     private float spinTimeLeft;
     private float lastImageXpos;
+    public bool unlock_wall_jump = false;
     private float lastDash = -100f;
     private float lastSpin = -100f;
     [SerializeField]
@@ -155,8 +156,12 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckIfWallSliding() {
         if (((isTouchingWall || isTouchingWall2) && movementInputDirection == facingDirection && rb.velocity.y < -0.1 && rb.velocity.magnitude > 0)) {
-            isWallSliding = true;
+            if (unlock_wall_jump)
+            {
+                  isWallSliding = true;
             anim.SetBool("wallSlide", true);
+            }
+          
         }
         else {
 
@@ -537,13 +542,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void NormalJump() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        /*
+       
             if (((Time.time - lastTapTime) < tapSpeed && !isWallSliding) && (isTouchingWall || isTouchingWall2)) {
                 canNormalJump = false;
                 rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(rb.velocity.x, jumpForce)), .5f * Time.deltaTime);
                 UnityEngine.Debug.Log("Double tap");
             }
-
+*/
+ if (Input.GetKeyDown(KeyCode.Space)) {
             if (!isWallSliding && (!isTouchingWall || !isTouchingWall2) || isGrounded) {
                 canWallJump = true;
             }
@@ -576,7 +583,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void WallJump() {
-        if (canWallJump) {
+        if (canWallJump && unlock_wall_jump) {
             FindObjectOfType<AudioManager>().Play("PlayerJump");
             CreateDust(); //07 may 2020
             rb.velocity = new Vector2(rb.velocity.x, 0.0f);

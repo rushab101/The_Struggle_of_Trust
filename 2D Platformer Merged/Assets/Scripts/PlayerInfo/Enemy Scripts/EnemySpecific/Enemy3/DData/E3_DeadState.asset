@@ -16,3 +16,14 @@ MonoBehaviour:
     type: 3}
   deathBloodParticle: {fileID: 5100174698813196958, guid: 8f6d5cc5b81855743a9d717c9a2dad27,
     type: 3}
+  Explosion: {fileID: 0}
+  Green_coin: {fileID: 1572361575867067525, guid: 9d31cde0dfd5852468d7d38beb51327b,
+    type: 3}
+  Blue_coin: {fileID: 105241324871419831, guid: eb9c6f99b1d8dc9479a1dd0bb2e97c18,
+    type: 3}
+  Yellow_coin: {fileID: 4456612938062749762, guid: e1441b0d9304ce34bade54110a2d532e,
+    type: 3}
+  Red_coin: {fileID: 8692667399997679713, guid: 2a4976d0d44f51e468cbab72d1a1d17a,
+    type: 3}
+  Purple_coin: {fileID: 5315297190868228704, guid: 78e20dddc41f9274995c12834982654e,
+    type: 3}
