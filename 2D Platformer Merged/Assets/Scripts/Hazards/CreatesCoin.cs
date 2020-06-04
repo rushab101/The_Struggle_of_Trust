@@ -26,7 +26,7 @@ public class CreatesCoin : MonoBehaviour
     [SerializeField]
     private GameObject PurpleCoins;
 
-
+    public AttackDetails attackDetails;
 
     private float currentHealth, knockbackStart;
 
@@ -50,9 +50,10 @@ public class CreatesCoin : MonoBehaviour
 
     private void Update() {
         checkKnockback();
+       
     }
 
-    private void Damage(AttackDetails attackDetails)
+    public void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
     
@@ -115,8 +116,9 @@ public class CreatesCoin : MonoBehaviour
 
         int count = Random.Range(minCount,maxCount);
         for (int i = 0; i < count; ++i) {
-                StartCoroutine(Test3());
+              
         Instantiate(GreenCoins, aliveGO.transform.position,Quaternion.identity);
+          StartCoroutine(Test3());
         }
     }
 

@@ -10,7 +10,7 @@ public class GreenCoin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             
-        Debug.Log("Went to here");
+        
              FindObjectOfType<Currency>().UpdateBalance(1);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject);

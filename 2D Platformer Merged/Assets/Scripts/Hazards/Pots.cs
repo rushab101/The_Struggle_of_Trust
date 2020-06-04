@@ -118,8 +118,9 @@ public class Pots : MonoBehaviour
        
      //  brokenTopGO.SetActive(true);
     StartCoroutine(Test2());
-        StartCoroutine(Test3());
+
         Instantiate(Heart, aliveGO.transform.position,Heart.transform.rotation);
+                StartCoroutine(Test3());
 
     }
 
