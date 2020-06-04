@@ -10,6 +10,8 @@ public class CreatesCoin : MonoBehaviour
 
     private int minCount = 3;
     private int maxCount = 10;
+       public bool  coin_activate = false;
+             public bool  green_coin_activate = false;
 
     [SerializeField]
     private bool applyKnockback;
@@ -131,12 +133,17 @@ public class CreatesCoin : MonoBehaviour
 
         int random_number = Random.Range(0, 100);
 
-        Debug.Log(random_number);
+       // Debug.Log(count);
 
         for (int i = 0; i < count; ++i)
         {
+             green_coin_activate = true;
             StartCoroutine(Test3());
             Instantiate(GreenCoins, aliveGO.transform.position, Quaternion.identity);
+            if (i == count -1)
+            {
+                green_coin_activate = false;
+            }
 
         }
         for (int i = 0; i < blue_count; ++i)
@@ -144,6 +151,7 @@ public class CreatesCoin : MonoBehaviour
             if (random_number % 2 == 0)
             {
                 Instantiate(BlueCoins, aliveGO.transform.position, Quaternion.identity);
+                coin_activate = true;
             }
 
 
@@ -153,6 +161,7 @@ public class CreatesCoin : MonoBehaviour
             if (random_number > 0 && random_number <=25)
             {
                 Instantiate(YellowCoins, aliveGO.transform.position, Quaternion.identity);
+                  coin_activate = true;
             }
         }
          for (int i = 0; i < red_count; ++i)
@@ -160,8 +169,10 @@ public class CreatesCoin : MonoBehaviour
             if (random_number > 0 && random_number <=10)
             {
                 Instantiate(RedCoins, aliveGO.transform.position, Quaternion.identity);
+                  coin_activate = true;
             }
         }
+          coin_activate = true;
 
 
 

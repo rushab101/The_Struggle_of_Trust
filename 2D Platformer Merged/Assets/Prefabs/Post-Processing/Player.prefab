@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457980636531081408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.029, y: -0.102, z: 0}
+  m_LocalPosition: {x: -0.255, y: -0.089, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1457980638041078082}
@@ -44,7 +44,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0667305, y: -0.21163154}
+  m_Offset: {x: 0.0054121017, y: -0.21163154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2437973, y: 1.578557}
+  m_Size: {x: 1.3880825, y: 1.578557}
   m_EdgeRadius: 0
 --- !u!1 &1457980637032513604
 GameObject:
@@ -5049,6 +5049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 1457980638223692083}
+  unlock_wall_jump: 0
   knockbackDuation: 0.25
   isWalking: 0
   isGrounded: 0
@@ -5139,7 +5140,7 @@ MonoBehaviour:
   fJumpPressedRememberTime: 0.2
   touchDamageCoolDown: 0
   touchDamage: 0
-  touchDamageWidth: 2.5
+  touchDamageWidth: 1.4
   touchDamageHeight: 2
   touchDamageCheck: {fileID: 1457980636531081439}
   anim: {fileID: 0}

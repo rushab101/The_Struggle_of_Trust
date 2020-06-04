@@ -13,8 +13,23 @@ public class BlueCoin : MonoBehaviour
         Debug.Log("Went to here");
              FindObjectOfType<Currency>().UpdateBalance(2);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
-           Destroy(gameObject);
+           Destroy(gameObject,0.02f);
           
         }
     }
+
+      void Start()
+    {
+           StartCoroutine(Test());
+        
+    }
+
+       IEnumerator Test()
+    {
+        
+        yield return new WaitForSeconds(3.0f);
+       Destroy(gameObject);
+    }
+
+
 }

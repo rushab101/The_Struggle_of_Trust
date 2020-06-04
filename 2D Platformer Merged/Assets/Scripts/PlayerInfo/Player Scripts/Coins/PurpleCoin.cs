@@ -13,8 +13,21 @@ public class PurpleCoin : MonoBehaviour
         Debug.Log("Went to here");
              FindObjectOfType<Currency>().UpdateBalance(5);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
-           Destroy(gameObject);
+           Destroy(gameObject,0.02f);
           
         }
+    }
+
+      void Start()
+    {
+           StartCoroutine(Test());
+        
+    }
+
+       IEnumerator Test()
+    {
+        
+        yield return new WaitForSeconds(5.0f);
+       Destroy(gameObject);
     }
 }

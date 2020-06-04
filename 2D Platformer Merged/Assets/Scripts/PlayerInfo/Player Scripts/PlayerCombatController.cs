@@ -382,7 +382,7 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
-            Debug.Log("flag 2");
+            //Debug.Log("flag 2");
            
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 20);
             //Instantiate(HitParticle, a, Quaternion.identity);

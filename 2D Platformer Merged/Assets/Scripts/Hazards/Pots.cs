@@ -19,6 +19,7 @@ public class Pots : MonoBehaviour
     private int playerFacingDirection;
 
     private bool playerOnLeft, knockback,done = false;
+ 
 
       private PlayerController pc;
     private GameObject aliveGO, brokenTopGO, brokenBotGO ;
