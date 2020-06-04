@@ -12,6 +12,11 @@ public class CreatesCoin : MonoBehaviour
     private int maxCount = 10;
        public bool  coin_activate = false;
              public bool  green_coin_activate = false;
+              private GameObject clone;
+              private GameObject clone2;
+              private GameObject clone3;
+              private GameObject clone4;
+              private GameObject clone5;
 
     [SerializeField]
     private bool applyKnockback;
@@ -139,19 +144,17 @@ public class CreatesCoin : MonoBehaviour
         {
              green_coin_activate = true;
             StartCoroutine(Test3());
-            Instantiate(GreenCoins, aliveGO.transform.position, Quaternion.identity);
-            if (i == count -1)
-            {
-                green_coin_activate = false;
-            }
+            clone = (GameObject)Instantiate(GreenCoins, aliveGO.transform.position, Quaternion.identity);
+            Destroy (clone, 5.0f);
+          
 
         }
         for (int i = 0; i < blue_count; ++i)
         {
             if (random_number % 2 == 0)
             {
-                Instantiate(BlueCoins, aliveGO.transform.position, Quaternion.identity);
-                coin_activate = true;
+                clone2 = (GameObject)Instantiate(BlueCoins, aliveGO.transform.position, Quaternion.identity);
+                Destroy (clone2, 5.0f);
             }
 
 
@@ -160,16 +163,16 @@ public class CreatesCoin : MonoBehaviour
         {
             if (random_number > 0 && random_number <=25)
             {
-                Instantiate(YellowCoins, aliveGO.transform.position, Quaternion.identity);
-                  coin_activate = true;
+                clone3 = (GameObject)Instantiate(YellowCoins, aliveGO.transform.position, Quaternion.identity);
+                  Destroy (clone3, 5.0f);
             }
         }
          for (int i = 0; i < red_count; ++i)
         {
             if (random_number > 0 && random_number <=10)
             {
-                Instantiate(RedCoins, aliveGO.transform.position, Quaternion.identity);
-                  coin_activate = true;
+                 clone4 = (GameObject)Instantiate(RedCoins, aliveGO.transform.position, Quaternion.identity);
+                   Destroy (clone4, 5.0f);
             }
         }
           coin_activate = true;
@@ -200,6 +203,8 @@ public class CreatesCoin : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         aliveGO.SetActive(false);
     }
+    
+    
 
 
 
