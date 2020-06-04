@@ -114,12 +114,21 @@ public class CreatesCoin : MonoBehaviour
    
     StartCoroutine(Test2());
 
-        int count = Random.Range(minCount,maxCount);
+        int count = Random.Range(minCount,maxCount); //100% Chance
+        int blue_count = Random.Range(2,7);  //50% Chance
+         int yellow_count = Random.Range(1,5);
+         int red_count = Random.Range(0,1);
+
+         
+
         for (int i = 0; i < count; ++i) {
-              
+              StartCoroutine(Test3());
         Instantiate(GreenCoins, aliveGO.transform.position,Quaternion.identity);
-          StartCoroutine(Test3());
+          
         }
+     
+
+        
     }
 
 

@@ -31,6 +31,7 @@ public class Stag2 : MonoBehaviour
 
 
         if (collision.CompareTag("Player") &&   animator.GetCurrentAnimatorStateInfo(0).IsName("Falling")) {
+             Debug.Log("Trigger not working");
 
             FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
            // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
