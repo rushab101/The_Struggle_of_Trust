@@ -6,7 +6,7 @@ public class Enemy3 : Entity
 {
      public E3_MoveState moveState { get; private set; }
     public E3_idleState idleState { get; private set; }
-    
+    //  public GameObject Green_coin;
     public E3_EnemyAttackState meleeAttackState { get; private set; }
 
 
@@ -110,7 +110,7 @@ public class Enemy3 : Entity
      // Debug.Log("Checking");
       touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
             touchDamageTopRight.Set(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
-            
+
      if (Time.time >= lastTouchDamageTime + touchDamageCoolDown){
 
         
