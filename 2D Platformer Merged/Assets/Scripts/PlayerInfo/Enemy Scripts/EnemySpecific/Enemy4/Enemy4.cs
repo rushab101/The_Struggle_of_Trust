@@ -19,6 +19,8 @@ public class Enemy4 : Entity
     protected AttackDetails attackDetails;
       [SerializeField]
     private D_DeadState deadStateData;
+     [SerializeField]
+    private D_HurtState hurtStateData;
 
      
     private Vector2 movement,
@@ -48,7 +50,7 @@ public class Enemy4 : Entity
         moveState = new E4_MoveState(this, stateMachine, "move", moveStateData, this);
         idleState = new  E4_IdleState(this, stateMachine, "idle", idelstateData, this);
          deadState = new E4_DeadState(this,stateMachine,"dead",deadStateData,this);
-          hurtState = new E4_HurtState(this, stateMachine, "hurt", this);
+          hurtState = new E4_HurtState(this, stateMachine, "hurt", hurtStateData, this);
         stateMachine.Initialize(moveState);
     }
 

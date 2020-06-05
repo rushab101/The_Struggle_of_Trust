@@ -10,7 +10,7 @@ public class PurpleCoin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             
-        Debug.Log("Went to here");
+       // Debug.Log("Went to here");
              FindObjectOfType<Currency>().UpdateBalance(5);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject,0.02f);
@@ -18,16 +18,4 @@ public class PurpleCoin : MonoBehaviour
         }
     }
 
-      void Start()
-    {
-           StartCoroutine(Test());
-        
-    }
-
-       IEnumerator Test()
-    {
-        
-        yield return new WaitForSeconds(5.0f);
-       Destroy(gameObject);
-    }
 }
