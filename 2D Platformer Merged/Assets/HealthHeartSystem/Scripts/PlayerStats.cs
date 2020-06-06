@@ -73,6 +73,7 @@ public class PlayerStats : MonoBehaviour
             //PlayerisDead
            
             FindObjectOfType<PlayerStat>().Die();
+              FindObjectOfType<Scene1Save>().ResetValues();
             //StartCoroutine(Test());
            // FindObjectOfType<PlayerController>().GameOver();
             went_in = true;

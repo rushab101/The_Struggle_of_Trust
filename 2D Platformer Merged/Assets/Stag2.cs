@@ -20,7 +20,7 @@ public class Stag2 : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-       Debug.Log("Went to here");
+     //  Debug.Log("Went to here");
      
         
            

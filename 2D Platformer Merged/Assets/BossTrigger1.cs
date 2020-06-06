@@ -17,6 +17,7 @@ public class BossTrigger1 : MonoBehaviour
     public DialogueManager manager;
     SpriteRenderer rend;
     public bool boss_is_dead = false;
+    public bool boss_is_dead_complete = false;
 
        public GameObject canvasObject;
        public GameObject I;
@@ -229,6 +230,7 @@ private bool complete_this_one=false;
            rend.material.color = c;
            yield return new WaitForSeconds(0.05f);
        }
+       boss_is_dead_complete = true;
     }
 
 

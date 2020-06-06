@@ -41,6 +41,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
             gm.lastCheckPointPos = transform.position;
             heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
             FindObjectOfType<PlayerStats>().Heal(heal);
+              FindObjectOfType<Scene1Save>().SaveValues();
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
             PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
             FindObjectOfType<Currency>().SaveSettings();

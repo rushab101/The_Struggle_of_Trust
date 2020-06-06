@@ -36,6 +36,7 @@ public class ContineFire : MonoBehaviour
             heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
             FindObjectOfType<PlayerStats>().Heal(heal);
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+            FindObjectOfType<Scene1Save>().SaveValues();
             PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
             FindObjectOfType<Currency>().SaveSettings();
         }
