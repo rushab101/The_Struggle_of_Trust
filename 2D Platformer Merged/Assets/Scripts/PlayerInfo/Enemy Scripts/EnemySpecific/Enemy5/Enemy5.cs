@@ -120,6 +120,10 @@ public class Enemy5 :  Entity
         
     }
     }
+    public void PlayMovementSound()
+    {
+        FindObjectOfType<AudioManager>().Play("ThompDash");
+    }
 
 
 }

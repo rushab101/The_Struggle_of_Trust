@@ -7,7 +7,7 @@ public class TimeStop : MonoBehaviour
     // control how fast time restores back to normal, and when we started storing time
     private float speed;
     private bool restoreTime;
-
+    
     //public GameObject HitStop;
     private Animator anim;
 
@@ -32,6 +32,7 @@ public class TimeStop : MonoBehaviour
 
     private void enableHitStopParticle() {
         HitStopParticle.Play();
+        
     }
 
 
