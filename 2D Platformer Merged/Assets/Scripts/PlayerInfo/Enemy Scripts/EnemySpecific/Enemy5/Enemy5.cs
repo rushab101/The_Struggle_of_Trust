@@ -81,6 +81,7 @@ public class Enemy5 :  Entity
        moveStateData.movementSpeed+=10f;
          if (isDead)
         {
+            FindObjectOfType<AudioManager>().Play("ThompDead");
             FindObjectOfType<BossTrigger1>().boss_is_dead = true;
             FindObjectOfType<OldManTriggger>().new_dia = true;
             moveStateData.movementSpeed=30f;
@@ -88,6 +89,7 @@ public class Enemy5 :  Entity
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
+            FindObjectOfType<AudioManager>().Play("ThompHit"); // 06 June 2020
             stateMachine.ChangeState(hurtState);
         }
  
