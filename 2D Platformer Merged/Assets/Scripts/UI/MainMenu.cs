@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-      //  PlayerPrefs.DeleteAll();
+       //PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         if (SceneLoader == 0)
         {
@@ -25,12 +25,15 @@ public class MainMenu : MonoBehaviour
         {
             level = "CaveEntrance";
         }
+
+        FindObjectOfType<Scene1Save>().ResetValues();
         
     }
     public void PlayGame()
     {
-        
+       // FindObjectOfType<Scene1Save>().ResetValues();
         SceneManager.LoadScene(level);
+
     }
 
 

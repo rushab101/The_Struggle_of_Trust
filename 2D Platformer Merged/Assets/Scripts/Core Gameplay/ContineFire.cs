@@ -30,15 +30,16 @@ public class ContineFire : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !first )
         {
-             Debug.Log("Went to here");
+//             Debug.Log("Went to here");
          //   first = true;
             gm.lastCheckPointPos = transform.position;
+              FindObjectOfType<Currency>().SaveSettings();
+              PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
             heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
             FindObjectOfType<PlayerStats>().Heal(heal);
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
             FindObjectOfType<Scene1Save>().SaveValues();
-            PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
-            FindObjectOfType<Currency>().SaveSettings();
+            
         }
     }
 

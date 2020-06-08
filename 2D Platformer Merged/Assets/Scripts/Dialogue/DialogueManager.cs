@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
 	void Start () {
 		
 		sentences = new Queue<string>();
+		//PlayerPrefs.DeleteAll();
 	}
 
 	public void StartDialogue (Dialogue dialogue)

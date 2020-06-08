@@ -92,11 +92,11 @@ public class Scene1Save : MonoBehaviour
         // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
         // Debug.Log("Cancel is " + Red_Lever_anim.GetBool("cancel"));
 
-
+//    Debug.Log("Value is:  " + PlayerPrefs.GetInt("Red Lever Complete Soft"));
 
         if (!Red_Lever_anim.GetBool("done") && Red_Lever_anim.GetBool("cancel"))
         {
-            Debug.Log("In here");
+//            Debug.Log("In here");
             if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 0)
             {
                 PlayerPrefs.SetInt("Red Lever Complete Soft", 1);
@@ -119,7 +119,7 @@ public class Scene1Save : MonoBehaviour
         //-------------Blue Lever Save Case-------------------------------------\\
         if (!Blue_Lever_anim.GetBool("done") && Blue_Lever_anim.GetBool("cancel"))
         {
-            Debug.Log("In here");
+         //   Debug.Log("In here");
             if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 0)
             {
                 PlayerPrefs.SetInt("Blue Lever Complete Soft", 1);
@@ -151,6 +151,7 @@ public class Scene1Save : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Green Lever Complete Soft") == 2)
         {
+            Debug.Log("In here 2");
             Green_Lever_anim.SetBool("done", false);
             Green_Lever_anim.SetBool("cancel", true);
             GreenWall.SetActive(false);
@@ -174,7 +175,7 @@ public class Scene1Save : MonoBehaviour
             }
 
         }
-        Debug.Log(PlayerPrefs.GetInt("PurpleCoin1"));
+//        Debug.Log(PlayerPrefs.GetInt("PurpleCoin1"));
         if (PlayerPrefs.GetInt("PurpleCoin1") == 1 || PlayerPrefs.GetInt("PurpleCoin1") == 2 )
         {
             PurpleCoin1.SetActive(false);
@@ -447,12 +448,23 @@ public class Scene1Save : MonoBehaviour
         {
             PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
             RedWall.SetActive(true);
+             Red_Lever_anim.SetBool("done", false);
+            Red_Lever_anim.SetBool("cancel", false);
         }
-        if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
+       if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
         {
             PlayerPrefs.SetInt("Blue Lever Complete Soft", 0);
             BlueWall.SetActive(true);
             BlueWall1.SetActive(true);
+            Blue_Lever_anim.SetBool("done", false);
+            Blue_Lever_anim.SetBool("cancel", false);
+        }
+           if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
+        {
+            PlayerPrefs.SetInt("Green Lever Complete Soft", 0);
+            GreenWall.SetActive(true);
+            Green_Lever_anim.SetBool("done", false);
+            Green_Lever_anim.SetBool("cancel", false);
         }
         if (PlayerPrefs.GetInt("PurpleCoin2") == 1)
         {
@@ -562,6 +574,10 @@ public class Scene1Save : MonoBehaviour
             boss_trigger.SetActive(true);
             BlueLever.SetActive(false);
         }
+        if (FindObjectOfType<PlayerStats>().GameOver)
+        {
+            ResetValues();
+        }
     }
 
     public void ResetValues()
@@ -570,12 +586,24 @@ public class Scene1Save : MonoBehaviour
         {
             PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
             RedWall.SetActive(true);
+            Red_Lever_anim.SetBool("done", false);
+            Red_Lever_anim.SetBool("cancel", false);
+
         }
         if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
         {
             PlayerPrefs.SetInt("Blue Lever Complete Soft", 0);
             BlueWall.SetActive(true);
             BlueWall1.SetActive(true);
+            Blue_Lever_anim.SetBool("done", false);
+            Blue_Lever_anim.SetBool("cancel", false);
+        }
+           if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
+        {
+            PlayerPrefs.SetInt("Green Lever Complete Soft", 0);
+            GreenWall.SetActive(true);
+            Green_Lever_anim.SetBool("done", false);
+            Green_Lever_anim.SetBool("cancel", false);
         }
         if (PlayerPrefs.GetInt("PurpleCoin2") == 1)
         {
@@ -694,7 +722,7 @@ public void SaveValues()
     //-------------Red Lever Save Case-------------------------------------\\
     //Soft Save
     // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
-    // Debug.Log("Cancel is " + Red_Lever_anim.GetBool("cancel"));
+     Debug.Log("Cancel is " + Green_Lever_anim.GetBool("cancel"));
 
 
 

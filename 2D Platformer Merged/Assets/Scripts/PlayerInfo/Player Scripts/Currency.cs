@@ -8,50 +8,58 @@ public class Currency : MonoBehaviour
 
     public Text Current_Value;
     private float total_currency;
+    private float total_currency_temp;
     void Awake()
     {
-        total_currency =PlayerPrefs.GetFloat("Money");
+        total_currency_temp = PlayerPrefs.GetFloat("Money");
+        total_currency = PlayerPrefs.GetFloat("Money");
 
     }
     // Start is called before the first frame update
 
     private void Green_coin() //1
     {
-        total_currency +=1;
-        //Debug.Log(total_currency);
+        total_currency_temp += 1;
+         PlayerPrefs.SetInt("State", 1);
+        
     }
 
-      private void Blue_coin() //2
+    private void Blue_coin() //2
     {
-        total_currency +=5;
+        total_currency_temp += 5;
+         PlayerPrefs.SetInt("State", 1);
     }
 
-       private void Yellow_coin() //3 
+    private void Yellow_coin() //3 
     {
-        total_currency +=10;
+        total_currency_temp += 10;
+         PlayerPrefs.SetInt("State", 1);
     }
 
-    
-     private void Red_coin() //4
+
+    private void Red_coin() //4
     {
-        total_currency +=20;
+        total_currency_temp += 20;
+         PlayerPrefs.SetInt("State", 1);
     }
 
     private void Purple_coin() //5
     {
-        total_currency +=50;
-         
+        total_currency_temp += 50;
+         PlayerPrefs.SetInt("State", 1);
+
     }
 
-     
+
 
     public void UpdateBalance(int coin)
     {
+
        
-         switch (coin)
+        switch (coin)
         {
             case 1:
-               Green_coin();
+                Green_coin();
                 break;
             case 2:
                 Blue_coin();
@@ -60,7 +68,7 @@ public class Currency : MonoBehaviour
                 Yellow_coin();
                 break;
             case 4:
-               Red_coin();
+                Red_coin();
                 break;
             case 5:
                 Purple_coin();
@@ -74,36 +82,74 @@ public class Currency : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetFloat("Money")==0f)
+        if (PlayerPrefs.GetFloat("Money") == 0f)
         {
             total_currency = 0;
         }
 
     }
 
-     public void SaveSettings()
+    public void SaveSettings()
     {
-
-        PlayerPrefs.SetFloat("Money", total_currency);
-        PlayerPrefs.Save();
+        
+      //  PlayerPrefs.SetFloat("Money", total_currency);
+      //  PlayerPrefs.Save();
+      Debug.Log("Went into coins");
+       PlayerPrefs.SetInt("State", 2);
+       Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
+       PlayerPrefs.SetFloat("Money",total_currency_temp);
+     //  PlayerPrefs.SetInt("State", 2);
+    
 
     }
 
-/*
-    void OnApplicationFocus(bool hasFocus)
+
+    void OnApplicationQuit()
     {
-        if (hasFocus == false)
+        Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
+        if (PlayerPrefs.GetInt("State") == 1) //Does not save
         {
-            // UnityEngine.Debug.Log("message");
+           // total_currency = PlayerPrefs.GetInt("Money");
+             PlayerPrefs.SetFloat("Money",total_currency);
+
+        }
+        if (PlayerPrefs.GetInt("State") == 2) // Saves 
+        {
             SaveSettings();
         }
+       
+            
+
     }
-*/
+
+    void ResetVal()
+    {
+        Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
+        if (PlayerPrefs.GetInt("State") == 1) //Does not save
+        {
+           // total_currency = PlayerPrefs.GetInt("Money");
+             PlayerPrefs.SetFloat("Money",total_currency);
+
+        }
+        if (PlayerPrefs.GetInt("State") == 2) // Saves 
+        {
+            SaveSettings();
+        }
+       
+
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        Current_Value.text = total_currency.ToString("0");
-        
+        Current_Value.text = total_currency_temp.ToString("0");
+        PlayerPrefs.SetFloat("Money", total_currency_temp);
+        if (FindObjectOfType<PlayerStats>().GameOver)
+        {
+            ResetVal();
+        }
+      //  Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
+
     }
 }

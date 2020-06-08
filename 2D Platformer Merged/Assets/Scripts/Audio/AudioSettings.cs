@@ -18,7 +18,7 @@ public class AudioSettings : MonoBehaviour
     {
 
         backgroundfloat = PlayerPrefs.GetFloat(BackgroundPref);
-        UnityEngine.Debug.Log(backgroundfloat);
+//        UnityEngine.Debug.Log(backgroundfloat);
         backgroundAudio.volume = backgroundfloat;
 
     }
