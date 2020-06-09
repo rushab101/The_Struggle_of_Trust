@@ -29,7 +29,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-      
+
 
         if (Input.GetKey(KeyCode.E) && !first && collision.gameObject.tag == "Player")
         {
@@ -39,12 +39,14 @@ public class FirePlaceCheckPoint : MonoBehaviour
             aliveGO.SetActive(false);
             aliveAnim.SetBool("on", true);
             gm.lastCheckPointPos = transform.position;
-            heal =  FindObjectOfType<PlayerStats>().MaxHealth; 
+            heal = FindObjectOfType<PlayerStats>().MaxHealth;
             FindObjectOfType<PlayerStats>().Heal(heal);
-              FindObjectOfType<Scene1Save>().SaveValues();
-            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
-            PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
             FindObjectOfType<Currency>().SaveSettings();
+            PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
+            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+             FindObjectOfType<Scene0SaveScript>().SaveValues();
+            FindObjectOfType<Scene1Save>().SaveValues();
+           
         }
     }
 
@@ -65,10 +67,10 @@ public class FirePlaceCheckPoint : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
 
-        first = false;
-        
+            first = false;
+
         }
-       
+
 
 
     }
