@@ -12,6 +12,7 @@ public class Scene0SaveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       // PlayerPrefs.DeleteAll();
         Create1_child = Create1.transform.GetChild(0).gameObject;
         Create2_child = Create2.transform.GetChild(0).gameObject;
 
@@ -20,9 +21,10 @@ public class Scene0SaveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!Create1_child.activeSelf)
         {
-         
+        //  Debug.Log(PlayerPrefs.GetInt("Create1_scene2"));
             if (PlayerPrefs.GetInt("Create1_scene1") == 0)
             {
                 PlayerPrefs.SetInt("Create1_scene1", 1);
@@ -37,6 +39,7 @@ public class Scene0SaveScript : MonoBehaviour
         //Create 2
         if (!Create2_child.activeSelf)
         {
+           
             if (PlayerPrefs.GetInt("Create2_scene1") == 0)
             {
                 PlayerPrefs.SetInt("Create2_scene1", 1);
