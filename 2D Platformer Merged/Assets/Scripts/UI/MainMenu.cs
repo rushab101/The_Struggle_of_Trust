@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-       //PlayerPrefs.DeleteAll();
+      // PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         if (SceneLoader == 0)
         {
