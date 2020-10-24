@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
             level = "CaveEntrance";
         }
 
-        FindObjectOfType<Scene1Save>().ResetValues();
+        //FindObjectOfType<Scene1Save>().ResetValues();
         
     }
     public void PlayGame()

@@ -14,7 +14,7 @@ public class Spikes : MonoBehaviour {
        
         if (collision.CompareTag("Sword"))
         {   
-           Debug.Log("Checker Done");
+//           Debug.Log("Checker Done");
             
             
                   hitSpike = false;

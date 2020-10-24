@@ -368,7 +368,7 @@ public class PlayerController : MonoBehaviour {
             {
                 if ( !Input.GetKey(KeyCode.DownArrow) &&  (!Input.GetButton("Jump")) && !Input.GetKey(KeyCode.Space) && isGrounded )
                 {   
-                        UnityEngine.Debug.Log("Going thru here");
+//                        UnityEngine.Debug.Log("Going thru here");
                           AtemptToSpin();
                 }
               

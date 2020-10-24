@@ -80,7 +80,7 @@ public class Scene1Save : MonoBehaviour
         Create14_child = Create14.transform.GetChild(0).gameObject;
         rend = BlueLever.GetComponent<SpriteRenderer>();
 
-      //  PlayerPrefs.DeleteAll();
+       // PlayerPrefs.DeleteAll();
     }
 
 
@@ -194,7 +194,7 @@ public class Scene1Save : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("PurpleCoin2") == 1 || PlayerPrefs.GetInt("PurpleCoin2") == 2)
         {
-            Debug.Log("In here Coin 2");
+//            Debug.Log("In here Coin 2");
             PurpleCoin2.SetActive(false);
         }
 

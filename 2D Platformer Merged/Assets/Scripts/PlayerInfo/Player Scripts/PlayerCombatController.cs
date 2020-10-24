@@ -377,7 +377,7 @@ public class PlayerCombatController : MonoBehaviour
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
         attackDetails.stunDamageAmount = stunDamageAmount;
-         Debug.Log("flag 1");
+//         Debug.Log("flag 1");
 
 
         foreach (Collider2D collider in detectedObjects2)

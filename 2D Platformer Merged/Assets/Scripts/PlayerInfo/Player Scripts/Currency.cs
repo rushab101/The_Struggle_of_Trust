@@ -94,7 +94,7 @@ public class Currency : MonoBehaviour
         
       //  PlayerPrefs.SetFloat("Money", total_currency);
       //  PlayerPrefs.Save();
-      Debug.Log("Went into coins");
+     // Debug.Log("Went into coins");
        PlayerPrefs.SetInt("State", 2);
      //  Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
        PlayerPrefs.SetFloat("Money",total_currency_temp);

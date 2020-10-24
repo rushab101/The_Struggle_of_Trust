@@ -19,6 +19,7 @@ public class FadeInSection1 : MonoBehaviour
     {
         if (!went_in)
         {
+             canvasObject.SetActive(true);
             went_in = true;
             StartCoroutine(FadeIn());
 
@@ -29,6 +30,7 @@ public class FadeInSection1 : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+
         // start fading
         yield return StartCoroutine(FadeEffect.FadeCanvas(canvas, 0f, 1f, 2f));
         StartCoroutine(FadeOut());
@@ -50,6 +52,7 @@ public class FadeInSection1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canvasObject.SetActive(false);
         canvas = canvasObject.GetComponent<CanvasGroup>();
         StartCoroutine(FadeEffect.FadeCanvas(canvas, 0f, 0f, 0f));
 
