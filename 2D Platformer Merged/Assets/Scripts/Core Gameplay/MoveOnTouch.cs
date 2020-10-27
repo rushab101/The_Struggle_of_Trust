@@ -6,8 +6,10 @@ public class MoveOnTouch : MonoBehaviour
 {
    [SerializeField]
    private Vector3 velocity;
-   private bool moving;
+   public bool moving;
    private bool resetPlatform=false;
+   private bool move_right = false;
+   public bool end = false;
    private Vector3 initialPosition;
 
    void OnCollisionEnter2D(Collision2D collision)
@@ -34,37 +36,42 @@ public class MoveOnTouch : MonoBehaviour
 
      void Start()
  {
-     initialPosition = transform.position;
+     initialPosition = transform.localPosition;
  }
 
     private void FixedUpdate()
     {
         if (moving)
         {
+            if (transform.localPosition.y  >= -65)
+            {
+               //  velocity = new Vector3(5,0,0);
+                 transform.localPosition+=(velocity * Time.deltaTime);
+
+                 move_right = true;
+
+            }
+            else if (move_right){
+                    velocity = new Vector3(0,0,0);
+                 transform.localPosition +=(velocity * Time.deltaTime);
+            }
+            else if (end){
+                 velocity = new Vector3(0,0,0);
+                 transform.localPosition +=(velocity * Time.deltaTime);
+            }
             
-            if (transform.position.x < 238)
-            {
-                 transform.position +=(velocity * Time.deltaTime);
-            }
-            else if (transform.position.x > 238)
-            {
-                velocity = new Vector3(0,5,0);
-                 transform.position +=(velocity * Time.deltaTime);
-            }
-            else if (transform.position.y > 28)
-            {
-                moving = false;
-            }
-           resetPlatform=true;
-            Debug.Log(transform.position);
-           
+            
+            resetPlatform=true;
+            Debug.Log(transform.localPosition);
         }
+
+
         else if (resetPlatform && !moving)
         {
            
            
-                velocity = new Vector3(5,0,0);
-                 transform.position = Vector3.MoveTowards(transform.position, initialPosition, 20f *Time.deltaTime);
+               // velocity = new Vector3(5,0,0);
+                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, initialPosition, 20f *Time.deltaTime);
                  
              
         }

@@ -173,8 +173,16 @@ public class Entity : MonoBehaviour
       public virtual void Flip2()
     {
         facingDirection *=-1;
-      //  aliveGO.transform.Rotate(0f,180f,0f);
+       // aliveGO.transform.Rotate(180f,0f,0f);
     }
+
+      public virtual void Flip3()
+    {
+        facingDirection *=-1;
+        aliveGO.transform.Rotate(180f,0f,0f);
+    }
+
+
 
 
    public virtual void OnDrawGizmos()

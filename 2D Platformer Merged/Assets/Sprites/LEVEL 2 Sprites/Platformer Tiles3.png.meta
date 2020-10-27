@@ -8,6 +8,21 @@ TextureImporter:
   - first:
       213: -6462316053124129742
     second: Platformer Tiles3_1
+  - first:
+      213: -330398229752204799
+    second: Platformer Tiles3_2
+  - first:
+      213: -6199153961434378943
+    second: Platformer Tiles3_3
+  - first:
+      213: -7425352447459508137
+    second: Platformer Tiles3_2
+  - first:
+      213: -1666229265892120200
+    second: Platformer Tiles3_4
+  - first:
+      213: -3613711262822935155
+    second: Platformer Tiles3_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,6 +157,90 @@ TextureImporter:
       bones: []
       spriteID: 23c5b3bd9cd3156a0800000000000000
       internalID: -6462316053124129742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles3_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 130
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d8fbc015e28f9a0800000000000000
+      internalID: -6199153961434378943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles3_2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 129
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750491d4a49d3f890800000000000000
+      internalID: -7425352447459508137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles3_4
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 130
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879e32c8f4d50e8e0800000000000000
+      internalID: -1666229265892120200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles3_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 129
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d855c92b0c489ddc0800000000000000
+      internalID: -3613711262822935155
       vertices: []
       indices: 
       edges: []

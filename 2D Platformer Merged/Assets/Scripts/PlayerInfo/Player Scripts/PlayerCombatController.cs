@@ -175,7 +175,7 @@ public class PlayerCombatController : MonoBehaviour
             }
             else if (FindObjectOfType<PlayerController>().isGrounded || counter >=6)
             {
-                    Debug.Log("Condition");
+//                    Debug.Log("Condition");
                 counter =0;
             }
 
