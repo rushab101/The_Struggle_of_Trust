@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: E2_MeleeAttackData
   m_EditorClassIdentifier: 
   attackRadius: 0.4
-  attackDamage: 10
+  attackDamage: 20
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 2048
