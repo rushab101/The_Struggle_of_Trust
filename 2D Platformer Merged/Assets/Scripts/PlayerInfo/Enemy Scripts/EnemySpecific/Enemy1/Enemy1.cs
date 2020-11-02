@@ -48,9 +48,9 @@ public class Enemy1 : Entity
         chargeState = new E1_ChargeState(this, stateMachine, "charge", chargeStateData, this);
         lookForPlayerState = new E1_LookForPlayerState(this, stateMachine, "lookForPlayer", lookForPlayerStateData, this);
         meleeAttackState = new E1_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
-        stunState = new E1_StunState(this, stateMachine, "stun", stunStateData, this);
+        //stunState = new E1_StunState(this, stateMachine, "stun", stunStateData, this);
         deadState = new E1_DeadState(this,stateMachine,"dead",deadStateData,this);
-        hurtState = new E1_HurtState(this, stateMachine, "hurt",this);
+       // hurtState = new E1_HurtState(this, stateMachine, "hurt",this);
         stateMachine.Initialize(movestate);
 
     }
@@ -59,6 +59,7 @@ public class Enemy1 : Entity
         base.OnDrawGizmos();
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
     }
+  
 
     public override void Damage(AttackDetails attackDetails)
     {
@@ -67,19 +68,7 @@ public class Enemy1 : Entity
         {
           stateMachine.ChangeState(deadState);
         }
-       else  if (isStunned && stateMachine.currentState != stunState)
-        {
-            stateMachine.ChangeState(stunState);
-        }
-        else if (PlayerDamaged && stateMachine.currentState != hurtState)
-        {
-          //  PlayerDamaged = false;
-            stateMachine.ChangeState(hurtState);
-            //stateMachine.ChangeState(idleState);
-            //Debug.Log("Went to here");
-        }
-
-    
+       
     }
 
 }
