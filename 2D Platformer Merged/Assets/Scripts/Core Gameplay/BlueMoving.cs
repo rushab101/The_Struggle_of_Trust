@@ -34,7 +34,7 @@ public class BlueMoving : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            //   moving = false;
+               moving = false;
             collision.collider.transform.SetParent(null);
          
         }
@@ -69,17 +69,18 @@ public class BlueMoving : MonoBehaviour
 
 
             }
-            else{
+          // else
                 resetPlatform=true;
-            }
-
-            
             Debug.Log(transform.localPosition);
         }
 
 
-        else if (resetPlatform)
+        else if (resetPlatform && !moving)
         {
+            up = true;
+             right = false;
+                    resetPlatform = true;
+                    moving =  false;
            
                // velocity = new Vector3(5,0,0);
                  transform.localPosition = Vector3.MoveTowards(transform.localPosition, initialPosition, 20f *Time.deltaTime);
