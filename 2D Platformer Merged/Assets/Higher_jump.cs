@@ -6,30 +6,16 @@ public class Higher_jump : MonoBehaviour
 {
     public bool high_jump = false;
     
-     void OnCollisionStay2D(Collision2D collision)
-    {
-       
-           high_jump = true;
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
        
-           high_jump = true;
-    }
-    private void OnTriggerEnter2D(Collider2D collision) {
-        high_jump = true;
-    }
-
-     private void OnTriggerExit2D(Collider2D collision) {
-        high_jump = false;
-    }
-
-
-     void OnCollisionExit2D(Collision2D collision)
-    {
-       
-       high_jump = false;
+           if (collision.gameObject.tag == "Player")
+           {
+               if ( FindObjectOfType<PlayerCombatController>().downAttacking)
+                  {
+                       FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 30);
+                  }
+           }
     }
 
 }
