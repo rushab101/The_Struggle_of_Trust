@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     private bool isTouchingWall;
     private bool isTouchingWall2;
     private bool isWallSliding;
-    private bool canNormalJump;
+    public bool canNormalJump;
     private bool disableMove;
     private bool canWallJump;
     private bool isAttemptingToJump;
