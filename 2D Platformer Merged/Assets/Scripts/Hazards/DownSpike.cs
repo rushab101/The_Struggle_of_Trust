@@ -5,34 +5,61 @@ using UnityEngine;
 public class DownSpike : MonoBehaviour
 {
 
-      public Rigidbody2D body2d;
-      public  Vector2 start;
-      public  Vector2 target;
-     public float velocity = 10f;
-
-    public  float speed = 7f;
-    public float delta = 5f;  //delta is the difference between min y to max y.
-    public float startingDistance=4.8f;
+   [SerializeField]
+   private Vector3 velocity;
+   public bool moving;
+   public bool down = true;
+   private bool resetPlatform=false;
+   private bool up = false;
+   public bool end = false;
+   public int speed = 5;
+   public int down_pos = -9;
+   public int up_pos = 11;
+   private Vector3 initialPosition;
         
 
     // Start is called before the first frame update
     void Start()
     {
 
-         start = new Vector2(0,0);
-         target= new Vector2(0,4);
-            body2d = GetComponent<Rigidbody2D>();
+         initialPosition = transform.localPosition;
+         //target= new Vector2(-18,1);
+          
             
         
     }
 
     // Update is called once per frame
-    void Update()
+      private void FixedUpdate()
     {
-        float y = startingDistance+Mathf.PingPong(speed * Time.time, delta); 
-         Vector3 pos = new Vector3(transform.position.x, y, transform.position.z);
-         transform.position = pos;
+        
+            if (down){
+                velocity = new Vector3(0,-speed,0);
+                transform.localPosition+=(velocity * Time.deltaTime);
+            
+                if (transform.localPosition.y  <= down_pos)
+                {
+                down = false;
+                up =  true;
+                
+                }
+            }
+            else if (up){
+               velocity = new Vector3(0,speed,0);
+                transform.localPosition+=(velocity * Time.deltaTime);
+            
+                if (transform.localPosition.y  >= up_pos)
+                {
+                up = false;
+                down =  true;
+                
+                }
+
+            }
+           
     }
+
+
 
     
       void OnCollisionEnter2D(Collision2D collision)
@@ -47,4 +74,7 @@ public class DownSpike : MonoBehaviour
             FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
         }
     }
+
+
+
 }

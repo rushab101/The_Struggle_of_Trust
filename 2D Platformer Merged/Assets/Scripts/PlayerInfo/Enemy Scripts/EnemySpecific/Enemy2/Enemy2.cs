@@ -78,7 +78,7 @@ public class Enemy2 : Entity
     {
         base.Damage(attackDetails);
  
-        
+      
          if (isDead)
         {
           stateMachine.ChangeState(deadState);
