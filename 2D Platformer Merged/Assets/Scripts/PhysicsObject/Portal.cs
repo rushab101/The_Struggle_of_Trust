@@ -14,9 +14,10 @@ public class Portal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         Debug.Log("In portal");
        // a.SetActive(false);
         animator.SetBool("close", false);
-        animator.SetBool("open", false);
+      
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class Portal : MonoBehaviour
     {
         if (FindObjectOfType<Lever>().open_portal)
         {
-           ;
+           Debug.Log("In portal");
             gate_open = true;
             animator.SetBool("close", true);
             StartCoroutine(Test2());
