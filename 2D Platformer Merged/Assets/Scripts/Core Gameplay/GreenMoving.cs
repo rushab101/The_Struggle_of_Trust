@@ -153,7 +153,7 @@ public class GreenMoving : MonoBehaviour
                  }
             }
             else if (move_right_6){
-                 velocity = new Vector3(5,0,0);
+                 velocity = new Vector3(3,0,0);
                  transform.localPosition +=(velocity * Time.deltaTime);
                  if (transform.localPosition.x >= 470){
                      move_right_6 = false;
