@@ -12,8 +12,9 @@ public class Enemy1 : Entity
     public E1_MeleeAttackState meleeAttackState { get; private set; }
     public E1_StunState stunState { get; private set; }
     public E1_DeadState deadState { get; private set; }
-    public E1_HurtState hurtState {get; private set;}
+    public E1_HurtState hurtState { get; private set; }
 
+    protected AttackDetails attackDetails;
 
     [SerializeField]
     private D_IdleState idelstateData;
@@ -38,6 +39,28 @@ public class Enemy1 : Entity
     [SerializeField]
     private Transform meleeAttackPosition;
 
+    private Vector2 movement,
+    touchDamageBotLeft,
+    touchDamageTopRight;
+
+
+    [SerializeField]
+    private float
+      lastTouchDamageTime, // last time the enemy damaged
+      touchDamageCoolDown,
+      touchDamage,
+      touchDamageWidth,
+      touchDamageHeight;
+
+    [SerializeField]
+    private Transform
+touchDamageCheck;
+
+    [SerializeField]
+    private LayerMask
+    whatisPlayer;
+
+
 
     public override void Start()
     {
@@ -49,26 +72,68 @@ public class Enemy1 : Entity
         lookForPlayerState = new E1_LookForPlayerState(this, stateMachine, "lookForPlayer", lookForPlayerStateData, this);
         meleeAttackState = new E1_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         //stunState = new E1_StunState(this, stateMachine, "stun", stunStateData, this);
-        deadState = new E1_DeadState(this,stateMachine,"dead",deadStateData,this);
-       // hurtState = new E1_HurtState(this, stateMachine, "hurt",this);
+        deadState = new E1_DeadState(this, stateMachine, "dead", deadStateData, this);
+        // hurtState = new E1_HurtState(this, stateMachine, "hurt",this);
         stateMachine.Initialize(movestate);
 
     }
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
+        Vector2 botLeft = new Vector2(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
+        Vector2 botRight = new Vector2(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
+        Vector2 topRight = new Vector2(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
+        Vector2 topLeft = new Vector2(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
+        Gizmos.DrawLine(botLeft, botRight);
+        Gizmos.DrawLine(botRight, topRight);
+        Gizmos.DrawLine(topRight, topLeft);
+        Gizmos.DrawLine(topLeft, botLeft);
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
     }
-  
+
+
+
+
+
+
 
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
-            if (isDead)
+        if (isDead)
         {
-          stateMachine.ChangeState(deadState);
+            stateMachine.ChangeState(deadState);
         }
-       
+
     }
+    public void CheckTouchDamage()
+    {
+
+        // Debug.Log("Checking");
+        touchDamageBotLeft.Set(touchDamageCheck.position.x - (touchDamageWidth / 2), touchDamageCheck.position.y - (touchDamageHeight / 2));
+        touchDamageTopRight.Set(touchDamageCheck.position.x + (touchDamageWidth / 2), touchDamageCheck.position.y + (touchDamageHeight / 2));
+
+        if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
+        {
+
+
+            if (Time.time >= lastTouchDamageTime + touchDamageCoolDown)
+            {
+                Collider2D hit = Physics2D.OverlapArea(touchDamageBotLeft, touchDamageTopRight, whatisPlayer);
+                if (hit != null)
+                {
+
+                    lastTouchDamageTime = Time.time;
+
+                    hit.SendMessage("Damage", attackDetails);
+                    FindObjectOfType<TimeStop>().StopTime(0.25f, 10, 0.1f);
+                }
+
+            }
+
+        }
+
+    }
+
 
 }

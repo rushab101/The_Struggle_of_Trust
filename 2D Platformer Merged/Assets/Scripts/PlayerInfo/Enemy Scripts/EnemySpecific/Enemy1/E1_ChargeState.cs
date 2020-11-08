@@ -28,6 +28,7 @@ public class E1_ChargeState : ChargeState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        enemy.CheckTouchDamage();
          if (performCloseRangeAction)
             {
                 stateMachine.ChangeState(enemy.meleeAttackState);

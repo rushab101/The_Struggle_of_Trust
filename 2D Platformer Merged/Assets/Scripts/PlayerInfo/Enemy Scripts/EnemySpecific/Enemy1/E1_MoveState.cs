@@ -27,6 +27,7 @@ public class E1_MoveState : MoveState
     public override void LogicUpdate()
     {
          base.LogicUpdate();
+         enemy.CheckTouchDamage();
         if (isPlayerinMinAgroRange)
         {
             stateMachine.ChangeState(enemy.playerDetectedState);
