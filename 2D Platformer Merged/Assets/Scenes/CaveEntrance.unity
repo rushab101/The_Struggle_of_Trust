@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -285,10 +285,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2529581803243964845, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529581803243964845, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5670342507167393592, guid: f13e72acffa126c4fbc892de36fedc00,
         type: 3}
       propertyPath: m_Name
       value: Entire Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753152770331654193, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.6595764
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753152770331654193, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.458771
       objectReference: {fileID: 0}
     - target: {fileID: 5753152770985454312, guid: f13e72acffa126c4fbc892de36fedc00,
         type: 3}
@@ -299,6 +319,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932985065487339926, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932985065487339926, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932985066813462641, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932985066813462641, guid: f13e72acffa126c4fbc892de36fedc00,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.995041
       objectReference: {fileID: 0}
     - target: {fileID: 9087472121618564419, guid: f13e72acffa126c4fbc892de36fedc00,
         type: 3}
