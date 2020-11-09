@@ -9,7 +9,7 @@ public class PScript : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D collision) {
          Debug.Log("Its in here");
-         if (collision.CompareTag("Player") && FindObjectOfType<Lever>().open_portal)
+         if (collision.CompareTag("Player") && ((FindObjectOfType<Lever>().open_portal) || (FindObjectOfType<Lever2>().open_portal) || (FindObjectOfType<Lever3>().open_portal)))
          {
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
             player.transform.position = respawnPoint.transform.position;
