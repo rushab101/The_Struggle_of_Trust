@@ -20,7 +20,7 @@ public class Lever : MonoBehaviour
         if (Input.GetKey(KeyCode.Z) && !went_it)
         {
             Debug.Log("It went in here");
-            c.SetActive(true);
+          //  c.SetActive(true);
             went_it = true;
              anim.SetBool("done",true);
            open_portal = true;

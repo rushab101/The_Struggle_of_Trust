@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 12953a401b872f9489b945265b21d795
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7919218617484182084
+    second: YellowLever_0
+  - first:
+      213: 2722511333570046815
+    second: YellowLever_1
+  - first:
+      213: 7392573483870895849
+    second: YellowLever_2
+  - first:
+      213: 5061474957406781528
+    second: YellowLever_3
+  - first:
+      213: -3980606315957100879
+    second: YellowLever_4
+  - first:
+      213: -8635003025953126979
+    second: YellowLever_5
+  - first:
+      213: -5133414480825635853
+    second: YellowLever_6
+  - first:
+      213: -9201373423416647183
+    second: YellowLever_7
+  - first:
+      213: -6518003026752763922
+    second: YellowLever_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +67,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +91,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +112,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: YellowLever_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 161
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee70b71f7c66b85a0800000000000000
+      internalID: -6518003026752763922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowLever_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 162.5
+        height: 162.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5bea6622ad48c520800000000000000
+      internalID: 2722511333570046815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowLever_2
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0.5
+        width: 162.5
+        height: 162.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeb8128a62b79660800000000000000
+      internalID: 7392573483870895849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
