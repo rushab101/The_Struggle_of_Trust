@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: -90278530049073153
     second: Platformer Tiles2_0
+  - first:
+      213: -7287633777370377130
+    second: Platformer Tiles2_1
+  - first:
+      213: 2608383205735969961
+    second: Platformer Tiles2_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,7 +116,7 @@ TextureImporter:
         width: 17
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,6 +124,48 @@ TextureImporter:
       bones: []
       spriteID: fff949db7244fbef0800000000000000
       internalID: -90278530049073153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles2_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 65
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65453b6e0bf1dda90800000000000000
+      internalID: -7287633777370377130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platformer Tiles2_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 129
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4bcffa4b6d23420800000000000000
+      internalID: 2608383205735969961
       vertices: []
       indices: 
       edges: []

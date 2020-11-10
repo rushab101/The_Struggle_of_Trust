@@ -10,6 +10,7 @@ public class Lever2 : MonoBehaviour
     public bool open_portal = false;
   
     public GameObject c;
+     public GameObject gate;
 
     
      private void OnTriggerStay2D(Collider2D collision) 
@@ -44,6 +45,7 @@ public class Lever2 : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.2f);
       
             open_portal = true;
+            gate.SetActive(false);
              anim.SetBool("done",false);
              anim.SetBool("cancel",true);
            //  open_Gate = true;

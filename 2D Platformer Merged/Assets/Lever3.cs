@@ -8,6 +8,7 @@ public class Lever3 : MonoBehaviour
     private bool went_it= false;
     public bool open_Gate= false;
     public bool open_portal = false;
+     public GameObject gate;
   
     public GameObject c;
 
@@ -44,6 +45,7 @@ public class Lever3 : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.2f);
       
             open_portal = true;
+            gate.SetActive(false);
              anim.SetBool("done",false);
              anim.SetBool("cancel",true);
            //  open_Gate = true;

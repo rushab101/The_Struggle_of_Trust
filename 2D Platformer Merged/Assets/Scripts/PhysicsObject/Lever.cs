@@ -11,6 +11,12 @@ public class Lever : MonoBehaviour
     public GameObject a;
     public GameObject b;
     public GameObject c;
+    public GameObject gate;
+
+    void Start() {
+        gate.SetActive(true);
+    }
+    
 
     
      private void OnTriggerStay2D(Collider2D collision) 
@@ -49,6 +55,7 @@ public class Lever : MonoBehaviour
              anim.SetBool("cancel",true);
               a.SetActive(false);
               b.SetActive(false);
+              gate.SetActive(false);
              open_Gate = true;
      
         
