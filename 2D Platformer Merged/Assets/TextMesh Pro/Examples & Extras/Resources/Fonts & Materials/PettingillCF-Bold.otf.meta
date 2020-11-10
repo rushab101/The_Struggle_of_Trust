@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 585188cdc4600544eb408bee749e4b3a
+guid: dd677d5ea70265e4b92310a1a204a971
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,14 +8,15 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: ThaleahFat
+  fontName: Pettingill CF
   fontNames:
-  - ThaleahFat
+  - Pettingill CF
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
