@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -748.11, y: -287.00003}
+  m_AnchoredPosition: {x: 752.89, y: -308.00003}
   m_SizeDelta: {x: 372.2458, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110329165
@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 885, y: -527}
+  m_AnchoredPosition: {x: -759, y: -525}
   m_SizeDelta: {x: 367.39868, y: 96.35016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594871429
@@ -774,7 +774,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
-  m_textAlignment: 513
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
-  m_textAlignment: 513
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1281,7 +1281,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
-  m_textAlignment: 513
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
-  m_textAlignment: 513
+  m_textAlignment: 516
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -2237,7 +2237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749.11, y: -384}
+  m_AnchoredPosition: {x: 751.89, y: -405}
   m_SizeDelta: {x: 372.2458, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177980352
@@ -2793,7 +2793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -751.11, y: -475}
+  m_AnchoredPosition: {x: 749.89, y: -496}
   m_SizeDelta: {x: 372.2458, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430814858
@@ -3406,7 +3406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -747, y: -194}
+  m_AnchoredPosition: {x: 754, y: -215}
   m_SizeDelta: {x: 372.2458, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621509195
@@ -4188,7 +4188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE STRUGGLE OF LOGIC
+  m_text: THE STRUGGLE OF TRUST
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54a44d51180391347b2e16b595bd3600, type: 2}
   m_sharedMaterial: {fileID: -3791132747614694867, guid: 54a44d51180391347b2e16b595bd3600,
@@ -4218,8 +4218,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4256,7 +4256,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 33.922466, y: 43.17398, z: 37.461426, w: 439.4465}
+  m_margin: {x: 33.922466, y: 43.17398, z: 0.26745605, w: 439.4465}
   m_textInfo:
     textComponent: {fileID: 1952548806}
     characterCount: 21
