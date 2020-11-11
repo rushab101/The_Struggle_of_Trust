@@ -64,8 +64,6 @@ public class Enemy2 : Entity
            dodgeState = new E2_DodgeState(this,stateMachine,"dodge",dodgeStateData,this);
            rangedAttackState = new E2_RangedAttackState(this,stateMachine,"range", rangedAttackPosition,  rangedAttackStateData,this);
         stateMachine.Initialize(moveState);
-
-
     }
     public override void OnDrawGizmos()
     {

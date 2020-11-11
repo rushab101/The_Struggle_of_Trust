@@ -77,6 +77,11 @@ public class Entity : MonoBehaviour
         velocityWorkspace.Set(rb.velocity.x, velocity * facingDirection);
         rb.velocity = velocityWorkspace; //set the velocity of the enemy
     }
+     public virtual void SetVelocityDown(float velocity)
+    {
+        velocityWorkspace.Set( velocity, facingDirection * -rb.velocity.y);
+        rb.velocity = velocityWorkspace; //set the velocity of the enemy
+    }
 
     public virtual void SetVelocity(float velocity, Vector2 angle, int direction)
     {
