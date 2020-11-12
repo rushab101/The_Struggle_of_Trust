@@ -8,6 +8,8 @@ public class Enemy9 : Entity
     public E9_MoveState moveState { get; private set; }
     public E9_RangeAttackState rangedAttackState { get; private set; }
     public E9_MeleeAttack meleeAttackState { get; private set; }
+
+         public E9_HurtAttackState hurtState  { get; private set; }
     protected AttackDetails attackDetails;
 
     [SerializeField]
@@ -24,6 +26,9 @@ public class Enemy9 : Entity
 
     [SerializeField]
     private Transform meleeAttackPosition;
+
+       [SerializeField]
+    private D_HurtState hurtStateData;
 
 
     private Vector2 movement,
@@ -59,6 +64,7 @@ touchDamageCheck;
         moveState = new E9_MoveState(this, stateMachine, "move", moveStateData, this);
         rangedAttackState = new E9_RangeAttackState(this, stateMachine, "range", rangedAttackPosition, rangedAttackStateData, this);
         meleeAttackState = new E9_MeleeAttack(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
+        hurtState = new E9_HurtAttackState(this, stateMachine, "hurt", hurtStateData, this);
 
 
         stateMachine.Initialize(moveState);
@@ -80,6 +86,10 @@ touchDamageCheck;
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+        if (PlayerDamaged && stateMachine.currentState != hurtState)
+        {
+            stateMachine.ChangeState(hurtState);
+        }
 
     }
     public void CheckTouchDamage()
