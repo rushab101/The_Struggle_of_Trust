@@ -7,6 +7,9 @@ public class E9_MoveState : FlyMoveState
   
     private Enemy9 enemy;
     private int state = 0;
+    private int attk_state = 0;
+    private float x_pos;
+    private float y_pos;
     public E9_MoveState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData, Enemy9 enemy) : base(etity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
@@ -29,14 +32,54 @@ public class E9_MoveState : FlyMoveState
     {
          base.LogicUpdate();
       
-          if (isPlayerinMinAgroRange)
-        {
-           // stateMachine.ChangeState(enemy.playerDetectedState);
-        }
       
-       Debug.Log(state);
+       x_pos = entity.positionOfObject.x;
+       y_pos = entity.positionOfObject.y;
+       int x_att = 0;
+      
+       x_att = (int)x_pos;
+     //  Debug.Log(entity.facingDirection);
+        //Debug.Log(x_att);
+        Debug.Log(attk_state);
+       if (x_att == -34 && attk_state == 0){
+          
+            stateMachine.ChangeState(enemy.rangedAttackState);
+            attk_state = 1;
+       }
+      // if (x_att >= -40){
+      //     attk_state = 0;
+      // }
+       if (x_att <= -25 && x_att >= -20){
+           attk_state = 0;
+       }
+
+        if (x_att == -12 && attk_state == 1){
+          
+            stateMachine.ChangeState(enemy.rangedAttackState);
+            attk_state = 2;
+       }
+     
+        if (x_att == 8 && attk_state == 2){
+          
+            stateMachine.ChangeState(enemy.rangedAttackState);
+            if (entity.facingDirection == 1)
+            attk_state = 3;
+            else 
+                attk_state = 1;
+       }
+     
+
+      // Debug.Log(state);
        if (isDetectingWall && state== 0)
        {
+         //  Debug.Log("Flag1");
+          // if (attk_state == 0)
+          // {
+            //   attk_state = 1;
+                stateMachine.ChangeState(enemy.rangedAttackState);
+          // }
+           
+        //    Debug.Log("Flag2");
            entity.SetVelocityUp(-5f);
           
            state = 1;
@@ -44,6 +87,7 @@ public class E9_MoveState : FlyMoveState
        else if (isDetectingLedge && state== 1)
        {
             entity.Flip();
+            attk_state = 0;
             entity.SetVelocityUp(-5f);
          //  entity.SetVelocityUp(5f);
            state = 2;
@@ -51,6 +95,7 @@ public class E9_MoveState : FlyMoveState
        }
         else if (isDetectingLedge2 && state ==2)
         {
+             stateMachine.ChangeState(enemy.rangedAttackState);
            entity.SetVelocity(5f);
            state = 3;
           //  enemy.idleState.SetFlipAfterIdle(true);
@@ -58,6 +103,7 @@ public class E9_MoveState : FlyMoveState
         }
         else if (isDetectingWall && state == 3)
         {
+             stateMachine.ChangeState(enemy.rangedAttackState);
             entity.SetVelocityUp(5f);
             state = 4;
         }
@@ -69,8 +115,11 @@ public class E9_MoveState : FlyMoveState
        }
        else if (isDetectingLedge2 && state==5)
        {
+            stateMachine.ChangeState(enemy.rangedAttackState);
             entity.SetVelocity(5f);
+            if (entity.facingDirection ==1)
             state = 0;
+            else state = 2;
            
 
        }

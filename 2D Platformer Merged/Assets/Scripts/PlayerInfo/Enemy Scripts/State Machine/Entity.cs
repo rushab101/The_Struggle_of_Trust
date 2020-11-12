@@ -34,13 +34,19 @@ public class Entity : MonoBehaviour
     public bool PlayerDamaged;
     protected bool isDead;
     public Vector2 positionOfObject;
+    
+	float radius, moveSpeed;
+    
+
 
     public virtual void Start()
     {
         facingDirection = 1;
+
         currentHealth = entityData.maxHealth;
         currentStunResistance = entityData.stunResistance;
-
+        radius = 5f;
+		moveSpeed = 5f;
         aliveGO = transform.Find("Slime").gameObject;
         
         rb = aliveGO.GetComponent<Rigidbody2D>();
@@ -82,6 +88,7 @@ public class Entity : MonoBehaviour
         velocityWorkspace.Set( velocity, facingDirection * -rb.velocity.y);
         rb.velocity = velocityWorkspace; //set the velocity of the enemy
     }
+ 
 
     public virtual void SetVelocity(float velocity, Vector2 angle, int direction)
     {
