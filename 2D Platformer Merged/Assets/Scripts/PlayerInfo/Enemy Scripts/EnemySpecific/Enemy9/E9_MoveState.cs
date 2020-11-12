@@ -8,6 +8,7 @@ public class E9_MoveState : FlyMoveState
     private Enemy9 enemy;
     private int state = 0;
     private int attk_state = 0;
+    private int mel_att_state = 0;
     private float x_pos;
     private float y_pos;
     public E9_MoveState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData, Enemy9 enemy) : base(etity, stateMachine, animBoolName, stateData)
@@ -32,15 +33,29 @@ public class E9_MoveState : FlyMoveState
     {
          base.LogicUpdate();
       
-      
+    
+        //enemy.CheckTouchDamage();
        x_pos = entity.positionOfObject.x;
        y_pos = entity.positionOfObject.y;
        int x_att = 0;
-      
+       int y_att = 0;
        x_att = (int)x_pos;
+       y_att = (int)y_pos;
      //  Debug.Log(entity.facingDirection);
-        //Debug.Log(x_att);
-        Debug.Log(attk_state);
+       // Debug.Log(attk_state);
+        Debug.Log(y_att);
+        if (y_att == -1 && mel_att_state == 0)
+        {
+          //  Debug.Log("Went into melee attack");
+            stateMachine.ChangeState(enemy.meleeAttackState);
+            mel_att_state = 1;
+        }
+        if (y_att == 12 && mel_att_state == 1)
+        {
+          //  Debug.Log("Went into melee attack");
+            stateMachine.ChangeState(enemy.meleeAttackState);
+            mel_att_state = 0;
+        }
        if (x_att == -34 && attk_state == 0){
           
             stateMachine.ChangeState(enemy.rangedAttackState);
@@ -126,7 +141,7 @@ public class E9_MoveState : FlyMoveState
        else{
            if (state == 2)
            {
-                Debug.Log(isDetectingLedge2);
+//                Debug.Log(isDetectingLedge2);
                entity.SetVelocityUp(-5f);
             
            } else if (state == 4)

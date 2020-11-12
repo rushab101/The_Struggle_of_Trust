@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: E9_EntityData
   m_EditorClassIdentifier: 
   maxHealth: 30
-  damageHopSpeed: 3
+  damageHopSpeed: 0
   wallCheckDistance: 5
   ledgeCheckDistance: 1
   groundCheckRadius: 0.3
-  minAgroDistance: 3
-  maxAgroDistance: 4
-  stunResistance: 3
+  minAgroDistance: -10
+  maxAgroDistance: -10
+  stunResistance: 0
   sunRecoveryTime: 2
   closeRangeActionDistance: 1
   hitParticle: {fileID: 3776594737084044855, guid: f1165bc6f08b1e14797ff02fc650cc23,

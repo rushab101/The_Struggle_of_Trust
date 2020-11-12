@@ -37,7 +37,7 @@ public class E9_RangeAttackState : BossRangeAttackState
      
         if (isAnimationFinished)
         {
-             Debug.Log("Went into range");
+           //  Debug.Log("Went into range");
             stateMachine.ChangeState(enemy.moveState);
         }
     }

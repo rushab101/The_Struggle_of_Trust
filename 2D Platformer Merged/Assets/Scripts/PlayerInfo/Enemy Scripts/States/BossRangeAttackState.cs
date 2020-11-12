@@ -48,7 +48,7 @@ protected D_RangedAttackState stateData;
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-          Debug.Log("Went into trigger");
+//          Debug.Log("Went into trigger");
           if (temp ==0){
                SpawnProjectiles2(12);
                temp++;
