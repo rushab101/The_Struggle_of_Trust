@@ -10,7 +10,7 @@ protected D_RangedAttackState stateData;
    protected GameObject projectile;
    protected Projectile projectileScript;
    Vector2 startPoint;
-   float radius = 5f;
+  // float radius = 5f;
    float moveSpeed=5f;
    int temp = 0;
 
@@ -27,7 +27,6 @@ protected D_RangedAttackState stateData;
     public override void Enter()
     {
         base.Enter();
-        radius = 100f;
         temp = 0;
      
     }
@@ -50,7 +49,7 @@ protected D_RangedAttackState stateData;
         base.LogicUpdate();
 //          Debug.Log("Went into trigger");
           if (temp ==0){
-               SpawnProjectiles2(12);
+               SpawnProjectiles2(stateData.total_projectiles);
                temp++;
           }
          
@@ -70,8 +69,8 @@ protected D_RangedAttackState stateData;
 		for (int i = 0; i <= numberOfProjectiles - 1; i++) {
 		
     
-			float projectileDirXposition = startPoint.x + Mathf.Sin ((angle * Mathf.PI) / 180) * radius;
-			float projectileDirYposition = startPoint.y + Mathf.Cos ((angle * Mathf.PI) / 180) * radius;
+			float projectileDirXposition = startPoint.x + Mathf.Sin ((angle * Mathf.PI) / 180) * stateData.radius;
+			float projectileDirYposition = startPoint.y + Mathf.Cos ((angle * Mathf.PI) / 180) * stateData.radius;
 
 			Vector2 projectileVector = new Vector2 (projectileDirXposition, projectileDirYposition);
 			Vector2 projectileMoveDirection = (projectileVector - startPoint).normalized * moveSpeed;
@@ -81,7 +80,7 @@ protected D_RangedAttackState stateData;
 				new Vector2 (projectileMoveDirection.x, projectileMoveDirection.y);
 
 			angle += angleStep;
-          
+        
 		}
 	}
 

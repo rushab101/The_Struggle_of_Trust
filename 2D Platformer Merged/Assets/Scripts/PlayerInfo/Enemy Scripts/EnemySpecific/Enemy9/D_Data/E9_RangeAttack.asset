@@ -17,3 +17,5 @@ MonoBehaviour:
   projectileDamage: 10
   projectileSpeed: 12
   projectileTravelDistance: 10
+  radius: 100
+  total_projectiles: 10

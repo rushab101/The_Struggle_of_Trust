@@ -43,7 +43,7 @@ public class E9_MoveState : FlyMoveState
        y_att = (int)y_pos;
      //  Debug.Log(entity.facingDirection);
        // Debug.Log(attk_state);
-        Debug.Log(y_att);
+//        Debug.Log(y_att);
         if (y_att == -1 && mel_att_state == 0)
         {
           //  Debug.Log("Went into melee attack");
@@ -146,13 +146,23 @@ public class E9_MoveState : FlyMoveState
             
            } else if (state == 4)
            {
-               Debug.Log("Here");
+               
                 entity.SetVelocityUp(5f);
                //to do
-           } else
+           } 
+           else if (state == 1)
+           {
+               // entity.Flip();
+              //  attk_state = 0;
+                entity.SetVelocityUp(-5f);
+           }
+           else
+                Debug.Log(state);
+                Debug.Log("Last Flag");
                 entity.SetVelocity(-5f);
 
        }
+       
         
         
     }

@@ -70,8 +70,8 @@ touchDamageCheck;
         meleeAttackState = new E9_MeleeAttack(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         hurtState = new E9_HurtAttackState(this, stateMachine, "hurt", hurtStateData, this);
         deadState = new E9_DeadState(this,stateMachine,"dead",deadStateData,this);
-
-
+        rangedAttackStateData.radius = 100f;
+        rangedAttackStateData.total_projectiles=10;
         stateMachine.Initialize(moveState);
     }
     public override void OnDrawGizmos()
@@ -91,8 +91,11 @@ touchDamageCheck;
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+        rangedAttackStateData.radius+=50f;
+        rangedAttackStateData.total_projectiles+=1;
           if (isDead)
         {
+            
           stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
