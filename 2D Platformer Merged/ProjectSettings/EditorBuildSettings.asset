@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 4ccb564acac85a647be1ab5783299fbd
   - enabled: 1
-    path: Assets/Prefabs/SAVE/MiddleCave.unity
+    path: Assets/Scenes/MiddleCave.unity
     guid: 103b36deeb1fb8b49b1b0276e7764f46
   - enabled: 1
     path: Assets/Scenes/BossFight1.unity

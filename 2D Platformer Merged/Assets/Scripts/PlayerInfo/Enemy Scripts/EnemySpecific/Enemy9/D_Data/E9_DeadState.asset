@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d7f2271e14d9446aa0d1e3e618c7cf, type: 3}
+  m_Name: E9_DeadState
+  m_EditorClassIdentifier: 
+  deathChunkParticle: {fileID: 4978461408773442349, guid: 14fc67e11bc29cc42aa5f0a22334361d,
+    type: 3}
+  deathBloodParticle: {fileID: 2177252556937104049, guid: ecb83dffef3bdf746a00281b8faa56b8,
+    type: 3}
+  Explosion: {fileID: 3394069695841221855, guid: 3492c753fb98432488442e1349b4cd7b,
+    type: 3}
+  Green_coin: {fileID: 3555151101985294081, guid: 9d31cde0dfd5852468d7d38beb51327b,
+    type: 3}
+  Blue_coin: {fileID: 105241324871419831, guid: eb9c6f99b1d8dc9479a1dd0bb2e97c18,
+    type: 3}
+  Yellow_coin: {fileID: 4456612938062749762, guid: e1441b0d9304ce34bade54110a2d532e,
+    type: 3}
+  Red_coin: {fileID: 8692667399997679713, guid: 2a4976d0d44f51e468cbab72d1a1d17a,
+    type: 3}
+  Purple_coin: {fileID: 8864727468088743131, guid: d97335650d4d91148a974f9de706806b,
+    type: 3}
+  Hearts: {fileID: 0}
+  HeartContainer: {fileID: 2521903795434802315, guid: fd91fc94ac8683943a54b3fadab92b73,
+    type: 3}

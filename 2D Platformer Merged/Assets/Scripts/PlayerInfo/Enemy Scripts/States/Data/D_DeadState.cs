@@ -14,6 +14,7 @@ public class D_DeadState : ScriptableObject
      public GameObject Red_coin;
      public GameObject Purple_coin;
      public GameObject Hearts;
+     public GameObject HeartContainer;
 
 
 

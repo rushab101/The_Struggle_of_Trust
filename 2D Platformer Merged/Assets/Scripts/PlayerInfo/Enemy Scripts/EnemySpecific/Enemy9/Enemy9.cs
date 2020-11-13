@@ -10,10 +10,14 @@ public class Enemy9 : Entity
     public E9_MeleeAttack meleeAttackState { get; private set; }
 
          public E9_HurtAttackState hurtState  { get; private set; }
+         public E9_DeadState deadState { get; private set; }
     protected AttackDetails attackDetails;
 
     [SerializeField]
     private D_MoveState moveStateData;
+
+     [SerializeField]
+    private D_DeadState deadStateData;
 
     [SerializeField]
     private D_RangedAttackState rangedAttackStateData;
@@ -65,6 +69,7 @@ touchDamageCheck;
         rangedAttackState = new E9_RangeAttackState(this, stateMachine, "range", rangedAttackPosition, rangedAttackStateData, this);
         meleeAttackState = new E9_MeleeAttack(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         hurtState = new E9_HurtAttackState(this, stateMachine, "hurt", hurtStateData, this);
+        deadState = new E9_DeadState(this,stateMachine,"dead",deadStateData,this);
 
 
         stateMachine.Initialize(moveState);
@@ -86,7 +91,11 @@ touchDamageCheck;
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
-        if (PlayerDamaged && stateMachine.currentState != hurtState)
+          if (isDead)
+        {
+          stateMachine.ChangeState(deadState);
+        }
+        else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
             stateMachine.ChangeState(hurtState);
         }
