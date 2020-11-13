@@ -56,7 +56,9 @@ touchDamageCheck;
     private LayerMask
     whatisPlayer;
 
-
+    int damage_counter =0;
+    public GameObject a;
+    public GameObject b;
 
 
 
@@ -72,6 +74,9 @@ touchDamageCheck;
         deadState = new E9_DeadState(this,stateMachine,"dead",deadStateData,this);
         rangedAttackStateData.radius = 100f;
         rangedAttackStateData.total_projectiles=10;
+        damage_counter = 0;
+        a.SetActive(false);
+        b.SetActive(false);
         stateMachine.Initialize(moveState);
     }
     public override void OnDrawGizmos()
@@ -93,6 +98,19 @@ touchDamageCheck;
         base.Damage(attackDetails);
         rangedAttackStateData.radius+=50f;
         rangedAttackStateData.total_projectiles+=1;
+        damage_counter++;
+        if (damage_counter >= 10)
+        {
+            if (damage_counter%2 == 0){
+                a.SetActive(true);
+                b.SetActive(false);
+            }
+            else if (damage_counter%2 != 0)
+            {
+                a.SetActive(false);
+                b.SetActive(true);
+            }
+        }
           if (isDead)
         {
             
