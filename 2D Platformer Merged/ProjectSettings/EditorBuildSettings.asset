@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFight1.unity
     guid: ab8a3da8e33242549807b698999f95f2
+  - enabled: 1
+    path: Assets/Scenes/CaveExit.unity
+    guid: 7071b76e1df797f48a391324728ed1a3
   m_configObjects: {}
