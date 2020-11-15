@@ -59,6 +59,7 @@ touchDamageCheck;
     int damage_counter =0;
     public GameObject a;
     public GameObject b;
+    public bool boos_is_dead = false;
 
 
 
@@ -101,19 +102,15 @@ touchDamageCheck;
         damage_counter++;
         if (damage_counter >= 10)
         {
-            if (damage_counter%2 == 0){
-                a.SetActive(true);
-                b.SetActive(false);
-            }
-            else if (damage_counter%2 != 0)
-            {
-                a.SetActive(false);
-                b.SetActive(true);
-            }
+            a.SetActive(true);
+            b.SetActive(true);
+            
         }
           if (isDead)
         {
-            
+               a.SetActive(false);
+            b.SetActive(false);
+            FindObjectOfType<GrimBossTrigger>().boos_is_dead = true;
           stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)

@@ -9,7 +9,10 @@ public class GrimBossTrigger : MonoBehaviour
     public GameObject C;
     public GameObject D;
     public GameObject E;
+    public GameObject shroom1;
+    public GameObject shroom2;
     public GameObject boss;
+    public bool boos_is_dead = false;
 
 
 
@@ -22,6 +25,8 @@ public class GrimBossTrigger : MonoBehaviour
         C.SetActive(false);
         D.SetActive(false);
         E.SetActive(false);
+        shroom1.SetActive(false);
+        shroom2.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -85,14 +90,16 @@ public class GrimBossTrigger : MonoBehaviour
 
     void Update()
     {
-
-        if (!boss.active)
+     
+        if (!boss.active &&  boos_is_dead)
         {
             StartCoroutine(Tes());
             StartCoroutine(Tes2());
             StartCoroutine(Tes3());
             StartCoroutine(Tes4());
             StartCoroutine(Tes5());
+            shroom1.SetActive(true);
+            shroom2.SetActive(true);
 
         }
 
