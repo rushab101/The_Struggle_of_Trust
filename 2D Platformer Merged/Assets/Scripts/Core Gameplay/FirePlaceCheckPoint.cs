@@ -19,9 +19,9 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
     private void Start()
     {
-        // aliveGO = transform.Find("Broken Top").gameObject; 
-        // aliveAnim = aliveGO.GetComponent<Animator>();
-        // rbAlive = aliveGO.GetComponent<Rigidbody2D>();
+         aliveGO = transform.Find("Broken Top").gameObject; 
+         aliveAnim = aliveGO.GetComponent<Animator>();
+         rbAlive = aliveGO.GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         aliveGO2.SetActive(false);
     }

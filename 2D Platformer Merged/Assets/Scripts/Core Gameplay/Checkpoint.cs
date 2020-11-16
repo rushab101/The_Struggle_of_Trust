@@ -21,8 +21,8 @@ public class Checkpoint : MonoBehaviour
           //Debug.Log("Went to trigger");
           gm.lastCheckPointPos = transform.position;
             PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
-      //  PlayerPrefs.SetFloat("XPosition",gm.lastCheckPointPos.x);
-       // PlayerPrefs.SetFloat("yPosition",gm.lastCheckPointPos.y);
+        PlayerPrefs.SetFloat("XPosition",gm.lastCheckPointPos.x);
+        PlayerPrefs.SetFloat("yPosition",gm.lastCheckPointPos.y);
         SavePlayer(gm.lastCheckPointPos.x,gm.lastCheckPointPos.y);
       }
   }

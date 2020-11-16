@@ -11,7 +11,7 @@ public class PlayerPos : MonoBehaviour
    void Awake()
    {
        Checking =  PlayerPrefs.GetFloat("Check1");
-      // PlayerPrefs.DeleteAll();
+       //PlayerPrefs.DeleteAll();
    }
 
     
@@ -20,11 +20,11 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-         //LoadPlayer();
+       //  LoadPlayer();
 
        
        
-         if (Checking == 1)
+         if (Checking == 1) //At the house
          {
                Vector2 position;
                 position.x = 116.2f;
@@ -32,7 +32,7 @@ public class PlayerPos : MonoBehaviour
                 transform.position = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
-         else if (Checking == 2)
+         else if (Checking == 2) //At the Cave Entrance
          {
               Vector2 position;
                 position.x = -84.52002f;
@@ -41,14 +41,68 @@ public class PlayerPos : MonoBehaviour
                 PlayerPrefs.SetFloat("Check1",0);
          }
          
-         else if (Checking == 3)
+         else if (Checking == 3) //Left Cave Entrance and entered Cave Middle
          {
-                Vector2 position;
-                position.x = -64.00999f;
-                 position.y= -0.5839996f;
-                transform.position = position;
+          
+                Vector3 position;
+                position.x = 60.78f;
+                 position.y= -16.78f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
+         else if (Checking == 4) //Left Cave Middle and entered Cave Entrance
+         {
+          
+                Vector3 position;
+                position.x = 65.09f;
+                 position.y= -12.53f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+          else if (Checking == 5) //Left Cave Middle and entered Boss Entrance
+         {
+          
+                Vector3 position;
+                position.x = 220.4f;
+                 position.y= -24.9f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+          else if (Checking == 6) //Left Boss Entrance and entered Cave Entrance
+         {
+          
+                Vector3 position;
+                position.x = 214.75f;
+                 position.y= -24.91f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+         else if (Checking == 7) //Leave Boss Entrance and entered Cave Exit
+         {
+          
+                Vector3 position;
+                position.x = 400.21f;
+                 position.y= 1.11f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+          else if (Checking == 8) //Leave Cave Exit and entered Boss Entrance
+         {
+          
+                Vector3 position;
+                position.x = 404.75f;
+                 position.y= 1.13f;
+                 position.z = 10.47732f;
+                transform.localPosition = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
+         
+         
          
         else 
         {
