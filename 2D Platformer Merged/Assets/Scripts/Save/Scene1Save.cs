@@ -62,7 +62,7 @@ public class Scene1Save : MonoBehaviour
     {
 
         Red_Lever_anim = GameObject.Find("Lever").GetComponent<Animator>(); //Red Lever
-           canvas.transform.GetChild(0).gameObject.SetActive(false);                                                  // PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);                                                  // PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
         Blue_Lever_anim = GameObject.Find("Blue Lever").GetComponent<Animator>();
         Green_Lever_anim = GameObject.Find("Green Lever").GetComponent<Animator>();
         Create1_child = Create1.transform.GetChild(0).gameObject;
@@ -81,10 +81,10 @@ public class Scene1Save : MonoBehaviour
         Create14_child = Create14.transform.GetChild(0).gameObject;
         rend = BlueLever.GetComponent<SpriteRenderer>();
 
-     //   PlayerPrefs.DeleteAll();
+        //   PlayerPrefs.DeleteAll();
     }
 
-    
+
 
 
     void Update()
@@ -95,11 +95,11 @@ public class Scene1Save : MonoBehaviour
         // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
         // Debug.Log("Cancel is " + Red_Lever_anim.GetBool("cancel"));
 
-//    Debug.Log("Value is:  " + PlayerPrefs.GetInt("Red Lever Complete Soft"));
+        //    Debug.Log("Value is:  " + PlayerPrefs.GetInt("Red Lever Complete Soft"));
 
         if (!Red_Lever_anim.GetBool("done") && Red_Lever_anim.GetBool("cancel"))
         {
-//            Debug.Log("In here");
+            //            Debug.Log("In here");
             if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 0)
             {
                 PlayerPrefs.SetInt("Red Lever Complete Soft", 2);
@@ -111,7 +111,7 @@ public class Scene1Save : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Red Lever Complete Soft") == 2 )
+        if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Red Lever Complete Soft") == 2)
         {
             Red_Lever_anim.SetBool("done", false);
             Red_Lever_anim.SetBool("cancel", true);
@@ -123,7 +123,7 @@ public class Scene1Save : MonoBehaviour
         //-------------Blue Lever Save Case-------------------------------------\\
         if (!Blue_Lever_anim.GetBool("done") && Blue_Lever_anim.GetBool("cancel"))
         {
-         //   Debug.Log("In here");
+            //   Debug.Log("In here");
             if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 0)
             {
                 PlayerPrefs.SetInt("Blue Lever Complete Soft", 2);
@@ -181,8 +181,8 @@ public class Scene1Save : MonoBehaviour
             }
 
         }
-//        Debug.Log(PlayerPrefs.GetInt("PurpleCoin1"));
-        if (PlayerPrefs.GetInt("PurpleCoin1") == 1 || PlayerPrefs.GetInt("PurpleCoin1") == 2 )
+        //        Debug.Log(PlayerPrefs.GetInt("PurpleCoin1"));
+        if (PlayerPrefs.GetInt("PurpleCoin1") == 1 || PlayerPrefs.GetInt("PurpleCoin1") == 2)
         {
             PurpleCoin1.SetActive(false);
         }
@@ -200,7 +200,7 @@ public class Scene1Save : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("PurpleCoin2") == 1 || PlayerPrefs.GetInt("PurpleCoin2") == 2)
         {
-//            Debug.Log("In here Coin 2");
+            //            Debug.Log("In here Coin 2");
             PurpleCoin2.SetActive(false);
         }
 
@@ -298,7 +298,7 @@ public class Scene1Save : MonoBehaviour
                 // RedWall.SetActive(true);
             }
         }
-        if (PlayerPrefs.GetInt("Create5") == 1 || PlayerPrefs.GetInt("Create5") == 2 )
+        if (PlayerPrefs.GetInt("Create5") == 1 || PlayerPrefs.GetInt("Create5") == 2)
         {
             Create5_child.SetActive(false);
         }
@@ -455,10 +455,10 @@ public class Scene1Save : MonoBehaviour
         {
             PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
             RedWall.SetActive(true);
-             Red_Lever_anim.SetBool("done", false);
+            Red_Lever_anim.SetBool("done", false);
             Red_Lever_anim.SetBool("cancel", false);
         }
-       if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
+        if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
         {
             PlayerPrefs.SetInt("Blue Lever Complete Soft", 0);
             BlueWall.SetActive(true);
@@ -466,7 +466,7 @@ public class Scene1Save : MonoBehaviour
             Blue_Lever_anim.SetBool("done", false);
             Blue_Lever_anim.SetBool("cancel", false);
         }
-           if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
+        if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
         {
             PlayerPrefs.SetInt("Green Lever Complete Soft", 0);
             GreenWall.SetActive(true);
@@ -475,13 +475,13 @@ public class Scene1Save : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("PurpleCoin2") == 1)
         {
-              Debug.Log("Coin 2");
+            Debug.Log("Coin 2");
             PlayerPrefs.SetInt("PurpleCoin2", 0);
             PurpleCoin2.SetActive(true);
         }
         if (PlayerPrefs.GetInt("PurpleCoin1") == 1)
         {
-               Debug.Log("Coin 1");
+            Debug.Log("Coin 1");
             PlayerPrefs.SetInt("PurpleCoin1", 0);
             PurpleCoin1.SetActive(true);
         }
@@ -489,13 +489,13 @@ public class Scene1Save : MonoBehaviour
 
         if (PlayerPrefs.GetInt("PurpleCoin3") == 1)
         {
-             Debug.Log("Coin 3");
+            Debug.Log("Coin 3");
             PlayerPrefs.SetInt("PurpleCoin3", 0);
             PurpleCoin3.SetActive(true);
         }
         if (PlayerPrefs.GetInt("PurpleCoin4") == 1)
         {
-              Debug.Log("Coin 4");
+            Debug.Log("Coin 4");
             PlayerPrefs.SetInt("PurpleCoin4", 0);
             PurpleCoin4.SetActive(true);
         }
@@ -605,7 +605,7 @@ public class Scene1Save : MonoBehaviour
             Blue_Lever_anim.SetBool("done", false);
             Blue_Lever_anim.SetBool("cancel", false);
         }
-           if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
+        if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
         {
             PlayerPrefs.SetInt("Green Lever Complete Soft", 0);
             GreenWall.SetActive(true);
@@ -722,180 +722,180 @@ public class Scene1Save : MonoBehaviour
         }
     }
 
-public void show_save_icon()
-{
-      canvas.transform.GetChild(0).gameObject.SetActive(true);
-         StartCoroutine(Test()); 
+    public void show_save_icon()
+    {
+        canvas.transform.GetChild(0).gameObject.SetActive(true);
+        StartCoroutine(Test());
 
-}
+    }
 
-  IEnumerator Test()
+    IEnumerator Test()
     {
         yield return new WaitForSeconds(1.0f);
         //  Debug.Log("Hi");
-      //  anim.SetBool("setAttack", false);
-        canvas.transform.GetChild(0).gameObject.SetActive(false);  
-      //  anim.SetBool("downAttack",false);
+        //  anim.SetBool("setAttack", false);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
+        //  anim.SetBool("downAttack",false);
         // Debug.Log("flag 2");
         // SceneManager.LoadScene("Game Over");
     }
 
-    
-
-public void SaveValues()
-{
-    //-------------Red Lever Save Case-------------------------------------\\
-    //Soft Save
-    // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
-     Debug.Log("Cancel is " + Green_Lever_anim.GetBool("cancel"));
 
 
-
-
-    if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 1)
+    public void SaveValues()
     {
-        PlayerPrefs.SetInt("Red Lever Complete Soft", 2);
+        //-------------Red Lever Save Case-------------------------------------\\
+        //Soft Save
+        // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
+        Debug.Log("Cancel is " + Green_Lever_anim.GetBool("cancel"));
+
+
+
+
+        if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 1)
+        {
+            PlayerPrefs.SetInt("Red Lever Complete Soft", 2);
+
+        }
+
+
+
+
+        if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
+        {
+            PlayerPrefs.SetInt("Blue Lever Complete Soft", 2);
+        }
+
+
+
+        if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
+        {
+            PlayerPrefs.SetInt("Green Lever Complete Soft", 2);
+
+        }
+
+
+
+        if (PlayerPrefs.GetInt("PurpleCoin1") == 1)
+        {
+            PlayerPrefs.SetInt("PurpleCoin1", 2);
+        }
+        //Coin 2
+
+
+        if (PlayerPrefs.GetInt("PurpleCoin2") == 1)
+        {
+            PlayerPrefs.SetInt("PurpleCoin2", 2);
+        }
+
+        //Coin 3
+
+        if (PlayerPrefs.GetInt("PurpleCoin3") == 1)
+        {
+            PlayerPrefs.SetInt("PurpleCoin3", 2);
+        }
+
+        //Coin 4
+
+        if (PlayerPrefs.GetInt("PurpleCoin4") == 1)
+        {
+            PlayerPrefs.SetInt("PurpleCoin4", 2);
+        }
+
+
+        //-------------Creates Save Case-------------------------------------\\
+        //Soft Save
+        //Create 1
+
+        if (PlayerPrefs.GetInt("Create1") == 1)
+        {
+            PlayerPrefs.SetInt("Create1", 2);
+        }
+        //Create 2
+
+        if (PlayerPrefs.GetInt("Create2") == 1)
+        {
+            PlayerPrefs.SetInt("Create2", 2);
+        }
+        //Create 3
+
+        if (PlayerPrefs.GetInt("Create3") == 1)
+        {
+            PlayerPrefs.SetInt("Create3", 2);
+        }
+        //Create 4
+
+        if (PlayerPrefs.GetInt("Create4") == 1)
+        {
+            PlayerPrefs.SetInt("Create4", 2);
+        }
+        //Create 5
+
+        if (PlayerPrefs.GetInt("Create5") == 1)
+        {
+            PlayerPrefs.SetInt("Create5", 2);
+        }
+        //Create 6
+
+        if (PlayerPrefs.GetInt("Create6") == 1)
+        {
+            PlayerPrefs.SetInt("Create6", 2);
+        }
+        //Create 7
+
+        if (PlayerPrefs.GetInt("Create7") == 1)
+        {
+            PlayerPrefs.SetInt("Create7", 2);
+        }
+        //Create 8
+
+        if (PlayerPrefs.GetInt("Create8") == 1)
+        {
+            PlayerPrefs.SetInt("Create8", 2);
+        }
+        //Create 9
+
+        if (PlayerPrefs.GetInt("Create9") == 1)
+        {
+            PlayerPrefs.SetInt("Create9", 2);
+        }
+        //Create 10
+
+        if (PlayerPrefs.GetInt("Create10") == 1)
+        {
+            PlayerPrefs.SetInt("Create10", 2);
+        }
+        //Create 11
+
+        if (PlayerPrefs.GetInt("Create11") == 1)
+        {
+            PlayerPrefs.SetInt("Create11", 2);
+        }
+        //Create 12
+
+        if (PlayerPrefs.GetInt("Create12") == 1)
+        {
+            PlayerPrefs.SetInt("Create12", 2);
+        }
+        //Create 13
+
+        if (PlayerPrefs.GetInt("Create13") == 1)
+        {
+            PlayerPrefs.SetInt("Create13", 2);
+        }
+        //Create 14
+
+        if (PlayerPrefs.GetInt("Create14") == 1)
+        {
+            PlayerPrefs.SetInt("Create14", 2);
+        }
+
+        if (PlayerPrefs.GetInt("MiniBoss") == 1)
+        {
+            PlayerPrefs.SetInt("MiniBoss", 2);
+
+        }
 
     }
-
-
-
-
-    if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1)
-    {
-        PlayerPrefs.SetInt("Blue Lever Complete Soft", 2);
-    }
-
-
-
-    if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1)
-    {
-        PlayerPrefs.SetInt("Green Lever Complete Soft",2); 
-
-    }
-
-
-
-    if (PlayerPrefs.GetInt("PurpleCoin1") == 1)
-    {
-        PlayerPrefs.SetInt("PurpleCoin1",2); 
-    }
-    //Coin 2
-
-
-    if (PlayerPrefs.GetInt("PurpleCoin2") == 1)
-    {
-        PlayerPrefs.SetInt("PurpleCoin2",2); 
-    }
-
-    //Coin 3
-
-    if (PlayerPrefs.GetInt("PurpleCoin3") == 1)
-    {
-        PlayerPrefs.SetInt("PurpleCoin3",2); 
-    }
-
-    //Coin 4
-
-    if (PlayerPrefs.GetInt("PurpleCoin4") == 1)
-    {
-        PlayerPrefs.SetInt("PurpleCoin4",2); 
-    }
-
-
-    //-------------Creates Save Case-------------------------------------\\
-    //Soft Save
-    //Create 1
-
-    if (PlayerPrefs.GetInt("Create1") == 1)
-    {
-        PlayerPrefs.SetInt("Create1",2); 
-    }
-    //Create 2
-
-    if (PlayerPrefs.GetInt("Create2") == 1)
-    {
-        PlayerPrefs.SetInt("Create2",2); 
-    }
-    //Create 3
-
-    if (PlayerPrefs.GetInt("Create3") == 1)
-    {
-        PlayerPrefs.SetInt("Create3",2); 
-    }
-    //Create 4
-
-    if (PlayerPrefs.GetInt("Create4") == 1)
-    {
-        PlayerPrefs.SetInt("Create4",2); 
-    }
-    //Create 5
-
-    if (PlayerPrefs.GetInt("Create5") == 1)
-    {
-        PlayerPrefs.SetInt("Create5",2); 
-    }
-    //Create 6
-
-    if (PlayerPrefs.GetInt("Create6") == 1)
-    {
-        PlayerPrefs.SetInt("Create6",2); 
-    }
-    //Create 7
-
-    if (PlayerPrefs.GetInt("Create7") == 1)
-    {
-        PlayerPrefs.SetInt("Create7",2); 
-    }
-    //Create 8
-
-    if (PlayerPrefs.GetInt("Create8") == 1)
-    {
-        PlayerPrefs.SetInt("Create8",2); 
-    }
-    //Create 9
-
-    if (PlayerPrefs.GetInt("Create9") == 1)
-    {
-        PlayerPrefs.SetInt("Create9",2); 
-    }
-    //Create 10
-
-    if (PlayerPrefs.GetInt("Create10") == 1)
-    {
-       PlayerPrefs.SetInt("Create10",2); 
-    }
-    //Create 11
-
-    if (PlayerPrefs.GetInt("Create11") == 1)
-    {
-        PlayerPrefs.SetInt("Create11",2); 
-    }
-    //Create 12
-
-    if (PlayerPrefs.GetInt("Create12") == 1)
-    {
-        PlayerPrefs.SetInt("Create12",2); 
-    }
-    //Create 13
-
-    if (PlayerPrefs.GetInt("Create13") == 1)
-    {
-        PlayerPrefs.SetInt("Create13",2); 
-    }
-    //Create 14
-
-    if (PlayerPrefs.GetInt("Create14") == 1)
-    {
-        PlayerPrefs.SetInt("Create14",2); 
-    }
-
-    if (PlayerPrefs.GetInt("MiniBoss") == 1)
-    {
-       PlayerPrefs.SetInt("MiniBoss",2); 
-
-    }
-
-}
 
 }
