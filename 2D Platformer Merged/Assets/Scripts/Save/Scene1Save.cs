@@ -13,6 +13,7 @@ public class Scene1Save : MonoBehaviour
     private Animator Blue_Lever_anim;
     private Animator Green_Lever_anim;
     SpriteRenderer rend;
+    public Canvas canvas;
 
     public GameObject RedWall;
     public GameObject BlueWall;
@@ -61,7 +62,7 @@ public class Scene1Save : MonoBehaviour
     {
 
         Red_Lever_anim = GameObject.Find("Lever").GetComponent<Animator>(); //Red Lever
-                                                                            // PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
+           canvas.transform.GetChild(0).gameObject.SetActive(false);                                                  // PlayerPrefs.SetInt("Red Lever Complete Soft", 0);
         Blue_Lever_anim = GameObject.Find("Blue Lever").GetComponent<Animator>();
         Green_Lever_anim = GameObject.Find("Green Lever").GetComponent<Animator>();
         Create1_child = Create1.transform.GetChild(0).gameObject;
@@ -80,8 +81,10 @@ public class Scene1Save : MonoBehaviour
         Create14_child = Create14.transform.GetChild(0).gameObject;
         rend = BlueLever.GetComponent<SpriteRenderer>();
 
-       // PlayerPrefs.DeleteAll();
+     //   PlayerPrefs.DeleteAll();
     }
+
+    
 
 
     void Update()
@@ -99,7 +102,8 @@ public class Scene1Save : MonoBehaviour
 //            Debug.Log("In here");
             if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 0)
             {
-                PlayerPrefs.SetInt("Red Lever Complete Soft", 1);
+                PlayerPrefs.SetInt("Red Lever Complete Soft", 2);
+                show_save_icon();
                 // RedWall.SetActive(true);
             }
 
@@ -122,7 +126,8 @@ public class Scene1Save : MonoBehaviour
          //   Debug.Log("In here");
             if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 0)
             {
-                PlayerPrefs.SetInt("Blue Lever Complete Soft", 1);
+                PlayerPrefs.SetInt("Blue Lever Complete Soft", 2);
+                show_save_icon();
                 // RedWall.SetActive(true);
             }
 
@@ -145,7 +150,8 @@ public class Scene1Save : MonoBehaviour
             Debug.Log("In here");
             if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 0)
             {
-                PlayerPrefs.SetInt("Green Lever Complete Soft", 1);
+                PlayerPrefs.SetInt("Green Lever Complete Soft", 2);
+                show_save_icon();
                 // RedWall.SetActive(true);
             }
         }
@@ -417,7 +423,8 @@ public class Scene1Save : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("MiniBoss") == 0)
             {
-                PlayerPrefs.SetInt("MiniBoss", 1);
+                PlayerPrefs.SetInt("MiniBoss", 2);
+                show_save_icon();
                 // RedWall.SetActive(true);
             }
 
@@ -715,7 +722,25 @@ public class Scene1Save : MonoBehaviour
         }
     }
 
+public void show_save_icon()
+{
+      canvas.transform.GetChild(0).gameObject.SetActive(true);
+         StartCoroutine(Test()); 
 
+}
+
+  IEnumerator Test()
+    {
+        yield return new WaitForSeconds(1.0f);
+        //  Debug.Log("Hi");
+      //  anim.SetBool("setAttack", false);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);  
+      //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
+    
 
 public void SaveValues()
 {
