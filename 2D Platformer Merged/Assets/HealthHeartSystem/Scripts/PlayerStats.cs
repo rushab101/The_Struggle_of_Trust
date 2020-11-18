@@ -47,6 +47,11 @@ public class PlayerStats : MonoBehaviour
     {
 
         health = PlayerPrefs.GetFloat("Health");
+        if(PlayerPrefs.GetInt("boss_save") == 2)
+        {
+            maxHealth+=1;
+        }
+       // maxHealth = health;
         if (health ==0)
         {
             health = MaxHealth;
@@ -122,7 +127,9 @@ public class PlayerStats : MonoBehaviour
         {
             maxHealth += 1;
             health = maxHealth;
-
+            PlayerPrefs.SetFloat("Health",health);
+            PlayerPrefs.SetFloat("Max_health",maxHealth);
+         //   PlayerPrefs.SetInt("Total_Heart",(int)maxHealth);
             if (onHealthChangedCallback != null)
                 onHealthChangedCallback.Invoke();
         }   

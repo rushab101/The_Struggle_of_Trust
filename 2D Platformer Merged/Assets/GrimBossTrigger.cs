@@ -13,8 +13,9 @@ public class GrimBossTrigger : MonoBehaviour
     public GameObject shroom2;
     public GameObject boss;
     public bool boos_is_dead = false;
+     public Canvas canvas;
 
-
+    public bool boss_dead_save = false;
 
     bool went_in = false;
 
@@ -27,6 +28,7 @@ public class GrimBossTrigger : MonoBehaviour
         E.SetActive(false);
         shroom1.SetActive(false);
         shroom2.SetActive(false);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,6 +53,7 @@ public class GrimBossTrigger : MonoBehaviour
 
     }
 
+   
     IEnumerator Test()
     {
 
@@ -93,6 +96,9 @@ public class GrimBossTrigger : MonoBehaviour
      
         if (!boss.active &&  boos_is_dead)
         {
+            PlayerPrefs.SetInt("boss_save",2);
+            canvas.transform.GetChild(0).gameObject.SetActive(true);
+            StartCoroutine(Test_S());
             StartCoroutine(Tes());
             StartCoroutine(Tes2());
             StartCoroutine(Tes3());
@@ -104,6 +110,18 @@ public class GrimBossTrigger : MonoBehaviour
         }
 
     }
+
+     IEnumerator Test_S()
+    {
+        yield return new WaitForSeconds(1.0f);
+        //  Debug.Log("Hi");
+        //  anim.SetBool("setAttack", false);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
+        //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
 
     IEnumerator Tes()
     {
