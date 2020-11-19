@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour {
     private float lastSpin = -100f;
     [SerializeField]
     private float knockbackDuation;
+    public GameObject house;
 
     private int amountOfJumpsLeft;
     private int facingDirection = 1;
@@ -281,11 +282,27 @@ public class PlayerController : MonoBehaviour {
 
         if (Mathf.Abs(rb.velocity.x) >= 0.01f && rb.velocity.magnitude > 0 && !isTouchingWall && !isTouchingWall2) {
             isWalking = true;
+            if (house)
+            //if (FindObjectOfType<RunningOnWoodSFX>().in_wood)
+            StartCoroutine(wood_SFX());
+           
         }
         else {
             isWalking = false;
         }
     }
+
+
+     IEnumerator wood_SFX() {
+        //canMove = false;
+
+        yield return new WaitForSeconds(0.1f);
+
+         FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
+    }
+
+
+
 
     private void UpdateAnimations() {
         anim.SetBool("isWalking", isWalking);
@@ -334,6 +351,7 @@ public class PlayerController : MonoBehaviour {
 
 
         if (Input.GetButtonDown("Horizontal") && (isTouchingWall || isTouchingWall2)) {
+            
             if (!isGrounded && movementInputDirection != facingDirection) {
                 canMove = false;
                 canFlip = false;
@@ -621,7 +639,7 @@ public class PlayerController : MonoBehaviour {
 
     private void ApplyMovement() {
 
-
+        
         if (!isGrounded && !isWallSliding && movementInputDirection == 0 && !knockback) {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
@@ -631,6 +649,7 @@ public class PlayerController : MonoBehaviour {
             //  anim.SetBool("spinMan", false);
             anim.SetBool("spinMan", false);
             spinning = false;
+         //    FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
             notRepeat = false;
             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
         }
