@@ -11,6 +11,7 @@ public class PurpleCoin : MonoBehaviour
         {
             
        // Debug.Log("Went to here");
+        FindObjectOfType<AudioManager>().Play("coins");
              FindObjectOfType<Currency>().UpdateBalance(5);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
           // Destroy(gameObject,0.02f);

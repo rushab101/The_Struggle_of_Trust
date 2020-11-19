@@ -11,7 +11,8 @@ public class GreenCoin : MonoBehaviour
         if (collision.gameObject.tag == "Player" )
         {
             
-        Debug.Log("In Collision");
+     //   Debug.Log("In Collision");
+         FindObjectOfType<AudioManager>().Play("coins");
              FindObjectOfType<Currency>().UpdateBalance(1);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject,0.02f);

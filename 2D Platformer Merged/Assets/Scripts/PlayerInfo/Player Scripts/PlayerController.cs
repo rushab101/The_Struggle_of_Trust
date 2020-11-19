@@ -486,7 +486,7 @@ public class PlayerController : MonoBehaviour {
 
 
     private void AttemptToDash() {
-
+         FindObjectOfType<AudioManager>().Play("Dash");
         isDashing = true;
         dashTimeLeft = dashTime;
         lastDash = Time.time;
@@ -601,15 +601,18 @@ public class PlayerController : MonoBehaviour {
     }
     public void RunSound()
     {
-       // if (house)
-       if (house)
-       {
-           if (FindObjectOfType<RunningOnWoodSFX>().in_wood)
+     
             FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
-       }
-       
-        else 
-        FindObjectOfType<AudioManager>().Play("RunningOnGrassSFX");
+   
+     
+    }
+
+     public void swingSound()
+    {
+     
+            FindObjectOfType<AudioManager>().Play("somer");
+   
+     
     }
     private void WallJump() {
         if (canWallJump && unlock_wall_jump) {

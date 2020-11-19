@@ -382,15 +382,10 @@ public class PlayerCombatController : MonoBehaviour
 
         foreach (Collider2D collider in detectedObjects2)
         {
-            //Debug.Log("flag 2");
-           if (FindObjectOfType<Higher_jump>().high_jump){
-            FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 25);
-            //FindObjectOfType<Higher_jump>().high_jump = false;
-            }
-            else {
+         
             FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 25);
 
-            }
+            
             FindObjectOfType<PlayerController>().canNormalJump = true;
             //Instantiate(HitParticle, a, Quaternion.identity);
             //    DoNotDamage = true;

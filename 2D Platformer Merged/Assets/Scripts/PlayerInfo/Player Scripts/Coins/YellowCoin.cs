@@ -10,7 +10,7 @@ public class YellowCoin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             
-        Debug.Log("Went to here");
+         FindObjectOfType<AudioManager>().Play("coins");
              FindObjectOfType<Currency>().UpdateBalance(3);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject,0.02f);

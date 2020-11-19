@@ -52,7 +52,7 @@ public class CombatDummyController : MonoBehaviour {
     {
         currentHealth -= attackDetails.damageAmount;
        // currentHealth -= attackDetails;
-       
+       FindObjectOfType<AudioManager>().Play("damage_creates");
        // playerFacingDirection = pc.GetFacingDirection();
 
         if (attackDetails.position.x < aliveGO.transform.position.x)

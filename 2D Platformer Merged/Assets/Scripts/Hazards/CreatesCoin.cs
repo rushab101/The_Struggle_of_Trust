@@ -65,7 +65,7 @@ public class CreatesCoin : MonoBehaviour
     public void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
-
+        FindObjectOfType<AudioManager>().Play("damage_creates");
 
         if (attackDetails.position.x < aliveGO.transform.position.x)
         {
@@ -128,7 +128,7 @@ public class CreatesCoin : MonoBehaviour
     {
 
         aliveAnim.SetBool("broke", true);
-
+        FindObjectOfType<AudioManager>().Play("square_create");
         StartCoroutine(Test2());
 
         int count = Random.Range(3, 10); //100% Chance
