@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour {
     public Animator anim;
 
     public int amountOfJumps = 1;
+    private int step_counter = 0;
 
     public float movementSpeed = 10.0f;
     public float fasterMovementSpeed = 11.0f;
@@ -282,12 +283,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Mathf.Abs(rb.velocity.x) >= 0.01f && rb.velocity.magnitude > 0 && !isTouchingWall && !isTouchingWall2) {
             isWalking = true;
-            if (house)
-            //if (FindObjectOfType<RunningOnWoodSFX>().in_wood)
-            StartCoroutine(wood_SFX());
-           
+          
         }
         else {
+            step_counter =0;
             isWalking = false;
         }
     }
@@ -296,7 +295,7 @@ public class PlayerController : MonoBehaviour {
      IEnumerator wood_SFX() {
         //canMove = false;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(5.0f);
 
          FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
     }
@@ -599,7 +598,10 @@ public class PlayerController : MonoBehaviour {
 
         }
     }
-
+    public void RunSound()
+    {
+        FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
+    }
     private void WallJump() {
         if (canWallJump && unlock_wall_jump) {
             FindObjectOfType<AudioManager>().Play("PlayerJump");
