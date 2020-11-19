@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float knockbackDuation;
     public GameObject house;
+    public GameObject house2;
 
     private int amountOfJumpsLeft;
     private int facingDirection = 1;
@@ -600,7 +601,15 @@ public class PlayerController : MonoBehaviour {
     }
     public void RunSound()
     {
-        FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
+       // if (house)
+       if (house)
+       {
+           if (FindObjectOfType<RunningOnWoodSFX>().in_wood)
+            FindObjectOfType<AudioManager>().Play("RunningOnWoodSFX");
+       }
+       
+        else 
+        FindObjectOfType<AudioManager>().Play("RunningOnGrassSFX");
     }
     private void WallJump() {
         if (canWallJump && unlock_wall_jump) {
