@@ -1,0 +1,24 @@
+Royalty free license
+
+This Game Asset Pack comes with a non-exclusive, non-transferable license to all resources in this pack.
+In general you can use this pack for commercial and non commercial projects.
+
+You can use, copy, adapt, modify, prepare derivative works based upon all assets;
+You may use my game assets as many times as you like;
+Distribution of source files is NOT permitted;
+You can sell and distribute games & films with my assets.
+Like all licensed artwork, this is a non-exclusive license, so the copyright stays with the original artist. 
+As this is a non-exclusive license, other developers may be using the same artwork, but neither them or you can make a copyright claim against their usage.
+
+
+Forbidden - Important:
+
+You can NOT resell the art source files (PNG, JPG, AI, PSD, etc) or slightly modified version of the art / models. 
+You can not redistribute the art / models or modified version of the art / models in a manner that would make some or all of the art / models files useable to another end user via the app. 
+For example, an app that uses the art as part of the play of the game is fine. An app that allows the user to save or export a modified version of the artwork itself is not fine.
+
+If you have any questions about the License, feel free to contact me: cryptogene@posteo.de
+
+
+For more Artwork please visit my website: https://cryptogene-3d.com/
+You can also visit our Game-Dev Community: https://rpgmaker-mv.de/forum/
