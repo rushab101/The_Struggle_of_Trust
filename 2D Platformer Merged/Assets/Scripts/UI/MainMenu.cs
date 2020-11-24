@@ -25,7 +25,15 @@ public class MainMenu : MonoBehaviour
         {
             level = "CaveEntrance";
         }
-
+        else if (SceneLoader == 3)
+        {
+            level = "MiddleCave";
+        }
+        else if (SceneLoader == 4)
+        {
+            level = "CaveExit";
+        }
+      
         //FindObjectOfType<Scene1Save>().ResetValues();
         
     }
