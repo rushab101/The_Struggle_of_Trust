@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Respawn_player : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    //[SerializeField] private Transform player;
     [SerializeField] private Transform respawnPoint;
+    private PlayerController player;
     public bool fell_in = false;
 
+
+
+    private void Start() {
+    player= GameObject.Find("Player").GetComponent<PlayerController>();    
+    }
      private void OnTriggerEnter2D(Collider2D collision) {
          if (collision.CompareTag("Player"))
          {
-             Debug.Log("HELLOOOOOOOOOOOOOOOOOOOO");
+            // Debug.Log("HELLOOOOOOOOOOOOOOOOOOOO");
              fell_in = true;
               FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
            // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
