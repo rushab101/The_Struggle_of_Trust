@@ -56,7 +56,9 @@ public class EnemyGFX : MonoBehaviour
     private GameObject
         hitParticle,
         deathChunckParticle,
-        DeathBloodParticle;
+        DeathBloodParticle,
+        
+        Hearts;
 
 
     private float currentHealth, knowckbackStartTime;
@@ -110,6 +112,9 @@ public class EnemyGFX : MonoBehaviour
     {
         Instantiate(deathChunckParticle, Slime.transform.position, deathChunckParticle.transform.rotation);
         Instantiate(DeathBloodParticle, Slime.transform.position, DeathBloodParticle.transform.rotation);
+         int random_number = Random.Range(0, 100);
+        if (random_number% 2 == 0)
+        Instantiate(Hearts,Slime.transform.position, Quaternion.identity);
         //Spawn chucks and blood
         Destroy(gameObject);
 
@@ -138,6 +143,7 @@ public class EnemyGFX : MonoBehaviour
         Debug.Log(currentHealth);
         Instantiate(hitParticle, Slime.transform.position,Quaternion.Euler(0.0f,0.0f,UnityEngine.Random.Range(0.0f, 360.0f)));
         
+        
 
         // Hit particle
 
@@ -162,7 +168,10 @@ public class EnemyGFX : MonoBehaviour
             Collider2D hit = Physics2D.OverlapArea(touchDamageBotLeft, touchDamageTopRight, whatisPlayer);
             if (hit != null)
             {
-               
+               lastTouchDamageTime = Time.time;
+       
+                hit.SendMessage("Damage", attackDetails);
+                FindObjectOfType<TimeStop>().StopTime(0.25f, 10, 0.1f);
             }
         }
     }

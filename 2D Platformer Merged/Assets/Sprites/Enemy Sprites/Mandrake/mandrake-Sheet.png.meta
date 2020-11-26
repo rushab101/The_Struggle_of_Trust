@@ -1,7 +1,130 @@
 fileFormatVersion: 2
 guid: 37ef7acd901bd2f45b9b8e7150c9dbd4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6206747550222692430
+    second: mandrake-Sheet_0
+  - first:
+      213: 8355548691151604080
+    second: mandrake-Sheet_1
+  - first:
+      213: -1051331966898880768
+    second: mandrake-Sheet_2
+  - first:
+      213: 5349955205587255193
+    second: mandrake-Sheet_3
+  - first:
+      213: 1304391379633469721
+    second: mandrake-Sheet_4
+  - first:
+      213: 1649309336363294117
+    second: mandrake-Sheet_5
+  - first:
+      213: 8470517160762664429
+    second: mandrake-Sheet_6
+  - first:
+      213: 3462088788077927308
+    second: mandrake-Sheet_7
+  - first:
+      213: -5364416269549767980
+    second: mandrake-Sheet_8
+  - first:
+      213: 4546206227543060503
+    second: mandrake-Sheet_9
+  - first:
+      213: -2379178544149453992
+    second: mandrake-Sheet_10
+  - first:
+      213: 7556982577548471836
+    second: mandrake-Sheet_11
+  - first:
+      213: 7748589163435616261
+    second: mandrake-Sheet_12
+  - first:
+      213: 2985210495939434686
+    second: mandrake-Sheet_13
+  - first:
+      213: -5248691500866038801
+    second: mandrake-Sheet_14
+  - first:
+      213: 2696700299631729117
+    second: mandrake-Sheet_15
+  - first:
+      213: -2067286056795341415
+    second: mandrake-Sheet_16
+  - first:
+      213: 2428123679331177846
+    second: mandrake-Sheet_17
+  - first:
+      213: 6344763555451770877
+    second: mandrake-Sheet_18
+  - first:
+      213: 2763415530443833756
+    second: mandrake-Sheet_19
+  - first:
+      213: 6845615915888333268
+    second: mandrake-Sheet_20
+  - first:
+      213: -6380720036495618271
+    second: mandrake-Sheet_21
+  - first:
+      213: -6054654831849566989
+    second: mandrake-Sheet_22
+  - first:
+      213: -6203028386703358705
+    second: mandrake-Sheet_23
+  - first:
+      213: -5356082453083351870
+    second: mandrake-Sheet_24
+  - first:
+      213: 6689470513394363237
+    second: mandrake-Sheet_25
+  - first:
+      213: -5697307301214219652
+    second: mandrake-Sheet_26
+  - first:
+      213: -6142244889150602791
+    second: mandrake-Sheet_27
+  - first:
+      213: 8756255762432138466
+    second: mandrake-Sheet_28
+  - first:
+      213: -1079966715315431965
+    second: mandrake-Sheet_29
+  - first:
+      213: -6042285391505712632
+    second: mandrake-Sheet_30
+  - first:
+      213: 5243473257336714628
+    second: mandrake-Sheet_31
+  - first:
+      213: -32139148542827749
+    second: mandrake-Sheet_32
+  - first:
+      213: 2740598226282297707
+    second: mandrake-Sheet_33
+  - first:
+      213: 413359118252282337
+    second: mandrake-Sheet_34
+  - first:
+      213: 2778056591148301524
+    second: mandrake-Sheet_35
+  - first:
+      213: -1795219274163295832
+    second: mandrake-Sheet_36
+  - first:
+      213: 5162602381926499487
+    second: mandrake-Sheet_37
+  - first:
+      213: -5887699907213159957
+    second: mandrake-Sheet_38
+  - first:
+      213: -1279921295115908613
+    second: mandrake-Sheet_39
+  - first:
+      213: -5762584511403498574
+    second: mandrake-Sheet_40
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +154,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +163,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -64,7 +187,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +208,868 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mandrake-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf4372ecf33dd9a0800000000000000
+      internalID: -6206747550222692430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0794297d34fd4f370800000000000000
+      internalID: 8355548691151604080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fbaf3752be861f0800000000000000
+      internalID: -1051331966898880768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fb7490aebde3a40800000000000000
+      internalID: 5349955205587255193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919722f7c012a1210800000000000000
+      internalID: 1304391379633469721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 228
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad5bae5a1683e610800000000000000
+      internalID: 1649309336363294117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5eb1f9a725d8570800000000000000
+      internalID: 8470517160762664429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b5f3ae86fcb0030800000000000000
+      internalID: 3462088788077927308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2f82223d3cd85b0800000000000000
+      internalID: -5364416269549767980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7107f542a7e571f30800000000000000
+      internalID: 4546206227543060503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853adb238b57bfed0800000000000000
+      internalID: -2379178544149453992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 190
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ea79c9d9bcfd860800000000000000
+      internalID: 7556982577548471836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50865055ac4888b60800000000000000
+      internalID: 7748589163435616261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8dc3631299d6920800000000000000
+      internalID: 2985210495939434686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3944383e6e827b0800000000000000
+      internalID: -5248691500866038801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd91d3182aa9c6520800000000000000
+      internalID: 2696700299631729117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d7897c8468f43e0800000000000000
+      internalID: -2067286056795341415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 152
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675df312f9d62b120800000000000000
+      internalID: 2428123679331177846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df71c8276d02d0850800000000000000
+      internalID: 6344763555451770877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9107e2a8cf995620800000000000000
+      internalID: 2763415530443833756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1d847e763800f50800000000000000
+      internalID: 6845615915888333268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f067deee02377a0800000000000000
+      internalID: -6380720036495618271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc0106628b89fba0800000000000000
+      internalID: -6054654831849566989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 114
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05c1ee1c8a6ae9a0800000000000000
+      internalID: -6203028386703358705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4934cf26f5ba5b0800000000000000
+      internalID: -5356082453083351870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b22565df5c5dc50800000000000000
+      internalID: 6689470513394363237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7213e6f1391fe0b0800000000000000
+      internalID: -5697307301214219652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d148baf0dc52caa0800000000000000
+      internalID: -6142244889150602791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec1c3a2938748970800000000000000
+      internalID: 8756255762432138466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 76
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5d06c8eff2301f0800000000000000
+      internalID: -1079966715315431965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a15c7237d752ca0800000000000000
+      internalID: -6042285391505712632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485b0dc752f84c840800000000000000
+      internalID: 5243473257336714628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13a8bb5d91dd8ff0800000000000000
+      internalID: -32139148542827749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b693f95019f880620800000000000000
+      internalID: 2740598226282297707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e198109deb8cb500800000000000000
+      internalID: 413359118252282337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 38
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcb35930c3ad8620800000000000000
+      internalID: 2778056591148301524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9ef85e4991617e0800000000000000
+      internalID: -1795219274163295832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f948053838f35a740800000000000000
+      internalID: 5162602381926499487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be19576f020ba4ea0800000000000000
+      internalID: -5887699907213159957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf988280d5ecc3ee0800000000000000
+      internalID: -1279921295115908613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mandrake-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b360a91bef2700b0800000000000000
+      internalID: -5762584511403498574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

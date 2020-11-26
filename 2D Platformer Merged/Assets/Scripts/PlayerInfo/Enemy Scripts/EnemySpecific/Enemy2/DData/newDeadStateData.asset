@@ -14,5 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathChunkParticle: {fileID: 9101933404109482393, guid: 0d7bf6660612dda488bf4b2d700c95d1,
     type: 3}
-  deathBloodParticle: {fileID: 5100174698813196958, guid: 8f6d5cc5b81855743a9d717c9a2dad27,
+  deathBloodParticle: {fileID: 231112197258768274, guid: 099540dc8dd5628418c2f369e86b6cb4,
     type: 3}
+  Explosion: {fileID: 0}
+  Green_coin: {fileID: 3555151101985294081, guid: 9d31cde0dfd5852468d7d38beb51327b,
+    type: 3}
+  Blue_coin: {fileID: 105241324871419831, guid: eb9c6f99b1d8dc9479a1dd0bb2e97c18,
+    type: 3}
+  Yellow_coin: {fileID: 4456612938062749762, guid: e1441b0d9304ce34bade54110a2d532e,
+    type: 3}
+  Red_coin: {fileID: 8692667399997679713, guid: 2a4976d0d44f51e468cbab72d1a1d17a,
+    type: 3}
+  Purple_coin: {fileID: 8864727468088743131, guid: d97335650d4d91148a974f9de706806b,
+    type: 3}
+  Hearts: {fileID: 1723643762198735653, guid: b04b656ed3d3fa541b0fd8b60e5502d5, type: 3}
+  HeartContainer: {fileID: 0}
