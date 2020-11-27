@@ -38,11 +38,13 @@ public class BossProjectiles : MonoBehaviour
         if (!hasHitGround)
         {
             attackDetails.position = transform.position;
+            
             if (isGravityOn)
             {
                 float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             }
+            
         }
 
     }
