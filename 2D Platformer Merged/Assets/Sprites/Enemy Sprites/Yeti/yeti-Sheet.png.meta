@@ -1,7 +1,130 @@
 fileFormatVersion: 2
 guid: 6e8045fb9d304514480301da7a5fed56
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6017029890879602838
+    second: yeti-Sheet_0
+  - first:
+      213: 7807045570232560109
+    second: yeti-Sheet_1
+  - first:
+      213: -6429077252910244419
+    second: yeti-Sheet_2
+  - first:
+      213: 4473739525635712642
+    second: yeti-Sheet_3
+  - first:
+      213: 2361524824566093976
+    second: yeti-Sheet_4
+  - first:
+      213: 5707645852357341132
+    second: yeti-Sheet_5
+  - first:
+      213: -6288584892403249224
+    second: yeti-Sheet_6
+  - first:
+      213: 7201014029340970657
+    second: yeti-Sheet_7
+  - first:
+      213: -3646534903729732154
+    second: yeti-Sheet_8
+  - first:
+      213: -4796369500403982635
+    second: yeti-Sheet_9
+  - first:
+      213: -7695801364785916377
+    second: yeti-Sheet_10
+  - first:
+      213: -8160102237377462005
+    second: yeti-Sheet_11
+  - first:
+      213: 705272191042980875
+    second: yeti-Sheet_12
+  - first:
+      213: 2493798825042514911
+    second: yeti-Sheet_13
+  - first:
+      213: 4786211188083788281
+    second: yeti-Sheet_14
+  - first:
+      213: 1825633391566427059
+    second: yeti-Sheet_15
+  - first:
+      213: 7791387052450716929
+    second: yeti-Sheet_16
+  - first:
+      213: 4653605544347662985
+    second: yeti-Sheet_17
+  - first:
+      213: -7554106384014213081
+    second: yeti-Sheet_18
+  - first:
+      213: 6711145652798623642
+    second: yeti-Sheet_19
+  - first:
+      213: -4319110728847981850
+    second: yeti-Sheet_20
+  - first:
+      213: 469047549898844770
+    second: yeti-Sheet_21
+  - first:
+      213: -8129168376063021449
+    second: yeti-Sheet_22
+  - first:
+      213: -843231772465019741
+    second: yeti-Sheet_23
+  - first:
+      213: 1743590665621999803
+    second: yeti-Sheet_24
+  - first:
+      213: 3236829694664165423
+    second: yeti-Sheet_25
+  - first:
+      213: 8352248622994125114
+    second: yeti-Sheet_26
+  - first:
+      213: -8374192795654535760
+    second: yeti-Sheet_27
+  - first:
+      213: 4992172736479709166
+    second: yeti-Sheet_28
+  - first:
+      213: 940413061359854091
+    second: yeti-Sheet_29
+  - first:
+      213: -7105429507450599341
+    second: yeti-Sheet_30
+  - first:
+      213: -5552359813403378383
+    second: yeti-Sheet_31
+  - first:
+      213: 3309603354490612437
+    second: yeti-Sheet_32
+  - first:
+      213: 6735968260806540706
+    second: yeti-Sheet_33
+  - first:
+      213: -7429184928314488044
+    second: yeti-Sheet_34
+  - first:
+      213: -5787749018772346400
+    second: yeti-Sheet_35
+  - first:
+      213: -1850527817913620947
+    second: yeti-Sheet_36
+  - first:
+      213: -3807099391303348624
+    second: yeti-Sheet_37
+  - first:
+      213: -4429670440193060392
+    second: yeti-Sheet_38
+  - first:
+      213: -7103578379636035324
+    second: yeti-Sheet_39
+  - first:
+      213: 1235466185858234996
+    second: yeti-Sheet_40
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +154,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +163,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +187,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +208,868 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: yeti-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fb63f91373f7ca0800000000000000
+      internalID: -6017029890879602838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 456
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9aff62592385c60800000000000000
+      internalID: 7807045570232560109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 456
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd9dba1d4457c6a0800000000000000
+      internalID: -6429077252910244419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 456
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286242b456ae51e30800000000000000
+      internalID: 4473739525635712642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 456
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8985788e052d5c020800000000000000
+      internalID: 2361524824566093976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfad7d89a1a53f40800000000000000
+      internalID: 5707645852357341132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 399
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf8a64db557ab8a0800000000000000
+      internalID: -6288584892403249224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 399
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae09796b142fe360800000000000000
+      internalID: 7201014029340970657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 399
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5402243d7e46dc0800000000000000
+      internalID: -3646534903729732154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 399
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de17e40a5fdf6db0800000000000000
+      internalID: -4796369500403982635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72618fdce65033590800000000000000
+      internalID: -7695801364785916377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 342
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b010f3acf3e71ce80800000000000000
+      internalID: -8160102237377462005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 342
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c04113251a9c900800000000000000
+      internalID: 705272191042980875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 342
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd312f391d0cb9220800000000000000
+      internalID: 2493798825042514911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 342
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f90cb597b90c6240800000000000000
+      internalID: 4786211188083788281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b39862a5e3f55910800000000000000
+      internalID: 1825633391566427059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 285
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d17e06e31902c60800000000000000
+      internalID: 7791387052450716929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 285
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a71a3369de49040800000000000000
+      internalID: 4653605544347662985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 285
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7208251644c6a2790800000000000000
+      internalID: -7554106384014213081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 285
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f08fef967c22d50800000000000000
+      internalID: 6711145652798623642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2007dfcaf6f04c0800000000000000
+      internalID: -4319110728847981850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 228
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26aec72f244628600800000000000000
+      internalID: 469047549898844770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 228
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77eac61ae646f2f80800000000000000
+      internalID: -8129168376063021449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 228
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a446eaab2d3c44f0800000000000000
+      internalID: -843231772465019741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 228
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb01612f87a723810800000000000000
+      internalID: 1743590665621999803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28c4e435778bec20800000000000000
+      internalID: 3236829694664165423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 171
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a317f49ded529e370800000000000000
+      internalID: 8352248622994125114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 171
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5406e4504e8cb80800000000000000
+      internalID: -8374192795654535760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 171
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7434777a2c74540800000000000000
+      internalID: 4992172736479709166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 171
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02ed7062b40d0d00800000000000000
+      internalID: 940413061359854091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35804d75281746d90800000000000000
+      internalID: -7105429507450599341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 114
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13dffe8da2e02f2b0800000000000000
+      internalID: -5552359813403378383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 114
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daaad347b21eed20800000000000000
+      internalID: 3309603354490612437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 114
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adfdabc177fa7d50800000000000000
+      internalID: 6735968260806540706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 114
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b01215bab36e890800000000000000
+      internalID: -7429184928314488044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e965f6aee8cdafa0800000000000000
+      internalID: -5787749018772346400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 57
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26a74e01ca9156e0800000000000000
+      internalID: -1850527817913620947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 57
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e02c446477a2bc0800000000000000
+      internalID: -3807099391303348624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 57
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d19e3c3436a682c0800000000000000
+      internalID: -4429670440193060392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 57
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40136af99150b6d90800000000000000
+      internalID: -7103578379636035324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yeti-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 73
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a361443f1452110800000000000000
+      internalID: 1235466185858234996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
