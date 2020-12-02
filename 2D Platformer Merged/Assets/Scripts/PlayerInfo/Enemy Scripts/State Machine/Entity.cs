@@ -194,6 +194,22 @@ public class Entity : MonoBehaviour
         aliveGO.transform.Rotate(180f,0f,0f);
     }
 
+    public virtual void PlayHitSound()
+    {
+        if (entityData.enemy_id == 1)
+        {
+            FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
+        }
+    }
+
+    public virtual void PlayDeadSound()
+    {
+        if (entityData.enemy_id == 1)
+        {
+             FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
+        }
+    }
+
 
 
 

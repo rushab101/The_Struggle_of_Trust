@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be435c747e21ecf488d6dbe98188b715, type: 3}
   m_Name: golem_melee_attack
   m_EditorClassIdentifier: 
-  attackRadius: 0.5
+  attackRadius: 2
   attackDamage: 10
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048

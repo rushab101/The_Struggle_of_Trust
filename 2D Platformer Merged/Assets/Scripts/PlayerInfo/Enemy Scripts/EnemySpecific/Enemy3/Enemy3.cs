@@ -94,12 +94,14 @@ public class Enemy3 : Entity
        // CheckTouchDamage();
          if (isDead)
         {
-            FindObjectOfType<AudioManager>().Play("SlimeDead"); // 06 June 2020
+          
+           PlayDeadSound();
+            
             stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
-            FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
+           PlayHitSound();
             stateMachine.ChangeState(hurtState);
         }
  
