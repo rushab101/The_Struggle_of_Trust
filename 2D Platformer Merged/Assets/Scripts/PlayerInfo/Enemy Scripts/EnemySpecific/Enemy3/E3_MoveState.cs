@@ -31,6 +31,8 @@ public class E3_MoveState : MoveState
     public override void LogicUpdate()
     {
          base.LogicUpdate();
+
+      
          /*
           if (isPlayerinMinAgroRange)
         {

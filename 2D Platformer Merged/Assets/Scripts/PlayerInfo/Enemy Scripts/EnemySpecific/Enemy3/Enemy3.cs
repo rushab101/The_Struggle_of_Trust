@@ -107,7 +107,8 @@ public class Enemy3 : Entity
  
     }
 
-    
+
+
   public void CheckTouchDamage()
     {
       

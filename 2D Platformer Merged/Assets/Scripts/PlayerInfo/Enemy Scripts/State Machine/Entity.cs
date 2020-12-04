@@ -200,13 +200,24 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("GolemHit"); // 06 June 2020
+        }
+
     }
+
+   
 
     public virtual void PlayDeadSound()
     {
         if (entityData.enemy_id == 1)
         {
-             FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
+             FindObjectOfType<AudioManager>().Play("SlimeDead"); // 06 June 2020
+        }
+        else  if (entityData.enemy_id == 2)
+        {
+            FindObjectOfType<AudioManager>().Play("GolemDead"); // 06 June 2020
         }
     }
 
