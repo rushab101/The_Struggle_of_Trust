@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Respawn_player : MonoBehaviour
 {
@@ -26,8 +27,9 @@ public class Respawn_player : MonoBehaviour
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
             player.transform.position = respawnPoint.transform.position;
          }
-         else if (collision.CompareTag("Enemy"))
+         else if (collision.CompareTag("Enemy") && SceneManager.GetActiveScene().name == "Beginning")
          {
+             Debug.Log("Went to the respawn player script thingy");
              attackDetails.damageAmount = 10f;
              FindObjectOfType<Entity>().Damage(attackDetails);
          }

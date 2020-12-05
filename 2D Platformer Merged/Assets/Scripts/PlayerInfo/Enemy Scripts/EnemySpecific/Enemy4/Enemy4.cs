@@ -75,10 +75,12 @@ public class Enemy4 : Entity
        // CheckTouchDamage();
          if (isDead)
         {
+          PlayDeadSound();
           stateMachine.ChangeState(deadState);
         }
        else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
+          PlayHitSound();
             stateMachine.ChangeState(hurtState);
         }
  

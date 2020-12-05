@@ -56,6 +56,7 @@ public class Pots : MonoBehaviour
     private void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
+        FindObjectOfType<AudioManager>().Play("damage_creates");
        // currentHealth -= attackDetails;
        
        // playerFacingDirection = pc.GetFacingDirection();
@@ -114,7 +115,7 @@ public class Pots : MonoBehaviour
     private void Die() {
        // aliveGO.SetActive(false);
         aliveAnim.SetBool("Broken", true);
-     
+      FindObjectOfType<AudioManager>().Play("square_create");
        // Destroy(gameObject,0.95f);
        
      //  brokenTopGO.SetActive(true);

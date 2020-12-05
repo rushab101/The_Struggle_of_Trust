@@ -18,22 +18,27 @@ public class E4_DeadState : DeadState
     public override void Enter()
     {
         base.Enter();
-         int count = Random.Range(3, 7); //100% Chance
-  int random = Random.Range(1,4);
+         int count = Random.Range(3, 10); //100% Chance
+  int random = Random.Range(1,20);
         
         for (int i = 0; i < count; ++i)
         {
-            if (random >=2)
+            if (random >10)
             {
+                if (random%2 == 0)
                  GameObject.Instantiate(stateData.Green_coin, entity.aliveGO.transform.position, Quaternion.identity);
+                if (random%2 !=0)
+                GameObject.Instantiate(stateData.Blue_coin, entity.aliveGO.transform.position, Quaternion.identity);
+                if (random%5 == 0)
+                GameObject.Instantiate(stateData.Yellow_coin, entity.aliveGO.transform.position, Quaternion.identity);
+                if (random%7 == 0)
+                GameObject.Instantiate(stateData.Yellow_coin, entity.aliveGO.transform.position, Quaternion.identity);
             }
-            if (random== 1)
+            if (random <= 10)
             {
                 GameObject.Instantiate(stateData.Hearts, entity.aliveGO.transform.position, Quaternion.identity);
                 break;
             }
-           
-
         }
     }
 

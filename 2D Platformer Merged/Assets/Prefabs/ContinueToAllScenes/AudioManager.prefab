@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8061971035209328581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8061971035209328635}
+  - component: {fileID: 8061971035209328580}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8061971035209328635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061971035209328581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8061971035209328580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8061971035209328581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a9462b1f67dd645971a5ffbdda16a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: SwordSlash
+    clip: {fileID: 8300000, guid: 5a4550844c31b0045b5aa7f18f19443c, type: 3}
+    volume: 0.19
+    pitch: 1
+    source: {fileID: 0}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: 67d5719815266f04da69743c989518ee, type: 3}
+    volume: 0.398
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 67be883d5a88d8041a7ce846ab364512, type: 3}
+    volume: 0.398
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerHit
+    clip: {fileID: 8300000, guid: 6af0f6fc857535349a7db02395754007, type: 3}
+    volume: 0.398
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerJump
+    clip: {fileID: 8300000, guid: 38f688fd25285dd43bab4b6161537cc2, type: 3}
+    volume: 0.16
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDash
+    clip: {fileID: 8300000, guid: 635dfccdf875eb244afb3f929c9c2c04, type: 3}
+    volume: 0.293
+    pitch: 1
+    source: {fileID: 0}
+  - name: SlimeDead
+    clip: {fileID: 8300000, guid: 9f89eca4f6bf95d4091e19805987b853, type: 3}
+    volume: 0.52
+    pitch: 1
+    source: {fileID: 0}
+  - name: SlimeHit
+    clip: {fileID: 8300000, guid: 3dee4b23aae47a841a9d6b275e418abb, type: 3}
+    volume: 0.81
+    pitch: 1
+    source: {fileID: 0}
+  - name: ThompHit
+    clip: {fileID: 8300000, guid: 64a1fd281e2d45e409ed2edf8f5e1e6a, type: 3}
+    volume: 0.81
+    pitch: 1
+    source: {fileID: 0}
+  - name: ThompDead
+    clip: {fileID: 8300000, guid: 1cd7f840d32e8c8468115767ae1316b0, type: 3}
+    volume: 0.351
+    pitch: 1
+    source: {fileID: 0}
+  - name: ThompDash
+    clip: {fileID: 8300000, guid: 3bd864e0fbd0c424d98ad7097ac7234d, type: 3}
+    volume: 0.52
+    pitch: 1
+    source: {fileID: 0}
+  - name: CrateHit
+    clip: {fileID: 8300000, guid: 5050f845d5701c24c9daffbb5acf41af, type: 3}
+    volume: 0.52
+    pitch: 1
+    source: {fileID: 0}
+  - name: CrateBreak
+    clip: {fileID: 8300000, guid: ee72d852038b0c1418750d6d021b8cc8, type: 3}
+    volume: 0.52
+    pitch: 1
+    source: {fileID: 0}
+  - name: CoinCollect
+    clip: {fileID: 8300000, guid: ddaaf7336d151eb4bb2632a8f5786a86, type: 3}
+    volume: 0.52
+    pitch: 1
+    source: {fileID: 0}
+  - name: RunningOnWoodSFX
+    clip: {fileID: 8300000, guid: 64cb8c6c2434d75448d3de76e300ee5b, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: RunningOnGrassSFX
+    clip: {fileID: 8300000, guid: 4a65fc16aec93be41995963dc6b31572, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Dash
+    clip: {fileID: 8300000, guid: 635dfccdf875eb244afb3f929c9c2c04, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: somer
+    clip: {fileID: 8300000, guid: f08d9dafa9901e644981d1ecc63f302c, type: 3}
+    volume: 0.15
+    pitch: 1
+    source: {fileID: 0}
+  - name: square_create
+    clip: {fileID: 8300000, guid: ee72d852038b0c1418750d6d021b8cc8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: coins
+    clip: {fileID: 8300000, guid: ddaaf7336d151eb4bb2632a8f5786a86, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: damage_creates
+    clip: {fileID: 8300000, guid: 5050f845d5701c24c9daffbb5acf41af, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GolemHit
+    clip: {fileID: 8300000, guid: 50b2fd0c6023c004cb55849e05c01d01, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GolemDead
+    clip: {fileID: 8300000, guid: 5c6800317232ae24698f388dcdaeaecf, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: MosquitoHit
+    clip: {fileID: 8300000, guid: 40216507b507a0941a4f4c7194a9405a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: MosquitoDead
+    clip: {fileID: 8300000, guid: c5b38ae1a8263fc42a128d8bbc3fe802, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ArcherHurt
+    clip: {fileID: 8300000, guid: e0ddd8072da01b34ab1e82b1f943a0ec, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ArcherDead
+    clip: {fileID: 8300000, guid: 14025a529ac58df4fb7ff20d2376b173, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

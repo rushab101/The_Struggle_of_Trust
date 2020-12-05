@@ -12,6 +12,7 @@ public class IncreaseHp : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Hearts");
              FindObjectOfType<PlayerStats>().Heal(1.0f);
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject);

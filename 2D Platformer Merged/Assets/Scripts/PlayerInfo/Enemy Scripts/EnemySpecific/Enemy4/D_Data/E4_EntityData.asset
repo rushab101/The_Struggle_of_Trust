@@ -22,6 +22,7 @@ MonoBehaviour:
   stunResistance: 3
   sunRecoveryTime: 2
   closeRangeActionDistance: 1
+  enemy_id: 4
   hitParticle: {fileID: 7160565004742066919, guid: 54f48987e4285ba4f8b0f2fd0c8fe1ec,
     type: 3}
   whatIsGround:
