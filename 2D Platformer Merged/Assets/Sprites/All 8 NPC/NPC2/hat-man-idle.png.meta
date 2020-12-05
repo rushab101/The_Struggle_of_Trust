@@ -14,6 +14,21 @@ TextureImporter:
   - first:
       213: 5508982163796420381
     second: hat-man-idle_3
+  - first:
+      213: 3877195937316477744
+    second: hat-man-idle_0
+  - first:
+      213: -1664977801527428420
+    second: hat-man-idle_1
+  - first:
+      213: -8824061471179400375
+    second: hat-man-idle_2
+  - first:
+      213: 7095831877840583089
+    second: hat-man-idle_3
+  - first:
+      213: 6334110061985071528
+    second: hat-man-idle_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,14 +122,14 @@ TextureImporter:
         width: 39
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada97be87c0473e10800000000000000
-      internalID: 2177280170693991130
+      spriteID: 03b1658a9219ec530800000000000000
+      internalID: 3877195937316477744
       vertices: []
       indices: 
       edges: []
@@ -123,19 +138,19 @@ TextureImporter:
       name: hat-man-idle_1
       rect:
         serializedVersion: 2
-        x: 39
+        x: 37
         y: 0
         width: 39
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b96a9861123e0bbf0800000000000000
-      internalID: -310498643037018469
+      spriteID: cbafb0dc28fc4e8e0800000000000000
+      internalID: -1664977801527428420
       vertices: []
       indices: 
       edges: []
@@ -149,14 +164,14 @@ TextureImporter:
         width: 39
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c7ce8c2e182e1b0800000000000000
-      internalID: -5628793773226165213
+      spriteID: 94b142608d2aa8580800000000000000
+      internalID: -8824061471179400375
       vertices: []
       indices: 
       edges: []
@@ -170,14 +185,35 @@ TextureImporter:
         width: 39
         height: 52
       alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9b4906f75797260800000000000000
+      internalID: 7095831877840583089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hat-man-idle_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 33
+        width: 17
+        height: 13
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d176c031716d37c40800000000000000
-      internalID: 5508982163796420381
+      spriteID: 8a109d4ba8747e750800000000000000
+      internalID: 6334110061985071528
       vertices: []
       indices: 
       edges: []

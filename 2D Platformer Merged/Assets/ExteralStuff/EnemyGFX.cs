@@ -110,6 +110,7 @@ public class EnemyGFX : MonoBehaviour
     //-- Dead State ---//
     private void EnterDeadState()
     {
+        FindObjectOfType<AudioManager>().Play("MosquitoDead");
         Instantiate(deathChunckParticle, Slime.transform.position, deathChunckParticle.transform.rotation);
         Instantiate(DeathBloodParticle, Slime.transform.position, DeathBloodParticle.transform.rotation);
          int random_number = Random.Range(0, 100);
@@ -140,6 +141,8 @@ public class EnemyGFX : MonoBehaviour
     private void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
+        FindObjectOfType<AudioManager>().Play("MosquitoHit");
+        
         Debug.Log(currentHealth);
         Instantiate(hitParticle, Slime.transform.position,Quaternion.Euler(0.0f,0.0f,UnityEngine.Random.Range(0.0f, 360.0f)));
         

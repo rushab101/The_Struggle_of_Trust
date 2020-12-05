@@ -79,18 +79,22 @@ public class Enemy2 : Entity
       
          if (isDead)
         {
+          PlayDeadSound();
           stateMachine.ChangeState(deadState);
         }
         else if (isStunned && stateMachine.currentState != stunState)
         {
+           PlayHitSound();
             stateMachine.ChangeState(stunState);
         }
         else if (CheckPlayerInMinAgroRange())
         {
+           PlayHitSound();
           stateMachine.ChangeState(rangedAttackState);
         }
         else if (!CheckPlayerInMinAgroRange())
         {
+           PlayHitSound();
             lookForPlayerState.SetTurnImmediately(true);
             stateMachine.ChangeState(lookForPlayerState);
         }

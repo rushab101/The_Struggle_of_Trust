@@ -91,6 +91,7 @@ public class Enemy3 : Entity
      public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+       
        // CheckTouchDamage();
          if (isDead)
         {

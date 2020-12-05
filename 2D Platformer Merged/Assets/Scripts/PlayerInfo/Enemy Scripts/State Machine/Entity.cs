@@ -204,6 +204,11 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("GolemHit"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 3)
+        {
+             FindObjectOfType<AudioManager>().Play("ArcherHurt"); // 06 June 2020
+        }
+
 
     }
 
@@ -218,6 +223,10 @@ public class Entity : MonoBehaviour
         else  if (entityData.enemy_id == 2)
         {
             FindObjectOfType<AudioManager>().Play("GolemDead"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 3)
+        {
+             FindObjectOfType<AudioManager>().Play("ArcherDead"); // 06 June 2020
         }
     }
 
