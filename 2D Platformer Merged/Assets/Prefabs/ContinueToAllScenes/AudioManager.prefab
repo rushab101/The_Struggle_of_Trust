@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1102713514150565018}
   - component: {fileID: 1102713514150565029}
   m_Layer: 0
-  m_Name: AudioManager 2
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,6 +190,11 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: BatDead
+    clip: {fileID: 8300000, guid: c0a135a90955c754097d25eedc3630c8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: GateClose
     clip: {fileID: 8300000, guid: c0a135a90955c754097d25eedc3630c8, type: 3}
     volume: 1
     pitch: 1

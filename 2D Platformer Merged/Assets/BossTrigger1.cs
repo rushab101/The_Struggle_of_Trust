@@ -16,6 +16,8 @@ public class BossTrigger1 : MonoBehaviour
     public GameObject Lever;
     public DialogueTrigger trigger;
     public DialogueManager manager;
+    public AudioSource audio;
+    public AudioSource BGM;
     SpriteRenderer rend;
     public bool boss_is_dead = false;
     public bool boss_is_dead_complete = false;
@@ -40,6 +42,7 @@ private bool complete_this_one=false;
         G.SetActive(false);
         H.SetActive(false);
         I.SetActive(true);
+        BGM.Pause();
         rend= Lever.GetComponent<SpriteRenderer>();
         Color c = rend.material.color;
         c.a= 0f;
@@ -56,6 +59,8 @@ private bool complete_this_one=false;
         {
            Time.timeScale = 0f;
            went_in = true;
+           audio.Play();
+           BGM.Play();
              StartCoroutine(Test());
              StartCoroutine(Test2());
              StartCoroutine(Test3());
@@ -153,6 +158,7 @@ private bool complete_this_one=false;
         }
         if (boss_is_dead)
         {
+            BGM.Pause();
                StartCoroutine(Tes());
              StartCoroutine(Tes2());
              StartCoroutine(Tes3());
