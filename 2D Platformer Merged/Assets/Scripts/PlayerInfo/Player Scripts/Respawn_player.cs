@@ -9,7 +9,7 @@ public class Respawn_player : MonoBehaviour
     private PlayerController player;
     public bool fell_in = false;
 
-
+    AttackDetails attackDetails;
 
     private void Start() {
     player= GameObject.Find("Player").GetComponent<PlayerController>();    
@@ -26,7 +26,11 @@ public class Respawn_player : MonoBehaviour
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
             player.transform.position = respawnPoint.transform.position;
          }
-         
+         else if (collision.CompareTag("Enemy"))
+         {
+             attackDetails.damageAmount = 10f;
+             FindObjectOfType<Entity>().Damage(attackDetails);
+         }
         
     }
 

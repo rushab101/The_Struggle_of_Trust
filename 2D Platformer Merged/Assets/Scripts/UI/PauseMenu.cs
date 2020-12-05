@@ -6,18 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject controllMenuUI;
 
 
-    public AudioSource backgroundAudio;
+   // private AudioSource audioSource;
 
 
     void Start()
     {
         pauseMenuUI.SetActive(false);
         controllMenuUI.SetActive(false);
+//        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -41,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        backgroundAudio.Play();
+       // audioSource.Play();
         GameIsPaused = false;
 
     }
@@ -51,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         controllMenuUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        backgroundAudio.Pause();
+       // audioSource.Pause();
        GameIsPaused = true;
     }
 
@@ -59,7 +60,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        backgroundAudio.Play();
+        //backgroundAudio.Play();
         SceneManager.LoadScene("Main Menu");
     }
 

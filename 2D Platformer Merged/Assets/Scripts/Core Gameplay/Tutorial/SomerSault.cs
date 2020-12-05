@@ -14,11 +14,14 @@ public class SomerSault : MonoBehaviour
         canvas.SetActive(false);
         
     }
-
+    void Update() {
+        if (FindObjectOfType<PauseMenu>().GameIsPaused) 
+            canvas.SetActive(false);
+    }
      private void OnTriggerEnter2D(Collider2D collision) 
     {
       
-         if (collision.CompareTag("Player") && !first)
+         if (collision.CompareTag("Player") && !first && !FindObjectOfType<PauseMenu>().GameIsPaused)
         {
                 canvas.SetActive(true);
               // first=true;
