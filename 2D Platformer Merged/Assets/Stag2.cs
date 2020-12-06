@@ -17,21 +17,25 @@ public class Stag2 : MonoBehaviour
         
     }
 
-
+   public void PlayStagSound()
+   {
+      FindObjectOfType<AudioManager>().Play("StagA"); // 06 June 2020
+   }
 
     private void OnTriggerEnter2D(Collider2D collision) {
      //  Debug.Log("Went to here");
-     
+      
         
            
               
-            
+     
    
        
 
 
         if (collision.CompareTag("Player") &&   animator.GetCurrentAnimatorStateInfo(0).IsName("Falling")) {
-             Debug.Log("Trigger not working");
+          
+             //Debug.Log("Trigger not working");
 
             FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
            // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");

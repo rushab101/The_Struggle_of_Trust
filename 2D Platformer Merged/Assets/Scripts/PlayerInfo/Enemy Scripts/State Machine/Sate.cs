@@ -48,5 +48,10 @@ public class State
 
     }
 
+    public virtual void PlayAttackSounds()
+    {
+        entity.PlayAttackSound();
+    }
+
 
 }

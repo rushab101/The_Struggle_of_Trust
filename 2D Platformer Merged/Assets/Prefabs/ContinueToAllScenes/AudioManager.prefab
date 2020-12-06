@@ -199,3 +199,33 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: LeverHit
+    clip: {fileID: 8300000, guid: 80d4e2f6104a62b48b9b2eb5ef19e1d0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: StagA
+    clip: {fileID: 8300000, guid: 80d4e2f6104a62b48b9b2eb5ef19e1d0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Yeti_hitA
+    clip: {fileID: 8300000, guid: 6696ff3dbf0f8fa4b9841b43b1e96a20, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Yeti_hitB
+    clip: {fileID: 8300000, guid: 2320a9f134c59c04f87e1252aaf36d9e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Yeti_Dead
+    clip: {fileID: 8300000, guid: 0ce89259a96c6af4ebd483dc71a56610, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Yeti_Attack
+    clip: {fileID: 8300000, guid: 22315016e78a3164db7a94fc9e7f64b8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

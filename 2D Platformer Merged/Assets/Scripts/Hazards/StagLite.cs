@@ -20,6 +20,11 @@ public class StagLite : MonoBehaviour
         
     }
 
+     public void PlayStagSound()
+   {
+      FindObjectOfType<AudioManager>().Play("StagA"); // 06 June 2020
+   }
+
     // Update is called once per frame
     void FixedUpdate()
     {

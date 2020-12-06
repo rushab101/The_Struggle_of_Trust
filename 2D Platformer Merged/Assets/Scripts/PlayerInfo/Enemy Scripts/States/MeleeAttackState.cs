@@ -49,12 +49,16 @@ public class MeleeAttackState : AttackState
       public override void TriggerAttack()
     {
         base.TriggerAttack();
+        entity.PlayAttackSound();
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attackPosition.position,stateData.attackRadius, stateData.whatIsPlayer);
         foreach (Collider2D collider in detectedObjects)
         {
             collider.transform.SendMessage("Damage",attackDetails);
         }
     }
+
+
+   
 
 
 
