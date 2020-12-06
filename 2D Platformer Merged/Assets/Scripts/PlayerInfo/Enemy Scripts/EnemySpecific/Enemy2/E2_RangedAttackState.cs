@@ -18,6 +18,7 @@ public class E2_RangedAttackState : RangedAttackState
     public override void Enter()
     {
         base.Enter();
+        entity.PlayRangeAttackSound();
     }
 
     public override void Exit()
@@ -33,6 +34,7 @@ public class E2_RangedAttackState : RangedAttackState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        
         if (isAnimationFinished)
         {
             if (isPlayerInMinAgroRange)

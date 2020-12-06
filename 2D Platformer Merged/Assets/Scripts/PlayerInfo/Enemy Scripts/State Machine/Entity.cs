@@ -252,6 +252,22 @@ public class Entity : MonoBehaviour
             
             FindObjectOfType<AudioManager>().Play("Yeti_Attack"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 3)
+        {
+            FindObjectOfType<AudioManager>().Play("sumari_Attack"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 2)
+        {
+             FindObjectOfType<AudioManager>().Play("Golem_Attack"); // 06 June 2020
+        }
+    }
+
+    public void PlayRangeAttackSound()
+    {
+        if (entityData.enemy_id == 3)
+        {
+            FindObjectOfType<AudioManager>().Play("Archer_Shoot"); // 06 June 2020
+        }
     }
 
 

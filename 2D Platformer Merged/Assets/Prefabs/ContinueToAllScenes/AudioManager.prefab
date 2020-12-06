@@ -229,3 +229,23 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: sumari_Attack
+    clip: {fileID: 8300000, guid: e1272e7d0671fa14e82c32d8efe35a10, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Golem_Attack
+    clip: {fileID: 8300000, guid: 04cec7015f815344ba3b4526e348c616, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Archer_Shoot
+    clip: {fileID: 8300000, guid: 1f5ef13f0126d1a4bb9f1a81a416045b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Archer_melee_attack
+    clip: {fileID: 8300000, guid: f7aedbb1a1ebefd4d9baada17518b62a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
