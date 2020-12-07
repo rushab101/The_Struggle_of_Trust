@@ -40,6 +40,7 @@ public class OldManTriggger : MonoBehaviour
             firstSentenceDone = true;
             old_man_dia.SetActive(true);
  old_man_dia.GetComponent<CanvasGroup>().alpha = 1f;;
+            FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
             FindObjectOfType<DialogueTrigger2>().TriggerDialogue();
         }
 
@@ -71,7 +72,7 @@ public class OldManTriggger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-
+         FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
         old_man_dia.SetActive(false);
         firstSentenceDone = false;
         this_plays_first = false;

@@ -34,4 +34,13 @@ public class AudioManager : MonoBehaviour {
         s.source.Play();
         // Adding audio source in other scripts e.g. running => FindObjectOfType<AudioManager>().Play(Name);
     }
+
+     public void Pause(string name) {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
+        // Adding audio source in other scripts e.g. running => FindObjectOfType<AudioManager>().Play(Name);
+    }
+
+
+
 }

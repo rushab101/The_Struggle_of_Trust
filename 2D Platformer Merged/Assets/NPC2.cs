@@ -20,7 +20,10 @@ public class NPC2 : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.E))
           {
              FindObjectOfType<DialogueManagerNPC3>().DisplayNextSentence();
-             if (FindObjectOfType<DialogueManagerNPC3>().sentences.Count < 0)
+                if (FindObjectOfType<DialogueManagerNPC3>().sentences.Count != 0)
+            FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
+
+             if (FindObjectOfType<DialogueManagerNPC3>().sentences.Count == 0)
              {
                   canvasObject.SetActive(false);
              }

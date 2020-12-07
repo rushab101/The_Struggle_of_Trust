@@ -20,7 +20,11 @@ public class NPC6Trigger : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.E))
           {
              FindObjectOfType<DialogueManagerNPC6>().DisplayNextSentence();
-             if (FindObjectOfType<DialogueManagerNPC6>().sentences.Count < 0)
+                if (FindObjectOfType<DialogueManagerNPC6>().sentences.Count != 0)
+            FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
+
+
+             if (FindObjectOfType<DialogueManagerNPC6>().sentences.Count  == 0)
              {
                   canvasObject.SetActive(false);
              }

@@ -133,6 +133,7 @@ private bool complete_this_one=false;
         canvasObject.SetActive(true);
        
         trigger.TriggerDialogue();
+        FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
 
        
      
@@ -145,6 +146,7 @@ private bool complete_this_one=false;
             if (Input.GetKeyDown(KeyCode.E))
           {
               manager.DisplayNextSentence();
+               FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
             
              if ( manager.sentences.Count < 1 && complete_this_one)
              {
@@ -152,6 +154,7 @@ private bool complete_this_one=false;
                  done_dialogue_sentence = true;
                   canvasObject.SetActive(false);
                   I.SetActive(false);
+                   FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
                   H.SetActive(true); //Actual Boss Fight
              }
           }      

@@ -249,3 +249,13 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Render_Text
+    clip: {fileID: 8300000, guid: 874c50d687a207444b0bbf42a145cbef, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Render_Text_long
+    clip: {fileID: 8300000, guid: fad9e5292c8cb414f87d960738bcd098, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

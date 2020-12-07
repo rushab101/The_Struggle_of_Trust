@@ -51,6 +51,7 @@ public class EvilManTrigger : MonoBehaviour
             old_man_dia.SetActive(true);
 
             FindObjectOfType<DialogueTrigger3>().TriggerDialogue();
+            FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
         }
 
     }
@@ -72,6 +73,7 @@ public class EvilManTrigger : MonoBehaviour
     {
 
         old_man_dia.SetActive(false);
+        FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
         firstSentenceDone = false;
           this_plays_first = false;
     }

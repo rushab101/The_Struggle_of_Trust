@@ -56,6 +56,7 @@ public class DialogueManagerNPC2 : MonoBehaviour
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
+		
 			dialogueText.text += letter;
 			yield return null;
 		}
