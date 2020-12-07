@@ -21,6 +21,7 @@ public class NPC5Trigger : MonoBehaviour
           {
              FindObjectOfType<DialogueManagerNPC5>().DisplayNextSentence();
                 if (FindObjectOfType<DialogueManagerNPC5>().sentences.Count != 0)
+            if (canvasObject.activeSelf)
             FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
 
              if (FindObjectOfType<DialogueManagerNPC5>().sentences.Count == 0)

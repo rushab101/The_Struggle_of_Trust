@@ -146,7 +146,9 @@ private bool complete_this_one=false;
             if (Input.GetKeyDown(KeyCode.E))
           {
               manager.DisplayNextSentence();
-               FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
+               if (canvasObject.activeSelf)
+            FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
+              // FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
             
              if ( manager.sentences.Count < 1 && complete_this_one)
              {
