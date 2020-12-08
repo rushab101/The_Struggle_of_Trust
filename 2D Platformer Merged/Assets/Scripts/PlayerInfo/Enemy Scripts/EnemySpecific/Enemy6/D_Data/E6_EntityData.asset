@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: E6_EntityData
   m_EditorClassIdentifier: 
   maxHealth: 30
-  damageHopSpeed: 3
-  wallCheckDistance: 7
+  damageHopSpeed: 0
+  wallCheckDistance: 4
   ledgeCheckDistance: 35
   groundCheckRadius: 1000
   minAgroDistance: 3
@@ -22,10 +22,12 @@ MonoBehaviour:
   stunResistance: 3
   sunRecoveryTime: 2
   closeRangeActionDistance: 1
-  hitParticle: {fileID: 0}
+  enemy_id: 6
+  hitParticle: {fileID: 7160565004742066919, guid: 54f48987e4285ba4f8b0f2fd0c8fe1ec,
+    type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0

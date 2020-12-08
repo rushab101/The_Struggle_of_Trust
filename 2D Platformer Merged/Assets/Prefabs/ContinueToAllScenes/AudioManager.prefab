@@ -259,3 +259,48 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: LavaSFX
+    clip: {fileID: 8300000, guid: 7ed92763e05fc1648b023a11ec686d61, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: wolf_hurt
+    clip: {fileID: 8300000, guid: 1cc7629901084db4595739439e2402b2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: wolf_dead
+    clip: {fileID: 8300000, guid: 366b4499da394464d9a60e5a89e8735c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: wolf_attack
+    clip: {fileID: 8300000, guid: 1785a0a84f8637e4ea9763e8986f251a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: rat_death
+    clip: {fileID: 8300000, guid: b9170896374456a46b45ba6ddd2944d7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: SpinningWheelA
+    clip: {fileID: 8300000, guid: 2d14e8d509ec8c0408f7f8276b99ecda, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: SpinningWheelB
+    clip: {fileID: 8300000, guid: ed8d682179556e84887ab1f66d6aead1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Acid
+    clip: {fileID: 8300000, guid: aba9064ff292d08479f6a4c7dc9aee20, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Spike
+    clip: {fileID: 8300000, guid: 65c212cb1976da14a8eb79cf7c83db84, type: 3}
+    volume: 0.25
+    pitch: 1
+    source: {fileID: 0}

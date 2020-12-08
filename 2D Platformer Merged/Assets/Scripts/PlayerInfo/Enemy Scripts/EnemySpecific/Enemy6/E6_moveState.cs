@@ -27,13 +27,14 @@ public class E6_moveState : MoveState
     public override void LogicUpdate()
     {
          base.LogicUpdate();
-       
+        entity.PlayMoveSound(); 
       
 
 
     if (isDetectingWall || !isDetectingLedge)
         {
-            enemy.idleState.SetFlipAfterIdle(true);
+             entity.Flip();
+           // enemy.idleState.SetFlipAfterIdle(true);
     
             stateMachine.ChangeState(enemy.idleState);
         }

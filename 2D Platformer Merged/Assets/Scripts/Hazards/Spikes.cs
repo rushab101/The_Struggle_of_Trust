@@ -20,6 +20,7 @@ public class Spikes : MonoBehaviour {
                   hitSpike = false;
                   if ( FindObjectOfType<PlayerCombatController>().downAttacking)
                   {
+                        FindObjectOfType<AudioManager>().Play("Spike"); // 06 June 2020
                        FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 30);
                   }
                   

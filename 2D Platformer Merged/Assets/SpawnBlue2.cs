@@ -48,6 +48,7 @@ public class SpawnBlue2 : MonoBehaviour
     {
           if (!e1.active && !e2.active && !e3.active)
         {
+          
             box.isTrigger= false;
             b1.SetActive(true);
             b2.SetActive(true);

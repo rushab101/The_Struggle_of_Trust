@@ -102,8 +102,10 @@ touchDamageCheck;
         base.Damage(attackDetails);
         if (isDead)
         {
+            PlayDeadSound();
             stateMachine.ChangeState(deadState);
         }
+        else PlayHitSound();
 
     }
     public void CheckTouchDamage()

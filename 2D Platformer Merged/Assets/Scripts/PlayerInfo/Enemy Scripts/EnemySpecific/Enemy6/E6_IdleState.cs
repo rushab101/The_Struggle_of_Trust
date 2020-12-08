@@ -27,7 +27,9 @@ public class E6_IdleState : IdleState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+       
        // enemy.CheckTouchDamage();
+      // entity.StopMoveSound();
         if (isIdleTimeOver)
         {
             stateMachine.ChangeState(enemy.moveState );

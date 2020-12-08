@@ -19,7 +19,8 @@ public class Lever3 : MonoBehaviour
        
         if (Input.GetKey(KeyCode.Z) && !went_it)
         {
-            Debug.Log("It went in here");
+          //  Debug.Log("It went in here");
+           FindObjectOfType<AudioManager>().Play("LeverHit"); // 06 June 2020
             c.SetActive(true);
             went_it = true;
              anim.SetBool("done",true);

@@ -216,9 +216,26 @@ public class Entity : MonoBehaviour
         {
              FindObjectOfType<AudioManager>().Play("Yeti_hitB"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 7)
+        {
+            FindObjectOfType<AudioManager>().Play("wolf_hurt"); // 06 June 2020
+        }
+      
+       
 
     }
 
+
+    public virtual void PlayMoveSound()
+    {
+        
+    }
+
+    public virtual void StopMoveSound()
+    {
+
+         FindObjectOfType<AudioManager>().Pause("thomb_move"); // 06 June 2020
+    }
    
 
     public virtual void PlayDeadSound()
@@ -243,6 +260,14 @@ public class Entity : MonoBehaviour
         {
              FindObjectOfType<AudioManager>().Play("Yeti_Dead"); // 06 June 2020
         }
+         else if (entityData.enemy_id == 7)
+        {
+            FindObjectOfType<AudioManager>().Play("wolf_dead"); // 06 June 2020
+        }
+          else if (entityData.enemy_id == 8)
+        {
+             FindObjectOfType<AudioManager>().Play("rat_death"); // 06 June 2020
+        }
     }
 
     public void PlayAttackSound()
@@ -259,6 +284,10 @@ public class Entity : MonoBehaviour
         else if (entityData.enemy_id == 2)
         {
              FindObjectOfType<AudioManager>().Play("Golem_Attack"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 7)
+        {
+            FindObjectOfType<AudioManager>().Play("wolf_attack"); // 06 June 2020
         }
     }
 

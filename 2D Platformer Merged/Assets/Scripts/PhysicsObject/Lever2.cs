@@ -19,6 +19,7 @@ public class Lever2 : MonoBehaviour
        
         if (Input.GetKey(KeyCode.Z) && !went_it)
         {
+             FindObjectOfType<AudioManager>().Play("LeverHit"); // 06 June 2020
             Debug.Log("It went in here");
             c.SetActive(true);
             went_it = true;
