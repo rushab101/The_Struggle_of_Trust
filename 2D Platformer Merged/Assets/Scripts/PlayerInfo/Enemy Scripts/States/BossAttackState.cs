@@ -54,7 +54,7 @@ public class BossAttackState : State
     }
     public virtual void TriggerAttack()
     {
-
+        entity.PlayAttackSound();
     }
     public virtual void FinishAttack()
     {

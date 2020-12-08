@@ -20,6 +20,7 @@ public class E9_MeleeAttack : Boss_melee_attack_state
     {
         base.Enter();
         timer = 0;
+          entity.PlayAttackSound();
     }
 
    
@@ -38,6 +39,7 @@ public class E9_MeleeAttack : Boss_melee_attack_state
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+      
       //  Debug.Log(timer);
       enemy.CheckTouchDamage();
        if (isAnimationFinished)

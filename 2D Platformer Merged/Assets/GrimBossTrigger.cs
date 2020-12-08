@@ -18,6 +18,7 @@ public class GrimBossTrigger : MonoBehaviour
     public bool boss_dead_save = false;
 
     bool went_in = false;
+    public AudioSource audio;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class GrimBossTrigger : MonoBehaviour
 
         if (collision.CompareTag("Player") && !went_in)
         {
+            audio.Play();
             Time.timeScale = 0f;
             went_in = true;
             StartCoroutine(Test());
@@ -87,6 +89,7 @@ public class GrimBossTrigger : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(0.5f);
         E.SetActive(true);
+
           Time.timeScale = 1f;
     }
 
@@ -96,6 +99,7 @@ public class GrimBossTrigger : MonoBehaviour
      
         if (!boss.active &&  boos_is_dead)
         {
+            FindObjectOfType<TriggerScythBoss>().audio.Pause();
             PlayerPrefs.SetInt("boss_save",2);
             canvas.transform.GetChild(0).gameObject.SetActive(true);
             StartCoroutine(Test_S());

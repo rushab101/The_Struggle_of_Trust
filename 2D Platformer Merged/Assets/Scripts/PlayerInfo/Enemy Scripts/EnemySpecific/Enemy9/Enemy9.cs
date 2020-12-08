@@ -97,9 +97,12 @@ touchDamageCheck;
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+      
+
         rangedAttackStateData.radius+=50f;
         rangedAttackStateData.total_projectiles+=1;
         damage_counter++;
+        if (damage_counter == 10)  FindObjectOfType<AudioManager>().Play("phase2");
         if (damage_counter >= 10)
         {
             a.SetActive(true);
@@ -110,11 +113,13 @@ touchDamageCheck;
         {
                a.SetActive(false);
             b.SetActive(false);
+             FindObjectOfType<AudioManager>().Play("ThompDead");
             FindObjectOfType<GrimBossTrigger>().boos_is_dead = true;
           stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
+              FindObjectOfType<AudioManager>().Play("grim_hurt"); // 06 June 2020
             stateMachine.ChangeState(hurtState);
         }
 

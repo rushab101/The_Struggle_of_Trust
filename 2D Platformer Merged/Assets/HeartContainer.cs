@@ -13,6 +13,7 @@ public class HeartContainer : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("gain_life");
              FindObjectOfType<PlayerStats>().AddHealth();
            // UnityEngine.Debug.Log("Health-- TRUE (Spikes)");
            Destroy(gameObject);

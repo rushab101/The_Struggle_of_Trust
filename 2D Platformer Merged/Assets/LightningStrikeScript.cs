@@ -27,6 +27,12 @@ public class LightningStrikeScript : MonoBehaviour
      }
      
     }
+    public void playLightningSFX()
+    {
+         FindObjectOfType<AudioManager>().Play("Lightning"); // 06 June 2020
+
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

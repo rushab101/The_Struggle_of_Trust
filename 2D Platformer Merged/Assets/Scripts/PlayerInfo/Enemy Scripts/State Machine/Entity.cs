@@ -289,6 +289,10 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("wolf_attack"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 9)
+        {
+            FindObjectOfType<AudioManager>().Play("swing_scyth"); // 06 June 2020
+        }
     }
 
     public void PlayRangeAttackSound()
@@ -296,6 +300,10 @@ public class Entity : MonoBehaviour
         if (entityData.enemy_id == 3)
         {
             FindObjectOfType<AudioManager>().Play("Archer_Shoot"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 9)
+        {
+            FindObjectOfType<AudioManager>().Play("range_scyth"); // 06 June 2020
         }
     }
 

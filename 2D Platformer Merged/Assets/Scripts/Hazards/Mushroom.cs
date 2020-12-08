@@ -13,6 +13,7 @@ public class Mushroom : MonoBehaviour
             
                   if ( FindObjectOfType<PlayerCombatController>().downAttacking)
                   {
+                      FindObjectOfType<AudioManager>().Play("bounce");
                        FindObjectOfType<PlayerController>().rb.velocity = new Vector2(0, 40);
                   }
                   

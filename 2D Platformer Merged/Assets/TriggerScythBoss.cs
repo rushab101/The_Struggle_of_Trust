@@ -10,6 +10,8 @@ public class TriggerScythBoss : MonoBehaviour
      public GameObject LightB;
      public GameObject BossName;
      int counter = 0;
+     public AudioSource audio;
+    
 
 
 
@@ -47,8 +49,10 @@ public class TriggerScythBoss : MonoBehaviour
              Axe.SetActive(false);
              BossName.SetActive(true);
             counter++;
-           
+            audio.Play();  
         }
+        
+       
         
     }
 }

@@ -304,3 +304,38 @@ MonoBehaviour:
     volume: 0.25
     pitch: 1
     source: {fileID: 0}
+  - name: Lightning
+    clip: {fileID: 8300000, guid: ed0230cdae0408f41beb63158d3d7bdd, type: 3}
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: grim_hurt
+    clip: {fileID: 8300000, guid: 2e2718e8e78bad04ba25767bad0b7ce0, type: 3}
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: phase2
+    clip: {fileID: 8300000, guid: dc459dd229a23bd49bd4901ba4cd89de, type: 3}
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: gain_life
+    clip: {fileID: 8300000, guid: 73ebdea4a3e4527409c1c2bf8d294550, type: 3}
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: bounce
+    clip: {fileID: 8300000, guid: 56f14efe5ed99e543b6d1cafe4f32bae, type: 3}
+    volume: 0.75
+    pitch: 1
+    source: {fileID: 0}
+  - name: swing_scyth
+    clip: {fileID: 8300000, guid: b604f385cf0a24449a0ce61e74d41ec8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: range_scyth
+    clip: {fileID: 8300000, guid: 49dcf43412a00fb48b9cd33de81ccc96, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

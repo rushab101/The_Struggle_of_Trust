@@ -19,6 +19,7 @@ public class E9_RangeAttackState : BossRangeAttackState
     public override void Enter()
     {
         base.Enter();
+        entity.PlayRangeAttackSound();
     }
 
     public override void Exit()
@@ -34,7 +35,7 @@ public class E9_RangeAttackState : BossRangeAttackState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-     
+        
         if (isAnimationFinished)
         {
            //  Debug.Log("Went into range");
@@ -50,5 +51,6 @@ public class E9_RangeAttackState : BossRangeAttackState
     public override void TriggerAttack()
     {
         base.TriggerAttack();
+        
     }
 }

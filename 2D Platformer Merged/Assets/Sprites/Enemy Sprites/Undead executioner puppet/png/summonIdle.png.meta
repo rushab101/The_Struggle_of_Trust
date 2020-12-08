@@ -5,6 +5,18 @@ TextureImporter:
   - first:
       213: -6973191664251310759
     second: summonIdle_0
+  - first:
+      213: 1894498064552952212
+    second: summonIdle_0
+  - first:
+      213: -4325375432071135373
+    second: summonIdle_1
+  - first:
+      213: 945793653771260252
+    second: summonIdle_2
+  - first:
+      213: -4601302620478663085
+    second: summonIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,10 +105,10 @@ TextureImporter:
       name: summonIdle_0
       rect:
         serializedVersion: 2
-        x: 69
-        y: 12
-        width: 10
-        height: 20
+        x: 0
+        y: 0
+        width: 50
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,8 +116,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95de59d702f3a3f90800000000000000
-      internalID: -6973191664251310759
+      spriteID: 4910855c3fb9a4a10800000000000000
+      internalID: 1894498064552952212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summonIdle_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fb23b16fd29f3c0800000000000000
+      internalID: -4325375432071135373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summonIdle_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51dadb2152202d00800000000000000
+      internalID: 945793653771260252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: summonIdle_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3569b4a35a3e420c0800000000000000
+      internalID: -4601302620478663085
       vertices: []
       indices: 
       edges: []

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2289633805297013084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: -0.32, z: 0}
+  m_LocalPosition: {x: -0.077, y: -0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7811972357406123922}
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7811972357406123923}
   - component: {fileID: 7811972357406123920}
   - component: {fileID: 1265535042624190170}
+  - component: {fileID: 6444337604088847411}
   m_Layer: 0
   m_Name: Boss Projectile
   m_TagString: Untagged
@@ -157,3 +158,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   damagePosition: {fileID: 9170722655745337126}
+--- !u!95 &6444337604088847411
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811972357406123926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c873f2eefbaf014e8ef4805062ac4e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

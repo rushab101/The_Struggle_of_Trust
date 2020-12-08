@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44467fb52f60b54c9ba237fb5652071, type: 3}
   m_Name: E9_EntityData
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 250
   damageHopSpeed: 0
   wallCheckDistance: 5
   ledgeCheckDistance: 1.5
@@ -22,7 +22,8 @@ MonoBehaviour:
   stunResistance: 0
   sunRecoveryTime: 2
   closeRangeActionDistance: 1
-  hitParticle: {fileID: 3776594737084044855, guid: f1165bc6f08b1e14797ff02fc650cc23,
+  enemy_id: 9
+  hitParticle: {fileID: 7160565004742066919, guid: 54f48987e4285ba4f8b0f2fd0c8fe1ec,
     type: 3}
   whatIsGround:
     serializedVersion: 2
