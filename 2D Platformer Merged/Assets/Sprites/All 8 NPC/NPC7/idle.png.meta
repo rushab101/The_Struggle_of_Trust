@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: 5667770778836351527
     second: idle_9
+  - first:
+      213: -1480364998338425778
+    second: idle_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,7 +128,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +149,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +170,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +191,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +212,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +233,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +254,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +275,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +296,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,7 +317,7 @@ TextureImporter:
         width: 35
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,6 +325,27 @@ TextureImporter:
       bones: []
       spriteID: 72a31e48e77f7ae40800000000000000
       internalID: 5667770778836351527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 100
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ccd1890efa47be0800000000000000
+      internalID: -1480364998338425778
       vertices: []
       indices: 
       edges: []

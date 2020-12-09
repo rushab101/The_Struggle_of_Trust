@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -7424291854051542380
     second: gothic-hero-idle_3
+  - first:
+      213: 8326222219612863729
+    second: gothic-hero-idle_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,7 +122,7 @@ TextureImporter:
         width: 38
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,7 +143,7 @@ TextureImporter:
         width: 38
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +164,7 @@ TextureImporter:
         width: 38
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +185,7 @@ TextureImporter:
         width: 38
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,6 +193,27 @@ TextureImporter:
       bones: []
       spriteID: 49a7e62f4ed97f890800000000000000
       internalID: -7424291854051542380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gothic-hero-idle_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 21
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc3df89efeac8370800000000000000
+      internalID: 8326222219612863729
       vertices: []
       indices: 
       edges: []

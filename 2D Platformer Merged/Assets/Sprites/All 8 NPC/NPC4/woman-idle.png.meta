@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: 6121779862897708526
     second: woman-idle_6
+  - first:
+      213: -890983405314583236
+    second: woman-idle_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,7 +119,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,7 +140,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,7 +161,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,7 +182,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,7 +203,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -221,7 +224,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,7 +245,7 @@ TextureImporter:
         width: 37
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -250,6 +253,27 @@ TextureImporter:
       bones: []
       spriteID: eed4829c95ee4f450800000000000000
       internalID: 6121779862897708526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-idle_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35d471405792a3f0800000000000000
+      internalID: -890983405314583236
       vertices: []
       indices: 
       edges: []
