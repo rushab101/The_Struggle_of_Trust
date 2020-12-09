@@ -339,3 +339,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: break
+    clip: {fileID: 8300000, guid: 6c26b3e8ad9740945ae2ae5d1298c1cd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
