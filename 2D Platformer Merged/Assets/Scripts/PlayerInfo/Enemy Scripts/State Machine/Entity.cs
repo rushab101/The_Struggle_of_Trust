@@ -220,6 +220,24 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("wolf_hurt"); // 06 June 2020
         }
+        else if (entityData.enemy_id == 10)
+        {
+            FindObjectOfType<AudioManager>().Play("ogre_hurt"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 11)
+        {
+            FindObjectOfType<AudioManager>().Play("skeleton_hurt"); // 06 June 2020
+        }
+         else if (entityData.enemy_id == 12)
+        {
+       
+            FindObjectOfType<AudioManager>().Play("shade_hurt"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 13)
+        {
+       
+            FindObjectOfType<AudioManager>().Play("eyeball_hurt"); // 06 June 2020
+        }
       
        
 
@@ -268,6 +286,24 @@ public class Entity : MonoBehaviour
         {
              FindObjectOfType<AudioManager>().Play("rat_death"); // 06 June 2020
         }
+         else if (entityData.enemy_id == 10)
+        {
+            FindObjectOfType<AudioManager>().Play("ogre_dead"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 11)
+        {
+            FindObjectOfType<AudioManager>().Play("skeleton_dead"); // 06 June 2020
+        }
+          else if (entityData.enemy_id == 12)
+        {
+            FindObjectOfType<AudioManager>().Play("shade_dead"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 13)
+        {
+            FindObjectOfType<AudioManager>().Play("eyeball_dead"); // 06 June 2020
+        }
+      
+      
     }
 
     public void PlayAttackSound()
@@ -293,6 +329,16 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("swing_scyth"); // 06 June 2020
         }
+         else if (entityData.enemy_id == 10)
+        {
+            FindObjectOfType<AudioManager>().Play("ogre_attack"); // 06 June 2020
+        }
+        else if (entityData.enemy_id == 11)
+        {
+            FindObjectOfType<AudioManager>().Play("skeleton_attack"); // 06 June 2020
+        }
+      
+
     }
 
     public void PlayRangeAttackSound()
@@ -305,6 +351,11 @@ public class Entity : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("range_scyth"); // 06 June 2020
         }
+          else if (entityData.enemy_id == 12)
+        {
+            FindObjectOfType<AudioManager>().Play("shade_attack"); // 06 June 2020
+        }
+      
     }
 
 

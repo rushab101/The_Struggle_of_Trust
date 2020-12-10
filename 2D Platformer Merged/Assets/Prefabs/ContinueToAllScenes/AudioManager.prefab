@@ -344,3 +344,58 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: ogre_hurt
+    clip: {fileID: 8300000, guid: f7e327f04a910454d911bb971a639cc6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ogre_dead
+    clip: {fileID: 8300000, guid: fd969d7bd5c38274f9bef30ee836cfa0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ogre_attack
+    clip: {fileID: 8300000, guid: d2c3aa08872276741b328f30567d692a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: skeleton_hurt
+    clip: {fileID: 8300000, guid: 1b4f699f2688be544ba63e5e6195b93b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: skeleton_dead
+    clip: {fileID: 8300000, guid: 1503057a33fd99940a30ff384b2cf9bd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: skeleton_attack
+    clip: {fileID: 8300000, guid: 1d3c564dfe1ebfb45b1eb6f0f7d27be2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: shade_hurt
+    clip: {fileID: 8300000, guid: 10275ca3a692c0549908b9363bb98e8f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: shade_dead
+    clip: {fileID: 8300000, guid: 64f13179f9d99e449a590281950bcfbe, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: shade_attack
+    clip: {fileID: 8300000, guid: c3929f66274aae94888dd186f0c34e2a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: eyeball_hurt
+    clip: {fileID: 8300000, guid: 8866ce09e83d2eb4cbb0addf6245d25a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: eyeball_dead
+    clip: {fileID: 8300000, guid: 342fd4a3de5fa614098a5dd26463f6d5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

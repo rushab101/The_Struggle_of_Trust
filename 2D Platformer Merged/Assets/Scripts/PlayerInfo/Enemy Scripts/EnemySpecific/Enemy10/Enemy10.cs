@@ -82,10 +82,12 @@ touchDamageCheck;
 
         if (isDead)
         {
+            PlayDeadSound();
             stateMachine.ChangeState(deadState);
         }
          else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
+            PlayHitSound();
           //  FindObjectOfType<AudioManager>().Play("SlimeHit"); // 06 June 2020
             stateMachine.ChangeState(hurtState);
         }

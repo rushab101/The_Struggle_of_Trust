@@ -50,5 +50,6 @@ public class E10_attack : RangedAttackState
     public override void TriggerAttack()
     {
         base.TriggerAttack();
+        entity.PlayRangeAttackSound();
     }
 }
