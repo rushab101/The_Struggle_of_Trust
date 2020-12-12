@@ -19,9 +19,10 @@ public class NPC8 : MonoBehaviour
         
          if (Input.GetKeyDown(KeyCode.E))
           {
-             FindObjectOfType<DialogueManagerNPC4>().DisplayNextSentence();
-             if (canvasObject.activeSelf && FindObjectOfType<DialogueManagerNPC8>().sentences.Count != 0)
+               if (canvasObject.activeSelf && FindObjectOfType<DialogueManagerNPC8>().sentences.Count != 0)
             FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
+             FindObjectOfType<DialogueManagerNPC8>().DisplayNextSentence();
+            
              if (FindObjectOfType<DialogueManagerNPC8>().sentences.Count == 0)
              {
                   canvasObject.SetActive(false);

@@ -10,6 +10,7 @@ public class EndTrigger : MonoBehaviour
 {
      public GameObject enter_code_menu;
      private InputField input;
+     private string ans;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class EndTrigger : MonoBehaviour
        
 
         enter_code_menu.SetActive(false);
+        ans = "1374485124128129160170";
 
     }
 
@@ -57,8 +59,9 @@ public class EndTrigger : MonoBehaviour
 
 public void inputBetValue(InputField userInput)
 {
+    if (userInput.text == ans)
+    SceneManager.LoadScene("End");
     
-    Debug.Log(userInput.text);
 }
 
 }
