@@ -11,7 +11,7 @@ public class PlayerPos : MonoBehaviour
    void Awake()
    {
        Checking =  PlayerPrefs.GetFloat("Check1");
-       //PlayerPrefs.DeleteAll();
+    //   PlayerPrefs.DeleteAll();
    }
 
     
@@ -20,7 +20,7 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-       //  LoadPlayer();
+       LoadPlayer();
 
        
        
@@ -106,6 +106,7 @@ public class PlayerPos : MonoBehaviour
          
         else 
         {
+
        // LoadPlayer();
         }
      
@@ -120,6 +121,7 @@ public class PlayerPos : MonoBehaviour
 
    public void LoadPlayer()
     {
+       FindObjectOfType<PlayerStats>().ResetHealth();
         PlayerData data = SaveSystem.LoadPlayer();
         Vector2 position;
         position.x = data.position[0];

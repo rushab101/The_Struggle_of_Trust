@@ -90,7 +90,7 @@ public class CombatDummyController : MonoBehaviour {
     }
 
     private void Knockback() {
-        Debug.Log("Ok");
+       // Debug.Log("Ok");
         knockback = true;
         knockbackStart = Time.time;
         rbAlive.velocity = new Vector2(knockbackSpeedX * playerFacingDirection, knockbackSpeedY);

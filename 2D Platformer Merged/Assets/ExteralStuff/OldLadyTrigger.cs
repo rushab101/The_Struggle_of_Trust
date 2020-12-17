@@ -21,7 +21,12 @@ public class OldLadyTrigger : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.E))
           {
              FindObjectOfType<DialogueManager>().DisplayNextSentence();
-             if (FindObjectOfType<DialogueManager>().sentences.Count < 0)
+              if (FindObjectOfType<DialogueManager>().sentences.Count != 0){
+                  if (canvasObject.activeSelf)
+              FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
+              }
+            
+             if (FindObjectOfType<DialogueManager>().sentences.Count == 0)
              {
                   canvasObject.SetActive(false);
              }

@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-      // PlayerPrefs.DeleteAll();
+      //  PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         if (SceneLoader == 0)
         {
@@ -34,14 +34,19 @@ public class MainMenu : MonoBehaviour
             level = "CaveExit";
         }
       
-        //FindObjectOfType<Scene1Save>().ResetValues();
+    //    FindObjectOfType<Scene1Save>().ResetValues();
         
     }
     public void PlayGame()
     {
-       // FindObjectOfType<Scene1Save>().ResetValues();
+       //  FindObjectOfType<PlayerStats>().ResetHealth();
+    //    FindObjectOfType<Scene1Save>().ResetValues();
         SceneManager.LoadScene(level);
 
+    }
+    private void Update() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 

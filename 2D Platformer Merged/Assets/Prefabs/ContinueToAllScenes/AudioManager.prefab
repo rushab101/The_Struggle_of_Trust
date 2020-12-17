@@ -66,7 +66,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: 38f688fd25285dd43bab4b6161537cc2, type: 3}
-    volume: 0.16
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: PlayerDash
@@ -120,7 +120,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: RunningOnGrassSFX
-    clip: {fileID: 8300000, guid: 4a65fc16aec93be41995963dc6b31572, type: 3}
+    clip: {fileID: 8300000, guid: 1268977ef557c80408258f1cc2b984c5, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: somer
     clip: {fileID: 8300000, guid: f08d9dafa9901e644981d1ecc63f302c, type: 3}
-    volume: 0.15
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: square_create

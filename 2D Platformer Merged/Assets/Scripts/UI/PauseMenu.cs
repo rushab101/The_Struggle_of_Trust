@@ -28,15 +28,28 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
+             
             if (GameIsPaused)
             {
                 Resume();
+               
             }
             else
             {
+               
                 Pause();
             }
         }
+        if (!GameIsPaused){
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else if (GameIsPaused)
+        {
+             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
     }
    public  void Resume()
     {
@@ -61,6 +74,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         //backgroundAudio.Play();
+        FindObjectOfType<PlayerStats>().ResetHealth();
         SceneManager.LoadScene("Main Menu");
     }
 

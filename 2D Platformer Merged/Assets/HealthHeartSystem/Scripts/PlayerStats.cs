@@ -73,7 +73,8 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0 && !went_in)
         {
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
-          
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
                 GameOver = true;
             //PlayerisDead
            
@@ -112,11 +113,14 @@ public class PlayerStats : MonoBehaviour
         }
 
     }
-
+    public void ResetHealth()
+    {
+        health = MaxHealth;
+    }
 
     void OnApplicationQuit()
     {
-        health = MaxHealth;
+        
         SaveSettings();
 
     }

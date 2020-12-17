@@ -17,7 +17,7 @@ public class FadeInSection1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!went_in)
+        if (!went_in )
         {
              canvasObject.SetActive(true);
             went_in = true;
@@ -61,6 +61,10 @@ public class FadeInSection1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (FindObjectOfType<PauseMenu>().GameIsPaused)
+        {
+            canvasObject.SetActive(false);
+        }
 
     }
 }

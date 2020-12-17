@@ -7,13 +7,23 @@ public class AreaBAudio : MonoBehaviour
     // Start is called before the first frame update
 
     public AudioSource audio;
-    private void Awake() {
-        audio.Pause();    
+    float firstPlay;
+  
+    void Awake()
+    {
+        audio.Pause();
+        firstPlay = PlayerPrefs.GetFloat("FirstPlay");
     }
+    
+ 
 
      private void OnTriggerEnter2D(Collider2D collision) {
          if (collision.CompareTag("Player"))
-            audio.Play();
+         {
+             audio.volume = firstPlay;
+             audio.Play();
+         }
+            
     }
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.CompareTag("Player"))

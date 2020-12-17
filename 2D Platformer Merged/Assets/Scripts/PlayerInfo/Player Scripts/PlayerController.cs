@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour {
     private bool damagePlayer;
     private bool isDashing;
     private bool isSlidding;
+    private int counter = 0;
 
     [SerializeField]
     private Vector2 knockbackSpeed;
@@ -254,9 +255,13 @@ public class PlayerController : MonoBehaviour {
 
 
 
-        if (isTouchingWall) {
+        if (isTouchingWall || isTouchingWall2) {
+          //  counter++;
             checkJumpMultiplier = false;
             canWallJump = true;
+        }
+        else{
+            counter = 0;
         }
 
         if (amountOfJumpsLeft <= 0) {
@@ -530,11 +535,13 @@ public class PlayerController : MonoBehaviour {
     private void CheckJump() {
         if (jumpTimer > 0) {
             //WallJump
+            /*
             if (!isGrounded && (isTouchingWall || isTouchingWall2) && movementInputDirection != 0 && movementInputDirection != facingDirection) {
-                WallJump();
+              //  WallJump();
             }
-            else if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0 && (!isTouchingWall || !isTouchingWall2)) {
-
+            */
+            if (isGrounded || fJumpPressedRemember > 0 || fGroundedRemeber > 0 && (!isTouchingWall || !isTouchingWall2)) {
+               
                 fGroundedRemeber = 0;
                 fJumpPressedRemember = 0;
                 NormalJump();
@@ -544,7 +551,7 @@ public class PlayerController : MonoBehaviour {
         if (isAttemptingToJump) {
             jumpTimer -= Time.deltaTime;
         }
-
+/*
         if (wallJumpTimer > 0) {
             if (hasWallJumped && movementInputDirection == -lastWallJumpDirection) {
                 rb.velocity = new Vector2(rb.velocity.x, 0.0f);
@@ -557,6 +564,7 @@ public class PlayerController : MonoBehaviour {
                 wallJumpTimer -= Time.deltaTime;
             }
         }
+*/
     }
 
     private void NormalJump() {
@@ -583,7 +591,7 @@ public class PlayerController : MonoBehaviour {
         if (isGrounded) {
             canWallJump = true;
         }
-
+       
         if (canNormalJump) {
             FindObjectOfType<AudioManager>().Play("PlayerJump");
             CreateDust(); //07 may 2020
@@ -617,6 +625,7 @@ public class PlayerController : MonoBehaviour {
     private void WallJump() {
         if (canWallJump && unlock_wall_jump) {
             FindObjectOfType<AudioManager>().Play("PlayerJump");
+            UnityEngine.Debug.Log("Its in the wall jump");
             CreateDust(); //07 may 2020
             rb.velocity = new Vector2(rb.velocity.x, 0.0f);
             isWallSliding = false;
