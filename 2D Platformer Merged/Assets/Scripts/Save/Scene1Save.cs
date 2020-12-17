@@ -747,7 +747,7 @@ public class Scene1Save : MonoBehaviour
         //-------------Red Lever Save Case-------------------------------------\\
         //Soft Save
         // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
-        Debug.Log("Cancel is " + Green_Lever_anim.GetBool("cancel"));
+//        Debug.Log("Cancel is " + Green_Lever_anim.GetBool("cancel"));
 
 
 

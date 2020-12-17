@@ -35,6 +35,7 @@ public class ContineFire : MonoBehaviour
             gm.lastCheckPointPos = transform.position;
             FindObjectOfType<Currency>().SaveSettings();
             PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
+           // UnityEngine.Debug.Log(SceneManager.GetActiveScene().buildIndex);
             heal = FindObjectOfType<PlayerStats>().MaxHealth;
             FindObjectOfType<PlayerStats>().Heal(heal);
             SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);

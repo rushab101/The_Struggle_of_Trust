@@ -32,6 +32,14 @@ public class PlayerPos : MonoBehaviour
                 transform.position = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
+         else if (Checking == 1.1f)
+         {
+                 Vector2 position;
+                position.x = -63.2f;
+                 position.y= -0.1f;
+                transform.position = position;
+                PlayerPrefs.SetFloat("Check1",0);
+         }
          else if (Checking == 2) //At the Cave Entrance
          {
               Vector2 position;
@@ -115,6 +123,7 @@ public class PlayerPos : MonoBehaviour
 
    void Update()
    {
+      //    UnityEngine.Debug.Log(transform.position);
      // Checking =  PlayerPrefs.GetFloat("Check1");
    }
 

@@ -18,7 +18,7 @@ public class Scene4Save : MonoBehaviour
         scyth.SetActive(true);
         mush1.SetActive(false);
         mush2.SetActive(false);
-        PlayerPrefs.DeleteAll();
+     //   PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
