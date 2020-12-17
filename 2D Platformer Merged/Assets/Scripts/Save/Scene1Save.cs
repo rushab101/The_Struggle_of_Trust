@@ -81,7 +81,7 @@ public class Scene1Save : MonoBehaviour
         Create14_child = Create14.transform.GetChild(0).gameObject;
         rend = BlueLever.GetComponent<SpriteRenderer>();
 
-           PlayerPrefs.DeleteAll();
+         //  PlayerPrefs.DeleteAll();
     }
 
 
