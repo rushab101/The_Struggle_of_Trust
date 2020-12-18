@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+       // PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         if (SceneLoader == 0)
         {
@@ -25,11 +25,16 @@ public class MainMenu : MonoBehaviour
         {
             level = "CaveEntrance";
         }
-        else if (SceneLoader == 3)
+        else if (SceneLoader == 4)
         {
             level = "MiddleCave";
+             //PlayerPrefs.SetFloat("Check1",3.1f);
         }
-        else if (SceneLoader == 4)
+        else if (SceneLoader == 5)
+        {
+            level = "BossFight1";
+        }
+        else if (SceneLoader == 6)
         {
             level = "CaveExit";
         }
@@ -41,7 +46,7 @@ public class MainMenu : MonoBehaviour
     {
        //  FindObjectOfType<PlayerStats>().ResetHealth();
     //    FindObjectOfType<Scene1Save>().ResetValues();
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene("MiddleCave");
 
     }
     private void Update() {

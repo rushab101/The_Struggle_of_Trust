@@ -88,6 +88,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        FindObjectOfType<PlayerStats>().ResetHealth();
         Debug.Log("QUIT!");
         Application.Quit();
     }

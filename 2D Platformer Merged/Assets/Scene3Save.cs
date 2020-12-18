@@ -28,7 +28,7 @@ public class Scene3Save : MonoBehaviour
         Yellow_Lever_anim = GameObject.Find("Yellow Lever").GetComponent<Animator>();
 
 
-        //   PlayerPrefs.DeleteAll();
+     //   PlayerPrefs.DeleteAll();
     }
 
 

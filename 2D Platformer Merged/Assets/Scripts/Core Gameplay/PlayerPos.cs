@@ -20,7 +20,8 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-       LoadPlayer();
+      LoadPlayer();
+     //Checking = 3;
 
        
        
@@ -58,6 +59,10 @@ public class PlayerPos : MonoBehaviour
                  position.z = 10.47732f;
                 transform.localPosition = position;
                 PlayerPrefs.SetFloat("Check1",0);
+         }
+         else if (Checking == 3.1f)
+         {
+                LoadPlayer();
          }
          else if (Checking == 4) //Left Cave Middle and entered Cave Entrance
          {
@@ -123,7 +128,7 @@ public class PlayerPos : MonoBehaviour
 
    void Update()
    {
-      //    UnityEngine.Debug.Log(transform.position);
+          UnityEngine.Debug.Log(transform.position);
      // Checking =  PlayerPrefs.GetFloat("Check1");
    }
 

@@ -47,6 +47,7 @@ public class ContineFire : MonoBehaviour
             {
                 FindObjectOfType<Scene1Save>().SaveValues();
             }
+            
 
 
 
