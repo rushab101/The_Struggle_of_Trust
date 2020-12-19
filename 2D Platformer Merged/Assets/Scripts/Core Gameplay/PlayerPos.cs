@@ -20,7 +20,7 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-      LoadPlayer();
+    //  LoadPlayer();
      //Checking = 3;
 
        
