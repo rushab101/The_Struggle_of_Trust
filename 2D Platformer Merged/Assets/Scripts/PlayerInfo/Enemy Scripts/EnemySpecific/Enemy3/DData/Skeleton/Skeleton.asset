@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   damageHopSpeed: 3
-  wallCheckDistance: 1.2
+  wallCheckDistance: 1.4
   ledgeCheckDistance: 0.4
   groundCheckRadius: 0.3
   minAgroDistance: 3
