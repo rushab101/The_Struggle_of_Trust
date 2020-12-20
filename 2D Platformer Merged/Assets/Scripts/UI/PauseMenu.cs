@@ -41,8 +41,8 @@ public class PauseMenu : MonoBehaviour
             }
         }
         if (!GameIsPaused){
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+         //   Cursor.lockState = CursorLockMode.Locked;
+          //  Cursor.visible = false;
         }
         else if (GameIsPaused)
         {
