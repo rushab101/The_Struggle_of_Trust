@@ -21,6 +21,7 @@ public class Respawn_player : MonoBehaviour
             // Debug.Log("HELLOOOOOOOOOOOOOOOOOOOO");
              fell_in = true;
               FindObjectOfType<TimeStop>().StopTime(0.05f, 10, 0.1f);
+              
            // UnityEngine.Debug.Log("Timestop TRUE (Spikes)");
            // FindObjectOfType<PlayerController>().knockBack(FindObjectOfType<PlayerController>().GetFacingDirection());
             FindObjectOfType<PlayerStats>().TakeDamage(1f);

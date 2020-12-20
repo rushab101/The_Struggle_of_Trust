@@ -20,7 +20,7 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-    //  LoadPlayer();
+     // LoadPlayer();
      //Checking = 3;
 
        
@@ -128,7 +128,7 @@ public class PlayerPos : MonoBehaviour
 
    void Update()
    {
-          UnityEngine.Debug.Log(transform.position);
+//          UnityEngine.Debug.Log(transform.position);
      // Checking =  PlayerPrefs.GetFloat("Check1");
    }
 

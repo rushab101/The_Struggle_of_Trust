@@ -132,6 +132,7 @@ public class Scene3Save : MonoBehaviour
 
     public void show_save_icon()
     {
+        FindObjectOfType<Currency>().SaveSettings();
         canvas.transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(Test());
 

@@ -15,6 +15,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
     public float x_value;
     public float y_value;
     private float heal;
+    public Canvas canvas;
 
 
     private void Start()
@@ -23,8 +24,29 @@ public class FirePlaceCheckPoint : MonoBehaviour
          aliveAnim = aliveGO.GetComponent<Animator>();
          rbAlive = aliveGO.GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+          canvas.transform.GetChild(0).gameObject.SetActive(false);
         aliveGO2.SetActive(false);
     }
+      public void show_save_icon()
+    {
+        FindObjectOfType<Currency>().SaveSettings();
+        canvas.transform.GetChild(0).gameObject.SetActive(true);
+        
+        StartCoroutine(Test());
+
+    }
+
+    IEnumerator Test()
+    {
+        yield return new WaitForSeconds(1.0f);
+        //  Debug.Log("Hi");
+        //  anim.SetBool("setAttack", false);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
+        //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
 
 
     private void OnTriggerStay2D(Collider2D collision)
