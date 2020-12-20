@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
     {
        //  FindObjectOfType<PlayerStats>().ResetHealth();
     //    FindObjectOfType<Scene1Save>().ResetValues();
-        SceneManager.LoadScene("MiddleCave");
+        SceneManager.LoadScene(level);
 
     }
     private void Update() {
