@@ -77,6 +77,9 @@ TagManager:
   - name: Background 1
     uniqueID: 400664625
     locked: 0
+  - name: Snow Particle
+    uniqueID: 956694465
+    locked: 0
   - name: Background Decorations
     uniqueID: 1430828403
     locked: 0
