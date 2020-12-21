@@ -84,9 +84,21 @@ public class Currency : MonoBehaviour
     {
         if (PlayerPrefs.GetFloat("Money") == 0f)
         {
-            total_currency = 0;
+            total_currency_temp = 0;
         }
 
+    }
+
+    public void PayAmount(float price)
+    {
+        total_currency_temp-=price;
+        SaveSettings();
+        
+    }
+
+    public float GetAmount()
+    {
+        return total_currency_temp;
     }
 
     public void SaveSettings()

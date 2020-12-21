@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManagerNPC11 : MonoBehaviour
 {
-     public Text nameText;
+    public Text nameText;
 	public Text dialogueText;
 
 	public Animator animator;

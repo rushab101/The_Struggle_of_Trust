@@ -399,3 +399,13 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Failed_transAction
+    clip: {fileID: 8300000, guid: 116cc2db42fe8c245b44b5a7e70c0ba5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Paying
+    clip: {fileID: 8300000, guid: 768e2c4ab7de64f44ad1c78c8fb114ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}

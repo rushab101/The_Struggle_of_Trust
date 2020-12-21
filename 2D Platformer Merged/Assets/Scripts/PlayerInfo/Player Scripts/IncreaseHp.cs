@@ -5,6 +5,8 @@ using UnityEngine;
 public class IncreaseHp : MonoBehaviour
 {
 
+
+    
   
     void OnCollisionEnter2D(Collision2D collision)
     {

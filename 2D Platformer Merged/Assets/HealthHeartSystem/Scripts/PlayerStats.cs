@@ -51,6 +51,10 @@ public class PlayerStats : MonoBehaviour
         {
             maxHealth+=1;
         }
+        if (PlayerPrefs.GetInt("GainLife") == 2)
+        {
+             maxHealth+=1;
+        }
        // maxHealth = health;
         if (health ==0)
         {

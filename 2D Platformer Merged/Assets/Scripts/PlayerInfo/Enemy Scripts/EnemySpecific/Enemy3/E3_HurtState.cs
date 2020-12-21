@@ -39,7 +39,7 @@ public class E3_HurtState : HurtState
         {
 
             //Debug.Log("VALUE IS");
-              Debug.Log(counter);
+//              Debug.Log(counter);
             stateMachine.ChangeState(enemy.moveState);
            
         }
