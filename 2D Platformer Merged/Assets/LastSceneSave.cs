@@ -14,6 +14,7 @@ public class LastSceneSave : MonoBehaviour
     void Awake()
     {
         get_val = PlayerPrefs.GetInt("NPC_Gate");
+        get_val2= PlayerPrefs.GetInt("NPC_Gate2");
     }
 
     void Start()
@@ -25,13 +26,22 @@ public class LastSceneSave : MonoBehaviour
         else{
             MainGate.SetActive(true);
         }
+         if (get_val2 == 1)
+        {
+            MainGate2.SetActive(false);
+        }
+        else{
+            MainGate.SetActive(true);
+        }
        //   canvas.transform.GetChild(0).gameObject.SetActive(true);
         canvas.transform.GetChild(0).gameObject.SetActive(false);
+       // PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
     void Update()
     {
+           // Debug.Log(get_val2);
             get_val = PlayerPrefs.GetInt("NPC_Gate");
             get_val2 = PlayerPrefs.GetInt("NPC_Gate2");
             if (FindObjectOfType<OpenGateScript>().GateOpen && get_val == 0)
@@ -54,11 +64,12 @@ public class LastSceneSave : MonoBehaviour
             }
             if (FindObjectOfType<OpenCaveGate>().GateOpen && get_val == 0)
             {
-                PlayerPrefs.SetInt("NPC_Gate2",2);
+                PlayerPrefs.SetInt("NPC_Gate2",1);
                 MainGate2.SetActive(false);
                 StartCoroutine(Test_T());
                 canvas.transform.GetChild(0).gameObject.SetActive(true);
                 StartCoroutine(Test_S());
+                
             }
         
     }

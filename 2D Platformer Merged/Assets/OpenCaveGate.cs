@@ -26,12 +26,12 @@ public class OpenCaveGate : MonoBehaviour
     {
         Resume();
         StartCoroutine(Test_T1());
-        StartCoroutine(Test_T2());
-        StartCoroutine(Test_T3());
-        StartCoroutine(Test_T4());
-        StartCoroutine(Test_T5());
-        StartCoroutine(Test_T6());
-        StartCoroutine(Test_T7());
+       
+        
+       
+       
+       
+       
     }
 
      public  void Resume()
@@ -45,41 +45,48 @@ public class OpenCaveGate : MonoBehaviour
         
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T2());
     }
     IEnumerator Test_T2()
     {
        
         yield return new WaitForSeconds(1.0f);
          FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T3());
     }
     IEnumerator Test_T3()
     {
         
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T4());
     }
     IEnumerator Test_T4()
     {
         
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T5());
     }
     IEnumerator Test_T5()
     {
         
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T6());
     }
     IEnumerator Test_T6()
     {
         
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<PlayerStats>().TakeDamage(1f);
+         StartCoroutine(Test_T7());
     }
      IEnumerator Test_T7()
     {
+          
         yield return new WaitForSeconds(1.0f);
-          GateOpen = true;
+         GateOpen = true;
     }
         
 

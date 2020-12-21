@@ -125,7 +125,7 @@ public class PlayerStats : MonoBehaviour
     void OnApplicationQuit()
     {
         
-        SaveSettings();
+        ResetHealth();
 
     }
 
