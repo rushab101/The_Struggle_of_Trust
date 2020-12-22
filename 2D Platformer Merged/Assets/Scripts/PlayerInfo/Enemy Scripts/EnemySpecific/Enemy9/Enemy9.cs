@@ -9,14 +9,14 @@ public class Enemy9 : Entity
     public E9_RangeAttackState rangedAttackState { get; private set; }
     public E9_MeleeAttack meleeAttackState { get; private set; }
 
-    public E9_HurtAttackState hurtState { get; private set; }
-    public E9_DeadState deadState { get; private set; }
+         public E9_HurtAttackState hurtState  { get; private set; }
+         public E9_DeadState deadState { get; private set; }
     protected AttackDetails attackDetails;
 
     [SerializeField]
     private D_MoveState moveStateData;
 
-    [SerializeField]
+     [SerializeField]
     private D_DeadState deadStateData;
 
     [SerializeField]
@@ -31,7 +31,7 @@ public class Enemy9 : Entity
     [SerializeField]
     private Transform meleeAttackPosition;
 
-    [SerializeField]
+       [SerializeField]
     private D_HurtState hurtStateData;
 
 
@@ -56,7 +56,7 @@ touchDamageCheck;
     private LayerMask
     whatisPlayer;
 
-    int damage_counter = 0;
+    int damage_counter =0;
     public GameObject a;
     public GameObject b;
     public bool boos_is_dead = false;
@@ -72,9 +72,9 @@ touchDamageCheck;
         rangedAttackState = new E9_RangeAttackState(this, stateMachine, "range", rangedAttackPosition, rangedAttackStateData, this);
         meleeAttackState = new E9_MeleeAttack(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
         hurtState = new E9_HurtAttackState(this, stateMachine, "hurt", hurtStateData, this);
-        deadState = new E9_DeadState(this, stateMachine, "dead", deadStateData, this);
+        deadState = new E9_DeadState(this,stateMachine,"dead",deadStateData,this);
         rangedAttackStateData.radius = 100f;
-        rangedAttackStateData.total_projectiles = 10;
+        rangedAttackStateData.total_projectiles=10;
         damage_counter = 0;
         a.SetActive(false);
         b.SetActive(false);
@@ -91,36 +91,35 @@ touchDamageCheck;
         Gizmos.DrawLine(botRight, topRight);
         Gizmos.DrawLine(topRight, topLeft);
         Gizmos.DrawLine(topLeft, botLeft);
-        Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
+         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
 
     }
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
+      
 
-
-        rangedAttackStateData.radius += 50f;
-        rangedAttackStateData.total_projectiles += 1;
+        rangedAttackStateData.radius+=50f;
+        rangedAttackStateData.total_projectiles+=1;
         damage_counter++;
-        if (damage_counter == 10) FindObjectOfType<AudioManager>().Play("phase2");
+        if (damage_counter == 10)  FindObjectOfType<AudioManager>().Play("phase2");
         if (damage_counter >= 10)
         {
             a.SetActive(true);
             b.SetActive(true);
-
+            
         }
-        if (isDead)
+          if (isDead)
         {
-            PlayerPrefs.SetInt("boss_pop_up", 1);
-            a.SetActive(false);
+               a.SetActive(false);
             b.SetActive(false);
-            FindObjectOfType<AudioManager>().Play("ThompDead");
+             FindObjectOfType<AudioManager>().Play("ThompDead");
             FindObjectOfType<GrimBossTrigger>().boos_is_dead = true;
-            stateMachine.ChangeState(deadState);
+          stateMachine.ChangeState(deadState);
         }
         else if (PlayerDamaged && stateMachine.currentState != hurtState)
         {
-            FindObjectOfType<AudioManager>().Play("grim_hurt"); // 06 June 2020
+              FindObjectOfType<AudioManager>().Play("grim_hurt"); // 06 June 2020
             stateMachine.ChangeState(hurtState);
         }
 

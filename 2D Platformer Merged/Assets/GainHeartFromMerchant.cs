@@ -5,13 +5,6 @@ using UnityEngine;
 public class GainHeartFromMerchant : MonoBehaviour
 {
         public GameObject enter_pay_menu;
-        
-
-    int checker = 0;
-        void Awake()
-        {
-           checker = PlayerPrefs.GetInt("boss_pop_up");
-        }
   
     // Start is called before the first frame update
     void Start()
@@ -28,13 +21,35 @@ public class GainHeartFromMerchant : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void PayNPC()
+    {
+        float f = FindObjectOfType<Currency>().GetAmount();
+        if (f > 1)
+        {
+            FindObjectOfType<Currency>().PayAmount(500);
+            
+             Resume();
+             FindObjectOfType<AudioManager>().Play("Paying");
+             FindObjectOfType<PlayerStats>().AddHealth();
+             PlayerPrefs.SetInt("GainLife",2);
+
+        }
+        else{
+            //Debug.Log("Failed Sound effect");
+            FindObjectOfType<AudioManager>().Play("Fail");
+        }
+        
+        
+
+    }
+
      public  void Resume()
     {
-        FindObjectOfType<PlayerStats>().AddHealth();
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
     }
-  
+
+
 
 
 
