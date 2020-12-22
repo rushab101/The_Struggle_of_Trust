@@ -12,29 +12,29 @@ public class MainMenu : MonoBehaviour
     {
        // PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
-        if (SceneLoader == 0)
+        if (SceneLoader == 1)
         {
             level = "Beginning";
             PlayerPrefs.SetFloat("Check1",1.1f);
         }
-        else if (SceneLoader == 1)
+        else if (SceneLoader == 2)
         {
             level = "Beginning";
         }
-          else if (SceneLoader == 2)
+          else if (SceneLoader == 3)
         {
             level = "CaveEntrance";
         }
-        else if (SceneLoader == 4)
+        else if (SceneLoader == 5)
         {
             level = "MiddleCave";
              //PlayerPrefs.SetFloat("Check1",3.1f);
         }
-        else if (SceneLoader == 5)
+        else if (SceneLoader == 6)
         {
             level = "BossFight1";
         }
-        else if (SceneLoader == 6)
+        else if (SceneLoader == 7)
         {
             level = "CaveExit";
         }
