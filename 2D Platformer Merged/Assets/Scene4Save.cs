@@ -31,12 +31,11 @@ public class Scene4Save : MonoBehaviour
         if(PlayerPrefs.GetInt("boss_save") == 2)
         {
              TriggerScyth.SetActive(false);
-            if (counter == 200)
             doorTrigger.SetActive(false);
             scyth.SetActive(false);
             mush1.SetActive(true);
             mush2.SetActive(true);
-            counter++;
+         //   counter++;
         }
         if (PlayerPrefs.GetInt("boss_pop_up") == 1)
         {
