@@ -33,7 +33,7 @@ public class BossDeadState : State
         base.Enter();
         GameObject.Instantiate(stateData.deathBloodParticle,entity.aliveGO.transform.position,stateData.deathBloodParticle.transform.rotation);
         GameObject.Instantiate(stateData.deathChunkParticle,entity.aliveGO.transform.position,stateData.deathChunkParticle.transform.rotation);
-        GameObject.Instantiate(stateData.HeartContainer,entity.aliveGO.transform.position,stateData.HeartContainer.transform.rotation);
+       // GameObject.Instantiate(stateData.HeartContainer,entity.aliveGO.transform.position,stateData.HeartContainer.transform.rotation);
         GameObject.Instantiate(stateData.Purple_coin,entity.aliveGO.transform.position,stateData.Purple_coin.transform.rotation);
         GameObject.Instantiate(stateData.Purple_coin,entity.aliveGO.transform.position,stateData.Purple_coin.transform.rotation);
         GameObject.Instantiate(stateData.Purple_coin,entity.aliveGO.transform.position,stateData.Purple_coin.transform.rotation);
