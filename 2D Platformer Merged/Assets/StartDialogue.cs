@@ -34,6 +34,7 @@ public class StartDialogue : MonoBehaviour
                 //FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
                 if (FindObjectOfType<DialogueManagerIntro>().sentences.Count == 0)
                 {
+                 
                     canvasObject.SetActive(false);
                     SceneManager.LoadScene("Beginning");
                 }

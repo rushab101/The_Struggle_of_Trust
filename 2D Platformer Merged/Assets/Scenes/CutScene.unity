@@ -329,13 +329,14 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 60
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello world!
+  m_Text: You wake up one morning, feeling a bit strange. Everything looked normal
+    but something did not feel right.
 --- !u!222 &1903812560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -360,7 +361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.8, y: -5.9795}
+  m_AnchoredPosition: {x: 17, y: 77}
   m_SizeDelta: {x: 1524.2572, y: 430.96277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &326488753752620288
@@ -3182,12 +3183,9 @@ MonoBehaviour:
   dialogue:
     name: meh
     sentences:
-    - There was a dumb guy named Wilson. He would boss people long all day.
-    - "He was so fking ass\t"
-    - that he decided to kill himself
-    - "The End.\t"
-    - "Thank you for listening\t"
-    - Life is good
+    - Nothing makes sense...
+    - As you leave your bed, you question yourself...
+    - Are you gifted enough to solve the mystery that surronds you?
 --- !u!4 &1691804680010269300
 Transform:
   m_ObjectHideFlags: 0
@@ -3409,7 +3407,7 @@ RectTransform:
   m_GameObject: {fileID: 8534264689442398882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -8223.092}
-  m_LocalScale: {x: 1.9166666, y: 1.6640348, z: 0}
+  m_LocalScale: {x: 1.9166666, y: 2.059243, z: 0}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
   m_RootOrder: 0
