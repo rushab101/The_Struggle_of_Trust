@@ -10,31 +10,31 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-       // PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
-        if (SceneLoader == 1)
+        if (SceneLoader == 0)
         {
-            level = "Beginning";
+            level = "CutScene";
             PlayerPrefs.SetFloat("Check1",1.1f);
         }
-        else if (SceneLoader == 2)
+        else if (SceneLoader == 3)
         {
             level = "Beginning";
         }
-          else if (SceneLoader == 3)
+          else if (SceneLoader == 4)
         {
             level = "CaveEntrance";
         }
-        else if (SceneLoader == 5)
+        else if (SceneLoader == 6)
         {
             level = "MiddleCave";
              //PlayerPrefs.SetFloat("Check1",3.1f);
         }
-        else if (SceneLoader == 6)
+        else if (SceneLoader == 7)
         {
             level = "BossFight1";
         }
-        else if (SceneLoader == 7)
+        else if (SceneLoader == 8)
         {
             level = "CaveExit";
         }
