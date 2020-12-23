@@ -739,7 +739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Disclaimer: Soundtracks and SFX belong to their respective owners'
+  m_text: 'DISCLAIMER: Soundtracks and SFX belong to their respective owners'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54a44d51180391347b2e16b595bd3600, type: 2}
   m_sharedMaterial: {fileID: -3791132747614694867, guid: 54a44d51180391347b2e16b595bd3600,
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 32
+  m_firstOverflowCharacterIndex: 48
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -202.78894, y: 0, z: 0, w: 0}
+  m_margin: {x: -458.18573, y: 0, z: -361.35925, w: 0}
   m_textInfo:
     textComponent: {fileID: 536548621}
     characterCount: 65
@@ -3171,7 +3171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Character and Art Design
+  m_text: character and art design
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54a44d51180391347b2e16b595bd3600, type: 2}
   m_sharedMaterial: {fileID: -3791132747614694867, guid: 54a44d51180391347b2e16b595bd3600,
