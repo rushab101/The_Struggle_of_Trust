@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour {
         CheckMovementDirection();
         UpdateAnimations();
         CheckIfCanJump();
-        CheckIfWallSliding();
+       // CheckIfWallSliding();
         CheckJump();
         CheckKnockback();
         // checkifCanspin();

@@ -9,41 +9,44 @@ public class OpenGateScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         enter_pay_menu.SetActive(false);
-      //  PlayerPrefs.DeleteAll();
-        
+        //  PlayerPrefs.DeleteAll();
+
     }
 
     public void EnterMenu()
     {
         enter_pay_menu.SetActive(true);
+        FindObjectOfType<PauseMenu>().GameIsPaused = true;
         Time.timeScale = 0f;
     }
 
     public void PayNPC()
     {
         float f = FindObjectOfType<Currency>().GetAmount();
-        if (f > 1)
+        if (f >= 1500f)
         {
             FindObjectOfType<Currency>().PayAmount(1500);
             GateOpen = true;
             Resume();
-             FindObjectOfType<AudioManager>().Play("Paying");
+            FindObjectOfType<AudioManager>().Play("Paying");
         }
-        else{
+        else
+        {
             Debug.Log("Failed Sound effect");
             FindObjectOfType<AudioManager>().Play("Fail");
         }
-        
-        
+
+
 
     }
 
-     public  void Resume()
+    public void Resume()
     {
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
+        FindObjectOfType<PauseMenu>().GameIsPaused = false;
     }
 
 
@@ -53,6 +56,6 @@ public class OpenGateScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -24,6 +24,7 @@ public class GainHeartFromMerchant : MonoBehaviour
 
     public void EnterMenu()
     {
+        FindObjectOfType<PauseMenu>().GameIsPaused = true;
         enter_pay_menu.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -33,6 +34,7 @@ public class GainHeartFromMerchant : MonoBehaviour
         FindObjectOfType<PlayerStats>().AddHealth();
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
+        FindObjectOfType<PauseMenu>().GameIsPaused = false;
     }
   
 

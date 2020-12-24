@@ -19,6 +19,7 @@ public class OpenCaveGate : MonoBehaviour
     public void EnterMenu()
     {
         enter_pay_menu.SetActive(true);
+        FindObjectOfType<PauseMenu>().GameIsPaused = true;
         Time.timeScale = 0f;
     }
 
@@ -38,6 +39,7 @@ public class OpenCaveGate : MonoBehaviour
     {
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
+         FindObjectOfType<PauseMenu>().GameIsPaused = false;
     }
 
        IEnumerator Test_T1()

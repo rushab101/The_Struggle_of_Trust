@@ -30,7 +30,7 @@ public class NPC12 : MonoBehaviour
                 if (FindObjectOfType<DialogueManagerNPC12>().sentences.Count == 0)
                 {
                     canvasObject.SetActive(false);
-                    FindObjectOfType<GainHeartFromMerchant>().EnterMenu();
+                    FindObjectOfType<NPCTALKGAINHEART>().EnterMenu();
                 }
             }
             else if (get_val == 2)
