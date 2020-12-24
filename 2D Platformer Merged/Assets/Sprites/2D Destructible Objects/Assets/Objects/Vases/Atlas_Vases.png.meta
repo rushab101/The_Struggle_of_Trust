@@ -1,0 +1,1076 @@
+fileFormatVersion: 2
+guid: 7f070844add0cd047a062cb0077257c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Vase_Edge_0008
+  - first:
+      213: 21300002
+    second: Vase_Edge_0001
+  - first:
+      213: 21300004
+    second: Vase_0001
+  - first:
+      213: 21300006
+    second: Vase_0008
+  - first:
+      213: 21300008
+    second: Vase_Edge_0005
+  - first:
+      213: 21300010
+    second: Vase_Edge_0004
+  - first:
+      213: 21300012
+    second: Vase_Edge_0012
+  - first:
+      213: 21300014
+    second: Vase_Edge_0011
+  - first:
+      213: 21300016
+    second: Vase_0012
+  - first:
+      213: 21300018
+    second: Vase_Edge_0013
+  - first:
+      213: 21300020
+    second: Vase_0004
+  - first:
+      213: 21300022
+    second: Vase_Edge_0006
+  - first:
+      213: 21300024
+    second: Vase_0005
+  - first:
+      213: 21300026
+    second: Vase_0011
+  - first:
+      213: 21300028
+    second: Vase_Edge_0009
+  - first:
+      213: 21300030
+    second: Vase_Edge_0002
+  - first:
+      213: 21300032
+    second: Vase_0006
+  - first:
+      213: 21300034
+    second: Vase_Edge_0003
+  - first:
+      213: 21300036
+    second: Vase_Edge_0010
+  - first:
+      213: 21300038
+    second: Vase_0013
+  - first:
+      213: 21300040
+    second: Vase_0009
+  - first:
+      213: 21300042
+    second: Vase_0002
+  - first:
+      213: 21300044
+    second: Vase_0010
+  - first:
+      213: 21300046
+    second: Vase_0003
+  - first:
+      213: 21300048
+    second: Vase_Edge_0007
+  - first:
+      213: 21300050
+    second: Vase_0007
+  - first:
+      213: 21300052
+    second: Shard_Edge_0004
+  - first:
+      213: 21300054
+    second: Shard_0004
+  - first:
+      213: 21300056
+    second: Shard_Edge_0001
+  - first:
+      213: 21300058
+    second: Shard_Edge_0006
+  - first:
+      213: 21300060
+    second: Shard_0001
+  - first:
+      213: 21300062
+    second: Shard_0006
+  - first:
+      213: 21300064
+    second: Shard_Edge_0005
+  - first:
+      213: 21300066
+    second: Shard_0005
+  - first:
+      213: 21300068
+    second: Shard_Edge_0003
+  - first:
+      213: 21300070
+    second: Shard_Edge_0007
+  - first:
+      213: 21300072
+    second: Shard_Edge_0002
+  - first:
+      213: 21300074
+    second: Shard_0003
+  - first:
+      213: 21300076
+    second: Shard_0007
+  - first:
+      213: 21300078
+    second: Shard_0002
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vase_Edge_0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 56
+        height: 91
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7032967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0001
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1
+        width: 48
+        height: 91
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7032967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 94
+        width: 46
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0008
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1
+        width: 54
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0005
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 94
+        width: 42
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0004
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 185
+        width: 47
+        height: 84
+      alignment: 9
+      pivot: {x: 0.4893617, y: 0.7619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0012
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1
+        width: 52
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0011
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 92
+        width: 48
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7710843}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0012
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 180
+        width: 50
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0013
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 271
+        width: 48
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7804878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0004
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1
+        width: 44
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0006
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 87
+        width: 38
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: 0.7804878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0005
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 177
+        width: 40
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0011
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 264
+        width: 46
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0009
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 355
+        width: 74
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.79012346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0002
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 62
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.79012346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0006
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 85
+        width: 36
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0003
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 171
+        width: 52
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0010
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 261
+        width: 72
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.8}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0013
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 348
+        width: 46
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0009
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1
+        width: 72
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0002
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 84
+        width: 60
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0010
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 167
+        width: 70
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0003
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 253
+        width: 50
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_Edge_0007
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 438
+        width: 62
+        height: 55
+      alignment: 9
+      pivot: {x: 0.48387095, y: 1.1636363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vase_0007
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 343
+        width: 58
+        height: 53
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0004
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 430
+        width: 39
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5641026, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0004
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1
+        width: 37
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5675676, y: 0.44186047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0001
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 82
+        width: 34
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 1.6842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0006
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 165
+        width: 33
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0001
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 247
+        width: 32
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 495
+        width: 31
+        height: 16
+      alignment: 9
+      pivot: {x: 0.48387095, y: 0.4375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0005
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 333
+        width: 28
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46153846}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0005
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 398
+        width: 26
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0003
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 476
+        width: 24
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0007
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 430
+        width: 19
+        height: 24
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_Edge_0002
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1
+        width: 21
+        height: 24
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0003
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 46
+        width: 22
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5217391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0007
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 103
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.54545456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shard_0002
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 82
+        width: 19
+        height: 22
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
