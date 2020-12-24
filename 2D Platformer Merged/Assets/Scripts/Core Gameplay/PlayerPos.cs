@@ -20,12 +20,13 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-     // LoadPlayer();
+       Debug.Log(Checking);
+      LoadPlayer();
      //Checking = 3;
-
        
        
-         if (Checking == 1) //At the house
+       
+         if (Checking == 1f) //At the house
          {
                Vector2 position;
                 position.x = 116.2f;
@@ -120,7 +121,7 @@ public class PlayerPos : MonoBehaviour
         else 
         {
 
-       // LoadPlayer();
+        LoadPlayer();
         }
      
     

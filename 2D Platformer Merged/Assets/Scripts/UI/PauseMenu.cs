@@ -11,14 +11,15 @@ public class PauseMenu : MonoBehaviour
     public GameObject controllMenuUI;
 
 
-   // private AudioSource audioSource;
+    // private AudioSource audioSource;
 
 
     void Start()
     {
+        //   PlayerPrefs.DeleteAll();
         pauseMenuUI.SetActive(false);
         controllMenuUI.SetActive(false);
-//        audioSource = GetComponent<AudioSource>();
+        //        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -28,34 +29,35 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-             
+
             if (GameIsPaused)
             {
                 Resume();
-               
+
             }
             else
             {
-               
+
                 Pause();
             }
         }
-        if (!GameIsPaused){
-         //   Cursor.lockState = CursorLockMode.Locked;
-          //  Cursor.visible = false;
+        if (!GameIsPaused)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else if (GameIsPaused)
         {
-             Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        
+
     }
-   public  void Resume()
+    public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-       // audioSource.Play();
+        // audioSource.Play();
         GameIsPaused = false;
 
     }
@@ -65,8 +67,8 @@ public class PauseMenu : MonoBehaviour
         controllMenuUI.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-       // audioSource.Pause();
-       GameIsPaused = true;
+        // audioSource.Pause();
+        GameIsPaused = true;
     }
 
     public void mainMenu()

@@ -8,24 +8,24 @@ public class Loader : MonoBehaviour
      public GameObject Exterior;
      private float x;
      private float y;
-    
+    float Checking;
 
 
      void Awake()
      {
-         LoadPlayer();
-        
-         if (x > - 60)
+         Checking =  PlayerPrefs.GetFloat("Check1");
+
+         if (Checking != 1.1f)
          {
              Interior.SetActive(false);
              Exterior.SetActive(true);
          }
-         else if (x < -60)
+         else if (Checking == 1.1f)
          {
-             
              Interior.SetActive(true);
              Exterior.SetActive(false);
          }
+       
      }
 
     
@@ -38,6 +38,7 @@ public class Loader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         
         
     }
 

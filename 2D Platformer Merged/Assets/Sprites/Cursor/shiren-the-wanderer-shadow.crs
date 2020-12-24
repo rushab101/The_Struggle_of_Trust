@@ -1,0 +1,12 @@
+﻿[Arrow]
+Path=shiren_sword.cur
+
+[IBeam]
+Path=shiren_scroll.cur
+
+[Help]
+Path=shiren_sword_help.cur
+
+[Wait]
+Path=shiren_sword_busy.cur
+

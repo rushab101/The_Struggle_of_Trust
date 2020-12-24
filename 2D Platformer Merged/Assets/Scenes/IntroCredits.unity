@@ -488,7 +488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A Production by Rushab and Humaiyun
+  m_Text: A Production of Rushab and Humaiyun
 --- !u!224 &2587835326254090742
 RectTransform:
   m_ObjectHideFlags: 0

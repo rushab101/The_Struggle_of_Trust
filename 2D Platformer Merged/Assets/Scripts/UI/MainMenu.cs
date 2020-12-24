@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     {
         //PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
+        Debug.Log(SceneLoader);
         if (SceneLoader == 0)
         {
             level = "CutScene";
@@ -44,6 +45,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
+  
        //  FindObjectOfType<PlayerStats>().ResetHealth();
     //    FindObjectOfType<Scene1Save>().ResetValues();
         SceneManager.LoadScene(level);

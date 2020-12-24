@@ -1,0 +1,15 @@
+﻿[SizeNS]
+Path=shiren_arrow_up_down.ani
+
+[SizeWE]
+Path=shiren_arrow_left_right.ani
+
+[SizeAll]
+Path=shiren_arrow_move.ani
+
+[SizeNESW]
+Path=shiren_arrow_diagonal_2.ani
+
+[SizeNWSE]
+Path=shiren_arrow_diagonal_1.ani
+
