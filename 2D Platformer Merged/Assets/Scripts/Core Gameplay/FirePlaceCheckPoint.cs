@@ -65,7 +65,7 @@ public class FirePlaceCheckPoint : MonoBehaviour
             FindObjectOfType<PlayerStats>().Heal(heal);
             FindObjectOfType<Currency>().SaveSettings();
             PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
-            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y,gm.lastCheckPointPos.z);
             if (PlayerPrefs.GetInt("Scene") == 1)
             {
                 FindObjectOfType<Scene0SaveScript>().SaveValues();
@@ -83,9 +83,9 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
 
 
-    public void SavePlayer(float x, float y)
+    public void SavePlayer(float x, float y,float z)
     {
-        SaveSystem.SavePlayer(x, y);
+        SaveSystem.SavePlayer(x, y,z);
     }
 
 

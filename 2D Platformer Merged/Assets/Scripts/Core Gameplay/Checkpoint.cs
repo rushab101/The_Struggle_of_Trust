@@ -9,6 +9,7 @@ public class Checkpoint : MonoBehaviour
     void Start()
     {
         gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+     //   PlayerPrefs.DeleteAll();
     }
 
     public float x_value;
@@ -16,9 +17,9 @@ public class Checkpoint : MonoBehaviour
 
 
 
-   public void SavePlayer(float x, float y)
+   public void SavePlayer(float x, float y, float z)
    {
-       SaveSystem.SavePlayer(x, y);
+       SaveSystem.SavePlayer(x, y,z);
    }
 
 

@@ -63,7 +63,7 @@ public class ContineFire : MonoBehaviour
             heal = FindObjectOfType<PlayerStats>().MaxHealth;
             FindObjectOfType<PlayerStats>().Heal(heal);
             show_save_icon();
-            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y);
+            SavePlayer(gm.lastCheckPointPos.x, gm.lastCheckPointPos.y,gm.lastCheckPointPos.z);
             if (PlayerPrefs.GetInt("Scene") == 1)
             {
                 FindObjectOfType<Scene0SaveScript>().SaveValues();
@@ -81,9 +81,9 @@ public class ContineFire : MonoBehaviour
 
 
 
-    public void SavePlayer(float x, float y)
+    public void SavePlayer(float x, float y,float z)
     {
-        SaveSystem.SavePlayer(x, y);
+        SaveSystem.SavePlayer(x, y,z);
     }
 
 
