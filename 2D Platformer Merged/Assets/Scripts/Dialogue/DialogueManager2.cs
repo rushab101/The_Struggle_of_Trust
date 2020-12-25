@@ -40,19 +40,23 @@ public class DialogueManager2 : MonoBehaviour
 
 	public void DisplayNextSentence ()
 	{
+		
 		if (sentences.Count == 0)
 		{
+			Debug.Log("Went into here");
 			EndDialogue();
 			return;
 		}
 
 		string sentence = sentences.Dequeue();
+		Debug.Log(sentence);
 		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));
 	}
 
 	IEnumerator TypeSentence (string sentence)
 	{
+		
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
