@@ -42,5 +42,20 @@ public class AudioManager : MonoBehaviour {
     }
 
 
+    public void PauseAllSFXSounds()
+    {
+          foreach (Sound s in sounds) {
+            s.source.Pause();
+        }
+    }
+
+    public void PlayAllSFXSounds()
+    {
+          foreach (Sound s in sounds) {
+            s.source.UnPause();
+        }
+    }
+   
+
 
 }

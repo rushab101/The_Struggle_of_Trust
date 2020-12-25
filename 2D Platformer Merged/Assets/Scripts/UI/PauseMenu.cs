@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject controllMenuUI;
+    int one_time_counter = 0;
 
 
     // private AudioSource audioSource;
@@ -45,11 +46,19 @@ public class PauseMenu : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            if (one_time_counter== 0)
+            {
+                //FindObjectOfType<AudioManager>().PlayAllSFXSounds();
+                one_time_counter++;
+            }
+            
         }
         else if (GameIsPaused)
         {
+            one_time_counter = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            FindObjectOfType<AudioManager>().PauseAllSFXSounds();
         }
 
     }
