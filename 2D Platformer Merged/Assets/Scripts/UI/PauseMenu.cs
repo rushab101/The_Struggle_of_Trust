@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public bool GameIsPaused = false;
+    public bool canPauseGame = true;
     public GameObject pauseMenuUI;
     public GameObject controllMenuUI;
     int one_time_counter = 0;
@@ -36,9 +37,8 @@ public class PauseMenu : MonoBehaviour
                 Resume();
 
             }
-            else
+            else if (canPauseGame)
             {
-
                 Pause();
             }
         }

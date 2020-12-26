@@ -30,11 +30,13 @@ public class OldManTriggger : MonoBehaviour
           if (Input.GetKeyDown(KeyCode.E) && anim.GetBool("cancel") && this_plays_first)
           {
                old_man_dia.SetActive(true);
+               FindObjectOfType<PauseMenu>().canPauseGame = false;
              FindObjectOfType<DialogueManager2>().DisplayNextSentence(); 
              if (old_man_dia.active && FindObjectOfType<DialogueManager2>().sentences.Count != 0) 
               FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020          
              if (FindObjectOfType<DialogueManager2>().sentences.Count == 0)
              {
+                 FindObjectOfType<PauseMenu>().canPauseGame = true;
                  old_man_dia.SetActive(false);
              }
           }
@@ -53,6 +55,7 @@ public class OldManTriggger : MonoBehaviour
 
             FindObjectOfType<DialogueTrigger2>().TriggerDialogue();
             FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
+             FindObjectOfType<PauseMenu>().canPauseGame = false;
         }
         if (anim.GetBool("cancel"))
         {
@@ -76,6 +79,7 @@ public class OldManTriggger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
          FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
+         FindObjectOfType<PauseMenu>().canPauseGame = true;
         old_man_dia.SetActive(false);
         firstSentenceDone = false;
         this_plays_first = false;

@@ -131,7 +131,7 @@ private bool complete_this_one=false;
         yield return new WaitForSecondsRealtime(1.0f);
 
         canvasObject.SetActive(true);
-       
+       FindObjectOfType<PauseMenu>().canPauseGame = false;
         trigger.TriggerDialogue();
         FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
 
@@ -153,11 +153,13 @@ private bool complete_this_one=false;
              if ( manager.sentences.Count < 1 && complete_this_one)
              {
                  Debug.Log("Go to here");
+                
                  done_dialogue_sentence = true;
                   canvasObject.SetActive(false);
                   I.SetActive(false);
                    FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
                   H.SetActive(true); //Actual Boss Fight
+                   FindObjectOfType<PauseMenu>().canPauseGame = true;
              }
           }      
         }

@@ -35,6 +35,7 @@ public class EvilManTrigger : MonoBehaviour
             
              if (FindObjectOfType<DialogueManager3>().sentences.Count < 1)
              {
+                 FindObjectOfType<PauseMenu>().canPauseGame = true;
                 //  old_man_dia.SetActive(false);
              }
           }
@@ -50,7 +51,7 @@ public class EvilManTrigger : MonoBehaviour
         {
             firstSentenceDone = true;
             old_man_dia.SetActive(true);
-
+            FindObjectOfType<PauseMenu>().canPauseGame = false;
             FindObjectOfType<DialogueTrigger3>().TriggerDialogue();
             FindObjectOfType<AudioManager>().Play("Render_Text_long"); // 06 June 2020
         }
@@ -76,6 +77,7 @@ public class EvilManTrigger : MonoBehaviour
         old_man_dia.SetActive(false);
         FindObjectOfType<AudioManager>().Pause("Render_Text_long"); // 06 June 2020
         firstSentenceDone = false;
+        FindObjectOfType<PauseMenu>().canPauseGame = true;
           this_plays_first = false;
     }
 

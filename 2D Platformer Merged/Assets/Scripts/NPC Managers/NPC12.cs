@@ -41,6 +41,7 @@ public class NPC12 : MonoBehaviour
                 if (FindObjectOfType<DialogueManagerNPC12_partb>().sentences.Count == 0)
                 {
                     canvasObject.SetActive(false);
+                     FindObjectOfType<PauseMenu>().canPauseGame = true;
                 }
             }
         }
@@ -58,6 +59,7 @@ public class NPC12 : MonoBehaviour
         {
             canvasObject.SetActive(true);
             firstSentence = true;
+             FindObjectOfType<PauseMenu>().canPauseGame = false;
             if (get_val < 2)
             FindObjectOfType<DialogueTriggerNPC12>().TriggerDialogue();
             else if (get_val == 2)
@@ -72,6 +74,7 @@ public class NPC12 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+         FindObjectOfType<PauseMenu>().canPauseGame = true;
         canvasObject.SetActive(false);
         firstSentence = false;
 

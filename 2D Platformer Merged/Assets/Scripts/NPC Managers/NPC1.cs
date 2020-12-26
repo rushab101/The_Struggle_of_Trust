@@ -17,7 +17,7 @@ public class NPC1 : MonoBehaviour
     void Update()
     {
         
-         if (Input.GetKeyDown(KeyCode.E))
+         if (Input.GetKeyDown(KeyCode.E) && firstSentence)
           {
              FindObjectOfType<DialogueManagerNPC2>().DisplayNextSentence();
              if (canvasObject.activeSelf)
@@ -25,6 +25,7 @@ public class NPC1 : MonoBehaviour
              if (FindObjectOfType<DialogueManagerNPC2>().sentences.Count == 0)
              {
                   canvasObject.SetActive(false);
+                  FindObjectOfType<PauseMenu>().canPauseGame = true;
              }
           }
 
@@ -50,8 +51,9 @@ public class NPC1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !firstSentence)
         {
+            FindObjectOfType<PauseMenu>().canPauseGame = false;
                 canvasObject.SetActive(true);
-                 firstSentence = true;
+                 firstSentence = false;
                 FindObjectOfType<DialogueTirggerNPC2>().TriggerDialogue();
                
                  
@@ -66,6 +68,7 @@ public class NPC1 : MonoBehaviour
      private void OnTriggerExit2D( Collider2D collision ) {
        canvasObject.SetActive(false);
        firstSentence = false;
+       FindObjectOfType<PauseMenu>().canPauseGame = true;
                  
     }
 }

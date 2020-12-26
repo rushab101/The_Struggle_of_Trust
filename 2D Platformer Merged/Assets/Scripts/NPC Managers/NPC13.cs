@@ -36,12 +36,13 @@ public class NPC13 : MonoBehaviour
             }
             else if (get_val == 1)
             {
-                Debug.Log("Its in here");
+               // Debug.Log("Its in here");
                FindObjectOfType<DialogueManagerNPC13_partb>().DisplayNextSentence();
                 if (canvasObject.activeSelf && FindObjectOfType<DialogueManagerNPC13_partb>().sentences.Count != 0)
                     FindObjectOfType<AudioManager>().Play("Render_Text"); // 06 June 2020
                 if (FindObjectOfType<DialogueManagerNPC13_partb>().sentences.Count == 0)
                 {
+                     FindObjectOfType<PauseMenu>().canPauseGame = true;
                     canvasObject.SetActive(false);
                 }
             }
@@ -60,6 +61,7 @@ public class NPC13 : MonoBehaviour
         {
             canvasObject.SetActive(true);
             firstSentence = true;
+             FindObjectOfType<PauseMenu>().canPauseGame = false;
             if (get_val == 0)
             FindObjectOfType<DialogueTriggerNPC13>().TriggerDialogue();
             else if (get_val == 1)
@@ -74,6 +76,7 @@ public class NPC13 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+         FindObjectOfType<PauseMenu>().canPauseGame = true;
         canvasObject.SetActive(false);
         firstSentence = false;
 
