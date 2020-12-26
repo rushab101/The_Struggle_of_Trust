@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+    //    PlayerPrefs.DeleteAll();
         SceneLoader = PlayerPrefs.GetInt("Scene");
         Debug.Log(SceneLoader);
         if (SceneLoader == 0)
@@ -48,6 +48,7 @@ public class MainMenu : MonoBehaviour
   
        //  FindObjectOfType<PlayerStats>().ResetHealth();
     //    FindObjectOfType<Scene1Save>().ResetValues();
+    // level = "Beginning";
         SceneManager.LoadScene(level);
 
     }

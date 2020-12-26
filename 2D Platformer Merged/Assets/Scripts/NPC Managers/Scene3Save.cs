@@ -40,9 +40,9 @@ public class Scene3Save : MonoBehaviour
           if (!Red_Lever_anim.GetBool("done") && Red_Lever_anim.GetBool("cancel"))
         {
             //            Debug.Log("In here");
-            if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 0)
+            if (PlayerPrefs.GetInt("Red_Lever_middle_cave") == 0)
             {
-                PlayerPrefs.SetInt("Red Lever Complete Soft", 2);
+                PlayerPrefs.SetInt("Red_Lever_middle_cave", 2);
                 show_save_icon();
                 // RedWall.SetActive(true);
             }
@@ -51,7 +51,7 @@ public class Scene3Save : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt("Red Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Red Lever Complete Soft") == 2)
+        if (PlayerPrefs.GetInt("Red_Lever_middle_cave") == 1 || PlayerPrefs.GetInt("Red_Lever_middle_cave") == 2)
         {
             Red_Lever_anim.SetBool("done", false);
             Red_Lever_anim.SetBool("cancel", true);
@@ -64,9 +64,9 @@ public class Scene3Save : MonoBehaviour
         if (!Blue_Lever_anim.GetBool("done") && Blue_Lever_anim.GetBool("cancel"))
         {
             //   Debug.Log("In here");
-            if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 0)
+            if (PlayerPrefs.GetInt("Blue_Lever_midde_cave") == 0)
             {
-                PlayerPrefs.SetInt("Blue Lever Complete Soft", 2);
+                PlayerPrefs.SetInt("Blue_Lever_midde_cave", 2);
                 show_save_icon();
                 // RedWall.SetActive(true);
             }
@@ -75,10 +75,10 @@ public class Scene3Save : MonoBehaviour
 
         }
 
-        if (PlayerPrefs.GetInt("Blue Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Blue Lever Complete Soft") == 2)
+        if (PlayerPrefs.GetInt("Blue_Lever_midde_cave") == 1 || PlayerPrefs.GetInt("Blue_Lever_midde_cave") == 2)
         {
-            Blue_Lever_anim.SetBool("done", false);
-            Blue_Lever_anim.SetBool("cancel", true);
+            Blue_Lever_anim.SetBool("Blue_Lever_midde_cave", false);
+            Blue_Lever_anim.SetBool("Blue_Lever_midde_cave", true);
             BlueWall.SetActive(false);
          
         }
@@ -88,14 +88,14 @@ public class Scene3Save : MonoBehaviour
         if (!Green_Lever_anim.GetBool("done") && Green_Lever_anim.GetBool("cancel"))
         {
             Debug.Log("In here");
-            if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 0)
+            if (PlayerPrefs.GetInt("Green_Lever_middle_cave") == 0)
             {
-                PlayerPrefs.SetInt("Green Lever Complete Soft", 2);
+                PlayerPrefs.SetInt("Green_Lever_middle_cave", 2);
                 show_save_icon();
                 // RedWall.SetActive(true);
             }
         }
-        if (PlayerPrefs.GetInt("Green Lever Complete Soft") == 1 || PlayerPrefs.GetInt("Green Lever Complete Soft") == 2)
+        if (PlayerPrefs.GetInt("Green_Lever_middle_cave") == 1 || PlayerPrefs.GetInt("Green_Lever_middle_cave") == 2)
         {
             Debug.Log("In here 2");
             Green_Lever_anim.SetBool("done", false);
@@ -105,7 +105,6 @@ public class Scene3Save : MonoBehaviour
         }
 
         //--------------Yellow Lever Case -----------------------------------\\
-          //-------------Green Lever Save Case-------------------------------------\\
         if (!Yellow_Lever_anim.GetBool("done") && Yellow_Lever_anim.GetBool("cancel"))
         {
             Debug.Log("In here 5");

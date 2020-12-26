@@ -12,7 +12,7 @@ public class Scene2After : MonoBehaviour
     {
        // door1 = GameObject.Find("House Interior");
       //  door2 = GameObject.Find("ExteriorScene");
-    
+ //   PlayerPrefs.DeleteAll();
     
            FindObjectOfType<FSTDemoManager>().PanelAnim(6);
      canvasObject.GetComponent<CanvasGroup>().alpha = 0f;

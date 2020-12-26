@@ -20,11 +20,12 @@ public class FirePlaceCheckPoint : MonoBehaviour
 
     private void Start()
     {
+          canvas.transform.GetChild(0).gameObject.SetActive(false);
          aliveGO = transform.Find("Broken Top").gameObject; 
          aliveAnim = aliveGO.GetComponent<Animator>();
          rbAlive = aliveGO.GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-          canvas.transform.GetChild(0).gameObject.SetActive(false);
+        
         aliveGO2.SetActive(false);
     }
       public void show_save_icon()
