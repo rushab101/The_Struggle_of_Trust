@@ -125,7 +125,7 @@ public class PlayerPos : MonoBehaviour
         {
                
 
-        LoadPlayer();
+       // LoadPlayer();
         }
      
     
