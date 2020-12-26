@@ -53,7 +53,7 @@ public class NPC1 : MonoBehaviour
         {
             FindObjectOfType<PauseMenu>().canPauseGame = false;
                 canvasObject.SetActive(true);
-                 firstSentence = false;
+                 firstSentence = true;
                 FindObjectOfType<DialogueTirggerNPC2>().TriggerDialogue();
                
                  
