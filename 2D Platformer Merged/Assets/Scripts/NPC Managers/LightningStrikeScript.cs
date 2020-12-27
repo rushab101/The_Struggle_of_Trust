@@ -17,7 +17,7 @@ public class LightningStrikeScript : MonoBehaviour
     void Update()
     {
       counter++;
-      if (counter == 120){
+      if (counter == 100){
            animator.SetBool("strike",false);
       }
      if (counter == 800)

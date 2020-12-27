@@ -12,7 +12,11 @@ public class TriggerScythBoss : MonoBehaviour
      int counter = 0;
      public AudioSource audio;
     
-
+    float firstPlay =0f;
+      void Awake()
+    {
+         firstPlay = PlayerPrefs.GetFloat("FirstPlay");
+    }
 
 
     // Start is called before the first frame update
@@ -27,28 +31,17 @@ public class TriggerScythBoss : MonoBehaviour
    
 
     
-       private void OnTriggerStay2D(Collider2D collision) 
-    {
-       
-        if (Input.GetKey(KeyCode.Z))
-        {
-               counter++;
-        }
-
-      
-
-      
-    }
-
+     
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<CounterScript>().counter == 6)
+        if (FindObjectOfType<CounterScript>().counter == 3)
         {
             SpawnBoss.SetActive(true);
              Axe.SetActive(false);
              BossName.SetActive(true);
             counter++;
+            audio.volume = firstPlay;
             audio.Play();  
         }
         
