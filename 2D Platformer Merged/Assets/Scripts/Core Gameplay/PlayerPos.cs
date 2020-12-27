@@ -80,11 +80,11 @@ public class PlayerPos : MonoBehaviour
          }
           else if (Checking == 5f) //Left Cave Middle and entered Boss Entrance
          {
-          
+                Debug.Log("I am in here now");
                 Vector3 position;
-                position.x = 220.4f;
-                 position.y= -24.9f;
-                 position.z = 10.47732f;
+                position.x = 308.07f;
+                 position.y= 0.2476334f;
+                 position.z = 0f;
                 transform.localPosition = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
