@@ -17,15 +17,15 @@ MonoBehaviour:
   deathBloodParticle: {fileID: 231112197258768274, guid: 099540dc8dd5628418c2f369e86b6cb4,
     type: 3}
   Explosion: {fileID: 0}
-  Green_coin: {fileID: 1572361575867067525, guid: 9d31cde0dfd5852468d7d38beb51327b,
+  Green_coin: {fileID: 6551613539712054613, guid: 03e652474f54e1a46b6f2e472c7e85e2,
     type: 3}
-  Blue_coin: {fileID: 105241324871419831, guid: eb9c6f99b1d8dc9479a1dd0bb2e97c18,
+  Blue_coin: {fileID: 1623892962664652447, guid: 231acc7cc03d0714182414b6a903622b,
     type: 3}
-  Yellow_coin: {fileID: 4456612938062749762, guid: e1441b0d9304ce34bade54110a2d532e,
+  Yellow_coin: {fileID: 5132809069451538912, guid: 2cfaadf012639b8478e0bde4c64cc5b7,
     type: 3}
-  Red_coin: {fileID: 8692667399997679713, guid: 2a4976d0d44f51e468cbab72d1a1d17a,
+  Red_coin: {fileID: 6887640917483499220, guid: f7dd21c709c6d434e8bba6d0170b271a,
     type: 3}
-  Purple_coin: {fileID: 5315297190868228704, guid: 78e20dddc41f9274995c12834982654e,
+  Purple_coin: {fileID: 5283808415456976821, guid: e099dc4e622bdef4fbbc127c6be9fb3f,
     type: 3}
-  Hearts: {fileID: 1723643762198735653, guid: b04b656ed3d3fa541b0fd8b60e5502d5, type: 3}
+  Hearts: {fileID: 5219830603000573070, guid: 0d06e66f619a05745b3c62f40dff335f, type: 3}
   HeartContainer: {fileID: 0}

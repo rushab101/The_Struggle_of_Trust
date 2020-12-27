@@ -10,6 +10,7 @@ public class LastSceneSave : MonoBehaviour
     int get_val = 0;
     int leave  = 0;
     int get_val2 = 0;
+    int counter = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -62,13 +63,14 @@ public class LastSceneSave : MonoBehaviour
                 StartCoroutine(Test_S());
                 leave+=1;
             }
-            if (FindObjectOfType<OpenCaveGate>().GateOpen && get_val == 0)
+            if (FindObjectOfType<OpenCaveGate>().GateOpen && get_val == 0 && counter == 0)
             {
                 PlayerPrefs.SetInt("NPC_Gate2",1);
                 MainGate2.SetActive(false);
                 StartCoroutine(Test_T());
                 canvas.transform.GetChild(0).gameObject.SetActive(true);
                 StartCoroutine(Test_S());
+                counter++;
                 
             }
         
@@ -77,6 +79,7 @@ public class LastSceneSave : MonoBehaviour
       IEnumerator Test_S()
     {
         yield return new WaitForSeconds(1.0f);
+        FindObjectOfType<Currency>().SaveSettings();
         canvas.transform.GetChild(0).gameObject.SetActive(false);
     }
       IEnumerator Test_T()
