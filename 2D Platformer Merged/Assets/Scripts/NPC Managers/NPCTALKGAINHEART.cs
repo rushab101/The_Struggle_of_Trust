@@ -5,11 +5,12 @@ using UnityEngine;
 public class NPCTALKGAINHEART : MonoBehaviour
 {
     public GameObject enter_pay_menu;
+    public AudioSource a;
   
     // Start is called before the first frame update
     void Start()
     {
-        
+        a.Pause();
         enter_pay_menu.SetActive(false);
       //  PlayerPrefs.DeleteAll();
         
@@ -32,6 +33,7 @@ public class NPCTALKGAINHEART : MonoBehaviour
             FindObjectOfType<Currency>().PayAmount(500);
             
              Resume();
+           // b.Play();
              FindObjectOfType<AudioManager>().Play("Paying");
              FindObjectOfType<PlayerStats>().AddHealth();
              PlayerPrefs.SetInt("GainLife",2);
@@ -40,6 +42,7 @@ public class NPCTALKGAINHEART : MonoBehaviour
         else{
             //Debug.Log("Failed Sound effect");
             FindObjectOfType<AudioManager>().Play("Fail");
+             a.Play();
         }
         
         

@@ -20,7 +20,7 @@ public class PlayerPos : MonoBehaviour
    {
        
        gm=GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-       Debug.Log(Checking);
+     //  Debug.Log(Checking);
       //LoadPlayer();
      //Checking = 3;
        
@@ -102,9 +102,9 @@ public class PlayerPos : MonoBehaviour
          {
           
                 Vector3 position;
-                position.x = 400.21f;
-                 position.y= 1.11f;
-                 position.z = 10.47732f;
+                position.x = 229.72f;
+                 position.y= 61.59f;
+                 position.z = 46.4f;
                 transform.localPosition = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
@@ -112,9 +112,9 @@ public class PlayerPos : MonoBehaviour
          {
           
                 Vector3 position;
-                position.x = 404.75f;
-                 position.y= 1.13f;
-                 position.z = 10.47732f;
+                position.x = 491.51f;
+                 position.y= 26.21f;
+                 position.z = 0f;
                 transform.localPosition = position;
                 PlayerPrefs.SetFloat("Check1",0);
          }
@@ -123,8 +123,6 @@ public class PlayerPos : MonoBehaviour
          
         else 
         {
-               
-
        LoadPlayer();
         }
      

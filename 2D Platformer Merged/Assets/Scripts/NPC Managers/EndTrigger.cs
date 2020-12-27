@@ -11,6 +11,7 @@ public class EndTrigger : MonoBehaviour
      public GameObject enter_code_menu;
      private InputField input;
      private string ans;
+     public AudioSource a;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class EndTrigger : MonoBehaviour
     {
         enter_code_menu.SetActive(true);
          Time.timeScale = 0f;
+         FindObjectOfType<PauseMenu>().GameIsPaused = true;
         input.onEndEdit.AddListener(delegate { inputBetValue(input); });
 
 
@@ -55,12 +57,16 @@ public class EndTrigger : MonoBehaviour
     {
         enter_code_menu.SetActive(false);
         Time.timeScale = 1f;
+        FindObjectOfType<PauseMenu>().GameIsPaused = false;
     }
 
 public void inputBetValue(InputField userInput)
 {
     if (userInput.text == ans)
     SceneManager.LoadScene("End");
+    else{
+        a.Play();
+    }
     
 }
 

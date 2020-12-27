@@ -6,6 +6,7 @@ public class OpenGateScript : MonoBehaviour
 {
     public GameObject enter_pay_menu;
     public bool GateOpen = false;
+    public AudioSource a;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class OpenGateScript : MonoBehaviour
     public void PayNPC()
     {
         float f = FindObjectOfType<Currency>().GetAmount();
+ FindObjectOfType<PauseMenu>().canPauseGame = false;
         if (f >= 1500f)
         {
             FindObjectOfType<Currency>().PayAmount(1500);
@@ -35,7 +37,8 @@ public class OpenGateScript : MonoBehaviour
         else
         {
             Debug.Log("Failed Sound effect");
-            FindObjectOfType<AudioManager>().Play("Fail");
+            a.Play();
+           // FindObjectOfType<AudioManager>().Play("Fail");
         }
 
 
@@ -44,6 +47,7 @@ public class OpenGateScript : MonoBehaviour
 
     public void Resume()
     {
+         FindObjectOfType<PauseMenu>().canPauseGame = true;
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
         FindObjectOfType<PauseMenu>().GameIsPaused = false;
