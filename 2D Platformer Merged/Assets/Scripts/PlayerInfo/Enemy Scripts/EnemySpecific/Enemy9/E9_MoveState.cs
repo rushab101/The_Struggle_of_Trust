@@ -139,7 +139,7 @@ public class E9_MoveState : FlyMoveState
 
        }
        else{
-         Debug.Log(state);
+//         Debug.Log(state);
            if (state == 2)
            {
 //                Debug.Log(isDetectingLedge2);
@@ -168,8 +168,8 @@ public class E9_MoveState : FlyMoveState
                // entity.SetVelocityUp(5f);
            }
            else{
-               Debug.Log(state);
-                Debug.Log("Last Flag");
+  //             Debug.Log(state);
+//                Debug.Log("Last Flag");
                 entity.SetVelocity(-5f);
 
            }

@@ -13,7 +13,7 @@ public class CounterScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-                Debug.Log("Chilling in Scyth Trigger");
+//                Debug.Log("Chilling in Scyth Trigger");
         if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.Z))
         {
                 counter++;

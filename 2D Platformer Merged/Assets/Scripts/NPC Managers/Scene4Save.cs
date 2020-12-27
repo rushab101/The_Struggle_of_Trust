@@ -27,11 +27,12 @@ public class Scene4Save : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         
         
         if(PlayerPrefs.GetInt("boss_save") == 2)
         {
              TriggerScyth.SetActive(false);
-            doorTrigger.SetActive(false);
+           // doorTrigger.SetActive(false);
             scyth.SetActive(false);
             mush1.SetActive(true);
             mush2.SetActive(true);

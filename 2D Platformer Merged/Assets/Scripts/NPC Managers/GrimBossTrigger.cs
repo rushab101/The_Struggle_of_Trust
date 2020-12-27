@@ -19,9 +19,10 @@ public class GrimBossTrigger : MonoBehaviour
 
     bool went_in = false;
     public AudioSource audio;
-
+    int counter =0;
     void Start()
     {
+       // PlayerPrefs.DeleteAll();
         A.SetActive(false);
         B.SetActive(false);
         C.SetActive(false);
@@ -36,7 +37,7 @@ public class GrimBossTrigger : MonoBehaviour
     {
 
 
-        if (collision.CompareTag("Player") && !went_in)
+        if (collision.CompareTag("Player") && !went_in && PlayerPrefs.GetInt("boss_save") != 2) 
         {
             audio.Play();
             Time.timeScale = 0f;
@@ -97,12 +98,22 @@ public class GrimBossTrigger : MonoBehaviour
     void Update()
     {
      
-        if (!boss.active &&  boos_is_dead)
+        if (!boss.active &&  boos_is_dead && counter == 0)
         {
-            FindObjectOfType<TriggerScythBoss>().audio.Pause();
             PlayerPrefs.SetInt("boss_save",2);
-            canvas.transform.GetChild(0).gameObject.SetActive(true);
+            counter++;
+             canvas.transform.GetChild(0).gameObject.SetActive(true);
             StartCoroutine(Test_S());
+          //  FindObjectOfType<TriggerScythBoss>().audio.Pause();
+           
+           
+            
+             
+        }
+        if (PlayerPrefs.GetInt("boss_save") == 2)
+        {
+            
+         //   Debug.Log(counter);
             StartCoroutine(Tes());
             StartCoroutine(Tes2());
             StartCoroutine(Tes3());
@@ -110,6 +121,7 @@ public class GrimBossTrigger : MonoBehaviour
             StartCoroutine(Tes5());
             shroom1.SetActive(true);
             shroom2.SetActive(true);
+            FindObjectOfType<TriggerScythBoss>().audio.Pause();
 
         }
 
@@ -117,7 +129,7 @@ public class GrimBossTrigger : MonoBehaviour
 
      IEnumerator Test_S()
     {
-        yield return new WaitForSecondsRealtime(1.0f);
+        yield return new WaitForSeconds(1.0f);
       //  yield return new WaitForRealSeconds(1.0f);
         //  Debug.Log("Hi");
         //  anim.SetBool("setAttack", false);
@@ -131,35 +143,35 @@ public class GrimBossTrigger : MonoBehaviour
     IEnumerator Tes()
     {
 
-        yield return new WaitForSecondsRealtime(0.1f);
+        yield return new WaitForSeconds(0.1f);
         A.SetActive(false);
     }
 
     IEnumerator Tes2()
     {
 
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSeconds(0.2f);
         B.SetActive(false);
     }
 
     IEnumerator Tes3()
     {
 
-        yield return new WaitForSecondsRealtime(0.3f);
+        yield return new WaitForSeconds(0.3f);
         C.SetActive(false);
     }
 
     IEnumerator Tes4()
     {
 
-        yield return new WaitForSecondsRealtime(0.4f);
+        yield return new WaitForSeconds(0.4f);
         D.SetActive(false);
     }
 
     IEnumerator Tes5()
     {
 
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSeconds(0.5f);
         E.SetActive(false);
     }
 }

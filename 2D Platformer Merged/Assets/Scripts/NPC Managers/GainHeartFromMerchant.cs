@@ -5,6 +5,7 @@ using UnityEngine;
 public class GainHeartFromMerchant : MonoBehaviour
 {
         public GameObject enter_pay_menu;
+        public GameObject disable_gates;
         
 
     int checker = 0;
@@ -35,6 +36,7 @@ public class GainHeartFromMerchant : MonoBehaviour
         enter_pay_menu.SetActive(false);
         Time.timeScale = 1f;
         FindObjectOfType<PauseMenu>().GameIsPaused = false;
+        disable_gates.SetActive(false);
     }
   
 
