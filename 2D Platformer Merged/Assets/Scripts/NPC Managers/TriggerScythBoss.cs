@@ -35,7 +35,7 @@ public class TriggerScythBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<CounterScript>().counter == 3)
+        if (FindObjectOfType<CounterScript>().counter == 1)
         {
             SpawnBoss.SetActive(true);
              Axe.SetActive(false);
