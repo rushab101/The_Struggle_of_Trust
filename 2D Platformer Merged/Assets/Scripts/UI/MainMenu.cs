@@ -64,5 +64,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void ClearData()
+    {
+        PlayerPrefs.DeleteAll();
+        level = "CutScene";
+        PlayerPrefs.SetFloat("Check1",1.1f);
+        PlayGame();
+
+    }
+
 
 }
