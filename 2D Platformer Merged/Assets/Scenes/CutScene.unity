@@ -503,7 +503,7 @@ RectTransform:
   m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -560,8 +560,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You wake up one morning, feeling a bit strange. Everything looked normal
-    but something did not feel right.
+  m_Text: You wake up one morning feeling a bit strange. Everything looks and feels
+    normal, but there's just something that doesn't feel right.
 --- !u!222 &1903812560
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ Transform:
   m_LocalScale: {x: 0.91098756, y: 0.8546031, z: 1}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1669707208400295656
 GameObject:
@@ -1144,7 +1144,7 @@ RectTransform:
   - {fileID: 1669707208400295657}
   - {fileID: 1903812561}
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1432,7 +1432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1669707208834921976
 MonoBehaviour:
@@ -1943,7 +1943,7 @@ RectTransform:
   - {fileID: 1669707209057678206}
   - {fileID: 1669707208846089954}
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2580,7 +2580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1669707209467465724
 MonoBehaviour:
@@ -2942,7 +2942,7 @@ Transform:
   m_Children:
   - {fileID: 1669707208483174083}
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1669707209618280646
 GameObject:
@@ -3215,7 +3215,7 @@ RectTransform:
   - {fileID: 1669707208834921983}
   - {fileID: 1669707209688836750}
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3409,11 +3409,15 @@ MonoBehaviour:
   dialogue:
     name: meh
     sentences:
-    - Nothing makes sense...
-    - As you leave your bed, you question yourself...
-    - Are you gifted enough to solve the mystery that surronds you?
-    - Are you gifted enough to solve the mystery that surronds you?
-    - Are you gifted enough to solve the mystery that surronds you?
+    - It feels as if you were asleep for a very long time. Your head hurts, body
+      aches, and stomach is growling. Time hasn't been too kind to you.
+    - 'Peeking through your bedroom door, even your own mother looks weird. '
+    - 'As you get up from your bed, you just sit there and question. '
+    - Why are you equipped with a sword and a heavy scarf?
+    - Nothing makes sense.... so what could it be?
+    - Are you gifted enough to solve the mystery that surrounds you?
+    - Are you gifted enough to solve the mystery that surrounds you?
+    - Are you gifted enough to solve the mystery that surrounds you?
 --- !u!4 &1691804680010269300
 Transform:
   m_ObjectHideFlags: 0
@@ -3426,7 +3430,7 @@ Transform:
   m_LocalScale: {x: 1.4499502, y: 1.1318197, z: 1}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &1691804680022916100
 CanvasRenderer:
@@ -3466,7 +3470,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3583,6 +3587,7 @@ Transform:
   m_LocalPosition: {x: 1011.89484, y: 553.2775, z: 8223.092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1691804680010269300}
   - {fileID: 8534264689442398881}
   - {fileID: 985134396}
   - {fileID: 1669707208518958419}
@@ -3593,7 +3598,6 @@ Transform:
   - {fileID: 1669707209618280640}
   - {fileID: 1691804680022916346}
   - {fileID: 326488753752620295}
-  - {fileID: 1691804680010269300}
   - {fileID: 1691804681013912244}
   - {fileID: 742576985}
   m_Father: {fileID: 0}
@@ -3640,7 +3644,7 @@ RectTransform:
   m_LocalScale: {x: 1.9166666, y: 2.059243, z: 0}
   m_Children: []
   m_Father: {fileID: 2723233084656454212}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
