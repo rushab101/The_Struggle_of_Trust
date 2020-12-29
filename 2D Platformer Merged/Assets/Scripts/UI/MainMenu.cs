@@ -63,6 +63,11 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUIT!");
         Application.Quit();
     }
+    public void ReturnToMenu()
+    {
+        //level = "Main Menu";
+        SceneManager.LoadScene("Main Menu");
+    }
 
     public void ClearData()
     {
