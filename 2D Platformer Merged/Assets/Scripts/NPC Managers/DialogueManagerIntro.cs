@@ -49,6 +49,7 @@ public class DialogueManagerIntro : MonoBehaviour
 
 		string sentence = sentences.Dequeue();
 		StopAllCoroutines();
+		
 		StartCoroutine(TypeSentence(sentence));
 	}
 
@@ -57,11 +58,32 @@ public class DialogueManagerIntro : MonoBehaviour
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
-		
+		//	StartCoroutine(Test());
 			dialogueText.text += letter;
 			yield return null;
+			yield return null;
+			yield return null;
+			yield return null;
+			yield return null;
+			yield return null;
+			yield return null;
+			yield return null;
+			
 		}
 	}
+
+	
+    IEnumerator Test()
+    {
+        yield return new WaitForSecondsRealtime(10000000000000.0f);
+        //  Debug.Log("Hi");
+        //  anim.SetBool("setAttack", false);
+        
+        //  anim.SetBool("downAttack",false);
+        // Debug.Log("flag 2");
+        // SceneManager.LoadScene("Game Over");
+    }
+
 
 	void EndDialogue()
 	{
