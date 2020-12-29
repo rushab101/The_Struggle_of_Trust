@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
     private int facingDirection = 1;
     private int lastWallJumpDirection;
 
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     public bool isWalking;
     public bool isGrounded;
     private bool isTouchingWall;

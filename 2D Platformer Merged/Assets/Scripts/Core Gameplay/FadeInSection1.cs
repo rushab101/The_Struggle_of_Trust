@@ -17,7 +17,7 @@ public class FadeInSection1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!went_in )
+        if (!went_in && FindObjectOfType<PlayerController>().isFacingRight)
         {
              canvasObject.SetActive(true);
             went_in = true;
