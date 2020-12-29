@@ -3659,7 +3659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -330}
+  m_AnchoredPosition: {x: 25, y: -330}
   m_SizeDelta: {x: 757.0924, y: 110.47769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6947330165943010475
@@ -3831,7 +3831,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The game is done.
+  m_Text: 'As you finish entering the numbers into the wall, you hear nothing but
+    the screams of the people around you.
+
+'
 --- !u!1 &6947330166302802311
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,11 +4071,26 @@ MonoBehaviour:
   dialogue:
     name: meh
     sentences:
-    - "The game is now complete\t"
-    - You awake from your sleep blah blah blah
-    - -10E^7 < iq < 10E^7
-    - -10E^7 < iq < 10E^7
-    - -10E^7 < iq < 10E^7
+    - "The world around you is vanishing right before your very eyes. \n\nYou've
+      been lied to by everyone around you. "
+    - 'They tried to keep you in this imaginary world for as long as possible.
+
+
+      But
+      against all odds... you did not fall for their deceptions.'
+    - Your vision fades to black as you start hearing whispers.
+    - All of a sudden you feel a sharp pain in your back that causes you to jolt
+      up off your bed.
+    - '"Wait.... what?"
+
+
+      You finally wake up from your sleep.'
+    - This was nothing but a freakishly long nightmare.
+    - As your mother walks to your room bringing a warm breakfast, you look to your
+      side and notice the absence of the scarf and sword.
+    - It's finally over now...
+    - It's finally over now...
+    - It's finally over now...
 --- !u!4 &8580378318488427581
 Transform:
   m_ObjectHideFlags: 0
