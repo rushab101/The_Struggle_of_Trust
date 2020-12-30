@@ -54,6 +54,7 @@ public class NPC3_A : MonoBehaviour
                 canvasObject.SetActive(true);
                  firstSentence = true;
                 FindObjectOfType<DialogueTriggerNPC3_A>().TriggerDialogue();
+                PlayerPrefs.SetInt("Code_F",1);
                  FindObjectOfType<PauseMenu>().canPauseGame = false;
                
                  

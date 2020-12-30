@@ -52,10 +52,11 @@ public class NPC2 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && !firstSentence)
         {
-           Debug.Log("In TRIGGER ZONE");
+          // Debug.Log("In TRIGGER ZONE");
                 canvasObject.SetActive(true);
                  firstSentence = true;
                 FindObjectOfType<DialogueTriggerNPC3>().TriggerDialogue();
+                PlayerPrefs.SetInt("Code_B",1);
                FindObjectOfType<PauseMenu>().canPauseGame = false;
                  
         }

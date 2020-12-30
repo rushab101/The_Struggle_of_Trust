@@ -190,7 +190,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulations, despite the illusions thrown at you, you have won!
+  m_Text: 'Congratulations, despite the illusions thrown at you, you have won!
+
+    Thank
+    you for Playing.'
 --- !u!222 &2025083740
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -53,6 +53,7 @@ public class NPC9 : MonoBehaviour
         {
                 canvasObject.SetActive(true);
                  firstSentence = true;
+                 PlayerPrefs.SetInt("Code_I",1);
                 FindObjectOfType<DialogueTriggerNPC9>().TriggerDialogue();
                  FindObjectOfType<PauseMenu>().canPauseGame = false;
         }

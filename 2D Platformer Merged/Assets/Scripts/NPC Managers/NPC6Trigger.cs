@@ -56,6 +56,7 @@ public class NPC6Trigger : MonoBehaviour
         {
                 canvasObject.SetActive(true);
                  firstSentence = true;
+                 PlayerPrefs.SetInt("Code_C",1);
                 FindObjectOfType<DialogueTriggerNPC6>().TriggerDialogue();
                  FindObjectOfType<PauseMenu>().canPauseGame = false;
                
