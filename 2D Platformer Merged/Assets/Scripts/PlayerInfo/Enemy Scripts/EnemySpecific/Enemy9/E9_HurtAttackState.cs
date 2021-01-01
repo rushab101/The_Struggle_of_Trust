@@ -40,7 +40,7 @@ public class E9_HurtAttackState : HurtState
         base.LogicUpdate();
         counter++;
    entity.aliveGO.GetComponent<SpriteRenderer>().color = Color.red;
-        if (counter > 25f)
+        if (counter > 10f)
         {
 
             //Debug.Log("VALUE IS");

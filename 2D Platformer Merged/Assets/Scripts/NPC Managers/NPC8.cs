@@ -55,6 +55,7 @@ public class NPC8 : MonoBehaviour
                 canvasObject.SetActive(true);
                  firstSentence = true;
                 FindObjectOfType<DialogueTriggerNPC8>().TriggerDialogue();
+                FindObjectOfType<Currency>().SaveSettings();
                 PlayerPrefs.SetInt("Code_E",1);
                  FindObjectOfType<PauseMenu>().canPauseGame = false;
                

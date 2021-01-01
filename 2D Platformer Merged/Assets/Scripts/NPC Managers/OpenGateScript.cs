@@ -30,6 +30,7 @@ public class OpenGateScript : MonoBehaviour
         if (f >= 1500f)
         {
             FindObjectOfType<Currency>().PayAmount(1500);
+            FindObjectOfType<Currency>().SaveSettings();
             GateOpen = true;
             Resume();
             FindObjectOfType<AudioManager>().Play("Paying");

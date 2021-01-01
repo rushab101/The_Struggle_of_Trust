@@ -34,6 +34,7 @@ public class NPCTALKGAINHEART : MonoBehaviour
             
              Resume();
            // b.Play();
+           FindObjectOfType<Currency>().SaveSettings();
              FindObjectOfType<AudioManager>().Play("Paying");
              FindObjectOfType<PlayerStats>().AddHealth();
              PlayerPrefs.SetInt("GainLife",2);

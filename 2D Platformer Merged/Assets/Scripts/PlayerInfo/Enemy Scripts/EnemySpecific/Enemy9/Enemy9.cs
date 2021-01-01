@@ -102,6 +102,18 @@ touchDamageCheck;
         rangedAttackStateData.radius += 50f;
         rangedAttackStateData.total_projectiles += 1;
         damage_counter++;
+        if (damage_counter < 10)
+        {
+            moveStateData.movementSpeed = 5f;
+        }
+        else if (damage_counter > 9 && damage_counter < 15)
+        {
+            moveStateData.movementSpeed = 10f;
+        }
+         else if (damage_counter >=15)
+        {
+            moveStateData.movementSpeed = 15f;
+        }
         if (damage_counter == 10) FindObjectOfType<AudioManager>().Play("phase2");
         if (damage_counter >= 10)
         {

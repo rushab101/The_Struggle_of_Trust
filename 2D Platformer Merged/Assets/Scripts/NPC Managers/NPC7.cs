@@ -53,6 +53,7 @@ public class NPC7 : MonoBehaviour
         {
                 canvasObject.SetActive(true);
                  firstSentence = true;
+                 FindObjectOfType<Currency>().SaveSettings();
                  PlayerPrefs.SetInt("Code_H",1);
                 FindObjectOfType<DialogueTriggerNPC7>().TriggerDialogue();
                  FindObjectOfType<PauseMenu>().canPauseGame = false;

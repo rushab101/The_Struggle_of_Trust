@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4074,16 +4074,15 @@ MonoBehaviour:
   dialogue:
     name: meh
     sentences:
-    - "The world around you is vanishing right before your very eyes. \n\nYou've
-      been lied to by everyone around you. "
-    - 'They tried to keep you in this imaginary world for as long as possible.
-
-
-      But
-      against all odds... you did not fall for their deceptions.'
-    - Your vision fades to black as you start hearing whispers.
-    - All of a sudden you feel a sharp pain in your back that causes you to jolt
-      up off your bed.
+    - 'You watch as all the NPCs you met start to disappear one by one. The key to
+      erasing this imaginary world was to enter the sacred numbers into the wall.  '
+    - They lied to you about getting unobtainable skills as they did not want to
+      be banished from existence. But you did not trust them allowing you to get
+      out of their deceptions.
+    - As everything fades away you start to feel guilty for all the creatures you
+      wiped out of existence.
+    - Suddenly, you feel a sharp pain in your back that causes you to jolt up off
+      your bed.
     - '"Wait.... what?"
 
 

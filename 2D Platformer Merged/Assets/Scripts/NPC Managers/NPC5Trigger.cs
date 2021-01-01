@@ -56,6 +56,7 @@ public class NPC5Trigger : MonoBehaviour
                 canvasObject.SetActive(true);
                  firstSentence = true;
                  PlayerPrefs.SetInt("Code_D",1);
+                 FindObjectOfType<Currency>().SaveSettings();
                 FindObjectOfType<DialogueTriggerNPC5>().TriggerDialogue();
                 FindObjectOfType<PauseMenu>().canPauseGame = false;
         }

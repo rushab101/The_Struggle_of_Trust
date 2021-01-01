@@ -103,7 +103,8 @@ public class E9_MoveState : FlyMoveState
        {
             entity.Flip();
             attk_state = 0;
-            entity.SetVelocityUp(-5f);
+            
+            entity.SetVelocityUp(-stateData.movementSpeed);
          //  entity.SetVelocityUp(5f);
            state = 2;
            
@@ -111,7 +112,7 @@ public class E9_MoveState : FlyMoveState
         else if (isDetectingLedge2 && state ==2)
         {
              stateMachine.ChangeState(enemy.rangedAttackState);
-           entity.SetVelocity(5f);
+           entity.SetVelocity(stateData.movementSpeed);
            state = 3;
           //  enemy.idleState.SetFlipAfterIdle(true);
             //    stateMachine.ChangeState(enemy.idleState);
@@ -119,13 +120,13 @@ public class E9_MoveState : FlyMoveState
         else if (isDetectingWall && state == 3)
         {
              stateMachine.ChangeState(enemy.rangedAttackState);
-            entity.SetVelocityUp(5f);
+            entity.SetVelocityUp(stateData.movementSpeed);
             state = 4;
         }
          else if (isDetectingLedge && state== 4)
        {
            entity.Flip();
-           entity.SetVelocityUp(5f);
+           entity.SetVelocityUp(stateData.movementSpeed);
            state = 5;
        }
        else if (isDetectingLedge2 && state==5)
@@ -143,34 +144,35 @@ public class E9_MoveState : FlyMoveState
            if (state == 2)
            {
 //                Debug.Log(isDetectingLedge2);
-               entity.SetVelocityUp(-5f);
+
+               entity.SetVelocityUp(-stateData.movementSpeed);
             
            } else if (state == 4)
            {
                
-                entity.SetVelocityUp(5f);
+                entity.SetVelocityUp(stateData.movementSpeed);
                //to do
            } 
            else if (state == 1)
            {
                // entity.Flip();
               //  attk_state = 0;
-                entity.SetVelocityUp(-5f);
+                entity.SetVelocityUp(-stateData.movementSpeed);
            }
            else if (state == 5)
            {
-             entity.SetVelocityUp(5f);
+             entity.SetVelocityUp(stateData.movementSpeed);
             
            }
            else if (state == 3)
            {
-              entity.SetVelocity(-5f);
+              entity.SetVelocity(-stateData.movementSpeed);
                // entity.SetVelocityUp(5f);
            }
            else{
   //             Debug.Log(state);
 //                Debug.Log("Last Flag");
-                entity.SetVelocity(-5f);
+                entity.SetVelocity(-stateData.movementSpeed);
 
            }
               
