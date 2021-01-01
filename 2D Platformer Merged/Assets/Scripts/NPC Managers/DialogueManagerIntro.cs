@@ -64,8 +64,8 @@ public class DialogueManagerIntro : MonoBehaviour
 			yield return null;
 			yield return null;
 			yield return null;
-			yield return null;
-			yield return null;
+			//yield return null;
+			//yield return null;
 		}
 	}
 

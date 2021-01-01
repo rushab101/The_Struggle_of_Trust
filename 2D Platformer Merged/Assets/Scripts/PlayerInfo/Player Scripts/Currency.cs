@@ -110,6 +110,7 @@ public class Currency : MonoBehaviour
        PlayerPrefs.SetInt("State", 2);
      //  Debug.Log("State value is" + (PlayerPrefs.GetInt("State")));
        PlayerPrefs.SetFloat("Money",total_currency_temp);
+       PlayerPrefs.Save();
      //  PlayerPrefs.SetInt("State", 2);
     
 

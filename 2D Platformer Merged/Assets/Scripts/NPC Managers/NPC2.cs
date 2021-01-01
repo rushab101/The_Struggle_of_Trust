@@ -55,6 +55,7 @@ public class NPC2 : MonoBehaviour
           // Debug.Log("In TRIGGER ZONE");
                 canvasObject.SetActive(true);
                  firstSentence = true;
+                 FindObjectOfType<Currency>().SaveSettings();
                 FindObjectOfType<DialogueTriggerNPC3>().TriggerDialogue();
                 PlayerPrefs.SetInt("Code_B",1);
                FindObjectOfType<PauseMenu>().canPauseGame = false;

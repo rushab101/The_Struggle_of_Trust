@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject code7;
     public GameObject code8;
     public GameObject code9;
-
+  
 
 
     int one_time_counter = 0;
@@ -111,12 +111,18 @@ public class PauseMenu : MonoBehaviour
 
 
     }
+    
 
+   
 
 
     // Update is called once per frame
     void Update()
     {
+        
+         
+
+
          Code_A = PlayerPrefs.GetInt("Code_A");
         Code_B = PlayerPrefs.GetInt("Code_B");
         Code_C = PlayerPrefs.GetInt("Code_C");
@@ -192,6 +198,7 @@ public class PauseMenu : MonoBehaviour
             }
             else if (canPauseGame)
             {
+                
                 Pause();
             }
         }
@@ -208,6 +215,8 @@ public class PauseMenu : MonoBehaviour
         }
         else if (GameIsPaused)
         {
+           
+          //  onMouseOver();
             one_time_counter = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

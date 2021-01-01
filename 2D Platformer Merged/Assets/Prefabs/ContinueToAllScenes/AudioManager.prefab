@@ -171,7 +171,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ArcherHurt
     clip: {fileID: 8300000, guid: e0ddd8072da01b34ab1e82b1f943a0ec, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: ArcherDead
@@ -211,12 +211,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Yeti_hitA
     clip: {fileID: 8300000, guid: 6696ff3dbf0f8fa4b9841b43b1e96a20, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: Yeti_hitB
     clip: {fileID: 8300000, guid: 2320a9f134c59c04f87e1252aaf36d9e, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: Yeti_Dead
@@ -241,7 +241,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Archer_Shoot
     clip: {fileID: 8300000, guid: 1f5ef13f0126d1a4bb9f1a81a416045b, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: Archer_melee_attack
@@ -266,17 +266,17 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: wolf_hurt
     clip: {fileID: 8300000, guid: 1cc7629901084db4595739439e2402b2, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: wolf_dead
     clip: {fileID: 8300000, guid: 366b4499da394464d9a60e5a89e8735c, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: wolf_attack
     clip: {fileID: 8300000, guid: 1785a0a84f8637e4ea9763e8986f251a, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - name: rat_death
@@ -286,12 +286,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SpinningWheelA
     clip: {fileID: 8300000, guid: 2d14e8d509ec8c0408f7f8276b99ecda, type: 3}
-    volume: 1
+    volume: 0.05
     pitch: 1
     source: {fileID: 0}
   - name: SpinningWheelB
     clip: {fileID: 8300000, guid: ed8d682179556e84887ab1f66d6aead1, type: 3}
-    volume: 1
+    volume: 0.05
     pitch: 1
     source: {fileID: 0}
   - name: Acid
@@ -346,12 +346,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ogre_hurt
     clip: {fileID: 8300000, guid: f7e327f04a910454d911bb971a639cc6, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: ogre_dead
     clip: {fileID: 8300000, guid: fd969d7bd5c38274f9bef30ee836cfa0, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: ogre_attack
@@ -376,7 +376,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: shade_hurt
     clip: {fileID: 8300000, guid: 10275ca3a692c0549908b9363bb98e8f, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: shade_dead
@@ -391,7 +391,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: eyeball_hurt
     clip: {fileID: 8300000, guid: 8866ce09e83d2eb4cbb0addf6245d25a, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     source: {fileID: 0}
   - name: eyeball_dead
