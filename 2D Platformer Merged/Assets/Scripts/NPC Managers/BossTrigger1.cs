@@ -31,6 +31,13 @@ private bool complete_this_one=false;
 
     bool went_in = false;
 
+    void Awake()
+    {
+        if  (PlayerPrefs.GetInt("mini_boss_dead") == 0)
+            Lever.SetActive(false);
+        else if  (PlayerPrefs.GetInt("mini_boss_dead") == 1)
+            Lever.SetActive(true);
+    }
     void Start()
     {
        // PlayerPrefs.DeleteAll();
@@ -43,7 +50,11 @@ private bool complete_this_one=false;
         G.SetActive(false);
         H.SetActive(false);
         I.SetActive(true);
-        Lever.SetActive(false);
+        if  (PlayerPrefs.GetInt("mini_boss_dead") == 0)
+            Lever.SetActive(false);
+        else if  (PlayerPrefs.GetInt("mini_boss_dead") == 1)
+            Lever.SetActive(true);
+        
         BGM.Pause();
         rend= Lever.GetComponent<SpriteRenderer>();
         Color c = rend.material.color;
@@ -247,6 +258,7 @@ private bool complete_this_one=false;
            rend.material.color = c;
            yield return new WaitForSeconds(0.05f);
        }
+       PlayerPrefs.SetInt("mini_boss_dead",1);
        boss_is_dead_complete = true;
     }
 
