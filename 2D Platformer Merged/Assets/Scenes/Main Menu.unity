@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2647,7 +2647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3, y: 4.200012}
+  m_AnchoredPosition: {x: -3, y: 4.199951}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831546991
@@ -4292,7 +4292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: character and art design
+  m_text: Sprite and Tile Design
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54a44d51180391347b2e16b595bd3600, type: 2}
   m_sharedMaterial: {fileID: -3791132747614694867, guid: 54a44d51180391347b2e16b595bd3600,
@@ -4363,7 +4363,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1332247842}
-    characterCount: 24
+    characterCount: 22
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
