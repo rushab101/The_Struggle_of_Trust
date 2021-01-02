@@ -33,6 +33,7 @@ private bool complete_this_one=false;
 
     void Start()
     {
+       // PlayerPrefs.DeleteAll();
         A.SetActive(false);
         B.SetActive(false);
         C.SetActive(false);
@@ -42,6 +43,7 @@ private bool complete_this_one=false;
         G.SetActive(false);
         H.SetActive(false);
         I.SetActive(true);
+        Lever.SetActive(false);
         BGM.Pause();
         rend= Lever.GetComponent<SpriteRenderer>();
         Color c = rend.material.color;
@@ -166,6 +168,7 @@ private bool complete_this_one=false;
         if (boss_is_dead)
         {
             BGM.Pause();
+            Lever.SetActive(true);
                StartCoroutine(Tes());
              StartCoroutine(Tes2());
              StartCoroutine(Tes3());
