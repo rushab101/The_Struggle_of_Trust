@@ -30,10 +30,18 @@ public class EndTrigger : MonoBehaviour
         
     }
 
+        private void OnTriggerEnter2D(Collider2D collision) {
+       
+        if (Input.GetKeyDown(KeyCode.N) ||Input.GetKey(KeyCode.N) )
+        {
+            EnterMenu();
+        }
+
+    }
     
     private void OnTriggerStay2D(Collider2D collision) {
        
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N) ||Input.GetKey(KeyCode.N) )
         {
             EnterMenu();
         }

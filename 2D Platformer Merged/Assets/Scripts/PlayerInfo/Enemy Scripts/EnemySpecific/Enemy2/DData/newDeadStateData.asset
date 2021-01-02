@@ -27,5 +27,5 @@ MonoBehaviour:
     type: 3}
   Purple_coin: {fileID: 8864727468088743131, guid: d97335650d4d91148a974f9de706806b,
     type: 3}
-  Hearts: {fileID: 1723643762198735653, guid: b04b656ed3d3fa541b0fd8b60e5502d5, type: 3}
+  Hearts: {fileID: 2547110771701512942, guid: 020928822ff1fc141913977de776f171, type: 3}
   HeartContainer: {fileID: 0}

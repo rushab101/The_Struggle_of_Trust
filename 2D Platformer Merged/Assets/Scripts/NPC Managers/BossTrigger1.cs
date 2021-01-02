@@ -27,17 +27,11 @@ public class BossTrigger1 : MonoBehaviour
 
        bool done_dialogue_sentence=false;
 private bool complete_this_one=false;
-
+public float uni_x = 0f;
+public float uni_y = 0f;
 
     bool went_in = false;
 
-    void Awake()
-    {
-        if  (PlayerPrefs.GetInt("mini_boss_dead") == 0)
-            Lever.SetActive(false);
-        else if  (PlayerPrefs.GetInt("mini_boss_dead") == 1)
-            Lever.SetActive(true);
-    }
     void Start()
     {
        // PlayerPrefs.DeleteAll();
@@ -50,10 +44,11 @@ private bool complete_this_one=false;
         G.SetActive(false);
         H.SetActive(false);
         I.SetActive(true);
-        if  (PlayerPrefs.GetInt("mini_boss_dead") == 0)
-            Lever.SetActive(false);
-        else if  (PlayerPrefs.GetInt("mini_boss_dead") == 1)
-            Lever.SetActive(true);
+        
+        Vector2 a = new Vector2(100000f,10000f);
+        uni_x = Lever.transform.localPosition.x;
+        uni_y = Lever.transform.localPosition.y;
+        Lever.transform.localPosition = a;
         
         BGM.Pause();
         rend= Lever.GetComponent<SpriteRenderer>();
@@ -250,7 +245,9 @@ private bool complete_this_one=false;
 
       IEnumerator FadeIn()
     {
-        
+       // Lever.transform.position = a;
+       Vector2 a = new Vector2(uni_x,uni_y);
+       Lever.transform.localPosition = a;
        for (float f = 0.05f; f <=1; f+=0.05f)
        {
            Color c = rend.material.color;
@@ -258,7 +255,7 @@ private bool complete_this_one=false;
            rend.material.color = c;
            yield return new WaitForSeconds(0.05f);
        }
-       PlayerPrefs.SetInt("mini_boss_dead",1);
+      // PlayerPrefs.SetInt("mini_boss_dead",1);
        boss_is_dead_complete = true;
     }
 
