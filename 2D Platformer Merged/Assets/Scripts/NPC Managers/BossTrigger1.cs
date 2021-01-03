@@ -31,6 +31,14 @@ public float uni_x = 0f;
 public float uni_y = 0f;
 
     bool went_in = false;
+ float firstPlay;
+    void Awake()
+    {
+         firstPlay = PlayerPrefs.GetFloat("FirstPlay");
+    }
+
+
+
 
     void Start()
     {
@@ -67,6 +75,7 @@ public float uni_y = 0f;
         {
            Time.timeScale = 0f;
            went_in = true;
+           BGM.volume = firstPlay;
            audio.Play();
            BGM.Play();
              StartCoroutine(Test());
@@ -160,7 +169,7 @@ public float uni_y = 0f;
             
              if ( manager.sentences.Count < 1 && complete_this_one)
              {
-                 Debug.Log("Go to here");
+                // Debug.Log("Go to here");
                 
                  done_dialogue_sentence = true;
                   canvasObject.SetActive(false);

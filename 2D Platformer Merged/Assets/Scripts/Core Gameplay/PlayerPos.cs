@@ -11,6 +11,7 @@ public class PlayerPos : MonoBehaviour
    void Awake()
    {
        Checking =  PlayerPrefs.GetFloat("Check1");
+     
      //  PlayerPrefs.DeleteAll();
    }
 
