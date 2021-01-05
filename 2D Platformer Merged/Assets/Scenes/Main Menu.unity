@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1540,6 +1540,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 0}
   backgroundAudio: {fileID: 0}
+  firstPlay: 0
+  secondPlay: 0
+  first_time_run: 0
 --- !u!114 &416530532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,6 +3397,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 0}
   backgroundAudio: {fileID: 0}
+  firstPlay: 0
+  secondPlay: 0
+  first_time_run: 0
 --- !u!114 &973310188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3764,6 +3770,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 0}
   backgroundAudio: {fileID: 0}
+  firstPlay: 0
+  secondPlay: 0
+  first_time_run: 0
 --- !u!114 &1033848155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,6 +4519,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 0}
   backgroundAudio: {fileID: 0}
+  firstPlay: 0
+  secondPlay: 0
+  first_time_run: 0
 --- !u!1 &1411135064
 GameObject:
   m_ObjectHideFlags: 0
@@ -6326,6 +6338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 1434245879}
   backgroundAudio: {fileID: 1870014448}
+  firstPlay: 0
+  secondPlay: 0
+  first_time_run: 0
 --- !u!1 &1952548804
 GameObject:
   m_ObjectHideFlags: 0

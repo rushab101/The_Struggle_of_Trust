@@ -9,41 +9,46 @@ public class RedoAudio : MonoBehaviour
     public Slider backgroundSlider;
     private float backgroundfloat;
     public AudioSource backgroundAudio;
-    private float firstPlay =0f;
-
+    public float firstPlay =0f;
+    public float secondPlay;
+    public int first_time_run = 0;
 
     void Awake() {
         firstPlay = PlayerPrefs.GetFloat("FirstPlay");
+        first_time_run = PlayerPrefs.GetInt("First_run");
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        backgroundAudio = GetComponent<AudioSource>();
-        if (firstPlay == 0.0f)
+       // first_time_run = PlayerPrefs.GetInt("First_run");
+        Debug.Log(PlayerPrefs.GetInt("First_run"));
+        if (PlayerPrefs.GetInt("First_run")== 0)
+        {
+            Debug.Log("It is stuck playing in here");
             firstPlay = 0.5f; 
+            backgroundSlider.value = firstPlay; //Setting the slider volume from memory
+            backgroundAudio.volume = backgroundSlider.value; //Setting the volume to the slider volume 
+            PlayerPrefs.SetInt("First_run",1);
+         //    PlayerPrefs.Save();
+        }
+            
+        else{
         backgroundSlider.value = firstPlay; //Setting the slider volume from memory
         backgroundAudio.volume = backgroundSlider.value; //Setting the volume to the slider volume 
+        }
+       
        
     }
 
 
 
-    public void SaveSoundSettings()
-    {
-
-        PlayerPrefs.SetFloat("FirstPlay", backgroundSlider.value);
-        PlayerPrefs.Save();
-
-    }
-    public void UpdateSound()
-    {
-        backgroundAudio.volume = backgroundSlider.value;
-    }
+   
 
     void Update()
     {
-        UpdateSound();
-        SaveSoundSettings();
+        backgroundAudio.volume = backgroundSlider.value;
+        PlayerPrefs.SetFloat("FirstPlay", backgroundAudio.volume);        
     }
 }
