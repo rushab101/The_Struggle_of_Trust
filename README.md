@@ -1,3 +1,4 @@
 # Struggle of Trust
-Coming Soon
-Expected Release Date: January 1st, 2021
+More info coming soon
+
+Released on itch.io: https://humaiyun-rushab.itch.io/the-struggle-of-trust
