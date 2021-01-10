@@ -54,8 +54,11 @@ public float uni_y = 0f;
         I.SetActive(true);
         
         Vector2 a = new Vector2(100000f,10000f);
+        
         uni_x = Lever.transform.localPosition.x;
         uni_y = Lever.transform.localPosition.y;
+        PlayerPrefs.SetFloat("uni_x",uni_x);
+        PlayerPrefs.SetFloat("uni_y", uni_y);
         Lever.transform.localPosition = a;
         
         BGM.Pause();
@@ -182,6 +185,7 @@ public float uni_y = 0f;
         }
         if (boss_is_dead)
         {
+            
             BGM.Pause();
             Lever.SetActive(true);
                StartCoroutine(Tes());

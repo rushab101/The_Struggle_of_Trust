@@ -90,6 +90,8 @@ public class Scene1Save : MonoBehaviour
     void Update()
     {
 
+
+
         //-------------Red Lever Save Case-------------------------------------\\
         //Soft Save
         // Debug.Log(RedLever.GetComponent<Animator>().GetBool("done"));
@@ -434,6 +436,10 @@ public class Scene1Save : MonoBehaviour
             miniBoss_idle.SetActive(false);
             boss_trigger.SetActive(false);
             BlueLever.SetActive(true);
+            float uni_x = PlayerPrefs.GetFloat("uni_x");
+            float uni_y = PlayerPrefs.GetFloat("uni_y");
+            Vector2 a = new Vector2(uni_x,uni_y);
+            BlueLever.transform.localPosition = a;
             Color c = rend.material.color;
             c.a = 1f;
             rend.material.color = c;
