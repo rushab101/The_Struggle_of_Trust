@@ -59,10 +59,16 @@ public class NPC11 : MonoBehaviour
             canvasObject.SetActive(true);
             firstSentence = true;
              FindObjectOfType<PauseMenu>().canPauseGame = false;
-            if (get_val == 0)
+            if (get_val == 0){
             FindObjectOfType<DialogueTriggerNPC11>().TriggerDialogue();
+            gru.SetActive(true);
+            }
             else if (get_val == 1)
-            FindObjectOfType<DialogueTriggerNPC11_partb>().TriggerDialogue();
+            {
+                gru.SetActive(false);
+                 FindObjectOfType<DialogueTriggerNPC11_partb>().TriggerDialogue();
+            }
+           
         }
 
 

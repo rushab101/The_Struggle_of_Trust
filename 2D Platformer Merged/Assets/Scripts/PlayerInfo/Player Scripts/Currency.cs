@@ -13,6 +13,7 @@ public class Currency : MonoBehaviour
     {
         total_currency_temp = PlayerPrefs.GetFloat("Money");
         total_currency = PlayerPrefs.GetFloat("Money");
+      
 
     }
     // Start is called before the first frame update
@@ -86,6 +87,7 @@ public class Currency : MonoBehaviour
         {
             total_currency_temp = 0;
         }
+       // total_currency_temp = 5000f;
 
     }
 
