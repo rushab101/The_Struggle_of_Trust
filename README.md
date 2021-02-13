@@ -117,7 +117,7 @@ Lesson that was learned here: sometimes its better to use simple solutions than 
 </table>
 
 ## Statistics
-> As of February 12th, 2021
+> Accurate as of February 12th, 2021
 <table>
   <thead>
     <tr>
