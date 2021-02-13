@@ -13,8 +13,7 @@ Released on itch.io (Official Page and Download): https://softframe.itch.io/the-
       + [Regular AI](#ii-regular-ai)
 - [Environmental Renderer & Shaders](#environmental-renderer--shaders)
 - [Parallax Background & Camera Scripts](#parallax-background--camera-scripts)    
-      
-  
+- [Statistics](#statistics)   
   
 ## Backend Framework
 ### Save System Implementation
@@ -41,7 +40,7 @@ Initially all the enemies were designed with simple if statements, however, this
 <table>
   <thead>
     <tr>   
-        <th><img src="https://i.imgur.com/oYcef9S.png"></th>      
+        <th><img src="https://i.imgur.com/CZ50QfX.png"></th>      
     </tr>
   </thead>
 </table>
@@ -117,3 +116,12 @@ Lesson that was learned here: sometimes its better to use simple solutions than 
   </thead>
 </table>
 
+## Statistics
+> As of February 12th, 2021
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://i.imgur.com/9rx2vVt.png"></th>
+    </tr>
+  </thead>
+</table>
