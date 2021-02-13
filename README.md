@@ -1,9 +1,21 @@
-# Struggle of Trust
+# The Struggle of Trust
 ## Description
 An action adventure platformer in which you battle your way through different regions, talk to NPCs to gain clues, and traverse through hardcore platforming sections with the ultimate goal to unravel the great mystery. You find yourself awake in a familiar yet unknown place. It seems as if you are in your house but as you look out of your window, you do not recognize the landscape. Being equipped with a sword and scarf, you are quested to figure out what is going on in this world. You must do whatever it takes to escape this strange world.
 
-Released on itch.io (Download): https://softframe.itch.io/the-struggle-of-trust 
+Released on itch.io (Official Page and Download): https://softframe.itch.io/the-struggle-of-trust 
 
+## Table of Contents
+- [Description](#description)
+- [Backend Framework](#backend-framework)
+  * [Save System Implementation](#save-system-implementation)
+  * [Artificial Intelligence Implementation](#artificial-intelligence-implementation)
+      + [Pathfinding AI](#i-pathfinding-ai)
+      + [Regular AI](#ii-regular-ai)
+- [Environmental Renderer & Shaders](#environmental-renderer--shaders)
+- [Parallax Background & Camera Scripts](#parallax-background--camera-scripts)    
+      
+  
+  
 ## Backend Framework
 ### Save System Implementation
 Important stuff that needs to be saved are events (e.g. defeating a boss, opening a lever, etc.), player position when they saved at checkpoints, the key codes, talking to NPCs, unlockable skills, currency, and the sound settings. For the events, player position, key codes, unlockable skills, and currency we used Serialization. We converted an object into a stream of bytes. Unity when it uses serialization and deserialization, it converts the file down to C++ code and saves it. When it needs it again, Unity converts the file back to C# code upon reloading the object. After it converts in into stream of bytes, it is stored as JSON (JavaScript Object Notation), which was then stored into the local server we have created using MAMP. We restricted the access to the local server so that players cannot easily cheat and get unlimited health/currency. Since the sound settings are non-sensitive information, we used Unity’s built in function PlayerPrefs() to store data in a plaintext file, which would read and write from the plaintext file to modify sound settings. 
