@@ -8,9 +8,8 @@ Released on itch.io (Download): https://softframe.itch.io/the-struggle-of-trust
 ### Save System Implementation
 Important stuff that needs to be saved are events (e.g. defeating a boss, opening a lever, etc.), player position when they saved at checkpoints, the key codes, talking to NPCs, unlockable skills, currency, and the sound settings. For the events, player position, key codes, unlockable skills, and currency we used Serialization. We converted an object into a stream of bytes. Unity when it uses serialization and deserialization, it converts the file down to C++ code and saves it. When it needs it again, Unity converts the file back to C# code upon reloading the object. After it converts in into stream of bytes, it is stored as JSON (JavaScript Object Notation), which was then stored into the local server we have created using MAMP. We restricted the access to the local server so that players cannot easily cheat and get unlimited health/currency. Since the sound settings are non-sensitive information, we used Unity’s built in function PlayerPrefs() to store data in a plaintext file, which would read and write from the plaintext file to modify sound settings. 
 
-### AI Implementation
-The AI can be split into 2 types: Pathfinding and Regular.
-#### Pathfinding
+### Artificial Intelligence Implementation
+#### i. Pathfinding AI
 For our path-finding AI we implemented a simple A* algorithm. A* gets one agent (smart AI) and takes it from its current position to where the main player is. A* finds the optimal path to reach the player. We added some additional constraints to the AI to make its path easier. Our simple implementation included to first making the 2D grid where the AI can move around. In this grid we constructed a bunch of nodes and our algorithm greedily choose which vertex to explore next according to the smallest cost. Further nodes would have a larger weight as it will take more time to travel while closer nodes will have a lot less weight as it reaches much faster. At each iteration, (every second while the enemy is still alive) the A* determines which of its path to extend. It does this by determining the cost of the path and along with an estimate of the cost required to extend the path all the way to the goal. Therefore, it always selects the path such that f(n)=g(n)+h(n)  where n is the next node on the 2d grid we constructed, g(n) represents the cost of the path from the start node to where the main player and h(n) represents the estimate of the cost of the cheapest path from the given node to where the player is.
 
 Our algorithm terminates when there is no eligible path found anymore which is usually as result of the enemy dying or the enemy being at the exact position of the player. To further optimize our code, obstacles and other monsters were excluding from the grid, so that it does not go through obstacles/enemies. You can see from the diagram below. The red markings indicate what were excluding from the grid. The blue represents background represents all possible paths that an AI could take. The yellow circle represents where the initial node it starts from. Finally, the green line is representative of the most optimal path the AI enemy could teach to reach the player.  
@@ -24,7 +23,7 @@ Our algorithm terminates when there is no eligible path found anymore which is u
   </thead>
 </table>
 
-#### Regular
+#### ii. Regular AI
 Initially all the enemies were designed with simple if statements, however, this restricted how complex we could make our enemy AIs. Therefore, to combat this we changed our back-end infrastructure to be designed with finite state machines (FSM). To implement these state machines, we used polymorphism. Our main parent class was the State Class which was an abstract class and each of the pure virtual functions were implemented in our derived classes. In the diagram below you can see the entire layout.  Each new state was a separate class that was derived from the parent state class.
 
 <table>
@@ -50,7 +49,7 @@ From the State Class, it shows the representation of all the other possible stat
 
 This idea came about when we decided that the main character sprite does not feel right in our already vibrant world. To fulfill that, we decided that the best thing to do was to add a glowing component to our character to not only look visually appealing, but functional as well (allows you to keep track of the main playable character a lot easier).
 
-The process was simple albeit very repetitive. We took the original sprite sheet and individually (pixel by pixel) colored in the sections of the scarf and sword out. These are called “Emissions” –  materials that appear as a visible source of light [(Unity Documentation)](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterEmission.html).To keep our work simplified, we ended up creating 3 separate emissions: 1 for the scarf, 1 for the sword, and 1 for the sword slash. That way not only does this help us stay organized, but it also made it a lot easier to put together in the Shader & Renderer Graph.
+The process was simple albeit very repetitive. We took the original sprite sheet and individually (pixel by pixel) colored in the sections of the scarf and sword out. These are called “Emissions” –  materials that appear as a visible source of light [(Unity Documentation)](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterEmission.html). To keep our work simplified, we ended up creating 3 separate emissions: 1 for the scarf, 1 for the sword, and 1 for the sword slash. That way not only does this help us stay organized, but it also made it a lot easier to put together in the Shader & Renderer Graph.
 
 What really is the point of these emissions? Below is an overview screenshot of the 2D Shader & Renderer graph that controls both the scarf and sword glow. The bulk of the work is done through connecting various nodes in the shader graph in order of what you seems best fit. These nodes are called vectors (text vectors, texture vectors, color vectors, etc…). By connecting the respective emissions and original sprite sheet, we now have 3 extra layers upon our normal sprite in which we can manipulate the colors ala shaders. We designed it in such a way that if we ever wanted to change the color of either of these entities, we could simply just modify the color vectors. Another small but noteworthy feature is the light intensity. This just controls how bright or dim you want the emissions to be. 
 
@@ -79,14 +78,30 @@ To display the water as a reflection, we had to create an extra camera. This cam
 
 One difference between this and the environmental renderer is that this is not an emission. It is not an explicit source of visible light in our scene; it is just a stock picture of water ripple texture being transformed in random directions to give the illusion of an actual body of water (the camera is what “reflects” images).
 
+## Parallax Background & Camera Scripts
+At the start of the project, we decided we wanted a “cool moving background” to give the illusion that our player covered significant distance (in other words: they made "visible progress"). Majority of the troubles stem from the fact that Unity is a 3D engine, not a 2D one. So we had to really think outside the box on this script because we have 3 axis to consider (horizontal, vertical, and depth)!
 
+We experimented with a lot of scripts until we settled for the one shown below (Assets -> Scripts -> UI -> Parallax.cs). There are a couple layers to this solution: We first created an object that houses our background objects (background pictures). We attached that object to the script which also houses the main camera. The gist of the script is that the background moves relative to the main camera. In other words, since the camera will be attached to the player, it will give the illusion that the background is moving (making visible progress). 
 
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://i.imgur.com/ZRRSefF.png"></th>
+    </tr>
+  </thead>
+</table>
 
+In the end we decided to scrap this idea as it caused complications when we started to add more than one theme per scene. One potential solution was to think of a way to create a background manager script that managed which background to attach to the camera; denoted by player location. This is honestly too complicated so we came up with a bright idea: using the Z (depth) axis to our advantage. Unity being a 3D engine allows us to put backgrounds in the scene as separate entities. We placed the furthest pictures further on the Z axis whilst the foreground backgrounds would be closer on the Z axis (all relative to the player). 
 
+Below is a picture of how this looks in practice. The backgrounds are separated on the Z axis so that it fulfills our initial objective (to give the illusion of visual progress via moving background). 
 
+Lesson that was learned here: sometimes its better to use simple solutions than to complicate things with scripts!
 
-
-
-
-
+<table>
+  <thead>
+    <tr>
+      <th><img height="560" length="1160" src="https://i.imgur.com/TGfmMT8.png"></th>
+    </tr>
+  </thead>
+</table>
 
