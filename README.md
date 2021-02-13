@@ -100,7 +100,7 @@ Lesson that was learned here: sometimes its better to use simple solutions than 
 <table>
   <thead>
     <tr>
-      <th><img height="560" length="1160" src="https://i.imgur.com/TGfmMT8.png"></th>
+      <th><img height="560" width="1160" src="https://i.imgur.com/TGfmMT8.png"></th>
     </tr>
   </thead>
 </table>
