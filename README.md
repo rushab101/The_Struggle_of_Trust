@@ -56,16 +56,30 @@ What really is the point of these emissions? Below is an overview screenshot of 
 
 One hiccup we experienced whilst trying to get this to work is that this whole idea ruined the vibrance of our tileset. When we initialized the project, we used one of the default 2D templates which had a “flatter” tone to the lighting and rendering . To fix this issue, we had to replace that “flat style” renderer with a 2D Environmental Renderer component. This benefitted us in more than one way. On top of fixing the issue, it also gave a subtle reflective property to the tileset. This provided us more depth to our game especially in dark tiles where you can easily see the glow of the sword and scarf being reflected by the ground. 
 
+<img align="right" src="https://i.imgur.com/OsuOB2s.gif">
+
 <table>
   <thead>
-    <tr>
-      <th><img align="left" src="https://i.imgur.com/r41vCs8.png"></th>
-      <th><img align="right" src="https://i.imgur.com/OsuOB2s.gif"></th>
+    <tr>      
+      <th></th>
     </tr>
   </thead>
 </table>
 
+We also used a similar method to create a ripple-effect water texture. We created a material that is reminiscent of water; by using a stock photo of a water ripple texture. We took that photo and added random transformations to it thus giving the ripple effect. 
 
+To display the water as a reflection, we had to create an extra camera. This camera captures an inversed view of the area above the water (the picture being reflected). We initialized this camera to be fixed so it does not ruin the illusion of water.
+
+One difference between this and the environmental renderer is that this is not an emission. It is not an explicit source of visible light in our scene; it is just a stock picture of water ripple texture being transformed in random directions to give the illusion of an actual body of water (the camera is what “reflects” images).
+
+<table>
+  <thead>
+    <tr>
+      <th><img align="left" width="461" height="302" src="https://i.imgur.com/r41vCs8.png"></th>
+      <th><img align="right" width="461" height="302" src="https://i.imgur.com/0zLtNRn.png"></th>
+    </tr>
+  </thead>
+</table>
 
 
 
