@@ -50,7 +50,7 @@ From the State Class, it shows the representation of all the other possible stat
 
 This idea came about when we decided that the main character sprite does not feel right in our already vibrant world. To fulfill that, we decided that the best thing to do was to add a glowing component to our character to not only look visually appealing, but functional as well (allows you to keep track of the main playable character a lot easier).
 
-The process was simple albeit very repetitive. We took the original sprite sheet and individually (pixel by pixel) colored in the sections of the scarf and sword out. These are called “Emissions” –  materials that appear as a visible source of light (via Unity Documentation).To keep our work simplified, we ended up creating 3 separate emissions: 1 for the scarf, 1 for the sword, and 1 for the sword slash. That way not only does this help us stay organized, but it also made it a lot easier to put together in the Shader & Renderer Graph.
+The process was simple albeit very repetitive. We took the original sprite sheet and individually (pixel by pixel) colored in the sections of the scarf and sword out. These are called “Emissions” –  materials that appear as a visible source of light [(Unity Documentation)](https://docs.unity3d.com/Manual/StandardShaderMaterialParameterEmission.html).To keep our work simplified, we ended up creating 3 separate emissions: 1 for the scarf, 1 for the sword, and 1 for the sword slash. That way not only does this help us stay organized, but it also made it a lot easier to put together in the Shader & Renderer Graph.
 
 What really is the point of these emissions? Below is an overview screenshot of the 2D Shader & Renderer graph that controls both the scarf and sword glow. The bulk of the work is done through connecting various nodes in the shader graph in order of what you seems best fit. These nodes are called vectors (text vectors, texture vectors, color vectors, etc…). By connecting the respective emissions and original sprite sheet, we now have 3 extra layers upon our normal sprite in which we can manipulate the colors ala shaders. We designed it in such a way that if we ever wanted to change the color of either of these entities, we could simply just modify the color vectors. Another small but noteworthy feature is the light intensity. This just controls how bright or dim you want the emissions to be. 
 
@@ -65,12 +65,19 @@ One hiccup we experienced whilst trying to get this to work is that this whole i
   </thead>
 </table>
 
-We also used a similar method to create a ripple-effect water texture. We created a material that is reminiscent of water; by using a stock photo of a water ripple texture. We took that photo and added random transformations to it thus giving the ripple effect. 
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://i.imgur.com/I7J716F.png"></th>
+    </tr>
+  </thead>
+</table>
+
+We also used a similar method to create a ripple-effect water texture (Pictured above). We created a material that is reminiscent of water; by using a stock photo of a water ripple texture. We took that photo and added random transformations to it thus giving the ripple effect. 
 
 To display the water as a reflection, we had to create an extra camera. This camera captures an inversed view of the area above the water (the picture being reflected). We initialized this camera to be fixed so it does not ruin the illusion of water.
 
 One difference between this and the environmental renderer is that this is not an emission. It is not an explicit source of visible light in our scene; it is just a stock picture of water ripple texture being transformed in random directions to give the illusion of an actual body of water (the camera is what “reflects” images).
-
 
 
 
