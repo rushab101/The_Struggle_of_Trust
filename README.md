@@ -102,7 +102,7 @@ We experimented with a lot of scripts until we settled for the one shown below (
   </thead>
 </table>
 
-In the end we decided to scrap this idea as it caused complications when we started to add more than one theme per scene. One potential solution was to think of a way to create a background manager script that managed which background to attach to the camera; denoted by player location. This is honestly too complicated so we came up with a bright idea: using the Z (depth) axis to our advantage. Unity being a 3D engine allows us to put backgrounds in the scene as separate entities. We placed the furthest pictures further on the Z axis whilst the foreground backgrounds would be closer on the Z axis (all relative to the player). 
+In the end we decided to scrap this idea as it caused complications when we started to add more than one theme per scene. One potential solution was to think of a way to create a background manager script that managed which background to attach to the camera; denoted by player location. This is honestly too complicated so we came up with a bright idea: using the Z (depth) axis to our advantage. Unity being a 3D engine allows us to put backgrounds in the scene as separate entities. We placed the furthest pictures further on the Z axis whilst the foreground backgrounds would be closer on the Z axis (all relative to the player) essentially creating a perspective projection. 
 
 Below is a picture of how this looks in practice. The backgrounds are separated on the Z axis so that it fulfills our initial objective (to give the illusion of visual progress via moving background). 
 
