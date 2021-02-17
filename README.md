@@ -85,7 +85,7 @@ One hiccup we experienced whilst trying to get this to work is that this whole i
 
 We also used a similar method to create a ripple-effect water texture (Pictured above). We created a material that is reminiscent of water; by using a stock photo of a water ripple texture. We took that photo and added random transformations to it thus giving the ripple effect. 
 
-To display the water as a reflection, we had to create an extra camera. This camera captures an inversed view of the area above the water (the picture being reflected). We initialized this camera to be fixed so it does not ruin the illusion of water.
+To display the water as a reflection, we had to create an extra camera. This camera captures an inversed view of the area above the water (the picture being reflected). We initialized this camera to be orthographic instead of perspective so it does not ruin the illusion of water.
 
 One difference between this and the environmental renderer is that this is not an emission. It is not an explicit source of visible light in our scene; it is just a stock picture of water ripple texture being transformed in random directions to give the illusion of an actual body of water (the camera is what “reflects” images).
 
